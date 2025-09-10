@@ -50,8 +50,12 @@ def run_cgen(
         )
     engine.join()
     if prin_output:
-        for i, o in enumerate(out):
-            print(i, o)
+        print("=== Sample Model Outputs (First 5) ===")
+        for i in range(min(5, len(out))):
+            print(f"\nSample {i+1}:")
+            print(f"Input: {inputs[i][:200]}{'...' if len(inputs[i]) > 200 else ''}")
+            print(f"Generated: {out[i]}")
+            print("-" * 80)
     return dur
     
 
