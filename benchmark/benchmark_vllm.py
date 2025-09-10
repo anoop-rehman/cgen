@@ -44,10 +44,21 @@ def run_vllm(
     
     # Create sampling params (we'll use the max output length from requests)
     max_output_tokens = max(max_tokens_list) if max_tokens_list else 100
+    
+    # Get tokenizer for stop tokens
+    tokenizer = llm.get_tokenizer()
+    stop_tokens = []
+    if hasattr(tokenizer, 'eos_token') and tokenizer.eos_token:
+        stop_tokens.append(tokenizer.eos_token)
+    if hasattr(tokenizer, 'pad_token') and tokenizer.pad_token:
+        stop_tokens.append(tokenizer.pad_token)
+    
     sampling_params = SamplingParams(
-        temperature=0.0,  # Deterministic for fair comparison
+        temperature=0.1,  # Small temperature for more diverse but still consistent output
+        top_p=0.9,  # Nucleus sampling to prevent repetitive loops
         max_tokens=max_output_tokens,
-        stop=None,
+        stop=stop_tokens,
+        repetition_penalty=1.1,  # Penalize repetition
     )
     
     print(f"Running vLLM benchmark with {len(inputs)} requests...")
@@ -74,8 +85,9 @@ def run_vllm(
             print("-" * 80)
     
     # Calculate statistics
-    total_input_tokens = sum(len(llm.get_tokenizer().encode(inp)) for inp in inputs)
-    total_output_tokens = sum(len(llm.get_tokenizer().encode(gen)) for gen in generated_texts)
+    tokenizer = llm.get_tokenizer()
+    total_input_tokens = sum(len(tokenizer.encode(inp)) for inp in inputs)
+    total_output_tokens = sum(len(output.outputs[0].token_ids) for output in outputs)
     
     input_throughput = total_input_tokens / duration
     output_throughput = total_output_tokens / duration
