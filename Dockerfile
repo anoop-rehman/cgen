@@ -16,7 +16,7 @@ RUN pip3 install transformers>=4.24 loguru pydantic wheel
 
 # Install vllm and its dependencies separately
 RUN pip3 install vllm==0.6.3 --force-reinstall --no-deps
-RUN pip3 install ray psutil sentencepiece numpy requests tqdm py-cpuinfo tokenizers protobuf aiohttp openai uvicorn pillow prometheus-client tiktoken lm-format-enforcer msgspec gguf importlib-metadata pyyaml einops nvidia-ml-py cloudpickle mistral-common datasets
+RUN pip3 install ray psutil sentencepiece numpy requests tqdm py-cpuinfo tokenizers protobuf aiohttp openai uvicorn pillow prometheus-client tiktoken lm-format-enforcer msgspec gguf importlib-metadata pyyaml einops nvidia-ml-py cloudpickle mistral-common datasets pyzmq
 
 WORKDIR /workspace
 COPY . /workspace/cgen

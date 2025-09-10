@@ -1,0 +1,885 @@
+of 15.625 ns / tdc . 
+ @xmath13 is the time - of - flight of the muon track defined as :    @xmath14    where @xmath15 is track length in cm , and 29.97cm / ns is the expected speed assuming that the muon is relativistic . 
+ since we require that each track is reconstructed and matched in both views , ( @xmath16 ; @xmath6 ) and ( @xmath17 ; @xmath18 ) must correspond to the lowest and highest points of the track respectively . 
+ in addition , we can estimate the missing coordinate for a particular hit in either view using 3d requirement . 
+ for the yz view , track coordinates can be calculated as such :    @xmath19    similarly , for the xz view :    @xmath20    where @xmath21 cm and @xmath22 cm are the widths of detector cells and planes . the cell and plane with id=0 
+ have coordinates @xmath23 cm and @xmath24 cm . 
+ since for each hit in each view we can estimate ( x ; y ; z ) coordinates , we can calculate the distance from the hit to the apd readout end . 
+ the further the hit is located from the readout the longer it takes for the light to propagate and be detected by the apd . 
+ we are interested in the hit time of the muon passing through the extrusion , so we have to correct for the light propagation time in the fiber . 
+ the speed of light in the fiber is measured to be 15.3 cm / ns . 
+ the light level in each channel in the no@xmath0a detector is independently sampled every 500 ns . the electronic response to an incident particle depositing energy in a cell can be parameterized in terms of two intrinsic timing values ( @xmath25 and @xmath26 ) , the number of photoelectrons ( @xmath27 ) , and a timing `` offset '' ( @xmath28 ) , or the elapsed time between a read - out and the time of incidence of the particle :    @xmath29    here , @xmath30 is a proportionality factor that does not affect the timing fit . 
+ the parameters @xmath25 and @xmath26 correspond to the intrinsic falling and rising time of the response curve , respectively . as such , they are approximately known . for the purpose of determining hit timing , 
+ the parameter of note is @xmath28 . by performing a simple @xmath31 minimization , 
+ the data - preferred value of @xmath28 can be extracted from multiple readouts on a single channel . for the purposes of the trigger , where hit processing time must be minimized , fit results were pre - calculated and tabulated such that the computationally expensive minimization need not be repeated for each individual hit . 
+ an example of fitting the electronics response curve to multiple readouts from a single cell hit . 
+ the time coordinate of the inflection point where the curve begins to rise is the fitted parameter @xmath28.,width=192 ]     single - hit timing resolution as observed in no@xmath0a far detector data with four - point readout , before ( left ) and after ( right ) fine timing implementation . 
+ see ref . 
+ @xcite for more details.,width=576 ]    each time measurement has an uncertainty , which varies with the amount of energy deposited . 
+ the time uncertainty on a given hit from a reconstructed muon track affects the determination of track directionality , so a parameterization of uncertainty in terms of energy deposition is necessary for the timing - based trigger . 
+ single - hit time resolution is plotted against energy deposition in fig . 
+ [ fig : deltat ] . for high energy hits the @xmath32 is measured to be approximately 10 ns in the data using the four - point readout scheme , which is consistent with that observed in simulation  @xcite . 
+ we can use equations  [ eq : ytimes ] and  [ eq : xtimes ] to produce the distribution of the expected v / s observed time for each track . 
+ the expected versus observed time distribution for an upward - going muon track reconstructed in the no@xmath0a far detector , using fine timing . 
+ the linear unconstrained fit ( red solid line ) has slope value close to `` 1 '' . 
+ the fit with the upward - going track hypothesis ( slope = 1 ) is shown as the blue - dashed line . 
+ the fit with the downward - going hypothesis is shown in the green dashed line and has a very poor probability . 
+ , width=384 ]    an example of expected v / s observed time distribution is shown in fig . 
+ [ fig : track_example ] . 
+ the distribution is produced using a reconstructed upward - going muon track simulated with wimpsim  @xcite . as can be seen , 
+ the points follow a rising trend with a slope value consistent with the upward - going track hypothesis . 
+ it is clear from the figure that the fitted slope value can be used to estimate the muon direction ( up or down ) . as shown in fig . 
+ [ fig : disc_slope ] , the slope values for cosmics and wimpsim mc samples are consistent with the downward- and upward - going hypothesis , respectively . in the relativistic limit , 
+ it is safe to assume that there are only two options for the slope values . 
+ therefore , we can fit the time distribution on fig . 
+ [ fig : track_example ] with fixed values of slopes . for the upward - going track 
+ the fit with the slope constrained to `` 1 '' results in a good @xmath31 probability value of the fit , @xmath33 . 
+ however the fit with slope of `` -1 '' yields a low probability value , @xmath34 . using the probability values from the fits with the fixed slope value 
+ , we can form a log - likelihood ratio ( llr ) : 
+ @xmath35    the llr distributions for the cosmic and wimpsim mc samples are shown in fig . 
+ [ fig : disc_llr ] . from this distribution , 
+ it is clear that a cut on llr slightly above zero will reduce the cosmic background by the desired amount while preserving a high signal acceptance . 
+ note that the wimpsim sample used is for dark matter with a 20 gev mass annihilating through the @xmath36 channel . 
+ as such the neutrinos from the b - meson decay produce muons which , on average , have a much lower energy compared to the cosmic ray muons . 
+ this explains why the llr for the signal has a larger component close to zero than the cosmic sample . 
+ the llr yields better performance for cosmic background rejection for the same signal acceptance in the regime where the cosmic rejection is sufficient ( at least four orders of magnitude ) , compared to a cut on the best - fit slope . 
+ for example , for a signal acceptance of 0.7 the background rejection is about a factor of three better for the llr . at this point 
+ the mc predicts background rejection of close to five orders of magnitude . 
+ in addition to being a more powerful discriminator as observed in the mc studies , the llr estimator is more robust to mis - reconstructed tracks which will be an important feature in real data . 
+ since mis - reconstructions will result in time distributions that follow neither the upward- nor the downward - going hypothesis , the result of mis - reconstruction will yield llr values close to `` 0 '' , and not values consistent with a high - probability for being upward - going . 
+ the slope distributions for cosmics ( red ) and wimpsim ( blue ) mc samples.,width=576 ]     the llr distributions for cosmics ( red ) and wimpsim ( blue ) mc samples . 
+ note that only tracks longer then 5 m and with more than 50 hits are included.,width=384 ] 
+ a timing - based upward - going muon trigger was implemented for the no@xmath0a far detector and was deployed in november 2014 . 
+ triggering at @xmath37hz , the algorithm suppresses cosmic ray muons by five orders of magnitude .     on 
+ the left is a display of a triggered event that is a strong candidate , based on its topology , for an upward - going muon . 
+ the activity at the bottom right indicates a cc scattering interaction . 
+ the curving at the other end probably indicates that the muon ranged out . 
+ there is also evidence for a michel electron , based on the timing information on the right . 
+ this event confirms that the llr algorithm is successfully selecting upward - going muons in the data.,title="fig:",width=384 ]   on the left is a display of a triggered event that is a strong candidate , based on its topology , for an upward - going muon . 
+ the activity at the bottom right indicates a cc scattering interaction . 
+ the curving at the other end probably indicates that the muon ranged out . 
+ there is also evidence for a michel electron , based on the timing information on the right . 
+ this event confirms that the llr algorithm is successfully selecting upward - going muons in the data.,title="fig:",width=192 ]    as can be seen in fig . 
+ [ fig : conc_example ] , events with probable michel electrons and contained vertices have been used to confirm upward - going muons in the triggered sample . 
+ atmospheric neutrinos generated on the other side of the earth are also capable of producing upward - going muons in the detector . 
+ these events represent an irreducible background in this search . 
+ the only method of discriminating atmospheric neutrino events from wimp events is to reconstruct the directionality of the incident neutrinos , which has yet to be attempted in no@xmath0a . 
+ the accumulating data sample opens the door to a program to study atmospheric neutrinos and sets the stage for a competitive dark matter search by the no@xmath0a experiment . 
+ this conference presentation was made possible by a grant from the university of virginia college of arts and sciences . 
+ additional financial support was provided by the jefferson trust , the uva physics department , and the fermilab particle physics division . 
+ the authors also acknowledge that support for this research was carried out by the fermilab scientific and technical staff . 
+ fermilab is operated by fermi research alliance , llc under contract no . 
+ de - ac02 - 07ch11359 with the united states department of energy . 
+ the university of virginia particle physics group is supported by de - sc0007838 . 
+ 7    j.  s.  hagelin , k.  w.  ng and k.  a.  olive , phys . 
+ b * 180 * , 375 ( 1986 ) . 
+ j.  buckley , d.  f.  cowen , s.  profumo , a.  archer , m.  cahill - rowley , r.  cotta , s.  digel and a.  drlica - wagner _ 
+ _ , arxiv:1310.7040 
+ . m.  fischler , c.  green , j.  kowalkowski , a.  norman , m.  paterno and r.  rechenmacher , j.  phys . 
+ ser .   * 396 * , 012020 ( 2012 ) .
+Generated:  
+ m.  fischler , c.  green , j.  kowalkowski , a.  norman , m.  paterno and r.  rechenmacher , j.  phys . 
+ ser .   * 404 * , 012002 ( 2013 ) . 
+ m.  fischler , c.  green , j.  kowalkowski , a.  norman , m.  paterno and r.  rechenmacher , j.  phys . 
+ ser .   * 404 * , 012003 ( 2013 ) . 
+ m.  fischler , c.  green , j.  kowalkowski , a.  norman , m.  paterno and r.  rechenmacher , j.  phys . 
+ ser .   * 404 * , 012004 ( 2013 ) . 
+ m.  fischler , c.  green , j.  kowalkowski , a.  norman , m.  paterno and r.  rechenmacher , j.  phys . 
+ ser .   * 404 * , 012005 ( 2013 ) . 
+ m.  fischler , c.  green , j.  kowalkowski , a.  norman , m.  paterno and r.  rechenmacher , j.  phys . 
+--------------------------------------------------------------------------------
+
+Sample 17:
+Input: nuclei in interaction with external fields display a wide variety of collective vibrations known as giant resonances , associated with various degrees of freedom and multipolarities . 
+ the giant isovector dipole resonance and the giant isoscalar quadrupole resonance are the most studied examples in this class of phenomena . 
+ a particular mode , that is associated with vibrations in the number of particles , has been predicted in the 70s@xcite and discussed , under the name of giant pairing resonance , in the middle of the 80 s in a number of papers@xcite . 
+ this phenomenon , despite some early efforts aimed to resolve some broad bump in the high - lying spectrum in ( p , t ) reactions@xcite , is still without any conclusive experimental confirmation . for a discussion , in particluar in connection with two - particle transfer reactions , on many aspects of pairing correlations in nuclei 
+ we refer to a recent review@xcite . 
+ we have studied the problem of collective pairing modes at high excitation energy in two neutron transfer reactions with the aim to prove the advantage of using unstable beam as a new tool to enhance the excitation of such modes @xcite . 
+ the main point is that with standard available beams one is faced with a large energy mismatch that strongly hinders the excitation of high - lying states and favours the transition to the ground state of the final system . 
+ instead the optimum q - value condition in the ( @xmath3he,@xmath4he ) stripping reaction suppresses the ground state and should allow the transition to 10 - 15 mev energy region . 
+ we have performed particle - particle rpa calculations on lead and bcs+rpa on tin , as paradigmatic examples of normal and superfluid systems , evaluating the response to the pairing operator . 
+ subsequently the two - neutron transfer form factors have been constructed in the framework of the macroscopic model@xcite and used in dwba computer codes . 
+ we have estimated cross - sections of the order of some millibarns , dominating over the mismatched transition to the ground state . 
+ recently we added similar calculations on other much studied targets to give some guide for experimental work . 
+ the formal analogy between particle - hole and particle - particle excitations is very well established both from the theoretical side@xcite and from the experimental side for what concern low - lying pairing vibrations around closed shell nuclei and pairing rotations in open shells . 
+ the predicted concentration of strength of a @xmath5 character in the high - energy region ( 8 - 15 mev for most nuclei ) is understood microscopically as the coherent superposition of 2p ( or 2h ) states in the next major shell above the fermi level . 
+ we have roughly depicted the situation in fig . 
+ ( [ fig1 ] ) .    in closed shell nuclei the addition of a pair of particles ( or holes ) to the next major shell , with a total energy @xmath6 , is expected to have a high degree of collectivity . 
+ also in the case of open shell nuclei the same is expected for the excitation of a pair of particles with @xmath7 energies . 
+ for normal nuclei the hamiltonian with a monopole strength interaction reads : @xmath8 where @xmath9 annihilates a pair of particles coupled to @xmath10 total angular momentum .    getting rid of all the technicalities of the solution of the pp - rpa equations ( that may be found in the already cited work by the author ) we merely state that the pairing phonon may be expressed as a superposition of 2p ( or 2h ) states with proper forward and backward amplitudes ( @xmath11 and @xmath12 ) . 
+ the pair transfer strength , that is a measure of the amount of collectivity of a each state @xmath13 , is given by : @xmath14 . 
+ \label{p5}\ ] ] this quantity is plotted in the first column of fig . 
+ ( [ fig2 ] ) for the removal ( upper panel ) and addition mode ( lower panel ) . in the same figure 
+ are reported the pairing strength parameters for the states of @xmath1sn . to obtain these last quantities for superfluid spherical 
+ nuclei one has to rewrite the hamiltonian according to the bcs transformation and has to solve more complex rpa equations . in this case 
+ the pairing strength for the addition of two particles is given , for each state @xmath13 , by : @xmath15_{00}|0\rangle =   \sum_{j } \sqrt{2j+1 } [ u^{2}_{j } x_{n}(j ) + v^{2}_{j}y_{n}(j)]\ ] ] where the @xmath16 and @xmath17 are the usual occupation probabilities . 
+ the amount of collectivity is a clear signal of the structural existence of giant pairing vibrations in the high - lying energy region . 
+ we also report here a number of analogous results for other commonly studied targets    = 9.4pc    = 9.4pc    = 9.4pc    with the aim of giving some indications to experimentalists on the reasons why we think that lead and tin are some of the most promising candidates . 
+ we have studied two isotopes of calcium with closed shells . 
+ even if the absolute magnitudes of the @xmath18 is lower , it is worthwhile to notice that some enhancement is seen in the more neutron - rich @xmath19ca with respect to @xmath20ca . 
+ an important role in this change is certainly due to the different shell structure of the two nuclei as well as to the scheme that we implemented to obtain the set of single particle levels . 
+ the latter is responsible for the collectivity of the removal modes in both ca isotopes and also for the difficulty in finding out a collective state in the addition modes . 
+ we display also results for @xmath21zr where the strength is much more fragmented and the identification of the gpv is more difficult . in the work of broglia and bes estimates for the energy of the pairing resonance are given as @xmath22 mev and @xmath23 mev for normal and superfluid systems respectively . 
+ our figures follow roughly these prescriptions based on simple arguments ( and much more grounded in the case of normal nuclei ) as evident from table [ ta1 ] . 
+ .comparison of position of gpv between our calculation and the broglia and bes estimate . 
+ [ cols="^,^,^",options="header " , ]     = 13.8pc    = 13.8pc    these cross - sections have been derived for sharp states , and we refer to the numbers in the last table when speaking of order of magnitude estimates . obviously cross - section in the high - lying energy region have a finite ( and large ) width that should be inserted for a more realistic description of the spectrum . 
+ we have chosen a simple scheme that gives a lorentzian distribution with a width that grows quadratically with the excitation energy , @xmath24 , with @xmath25 adjusted to give a width of 4 mev for the gpv . 
+ this could seem rather arbitrary since there is no reason for an _ a priori _ assignment of this quantity . 
+ we have been brought to this simple prescription because other collective states ( of different nature ) lying in the same energy region display similar values for their width , and it is reasonable to assume some rule to narrow the low - energy states and to broaden the high - energy ones . 
+ the final achievements for the four reactions studied in detail are presented in figure [ fig4 ] where the areas corresponding to the cross - sections given above have been shaded to give a feeling of the relative magnitudes of the transition to the ground states and to the gpv s . it is worthwhile to note that in the case of pb there is a considerable gain in using unstable beams , while in sn is much less evident . 
+ one sees the need for unstable helium when compares the magnitude for the pairing resonance in the right a ) and b ) panels with the peak at zero energy : in the first panel the transition to the ground state is extremely hindered . 
+ a @xmath3he beam is currently available ( or it will be available in the very near future ) in many radioactive ion beams facilities around the world and the calculations that we have presented could allow a planning for future experiments aimed to study the not yet completely unraveled role of pairing interaction in common nuclei , using exotic weakly bound nuclei as useful tools . 
+ the author wishes to gratefully acknowledge discussions with andrea vitturi , hugo sofia and wolfram von oertzen on various aspects of theoretical and experimental nuclear physics . 
+ the participation at the _ vii international school - seminar on heavy ion physics , dubna , russia _ 2002 has been supported by the infn . 
+ xxxx r.a.broglia and d.r.bes , plb691291977 . 
+ m.w.herzog , r.j.liotta and l.j.sibanda , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ et al _ , prl 3914511977 . 
+ w.von oertzen and a.vitturi , _ rep . 
+ phys . _ * 64 * , 1247 - 1337 , ( 2001 ) . 
+ l.fortunato , w.von oertzen , h.m.sofia and a. vitturi , _ eur . 
+ _ a * 14 * , ( 2002 ) , in press . c.h.dasso and a.vitturi ( editors ) , 
+ _ collective aspects in pair transfer phenomena _ , sif proc . 
+ 18 , ( editrice compositori bologna , 1987 ) . 
+ d.r.bes and r.a.broglia , _ phys . 
+ _ c * 3 * , 2349 , ( 1971 ) . 
+ c.h.dasso and g.pollarolo , plb 1552231985 . 
+ c.h.dasso and a.vitturi , prl 596341987 .
+Generated:  
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.vitturi , _ phys . 
+ _ c * 31 * , 259 , ( 1985 ) . 
+ c.h.dasso and a.v
+--------------------------------------------------------------------------------
+
+Sample 18:
+Input: the schwinger - dyson ( sd ) equation is one of the most popular approaches to investigate the non - perturbative features of quantum field theory . 
+ the analyses by making use of the sd equation for quark propagator are well - known . 
+ recently , the coupled sd equations for the gluon and ghost propagators in yang - mills theory have been studied mainly in the lorentz ( landau ) gauge.@xcite in this paper , we derive the sd equations for the @xmath0 yang - mills theory in the maximal abelian ( ma ) gauge and solve them analytically in the infrared ( ir ) asymptotic region . 
+ the ma gauge is useful to investigate the yang - mills theory from the view point of the dual superconductivity .    in the ma gauge , in contrast to the ordinary lorentz gauge 
+ , we must explicitly distinguish the diagonal components of the fields from the off - diagonal components . 
+ this is indeed the case even in the perturbative analysis in the uv region.@xcite therefore , we must take account of the four propagators for the diagonal gluon , off - diagonal gluon , diagonal ghost and off - diagonal ghost 
+ . numerical behaviors of gluon propagators in the ma gauge are also investigated on a lattice simulation.@xcite 
+ first , we derive the sd equations from the @xmath0 yang - mills action in the ma gauge@xcite . the graphical representation of sd equations are shown in figure  [ fig : sde ] . 
+ = .001 in    ( 6000,1800 ) ( 0,-200)(0,500)(0,150)(450,300)(600,160)(800,200)(1250,300)(1400,160)(1600,0)(2000,350)(2200,160)(2400,160)(3600,160)(3800,160)(0,1000)(0,150)(450,300)(600,160)(800,200)(1250,300)(1400,160)(1600,100)(2000,350)(2200,160)(2400,160)(3600,160)(3800,160)(0,1500)(0,150)(0,250)(450,300)(600,160)(800,200)(1000,250)(1250,300)(1400,160)(1600,0)(1570,230)(2200,160)(2400,0)(2370,230)(3000,160)(3200,160)(4400,160)(4600,160)(0,0)(0,150)(0,250)(450,300)(600,160)(800,200)(1000,250)(1250,300 )    for the diagonal gluon propagator , we adopt the landau gauge so that the diagonal gluon propagator @xmath1 has only the transverse part @xmath2 where we defined the form factor @xmath3 . while , the off - diagonal gluon propagator @xmath4 has both the transverse and longitudinal parts @xmath5\delta^{ab},\ ] ] where we defined the form factors @xmath6 and @xmath7 . 
+ the form factor @xmath8 for the off - diagonal ghost propagator @xmath9 is defined @xmath10 the diagonal ghost propagator is decoupled from the other fields so that we omit it hereafter . 
+ now , we write down the sd equations : @xmath11 @xmath12 and @xmath13 here the contributions from the two - loop graphs have been omitted . 
+ the full form of sd equations will be given in a separate paper@xcite . 
+ @xmath14 is the full vertex function for the diagonal gluon , off - diagonal ghost and off - diagonal antighost interaction , while @xmath15 is the full vertex function for an interaction of the diagonal gluon and two off - diagonal gluons , and the superscript `` @xmath16 '' means a _ bare _ propagator or vertex function .    in the ma gauge 
+ , we obtain the slavnov - taylor ( st ) identities @xmath17 @xmath18 
+ in order to solve the sd equations analytically , we employ the following approximations . 
+ @xmath19    we neglect the two - loop contributions .    instead of the full vertex functions , 
+ we adopt modified vertex functions which are compatible with the st identities . 
+ we adopt approximations for vertex functions as @xmath20 and @xmath21 here , we adopt the feynman gauge for the off - diagonal gluon for simplicity , that is , @xmath22 and @xmath23 . substituting the bare form factors , which are @xmath24 , into the right hand side of the ansatz ( [ eq : acc ] ) and ( [ eq : aaa ] ) 
+ , we obtain the bare vertex functions . 
+ moreover , these ansatz are compatible with the st identities  ( [ eq : sti - c ] ) and ( [ eq : sti - a ] ) in the limit of @xmath25 .    in the momentum integration 
+ , we use the higashijima - miransky approximation@xcite as @xmath26 
+ now we adopt the ansatz for the form factors in the ir region : @xmath27 g(p^2 )   = b(p^2)^v+\cdots,\\[1 mm ] f_{\rm t}(p^2 )   = c(p^2)^w+\cdots . \end{array } \label{eq : ir solutions}\ ] ] substituting the ansatz ( [ eq : ir solutions ] ) for the form factors , and the ansatz  ( [ eq : acc ] ) and ( [ eq : aaa ] ) for vertex functions into the sd equations ( [ eq : diagonal gluon ] ) , ( [ eq : off - diagonal ghost ] ) and ( [ eq : off - diagonal gluon ] ) , and comparing the leading term in the both sides of each equation , we obtain the following results for @xmath22 .    from eqs . 
+ ( [ eq : off - diagonal ghost ] ) and ( [ eq : off - diagonal gluon ] ) , we obtain the relations @xmath28 and @xmath29 .    in the case of @xmath30 and @xmath31 , from the eq . 
+ ( [ eq : diagonal gluon ] ) , we obtain the relation @xmath32 so that @xmath33 is less than @xmath34 .    in the case of @xmath35 and @xmath31 , we need redefine the form factor @xmath8 as @xmath36 with @xmath37 since contributions from the leading term of @xmath8 are canceled each other in the ansatz ( [ eq : acc ] ) . 
+ therefore we need the information of next leading term of the form factor @xmath8 . in this case 
+ we obtain the relation @xmath38 from the eq . 
+ ( [ eq : diagonal gluon ] ) so that @xmath33 is also less than @xmath34 . 
+ next , we consider the case of @xmath30 and @xmath39 . as well as the above case , we need redefine the form factor @xmath6 as @xmath40 with @xmath41 and we obtain the relation @xmath42 ( @xmath43 ) . 
+ similarly , in the case of @xmath44 , we obtain the relation @xmath45 ( @xmath43 ) . 
+ the results are summarized in table  [ tbl : feynman gauge ] . 
+ @xmath32 & @xmath42 @xmath35 & @xmath38 & @xmath45    [ tbl : feynman gauge ]    in the gauge other than the feynman gauge , that is , @xmath46 , the calculation and discussion are very tedious 
+ . however , the qualitative results are identical to the above case except for the following one point . in this case , even if @xmath39 , there occurs no cancellation as in the above two cases 2c and 2d . 
+ this is because the off - diagonal gluon propagator has the momentum dependent tensor structure for @xmath46 , while it is proportional to @xmath47 for @xmath22 . 
+ therefore , we obtain the relation @xmath48 in the case of @xmath39 . 
+ ( see table  [ tbl : not feynman gauge ] . ) 
+ @xmath30 & @xmath32 & @xmath48 @xmath35 & @xmath38 & @xmath48    [ tbl : not feynman gauge ] 
+ in the ir limit , the form factors of each propagator behave as @xmath49 @xmath50 @xmath51 therefore the solution shows that the diagonal gluon propagator is enhanced in the ir limit , while the off - diagonal gluon and off - diagonal ghost propagators are suppressed in the ir region . 
+ our results are compatible with a hypothesis of abelian dominance@xcite .
+Generated:  
+ in the next section , we investigate the numerical behaviors of the gluon propagators in the ma gauge on a lattice simulation . 
+ @xcite 1. 
+ y. nambu , k. ohnishi , y. takahashi , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki , y. yamawaki , k. yamawaki ,
+--------------------------------------------------------------------------------
+
+Sample 19:
+Input: it is common accepted that braking of pulsars is caused by the magneto - dipole radiation of the rotating magnetic star . in this case 
+ the rate of losses of the neutron star rotation energy can be equated to the power of its magneto - dipole radiation : @xmath1 + where _ i _ is the moment of inertia of the neutron star , @xmath2 - the angular speed of its rotation , @xmath3 - its magnetic moment , @xmath0 - the angle between the rotation axis and the magnetic moment , _ c _ - speed of light . for standard parameters of neutron stars : masses of order of the solar mass ( @xmath4 ) and radii _ r _ of order of @xmath5 cm we can put _ i _ = @xmath6 . for the magnetic moment 
+ we have @xmath7 + here @xmath8 is the magnetic induction at the magnetic pole , @xmath9 ? 
+ the induction at the magnetic equator . instead of @xmath2 the rotation period @xmath10 
+ is usually measured and we can obtain from ( 1 ) and ( 2 ) : @xmath11 + this equality is used usually to calculate magnetic inductions of pulsars assuming that @xmath12 for all objects . the known catalogs ( see , for example manchester et al 
+ . , 2005 ) contain as a rule @xmath9 instead of @xmath8 . 
+ here we propose to decline the assumption on the constancy of @xmath13 and use some estimations of this parameter to calculate more accurate values of pulsar magnetic inductions . 
+ in a number of our works ( malov & nikitina , 2011a , b , 2013 ) some methods for calculations of the angle @xmath0 have been put forward and applied to some catalogs of pulsars ( keith et al . , 2010 ; van ommen et al . , 1997 ; weltevrede & johnston , 2008 ) at approximately 10 , 20 and 30 cm . 
+ basic equations for this aim are ( manchester & taylor , 1977 ) : @xmath14    @xmath15     + here @xmath16 is the angle between the line of sight and the rotation axis , @xmath17 - the angular radius of the emission cone , @xmath18 - a half of the angular width of the observed pulse , @xmath19 - the position angle of the linear polarization , @xmath20 - longitude .      the simplest case for the calculations of the angle @xmath0 is realized when the line of sight passes through the center of the emission cone , i.e. @xmath21 + in this case we can use the dependence of the observed pulse width @xmath22 at the @xmath23 level on the rotation period and determine the lower boundary in the corresponding diagram to obtain @xmath24 + as the result we have from ( 4 ) , ( 5 ) and ( 7 ) ( malov & nikitina , 2011a ) :    @xmath25     + the values of angles calculated by this method are denoted as @xmath26 and given in the table 1 . 
+ usually polarization measurements are made inside the pulse longitudes only . in this case 
+ we can use the maximal derivative of the position angle . from ( 5 ) we have @xmath27    we can obtain from the dependence of @xmath22 on _ p _ by the least squares method @xmath28 + the third equation for the calculations of the angle @xmath0 is ( 4 ) . from these three equations we obtain @xmath29y^2 + 2c(d - b^2)y+c^2d^2-b^2(1+c^2)=0.\\\ ] ] + here    @xmath30 
+ + we can transform the equation ( 9 ) to the following form    @xmath31     + then finding the value of y from the equation ( 11 ) we can calculate @xmath0 from ( 13 ) . 
+ we have calculated values of @xmath0 by this method and list them in the table 1 as @xmath32 . here 
+ we correct the misprint in the equation ( 11 ) made in our papers ( malov & nikitina , 2011a , b , 2013 ) . 
+ there is an additional way to calculate angles @xmath0 . 
+ this way uses observable values of position angles and shapes of average profiles for individual pulsars . in this case , original equations form the closed system for calculations of the angles @xmath17 , @xmath16 and @xmath0 :    @xmath33    as the observed pulsar profiles have various forms , the coefficient _ 
+ n _ has a different value depending on a profile structure . 
+ we put arbitrary the following values of _ n _ ( fig.1 ) . if the ratio of the intensity @xmath34 in the center of the pulse to the maximal intensity @xmath35 is zero then @xmath36 . for @xmath37 @xmath38 , @xmath39 @xmath40 , @xmath41 @xmath42 , and for @xmath43 @xmath44 . 
+ it is worth noting that the solution of the system ( 14 ) can be obtained numerically for any value of _ 
+ n_.        for example , if @xmath45 , the solution for @xmath46 can be obtained from the equation :    @xmath47    at n = 2 :    @xmath48 y^4 + 2c \left [ c^2 ( 1 + d - 2d^2 ) - 2 - d \right ] y^3 + \left [ 2dc^4 ( 1 - d ) - \right . 
+ . - c^2 ( 2d^2 - 6d + 7 ) + 5 \right ] y^2   + 2c \left [ c^2 d^2 + d(1 + c^2 ) - 2 ( c^2 - 1 ) \right ] y + c^2 d^2 ( 1 + c^2 ) - ( c^2 - 1)^2 = 0;\\ \end{array}\ ] ]    at n = 3/2 :    @xmath49 \sqrt{\frac{1 + \frac{c + y}{\sqrt{c^2 + 2cy + 1}}}{2 } } - c y^2 ( 1 - d ) - y - cd = 0;\ ] ]    at n = 5/4 :    @xmath50    this method gives angles @xmath51 ( see the table 1 ) .    for some pulsars calculations 
+ were made by one method only . when it was possible we used two or all three methods . in these cases , 
+ the mean value of the angle @xmath0 has been calculated . 
+ the resulting values @xmath52 are listed in the table 1 . 
+ some other authors ( for example , kuzmin & dagkesamanskaya , 1983 ; kuzmin et al . , 1984 ; 
+ lyne & manchester , 1988 ) carried out calculations of the angle @xmath0 earlier for the shorter samples of pulsars using some additional assumptions . 
+ we will use further our estimations to calculate magnetic inductions at the surface of the neutron stars . 
+ the distribution of the angles @xmath0 from the table 1 ( fig.2 ) shows that the majority of pulsars have rather small inclinations of the magnetic moments . 
+ these pulsars are old enough , and we can conclude that they evolve to the aligned geometry . 
+ the average characteristic age for our sample of pulsars is @xmath53 years . 
+ we must note however that the angles calculated by the method * _ 1 ) _ * are the lower limits of this parameter . 
+ this explains partly the predominance of the small values of @xmath0 .     from the table 1.,width=453 ] 
+ .values of the angle @xmath0 ( deg ) . [ cols="^,^,^,^,^,^,^,^,^,^,^ " , ] 
+ 1 .   some methods for calculations of the angle @xmath0 between rotation and magnetic axes were applied to obtain the values of @xmath0 for 376 radio pulsars . 
+ the distribution of these values shows the predominance of small inclinations of the magnetic axes . 2 . 
+ magnetic inductions at the surface of 375 pulsars considered were calculated . 
+ there is no the measured derivative @xmath54 for the pulsar j1713 - 3949 and it is excluded from the consideration . 
+ the distribution of the calculated magnetic inductions can be described by the gaussian with the maximal value of @xmath55 and the width in the logarithmic scale nearly 1 . 
+ the calculated inductions are higher than the catalog equatorial inductions with the mean value of the ratio of these quantities of 5 . for the pulsar j1410 - 7404 @xmath56 . the maximal value of the ratio @xmath57 for the pulsar j2007 + 0809 . 
+ this work has been carried out with the financial support of basic research program of the presidium of the russian academy of sciences * _ transitional and explosive processes in astrophysics _ * ( p-41 ) . 
+ we thank a.v.biryukov for very useful comments and discussions . 
+ 99 keith m.j . , johnston s. , weltevrede p. and kramer m. , 2010 , mnras , 402 , 745 kuzmin a.d . , 
+ dagkesamanskaya i.m . , 1983 
+ , soviet astron . 
+ letters , 9 , 80 kuzmin a.d . , 
+ dagkesamanskaya i.m . , 
+ pugachev v.d . , 
+ 1984 , soviet astron . letters , 10 , 357 lyne a.g . , 
+ manchester r.n . , 1988 , 
+ mnras , 243 , 477 manchester r.n . 
+ , taylor j.h . , 1977 , pulsars . 
+ w.h.freeman and company , san francisco manchester r.n . 
+ et al . , 2005 , 
+ j. , 129 , 1993 . 
+ malov i.f . , 
+ nikitina e.b . , 2011a , astron.rep . , 55 
+ , 19 malov i.f . , 
+ nikitina e.b . , 2011b , astron.rep . , 55 , 878 malov i.f . , nikitina e.b 
+ , 2013 , astron.rep . , 57 , 833 van ommen t.d . 
+ et al . , 1997 , 
+ mnras , 287 , 1210 weltevrede p. , johnston s. , 2008 , mnras , 391 , 1210
+Generated:  
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+ . 
+--------------------------------------------------------------------------------
+
+Sample 20:
+Input: one of the most promising solutions to the hierarchy problem is the randall - sundrum ( rs ) model @xcite . in this model 
+ there is a single extra dimension compactified on @xmath1 with the non - factorizable metric of @xmath2 @xmath3 here @xmath4 is the extra - dimensional coordinate , and @xmath5 is the inverse of the @xmath6 curvature , @xmath7 . 
+ two branes define the boundaries of the extra dimension . 
+ one , at @xmath8 , is called the uv , or planck , brane . 
+ the other , at @xmath9 , is the ir , or tev , brane . picking @xmath10 , which is natural in realistic stabilization mechanisms , 
+ solves the hierarchy problem @xcite .    in the original rs model 
+ the sm was confined to the ir brane , and only gravity propagated in the bulk @xcite . 
+ it has since been realized that both gauge and fermion fields can live in the bulk in a realistic model @xcite . 
+ these models are realistic , but the parameter space can be strongly reduced by precision electroweak constraints . 
+ much of this problem can be traced to the fact that the massive gauge fields receive a contribution to their mass from the bulk geometry which does not respect the custodial @xmath11 . 
+ this can be fixed by expanding the gauge group to @xmath12 , which dramatically improves the electroweak fit @xcite . 
+ the breaking of this extended electroweak symmetry proceeds in two stages : on the uv brane @xmath13 ; on the ir brane @xmath14 , where @xmath15 is the diagonal of the @xmath16 groups . 
+ this paper investigates the properties of the higgs sector that accomplishes this breaking . 
+ we now ask what drives the breaking on each brane . on the planck brane 
+ all degrees of freedom will have planck scale masses , so we can ignore them . 
+ we can then implement the breaking with boundary conditions to good approximation . 
+ this leads to the boundary conditions at @xmath8 @xmath17 here @xmath18 and @xmath19 are ratios of 5d gauge couplings : @xmath20 , and @xmath21 .    on the tev brane 
+ , the masses will be tev scale , so we should look at the higgs sector in detail . the simplest structure that will create 
+ the breaking pattern is a real higgs that is a bidoublet under @xmath22 . 
+ this leads to the boundary conditions at @xmath9 @xmath23 note that in the @xmath24 limit we obtain the usual higgsless boundary conditions , and this model reduces to the higgsless model in @xcite 
+ . we will use this parameter , @xmath25 to interpolate between the sm limit ( @xmath26 ) , and the higgsless limit . 
+ [ fig : wroot ]    to write down the effective 4d theory , we expand the 5d fields into kaluza klein ( kk ) fields , @xmath27 we can now obtain the gauge boson wavefunctions by solving the equation of motion subject to the boundary conditions ( [ eq : gaugebcr ] ) and ( [ eq : gaugebcrp ] ) . 
+ this produces a spectrum of eigenvalues corresponding to the excitations of the gauge fields . 
+ the lowest masses in each of the charged and neutral sectors will correspond to the @xmath28 and @xmath29 bosons . 
+ the neutral sector also contains a zero mode , corresponding to the photon . 
+ fig [ fig : wroot ] shows the eigenvalue for the @xmath28 as a function of the parameter @xmath25 . 
+ [ fig : wcoup ] 
+ one interesting feature of this model is that the @xmath28 and @xmath29 wavefunctions are suppressed near the ir brane , as can be seen by inspecting the boundary conditions 
+ . this suppression increases for increasing @xmath25 . 
+ this means that the coupling of massive gauge bosons to the higgs will generically be suppressed . 
+ [ fig : wcoup ] shows the coupling of the @xmath28 to the higgs . for values of @xmath25 near unity 
+ the lep bounds on the higgs mass can be dramatically reduced . 
+ ( for larger values of @xmath25 the model is effectively higgsless . ) 
+ the fermion sector of this model is more complicated . 
+ again , the higgs vev induces mixed boundary conditions that link left and right handed fields to give the fermions masses . 
+ however , there are two new degrees of freedom . first 
+ , since 5d fermions are achiral , ther can always be a mass term in the bulk @xmath30 . 
+ the main effect of this term is to shift the location of the fermion zero mode in the bulk . by changing this parameter 
+ we can cause the zero mode to be localized either near the uv or ir brane , and also can change the degree of this localization . 
+ this allows us to control the overlap of the zero mode with the ir brane , and consequently the strength with which the fermion interacts with the higgs . in this way 
+ the hierarchy of fermion masses can be generated by order one changes in the 5d masses . 
+ the second complication arises from the @xmath31 symmetry which enforces that , for example , @xmath32 if unbroken . 
+ this mass relation can be modified by mixing with new fermions localized to the planck brane , where the @xmath31 is broken . for full details , see @xcite .    note that there are tree - level corrections to precision electroweak observables , coming largely from the kk excitations of the gauge bosons . 
+ unfortunately , the magnitude of these corrections is highly sensitive to the configuration of the fermion sector . for the specific configuration studied in @xcite 
+ we find the constraint @xmath33 . 
+ there are , however , special points in the fermion parameter space where the constraint becomes trivial , so a wide range of @xmath25 should be considered . 
+ the final interesting shift in higgs properties is in the couplings to massless gauge bosons , _ 
+ i.e. _ gluons and photons . 
+ the coupling of the higgs to gluon pairs is induced through top loops . however , in this model the kk excitations also couple to the higgs . 
+ furthermore , note that we have arranged small 4d yukawa couplings for the other fermions by small wavefunction overlaps with the would - be zero modes . 
+ the 5d yukawa couplings are all order 1 , and the excited states have _ no _ wavefunction suppression . 
+ hence there are large contributions to the higgs - glue - glue coupling from the kk excitations of _ all _ colored fermions . 
+ this leads to an enhancement in that coupling , as seen in fig . 
+ [ fig : hgg ] . 
+ there are similar corrections to the higgs - gamma - gamma coupling . 
+ the situation there is more complicated , however , since there are also contributions from @xmath28 boson loops , which are dominant in the sm , and the higgs coupling to @xmath28s is suppressed . 
+ we can now look at the behavior of the higgs branching ratios , as shown in fig . 
+ [ fig : widthbr ] . note in particular the dominance of @xmath34 over a wide range , and the late onset of @xmath35 . 
+ this is driven by the @xmath31 symmetry , which gives a large enhancement of the @xmath36-quark yukawa , and the suppression of the gauge boson couplings . 
+ note also the reduction in the @xmath37 mode . 
+ this will make discovery at the lhc difficult . 
+ the suppression of the coupling to gauge bosons also means that production at the ilc will be reduced , making this higgs a particularly difficult one to find . 
+ however , it will be essential to measure the higgs couplings with precision to identify a warped extra dimension as the correct theory of new physics , if indeed this is what is realized in nature . 
+ 9 b.  lillie , arxiv : hep - ph/0505074 . 
+ l.  randall and r.  sundrum , phys . 
+ lett .   * 83 * , 3370 ( 1999 ) [ arxiv : hep - ph/9905221 ] . 
+ w.  d.  goldberger and m.  b.  wise , phys . 
+ * 83 * , 4922 ( 1999 ) [ arxiv : hep - ph/9907447 ] . 
+ h.  davoudiasl , j.  l.  hewett and t.  g.  rizzo , phys . 
+ lett .   * 84 * , 2080 ( 2000 ) [ arxiv : hep - ph/9909255 ] . h.  davoudiasl , j.  l.  hewett and t.  g.  rizzo , phys . 
+ b * 473 * , 43 ( 2000 ) [ arxiv : hep - ph/9911262 ] and phys . 
+ d * 63 * , 075004 ( 2001 ) [ arxiv : hep - ph/0006041 ] ; a.  pomarol , phys . 
+ b * 486 * , 153 ( 2000 ) [ arxiv : hep - ph/9911294 ] ; y.  grossman and m.  neubert , phys . 
+ b * 474 * , 361 ( 2000 ) [ arxiv : hep - ph/9912408 ] ; t.  gherghetta and a.  pomarol , nucl . 
+ b * 586 * , 141 ( 2000 ) [ arxiv : hep - ph/0003129 ] . 
+ k.  agashe , a.  delgado , m.  j.  may and r.  sundrum , jhep * 0308 * , 050 ( 2003 ) [ arxiv : hep - ph/0308036 ] . c.  csaki , c.  grojean , h.  murayama , l.  pilo and j.  terning , phys . 
+ d * 69 * , 055006 ( 2004 ) [ arxiv : hep - ph/0305237 ] . c.  csaki , c.  grojean , l.  pilo and j.  terning , phys . 
+ * 92 * , 101802 ( 2004 ) [ arxiv : hep - ph/0308038 ] . 
+ g.  cacciapaglia , c.  csaki , c.  grojean and j.  terning , phys . 
+ d * 70 * , 075014 ( 2004 ) [ arxiv : hep - ph/0401160 ] and phys . 
+ d * 71 * , 035015 ( 2005 ) [ arxiv : hep - ph/0409126 ] ; g.  cacciapaglia , c.  csaki , c.  grojean , m.  reece and j.  terning , arxiv : hep - ph/0505001 . y.  nomura , jhep * 0311 * , 050 ( 2003 ) [ arxiv : hep - ph/0309189 ] . 
+ r.  barbieri , a.  pomarol and r.  rattazzi , phys . 
+ b * 591 * , 141 ( 2004 ) [ arxiv : hep - ph/0310285 ] . 
+ h.  davoudiasl , j.  l.  hewett , b.  lillie and t.  g.  rizzo , phys . 
+ d * 70 * , 015006 ( 2004 ) [ arxiv : hep - ph/0312193 ] and jhep * 0405 * , 015 ( 2004 ) [ arxiv : hep - ph/0403300 ] ; j.  l.  hewett , b.  lillie and t.  g.  rizzo , jhep * 0410 * , 014 ( 2004 ) [ arxiv : hep - ph/0407059 ] ; r.  s.  chivukula , e.  h.  simmons , h.  j.  he , m.  kurachi and m.  tanabashi , phys . 
+ d * 70 * , 075008 ( 2004 ) [ arxiv : hep - ph/0406077 ] and phys . 
+ b * 603 * , 210 ( 2004 ) [ arxiv : hep - ph/0408262 ] . 
+ a.  birkedal , k.  matchev and m.  perelstein , phys . 
+ * 94 * , 191803 ( 2005 ) [ arxiv : hep - ph/0412278 ] . c.  csaki , c.  grojean , j.  hubisz , y.  shirman and j.  terning , phys . 
+ d * 70 * , 015012 ( 2004 ) [ arxiv : hep - ph/0310355 ] .
+Generated:  
+ d * 70 * , 015013 ( 2004 ) [ arxiv : hep - ph/0310356 ] . 
+ d * 70 * , 015014 ( 2004 ) [ arxiv : hep - ph/0310357 ] . 
+ d * 70 * , 015015 ( 2004 ) [ arxiv : hep - ph/0310358 ] . 
+ d * 70 * , 015016 ( 2004 ) [ arxiv : hep - ph/0310359 ] . 
+ d * 70 * , 015017 ( 2004 ) [ arxiv : hep - ph/0310360 ] . 
+ d * 70 * , 015018 ( 2004 ) [ arxiv : hep - ph/0310361 ] . 
+ d * 70 * , 015019 ( 2004 ) [ arxiv : hep - ph/0310362 ] . 
+ d * 70 * , 015020 ( 2004 ) [ arxiv : hep - ph/0310363 ] . 
+ d * 70 * , 015021 ( 2004 ) [ arxiv : hep - ph/0310364 ] . 
+ d * 70 * , 015022 ( 2004 ) [ arxiv : hep - ph/0310365 ] . 
+ d * 70 * , 015023 ( 2004 ) [ arxiv : hep - ph/0310366 ] . 
+ d * 70 * , 015024 ( 2004 ) [ arxiv : hep - ph/0310367 ] . 
+ d * 70 * , 015025 ( 2004 ) [ arxiv : hep - ph/0310368 ] . 
+ d * 70 * , 015026 ( 2004 ) [ arxiv : hep - ph/0310369 ] . 
+ d * 70 * , 015027 ( 2004 ) [ arxiv : hep - ph/0310370 ] . 
+ d * 70 * , 015028 ( 2004 ) [ arxiv : hep - ph/0310371 ] . 
+ d * 70 * , 015029 ( 2004 ) [ arxiv : hep - ph/0310372 ] . 
+ d * 70 * , 015030 ( 2004 ) [ arxiv : hep - ph/0310373 ] . 
+ d * 70 * , 015
+--------------------------------------------------------------------------------
+Input tokens: 129838, Output tokens: 47606
+Input throughput: 130.58 tokens/s
+Output throughput: 47.88 tokens/s
+Total throughput: 178.45 tokens/s
+Total time: 994.35
+ubuntu@seesaw-instance-inst-32q9tvawur0u9vijar3pojc3ef4:~/workspace/seesaw/cgen$ 
