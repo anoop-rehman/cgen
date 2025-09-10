@@ -11,7 +11,7 @@ build-backend = "setuptools.build_meta"
 name = "cgen"
 requires-python = ">= 3.10"
 dependencies = [
-    "torch==2.4.0", "transformers>=4.24", "loguru", "vllm==0.5.5",
+    "torch==2.4.0", "transformers>=4.24", "loguru", "vllm>=0.6.0",
     "pydantic", "wheel"
 ]
 dynamic = ["version"]
