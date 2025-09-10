@@ -1,0 +1,19 @@
+{
+    "model": "meta-llama/Meta-Llama-3-8B",
+    "tokenizer": "meta-llama/Meta-Llama-3-8B",
+    "max_prefill_tokens": 8192,
+    "prefill_threshold": 0.1,
+    "dist_config_prefill": {
+        "tp_size": 1,
+        "pp_size": 2
+    },
+    "dist_config_decode": {
+        "tp_size": 2,
+        "pp_size": 1
+    },
+    "cache_config": {
+        "num_pages": 500,
+        "page_size": 16,
+        "shared_cache_tokens": 20000
+    }
+}
