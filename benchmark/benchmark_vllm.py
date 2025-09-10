@@ -54,11 +54,9 @@ def run_vllm(
         stop_tokens.append(tokenizer.pad_token)
     
     sampling_params = SamplingParams(
-        temperature=0.1,  # Small temperature for more diverse but still consistent output
-        top_p=0.9,  # Nucleus sampling to prevent repetitive loops
+        temperature=0.0,  # Greedy decoding to match Seesaw
         max_tokens=max_output_tokens,
         stop=stop_tokens,
-        repetition_penalty=1.1,  # Penalize repetition
     )
     
     print(f"Running vLLM benchmark with {len(inputs)} requests...")
