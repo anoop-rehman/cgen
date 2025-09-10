@@ -8,5 +8,6 @@ docker run --gpus=all \
    benchmark/configs/llama3-8b-2xl4.json \
    --dataset sharegpt \
    --dataset-path /datasets/sharegpt.json \
+   --num-requests 50 \
    --hf-token ${HF_TOKEN} \
    --print-output
