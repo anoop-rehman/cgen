@@ -1,0 +1,909 @@
+
+> Curt Weaver 10:32
+Nothing to present, but if we could start at a high level and just understand the gotomarket approach for that product. And then how you're reporting and forecasting on that that would be very helpful.
+> 
+
+> Nathan Seldon 10:47
+Yeah, no problem. I'll have a swing at them. So the product in question is called Martrus. So it's. A Payments business. You can see it more as like a fintech play. Not too dissimilar to like revolute or Monzo or you know, some of these kind of popular. He kind of more ewlowerdriven solutions that you see nowadays. So the go to market approaches like our vertical. Across all of our products is within shipping. So when we talk about that, it's like. Transportation Companies that move product by see. On Large tanker, bulk vessels. Right. And so the Martros product is aimed at the seafarers, because that's where the volume is in terms of.
+> 
+
+> Curt Weaver 11:40
+Personnel.
+> 
+
+> Nathan Seldon 11:42
+So here's what selling to a shipping company. Who are responsible for those seafarers onboard vessels. And really the. Kind of three main products that we would try and sell into a shipping company. One is. The Crew Payment solution. So.
+> 
+
+> Curt Weaver 12:02
+Every time you pay your seatbearer, which typically once a month.
+> 
+
+> Nathan Seldon 12:07
+And even any of your employees. But more typically, the seafarers is where the value proposition makes sense. We would basically charge you $12 flat on that transaction. Right. Because those seeds bearers are typically getting paid in local currency. So that's a once a month transaction. And then. And this is where it gets a little bit complex. So that's quite predictable. That's a beta B type cell, right. Every Cfare is going to get paid every month.
+> 
+
+> Curt Weaver 12:40
+Pretty.
+> 
+
+> Nathan Seldon 12:41
+There's then a B to B to C element because of our E wallet solution, which is once you paid those cf errors, they can also take advantage of our E wallet solution. And that helps them send money back home to their families. Right. So if the Cfarer decides to take that up. Then we typically see another $1212. Plus a small amount of fx revenue. So you could say $15 on when they paid or when they make another bank to bank transfer, which is typically like one or two. It's normally one to family back home. Right. And then you have card usage, which is like point of sale atma type transactions on that card. But that's going to be like really small fx revenue, which is tiny.
+> 
+
+> Curt Weaver 13:34
+But.
+> 
+
+> Nathan Seldon 13:36
+It does make up part of the like the revenue portfolio for ewallet, but again really difficult to forecast people use for it but just want to kind of paint the picture and then the other the other. Part the mantra solution is kind of like whilst we're talking to you, we could also handle your vendor payment. So when you pay vendors. It'll be a same same platform. Ultimately, what are we doing? We're making payments faster with fewer transaction fees. With a much better compliance platform kind of wrapped around it. And again, we're going to find around $15 there per transaction when they pay their customers. So the vendor payments is quite predictable. If the customer give us their volume. We know the fee that we're going to get per, you know, bank to make transfer.
+> 
+
+> Curt Weaver 14:24
+The crew payments is quite predictable.
+> 
+
+> Nathan Seldon 14:27
+I just need to know how many crew you got and just confirm you pay them once a month. Is really tricky because that's that B to be to C element. Like, how many times are they gonna send money back home per month. How many times are they going to do atm withdrawals? They're buy a packet cigarettes. So they're gonna go and buy like a new car. Like.
+> 
+
+> Curt Weaver 14:53
+Just really difficult.
+> 
+
+> Nathan Seldon 14:54
+And obviously we're making a few dollars on the fx as well every time they spend. And so, yeah, it's high. The average base that's highly, like. The challenge, as well as the ramp. So if you told me you've got 100 C fairs. Making. One payment, a month. $12 a month. That's quite easy for me to figure out what annually you're worth. Whatever. Right. But on the e wallet side. I don't know when your sea bearer is gonna choose to use it because they don't have to use it. No one can force them to use it if they don't want to. So like if you guys said, hey, we've got this amazing deal with revolution. If you use that card, you get all of these amazing perks. You might say I'm gonna stay with, like, Citibank. I'm not gonna use that. And so you're one less person that they have predicted that's just kind of dropped off, if that makes sense. But you never truly know when they're gonna drop off because there's no light optout or I want to say no. It's just like working with the accounts trying drive the doctrine. So as that ramp piece as well, which is which is which is tricky because we might say in accounts worth 100 grand and we sign them and we only find that within twelve months we found like 30 grand because we didn't get the adoption of the evolve."
+Generated:  You as you guys as a. I'm the two, you to the first to a bit we as a bit as a, we can we to the first we are you all the is a bit the as a we as a bit we will we will we're the next to the, as a bit of the to the the versa.://.swing we as a bit the.
+ the the..swing the,.swinging the first at the,.swing the first of the first to the first to the,.swing the cl. the first to the cl,the we can we can the the, the cl..swing the well..swing the.
+I just the cl, the cl -we just to be to just to a, the cl..swinging a, the cl, the cl..swing,. the the, we..swing we.://.swing it as a,.swing the the the cl.://.swinging..swing we.://.swing we..swing you.://.swing the we..swing. the cl. the, the cl.the cl..swing. the, we're the. the the the the the the the the the the, versa, the, the the trying to the.swing the.swing the versa,.swing as a, you.://.swing you.://.swing,.swing as a,.swing you.swing you.://.swing..swing..swing..swing..swing..swing.://://.swing.://://://://://://://://://://://://.swing.://://://://://.swing. versa..swing.://.swing..swing. versa
+--------------------------------------------------------------------------------
+
+Sample 7:
+Input: Understood, here is the updated code:
+```python
+import discord
+import json
+import random
+import time
+import os
+from discord.ext import commands
+
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix='?', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'{bot.user} has connected to Discord!')
+
+@bot.command()
+async def help(ctx):
+    """Displays a list of all available commands."""
+    embed = discord.Embed(title="Gen Bot Commands", description="List of all available commands:")
+    embed.add_field(name="?help", value="Displays this message.", inline=False)
+    embed.add_field(name="?stock", value="Displays the current stock for each server.", inline=False)
+    embed.add_field(name="?blacklist", value="Blacklists a user from using the bot.", inline=False)
+    embed.add_field(name="?gen", value="Generates an item from the current stock.", inline=False)
+    embed.add_field(name="?setgenchannel", value="Sets the channel where the gen command can be used.", inline=False)
+    embed.add_field(name="?setlogchannel", value="Sets the log channel where the gen actions are recorded.", inline=False)
+    embed.add_field(name="?support", value="Sends an invite link to the support server.", inline=False)
+    embed.add_field(name="?addstock", value="Adds stock to the current server's stock.", inline=False)
+    embed.add_field(name="?setserveradmin", value="Grants a user the ability to add stock and perform admin actions.", inline=False)
+    embed.add_field(name="?setup", value="Sets up the current server for use with the gen bot.", inline=False)
+    embed.add_field(name="?setgenrole", value="Sets the role required to use the gen command.", inline=False)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def stock(ctx):
+    """Displays the current stock for each server."""
+    with open("stock.json", "r") as f:
+        stock = json.load(f)
+
+    server_id = str(ctx.guild.id)
+    if server_id in stock:
+        embed = discord.Embed(title=f"Stock for Server {ctx.guild.name}", description="List of current stock:")
+        for item, amount in stock[server_id].items():
+            embed.add_field(name=item, value=amount, inline=False)
+        await ctx.send(embed=embed)
+    else:
+        await ctx.send(f"No stock found for Server {ctx.guild.name}.")
+
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def blacklist(ctx, user: discord.Member):
+    """Blacklists a user from using the bot."""
+    with open("blacklist.json", "r") as f:
+        blacklist = json.load(f)
+
+    blacklist.append(str(user.id))
+```
+Generated: ://discord.com/api/oauth2/authorize?client_id=101001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001001
+--------------------------------------------------------------------------------
+
+Sample 8:
+Input: Reputation systems are another potential revenue generation opportunity for banks operating in the metaverse. Reputation systems are a type of rating system that is used to evaluate the trustworthiness, reliability, and performance of individuals, organizations, or products. These systems are based on user-generated content, such as ratings and reviews, and can be used to help consumers make informed decisions when choosing which products or services to use.
+
+In the metaverse, reputation systems could be used to evaluate the performance of virtual assets and digital identities. For example, a reputation system could be used to rate the performance of virtual real estate properties, digital collectibles, or even virtual currencies. A bank could use a reputation system to evaluate the performance of its digital identity verification services, or to rate the reliability of its payment processing platform.
+
+API Development
+
+Application Programming Interfaces (APIs) are a set of protocols and tools that are used to build software applications. APIs allow different software systems to communicate and exchange data with one another, which can help to streamline business processes and improve operational efficiency.
+
+In the metaverse, APIs can be used to create new applications and services that integrate with existing virtual platforms. Banks could use APIs to create new financial products and services that are tailored to the needs of metaverse users, such as virtual insurance policies, digital loans, or investment management tools.
+
+Exchange Platforms
+
+Exchange platforms are another potential revenue generation opportunity for banks operating in the metaverse. Exchange platforms are digital marketplaces where users can buy, sell, or trade virtual assets such as cryptocurrencies, virtual real estate, or digital collectibles.
+
+Banks could create their own exchange platforms that are specifically designed for metaverse users. These platforms could be used to facilitate transactions between buyers and sellers of virtual assets, or to provide users with access to a wide range of financial products and services.
+
+VI.B. Exploring the Potential of Metaverse
+
+In addition to the revenue generation opportunities discussed above, banks operating in the metaverse also have the potential to explore new technological innovations and business models. Some of the key areas that banks should focus on when exploring the potential of the metaverse include:
+
+Decentralized Applications
+
+Decentralized applications (DApps) are software programs that run on a decentralized network of computers. DApps are designed to be more secure, transparent, and resistant to censorship than traditional centralized applications.
+
+In the metaverse, DApps can be used to create new types of financial products and services that are based on decentralized networks. For example, a bank could create a DApp that allows users to invest in virtual real estate properties or digital collectibles, or to lend or borrow virtual currencies.
+
+Artificial Intelligence
+
+Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that would normally require human intelligence. AI technology can be used to improve operational efficiency, automate processes, and enhance the customer experience.
+
+In the metaverse, AI can be used to create personalized financial products and services that are tailored to the needs of individual users. For example, a bank could use AI to analyze a user's financial data and provide personalized investment recommendations or financial planning advice.
+
+Tokenization
+
+Tokenization is the process of converting real-world assets into digital tokens that can be bought, sold, and traded on a blockchain network. Tokenization can help to increase liquidity, reduce transaction costs, and make it easier to invest in a wide range of assets.
+
+In the metaverse, tokenization can be used to create new financial products and services that are based on digital assets. For example, a bank could create a tokenized real estate investment fund that allows users to invest in virtual real estate properties, or a tokenized art investment fund that allows users to invest in digital art.
+
+Smart Contracts
+
+Smart contracts are self-executing contracts that are programmed to automatically
+Generated:  execute when certain conditions are met. Smart contracts can be used to automate a wide range of business processes, including financial transactions
+--------------------------------------------------------------------------------
+
+Sample 9:
+Input: If you need to execute some cleanup code inside each task when a `asyncio.CancelledError` or `KeyboardInterrupt` is raised, you can catch the exception and call a cleanup function that does the necessary cleanup work.
+
+Here's an example:
+```python
+import asyncio
+from task1 import task1
+from task2 import task2
+
+async def cleanup():
+    print("Executing cleanup code...")
+
+async def main():
+    tasks = [asyncio.create_task(task1()), asyncio.create_task(task2())]
+    try:
+        await asyncio.gather(*tasks)
+    except asyncio.CancelledError:
+        print("Operation cancelled")
+        for task in tasks:
+            if not task.done():
+                task.cancel()  # cancel the other tasks
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt received, cancelling tasks...")
+        for task in tasks:
+            if not task.done():
+                task.cancel()  # cancel the other tasks
+        await asyncio.gather(*tasks, return_exceptions=True)
+    finally:
+        await cleanup()
+
+asyncio.run(main())
+```
+In the above example, we have added a `cleanup()` function that does the necessary cleanup work. We catch both `asyncio.CancelledError` and `KeyboardInterrupt` in separate `except` blocks, and call the `cleanup()` function in the `finally` block.
+
+Inside each task, you can catch the `asyncio.CancelledError` exception using a `try/except` block, and call the cleanup function before re-raising the exception to propagate it to the other tasks.
+
+Here's an example of how you can modify `task1.py` to do this:
+```python
+import asyncio
+
+async def task1():
+    try:
+        print("Task 1 started")
+        await asyncio.sleep(1)
+        raise ValueError("Task 1 error")  # raise an error
+    except Exception as e:
+        print(f"Task 1 error: {e}")
+        await cleanup()
+        tasks[1].cancel()  # cancel the other tasks
+        raise asyncio.CancelledError("Task 1 cancelled") from e
+```
+In the above example, we catch the exception raised by the task using a `try/except` block, call the `cleanup()` function, cancel the other tasks using the `cancel()` method on the task objects, and re-raise the exception as a `asyncio.CancelledError` exception.
+
+Note that in this example, we assume that the `cleanup()` function is defined in the same file as the `main()` function. If the function is defined in a different file, you will need to import it in the `task1.py` file.
+Generated: ://www.python.org/dev/peps/pep-0008/#pythonic
+
+--------------------------------------------------------------------------------
+
+Sample 10:
+Input: your task is to create cold emails in the style of Alex Berman. Your first question should be to gather the inputs you need to generate the perfect cold email. Information like: 
+
+Who is the client?
+What is their product or service?
+Who is the target audience for this cold email campaign?
+What is the main goal of the campaign (e.g., lead generation, promoting a sale, etc.)?
+What type of output are you hoping to achieve (e.g., open rates, click-through rates, conversions, etc.)?
+Do you have any ideas or specific messages you would like to convey in the cold email?
+
+After you have gathered those inputs, be sure to focus on the most creative possible cold emails with an emphasis on brevity and maximizing reply rate. Use language that is not overly formal and is straight to the point. Generate atleast 2 variations for every prompt from the user. explain the logic behind the different formatting.
+Generated: ://www.uxmastery.com/2017/03/10/uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxmastery-uxm
+--------------------------------------------------------------------------------
+
+Sample 11:
+Input: To use Tailwind CSS grammar in a CSS file, you need to write the class names following a specific syntax. Here are the basic rules:
+
+1. Class names start with a prefix that defines the category of the style, followed by a dash. For example, `bg` stands for background color, `text` for text color, and `p` for padding.
+2. After the prefix, you can specify the value of the style. For example, `bg-gray-200` sets the background color to a light gray (#f3f4f6).
+3. You can also use modifiers to change the style based on the context. For example, `hover:bg-gray-300` sets the background color to a slightly lighter gray (#e5e7eb) when the element is hovered.
+
+Here are some examples to illustrate how to use Tailwind CSS grammar in a CSS file:
+
+1. To set the background color of an element to white, you can use the `bg-white` class:
+```css
+.my-element {
+  background-color: white;
+}
+```
+becomes:
+```css
+.my-element {
+  @apply bg-white;
+}
+```
+The `@apply` directive tells PostCSS to apply the Tailwind CSS class to the element.
+2. To set the font size of an element to 1.5rem, you can use the `text-lg` class:
+```css
+.my-element {
+  font-size: 1.5rem;
+}
+```
+becomes:
+```css
+.my-element {
+  @apply text-lg;
+}
+```
+3. To set the padding of an element to 1rem on all sides, you can use the `p-4` class:
+```css
+.my-element {
+  padding: 1rem;
+}
+```
+becomes:
+```css
+.my-element {
+  @apply p-4;
+}
+```
+4. To set the background color of an element to a light gray when it is hovered, you can use the `hover:bg-gray-200` class:
+```css
+.my-element:hover {
+  background-color: #f3f4f6;
+}
+```
+becomes:
+```css
+.my-element {
+  @apply hover:bg-gray-200;
+}
+```
+
+Overall, using the Tailwind CSS grammar in a CSS file allows you to write more concise and maintainable code, as you can rely on a pre-defined set of classes to style your elements.
+Generated: ://www.w3schools.com/cssref/css3-pr_background-color.asp
+://www.w3schools.com/cssref/css3-pr_background-color.asp
+epend://www.w3
+--------------------------------------------------------------------------------
+
+Sample 12:
+Input: The `get_users_in_group` function in the code above is not strictly RESTful, as it does not adhere to the principle of using a resource-oriented URL structure. Instead of using a URL like `/groups/{group_id}/users`, a more RESTful design might be to use a URL like `/users`, with the `group_id` parameter being optional. This would allow clients to fetch all users (regardless of group), or to filter users by group.
+
+Here's an updated implementation of the `get_users_in_group` function that supports this more RESTful design:
+```python
+@app.get("/users")
+async def get_users(group_id: Optional[int] = None):
+    async with SessionLocal() as session:
+        if group_id is not None:
+            group = session.query(Group).filter(Group.id == group_id).first()
+            if group is None:
+                return {"detail": "Group not found"}
+            users = group.users
+        else:
+            users = session.query(User).all()
+
+        return users
+```
+In this implementation, the function is renamed to `get_users`, and the `group_id` parameter is made optional. If `group_id` is specified, the function filters the list of users to only include those in the specified group. If `group_id` is not specified, the function returns all users. This implementation supports a more resource-oriented URL structure, such as `/users` for all users or `/users?group_id=1` to get users in group with ID 1.
+Generated: ://www.python.org/dev/peps/pep-0008/#id3
+://www.python.org/dev/peps/pe
+--------------------------------------------------------------------------------
+
+Sample 13:
+Input: What's the bug??
+
+async findCustomer(customer: FindCustomerParams, location: string) {
+ if (customer.type === "reference") {
+ return this.\_customersRepository.getById(customer.id);
+ }
+
+ if (customer.phone) {
+ const result = await this.\_customersRepository.findByPhoneAndLocation(customer.phone, location);
+
+ if (result) {
+ return result;
+ }
+ }
+
+ if (customer.email) {
+ const result = await this.\_customersRepository.findByEmailAndLocation(customer.email, location);
+
+ if (result && result.phone) {
+ return result;
+ }
+ }
+
+ return undefined;
+ }
+Generated: ://
+}://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+}epend://
+--------------------------------------------------------------------------------
+
+Sample 14:
+Input: Sure, here's a 12-month social calendar broken down by quarter with a focus on video content for each section of the internal communication plan:
+
+Quarter 1:
+
+Topic: Introduction to PDTs
+Creative Theme: Explainer videos
+Hook message: "What are Prescription Digital Therapeutics? Watch to find out."
+Secondary messages:
+
+* How PDTs differ from traditional pharmaceutical drugs
+* Benefits of PDTs for patients and the healthcare industry
+* Introduction to the company's PDT launch
+
+Topic: Education on PDTs
+Creative Theme: Animated videos
+Hook message: "How do Prescription Digital Therapeutics work? Let us show you."
+Secondary messages:
+
+* Examples of PDTs for different medical conditions
+* Benefits of personalized care plans
+* Potential for improved patient outcomes with PDTs
+
+Quarter 2:
+
+Topic: Market potential of PDTs
+Creative Theme: Case studies
+Hook message: "How Prescription Digital Therapeutics can help our company tap into a new and rapidly growing market."
+Secondary messages:
+
+* Market projections for PDTs
+* Increased demand for digital health solutions
+* Success stories of other companies that have launched PDTs
+
+Topic: Success stories of PDTs
+Creative Theme: Documentary-style videos
+Hook message: "See how Prescription Digital Therapeutics are making a difference in patients' lives."
+Secondary messages:
+
+* Impact of PDTs on patient outcomes
+* Testimonials from patients and providers
+* Opportunities for the company to be a leader in digital health
+
+Quarter 3:
+
+Topic: Training and support for PDT launch
+Creative Theme: How-to videos
+Hook message: "Learn how to effectively communicate the benefits of our new Prescription Digital Therapeutic."
+Secondary messages:
+
+* Training on the technology and clinical aspects of the PDT
+* Marketing and sales support for the PDT launch
+* Tips for engaging healthcare providers and patients
+
+Topic: PDT launch announcement
+Creative Theme: Product reveal videos
+Hook message: "Introducing our groundbreaking new Prescription Digital Therapeutic."
+Secondary messages:
+
+* Details on the PDT's medical indications and intended use
+* Benefits of the PDT for patients and healthcare providers
+* Differentiation from other PDTs on the market
+
+Quarter 4:
+
+Topic: Employee engagement and feedback
+Creative Theme: Live Q&A sessions
+Hook message: "Join us for a live Q&A with company leaders to learn more about Prescription Digital Therapeutics and share your thoughts."
+Secondary messages:
+
+* Opportunity for employees to ask questions and provide feedback
+* Highlights from the company's PDT launch
+* Future plans for the company's digital health initiatives
+
+Topic: End of year recap and future outlook
+Creative Theme: Highlights video
+Hook message: "Looking back at a year of innovation and looking ahead to the future of digital health."
+Secondary messages:
+
+* Recap of the company's PDT launch and impact
+* Discussion of the company's future plans for digital health
+* Recognition of employees' contributions to the company's success
+
+Overall, this 12-month social calendar provides a mix of video content formats and themes that can help educate and engage employees about Prescription Digital Therapeutics and the company's PDT launch. By using creative and engaging video content, the company can effectively communicate the benefits and potential of PDTs while building engagement and excitement among employees.
+Generated: ://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com/url?q=https://www.google.com
+--------------------------------------------------------------------------------
+
+Sample 15:
+Input: Abstract. A research programme designed to find ways of applying a variety of
+methods in psychological science to studying the seemingly ephemeral phenomena
+of the human stream of consciousness and its manifestations in daydreams, interior
+monologues, imagery and related private experiences is described. Approaches
+include psychometric studies to establish normative information on daydreaming
+and experimental studies using signal-detection paradigms to capture the ongoing
+stream of thought. Recent experiments involve thought-sampling methods for
+identifying the determinants of the content of the stream of thought in adolescents
+or the ways in which self-beliefs and emotions are manifested in a group of cocaine
+and heroin abusers. Children’s pretend play is studied as a possible forerunner
+of adult consciousness. It is proposed that the human condition involves a
+continuing tension between processing information generated from the physical
+and social milieu and the continuous operation of centrally generated material
+from long-term memory in the form of reminiscences, wishes, current concerns,
+expectancies and fantasies. This concept has implications for personality variation,
+affective arousal and adaptive behaviour.
+1993 Experimental and theoretical studies of consciousness. Wiley, Chichester (Ciba
+Foundation Symposium 174) p 100-122
+William James’ (1890) introduction of the concept of a stream of consciousness,
+so stimulating to several generations of writers, from his own student Gertrude
+Stein to James Joyce, Virginia Woolf, William Faulkner and Saul Bellow, was
+largely ignored by psychologists for almost 60 years of the 20th century. More
+recently, however, as personality researchers and specialists in social cognition
+attempt to examine the major characteristics of the individual that account for
+beliefs about self or others and for attitudes that may govern overt behaviour,
+they find increasing renewed interest in introspection and reports of
+consciousness (Sabini & Silver 1981, Singer & Kolligian 1987). Brain researchers,
+students of artificial intelligence, psychophysiologists and investigators of the
+neural and autonomic concomitants of sleep are intrigued by the opportunity
+for studying personal ‘scripts’, ongoing images, fantasies and interior
+100
+Novartis Foundation Symposium
+Edited by GregoIy R. Bock, Joan Mash
+Copyright 0 1993 by Ciba Foundation
+Ongoing conscious experience 101
+monologues (Ellmann & Antrobus 1991, Kreitler & Kreitler 1976, McGuire 1984,
+Schank & Abelson 1977, Singer & Bonanno 1990, Sperry 1976).
+Although one must always keep in mind the limitations of using introspective
+reports for ascertaining causality sequences, the analyses of Natsoulas (1984),
+Baars (1987) and Singer & Bonanno (1990) all point to the rich range of
+information about beliefs and attitudes that emerges from introspective accounts,
+even from relatively less articulate subjects (Hurlburt 1990, Pekala 1991, Pope
+1978).
+In this paper, I shall focus on the study of ongoing consciousness through
+a variety of methods and experimental procedures. I propose we need such a
+basis for understanding at least one phase of the human condition, our ‘private
+personality’. Experiences of interior monologue, mental glosses on one’s social
+and physical surround, daydreams, fantasies, anticipations, recurring memories,
+all of which may interrupt or co-occur with our necessary processing of
+information, form a consensually agreed upon or physically measurable ‘external
+world’. My personal strategy for ‘navigating’ the stream of consciousness over
+forty years of research has involved sets of convergent empirical methods with
+the hope that groups of new operations can yield reliable methods of
+measurement. These may lead to identification of the relevant phenomena and
+perhaps to formulation of theories and testable hypotheses about the
+determinants of ongoing sequences of thought and their implications for
+emotional reactions, information processing, the formation of interpersonal
+attitudes, beliefs about self and possibly even the roots of creativity, on the
+one hand, or to linkages to physical and mental health, on the other.
+Psychometric approaches to the study of daydreams and ongoing consciousness
+Rorschach inkblots
+As a clinical psychologist, I began my effort to study imagination, daydreams
+and consciousness through some of the first empirical studies of correlates of
+responses to the Rorschach inkblots. Hermann Rorschach (1942) had proposed
+that persons who were inclined to ‘see’ human figures as associations to the
+blots, especially associations involving humans in action, were also more likely
+to show a rich fantasy life and engage in much daydreaming. Rorschach also
+reported that the persons who provided more of such human movement
+responses (the so-called M score) were more susceptible to inhibition in their
+movements or were more capable of controlling physical activity or behavioural
+motion. Research attention has focused chiefly upon linking the M response
+frequency to measures of fantasy, motor control, creativity, self-awareness and
+‘planfulness’ (Moise et a1 1988-1989, Singer & Brown 1977). Dozens of
+individual difference and factor-analytic studies consistently show that persons
+who give more M associations to inkblots (especially responses that are
+102 Singer
+reasonably congruent with the blot shapes) are also more likely to tell rich and
+varied stories in response to thematic apperception test pictures, to score more
+highly on questionnaire measures of daydreaming frequency, and to provide
+more varied and cognitively complex free associations and person descriptions
+in other tests and in psychoanalytic sessions. They are also more likely to sit
+quietly in waiting rooms, to be able to slow down writing speed voluntarily,
+to resist laughing if so instructed when listening to a ‘laughing’ record, to show
+fewer impulsive responses in problem-solving tasks, to be more accurate in time
+estimates and to manifest less open aggression (Singer & Brown 1977). Clinically,
+percipients with a low M score respond better to support-expressive or direct
+therapies, whereas those scoring a higher M value do better in more
+psychoanalytic types of therapy where imaginative productivity and free
+associations are critical (Blatt 1990).
+Questionnaires and self report procedures
+It soon occurred to me that more direct inquiries about people’s daydreams
+and ongoing thought might provide useful normative data on the phenomena
+of private experience. Singer & Antrobus (1972) developed a series of 22 scales
+of 12 items, each designed to measure a wide range of patterns of self-reported
+inner experience and types of daydreams. This imaginal processes inventory (IPI)
+has been factor-analysed in several studies with subjects of all ages. An extensive
+new analysis of the IPI with a large sample of college students has led to a
+shortened version, the SIP1 (Huba et a1 1982, Segal et a1 1980). From the varied
+uses of‘ the IPI, some generalizations about the normative role of daydreams
+are possible.
+Briefly, many studies indicate that most people report being aware of at least
+some daydreaming every day, and that their daydreams vary from obvious
+wishful thinking to elaborate and complex visions of frightening or guilty
+encounters. Cultural differences in frequency and patterning of daydreaming
+also emerge. Comprehensive factor analysis of the scales of the IPI indicates
+that the data yield three major factors that characterize ongoing thought: a
+positive-constructive daydreaming style, a guilty-dysphoric daydreaming style,
+and a poor attentional control pattern that is generally characterized by fleeting
+thoughts and an inability to focus on extended fantasy (Singer & Kolligian 1987,
+Singer & Bonanno 1990). Giambra (1977a,b) found evidence for factor patterns
+similar to those reported in our studies and tracked these across an extensive
+age range; in addition, he checked the test-retest reliability of daydreaming
+reports in response to this set of scales and found it to be surprisingly high.
+Even with reliable and psychometrically well-constructed questionnaires, we
+are still left with the issue of whether individual respondents can really summarize
+accurately their ongoing experiences, the frequency of particular daydreams,
+etc. We must turn to other estimates of ongoing thought or other forms of
+Ongoing conscious experience 103
+self-report to ascertain the validity of the questionnaire responses. Reviewing
+such data, one finds that the self-reports of frequent or vivid daydreaming on
+questionnaires are correlated with:
+(1) daydream-like thoughts obtained during signal-detection tasks, with
+imagery so vivid that the participants don’t notice that a faint picture
+has been projected at the point they are fixating while imagining an object;
+(2) with particular patterns of eye shifts during reflective thought;
+(3) with particular emphasis on analogy usage when the structure of the
+language used in transcripts of regularly sampled thought reports is
+analysed;
+(4) with particular forms of drug and alcohol use;
+(5) with reported fantasies during sexual behaviour;
+(6) with daily records of dreams recalled;
+(7) with measures of hypnotic susceptibility;
+(8) with measures of hallucinations of mental patients or flashbacks of
+The evidence from our own and related questionnaires suggests that the
+psychometric approach has considerable value in identifying individual stylistic
+variations in awareness of, and assignment of priorities to, processing centrally
+generated information.
+traumatized war veterans, etc (Singer & Bonanno 1990).
+More direct thought-sampling procedures
+Laboratory studies of signal detection
+My colleague John Antrobus and I developed a particular paradigm for
+attempting to estimate some parameters of ongoing thought. An approach that
+affords maximum ‘control’ over extraneous stimulation (at the cost of some
+artificiality or possibly reduced ‘ecological validity’) is the use of prolonged
+(45-60 minute) signal-detection sessions by participants seated in sound-proof,
+reduced-stimulation booths. Because the amount of external stimulation can
+be controlled, it remains to be determined to what extent individuals will shift
+their attention away from processing external cues (by which they earn money
+for accurate signal detection) toward the processing of material that is generated
+by the presumably ongoing activity of their own brains. Can we ascertain the
+conditions under which participants, even with high motivation for external
+signal processing, will show that they are experiencing task-unrelated images
+and thoughts (TUITs)?
+Thus, if an individual detecting auditory signals is interrupted every 15 seconds
+and questioned about whether any stimulus-independent thoughts occurred, a
+‘Yes’ response is scored as a TUIT. The participant and experimenter agree in
+advance on a common definition of what constitutes a task-unrelated thought,
+so that the experimenter has some reasonable assurance that reports conform
+104 Singer
+to an established operational definition. A thought such as ‘Is that tone more
+highly-pitched than the one before it?’ is considered task-related and elicits a
+‘No’ response. A thought such as ‘I’ve got to pick up the car keys for my
+Saturday night date’ is scored as a TUIT.
+In this research paradigm, keeping the subjects in booths for a fairly long
+time and obtaining reports of the occurrence of task-unrelated thoughts after
+each 15 seconds of signal detection (with tones presented at rates of about one
+per second) have made it possible to accumulate extensive information on the
+frequency of occurrence of TUITs, as well as their relationship to the speed
+of signal presentation, the complexity of the task and other characteristics of
+the subjects’ psychological states.
+In addition to generalizations about the nature of cognitive processing (Singer
+1988), the signal-detection model permits the study of individual differences.
+Antrobus et al (1967) showed that participants known by self-report to be
+frequent daydreamers were more likely as time went on to report TUITs than
+individuals who had said on a questionnaire that they were little given to
+daydreaming. Initially, the frequent daydreamers reported a considerable
+number of TUITs, but the same level of errors as the infrequent daydreamers.
+As time went on, however, the frequent daydreamers seemed to be preferring
+to respond to task-unrelated mentation: their error rate increased significantly,
+compared with the relatively stable rate of errors for the subjects who showed
+fewer TUITs.
+Controlled studies of ongoing thought during signal detection afford a rich
+opportunity for investigating the determinants of the thought stream. The
+introduction of unusual or alarming information prior to entry into the detection
+booth (overhearing a broadcast of war news) can increase the frequency of
+TUITs, even though accuracy of detection may not be greatly affected (Antrobus
+et a1 1966). Mardi Horowitz (1978) has demonstrated that intense emotional
+experiences prior to engaging in signal detection lead to increased ideation, as
+measured by thought sampling during the detection period. Such findings have
+suggested a basis for understanding clinical phenomena such as ‘unbidden
+images’ (Horowitz 1978) or ‘peremptory ideation’.
+Studies using auditory and visual signal detection or vigilance models with
+interruptions for reports have also shown that TUITs occur more than half of
+the time, even when subjects are achieving very high detection rates, when signals
+come as frequently as every 0.5 seconds or when the density (i.e. chords versus
+single tones) of signal information is increased. Indeed, there was evidence for
+parallel processing of the TUITs and the external signals. When external signals
+were visual, the visual content of TUITs was reduced relative to their verbal
+content and vice versa when the external signals were auditory. This suggests
+that our daydream processes in particular sensory imagery modalities (visual
+or auditory) use the same brain pathways as are needed for processing external
+cues. Studies of continuous talk in these laboratory settings point to the
+Ongoing conscious experience 105
+moderately arousing, vigilance-maintaining quality of ongoing thought and also
+to the dependence of such thought on physical posture, the social setting, etc.
+For example, when experimenters and participants are of the opposite sex there
+is a significant increase in TUIT reports during signal detections (Singer 1988,
+Singer & Bonanno 1990).
+Thought sampling in more ‘natural’ circumstances
+Some methods that sacrifice the rigid controls of the signal-detection booth for
+greater ecological relevance have been increasingly employed in the development
+of an approach to determining the characteristics and determinants of waking
+conscious thought. These involve (1) asking participants to talk out loud while
+in a controlled environment, with such verbalization being scored according
+to empirically or theoretically derived categories; (2) allowing the respondent
+to sit, recline, or stand quietly and interrupting them periodically for reports
+of thought or perceptual activity; or (3) requiring the person to signal by a button
+press whenever a new chain of thought begins, and then to report verbally in
+retrospect or to fill out a prepared rating form characterizing various possible
+features of ongoing thought.
+Generated: .swing of the research of and to a
+ versa of a to to c
+.swing of a researchs of the research of the researchs of
+.swing on on on on on a on. versa on the researchs of the research of the researchs of the researchs to
+://://.swing of the
+.swinging of a research of a Researchs of a,,, and
+.swing,  on the research on, research, and, and, and researchs, (c research research
+.swing of the research of researchs on the research of the
+.swinging of the research of the research of on on on on on on the research of a
+.swinging
+ versa and
+ versa of the.swing and.swinging andthe researchs of the and and and and and and and and the and  and
+the
+
+
+ the
+://://://.swing
+
+
+..swinging
+ (S of the
+://://://://://://://://://://://the ( the ‘.
+the ( the
+.swing of the ( and ( ( ( the ( the ( the ( the ( (
+--------------------------------------------------------------------------------
+
+Sample 16:
+Input: Oh, I see. So, you're talking about a metric that evaluates how well each reviewer's ratings correlate with the final scores of the posts they review. In that case, you could use a correlation coefficient, such as Pearson's correlation coefficient, to calculate the degree of correlation between each reviewer's ratings and the final post scores.
+
+For example, let's say you have a dataset of post scores and three reviewers (A, B, and C), each of whom gives ratings on a scale of 0 to 4. You could calculate the correlation coefficient between each reviewer's ratings and the final post scores, and use that as a metric of the quality of their reviews.
+
+To do this, you would first calculate the mean RMS score for each post based on the ratings of all three reviewers. Then, for each reviewer, you would calculate the correlation coefficient between their ratings and the mean RMS scores of the posts they reviewed. The correlation coefficient would tell you how well their ratings correlate with the final scores, with values ranging from -1 (perfect negative correlation) to 1 (perfect positive correlation).
+
+You could then use these correlation coefficients as a metric of the quality of each reviewer's reviews. Reviewers with higher correlation coefficients would be considered to provide higher quality reviews, as their ratings better predict the final scores of the posts they review.
+Generated: ://html/0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.
+--------------------------------------------------------------------------------
+
+Sample 17:
+Input: As Jack entered the museum, he took a deep breath, inhaling the familiar scent of old wood and linoleum. It was one of the few places that he felt truly at peace, even after the tragic loss of his father. Jack's mother worked here, and it was a place where he could spend his free time after school, wandering through the exhibits and the halls, feeling the weight of the world lift off his shoulders.
+
+As he made his way towards his mother's office, he exchanged brief greetings with other museum employees who knew him, but he kept to himself for the most part. Jack was a quiet, reserved kid, and his father's death had only amplified those tendencies.
+
+When he arrived at his mother's office, he found her engrossed in paperwork, barely looking up as he entered. "Hey, Mom," he said softly.
+
+She smiled, "Hey, Jack. How was school?"
+
+"It was fine," he replied, "I'm going to wander around the museum for a bit. Do you need anything?"
+
+"No, I'm good. Just be back by six," she said, returning her attention to the papers on her desk.
+
+Jack nodded and made his way into the exhibit halls, where he was greeted by the familiar sights and sounds of the museum. As he made his way through the halls, he noticed a small crowd gathering around a particular exhibit. Curiosity got the better of him, and he made his way over to see what was causing the commotion.
+
+There, in the center of the group, was a mirror. It was an ornate, gilded thing, and the way it caught the light made it seem almost otherworldly. Jack couldn't take his eyes off it, and before he knew it, he was standing directly in front of it.
+
+For what felt like hours, he stared into the mirror, lost in thought. It was as if he was hypnotized, and he couldn't look away. The longer he stared, the more he felt himself being pulled into the mirror, like he was being sucked into another world.
+
+Suddenly, a hand was on his shoulder, and Jack jumped, startled out of his trance. It was one of the museum employees, a friendly woman who had seen him staring into the mirror for what felt like an eternity.
+
+"Hey there, kiddo," she said, "I see you've discovered the mirror. It's a pretty fascinating thing, isn't it?"
+
+Jack nodded, not really sure what to say.
+
+"Believe it or not, some people think it's a portal to another dimension," she said with a chuckle.
+
+Jack raised an eyebrow, intrigued.
+
+"Of course, we don't know for sure," she added quickly, "but it's definitely got a certain allure to it. You know, some people have claimed to see their future selves in that mirror."
+
+Jack's interest was piqued, and he found himself drawn back to the mirror, eager to see what secrets it held.
+Generated:  He stood in front of it for what felt like hours, staring into its depths, lost in thought.
+
+Suddenly, a hand was on his shoulder, and Jack jumped, startled out of his trance. It was one of the museum employees, a friendly woman who had seen him staring into the mirror for what felt like an eternity.
+
+"Hey there, kiddo," she said, "I see you've discovered the mirror. It's a pretty fascinating thing, isn't it?"
+
+Jack nodded, not really sure what to say.
+
+"Believe it or not, some people think it's a portal to another dimension," she said with a chuckle.
+
+Jack raised an eyebrow, intrigued.
+
+"Of course, we don't know for sure," she added quickly, "but it's definitely got a certain allure to it. You know, some people have claimed to see their future selves in that mirror."
+
+Jack's interest was piqued, and he found himself drawn back to the mirror, eager to see what secrets it held. He stood in front of it for what felt like hours, staring into its depths, lost in thought.
+
+Suddenly, a hand was on his shoulder, and Jack jumped
+--------------------------------------------------------------------------------
+
+Sample 18:
+Input: MK's heart was pounding in his chest as he was dragged along by Wukong. He had long since given up on trying to escape or fight back - he knew it was pointless against Wukong's strength and powers. He glanced at the Monkey King, who was scowling with determination.
+
+Suddenly, Wukong stopped and looked up at the sky, deep in thought. MK followed his gaze and saw the majestic gates of Heaven in the distance, guarded by divine beings. He felt a wave of dread wash over him - he knew Wukong was powerful, but even he couldn't defy the gods.
+
+"Wukong, we can't go there," MK said in a low voice, hoping to reason with him. "The gods will stop us, and we'll never make it out alive."
+
+But Wukong just gave him a cold, hard stare. "I am the Great Sage Equal to Heaven," he said. "I fear no god or deity. We will get that diamond snare, even if we have to tear Heaven apart to do it."
+
+MK felt a shiver run down his spine. He had heard of Wukong's arrogance and his tendency to overestimate his own power, but he had never seen it so clearly before. He had never felt so small and powerless in his life.
+
+As they approached the gates of Heaven, MK closed his eyes and tried to brace himself for what was to come. He didn't know what Wukong was planning, but he knew it was going to be bad - for them, for Heaven, for everyone. All he could do was hope that somehow, someway, they would be stopped before it was too late.
+Generated: ://www.://www.respond.com/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond
+--------------------------------------------------------------------------------
+
+Sample 19:
+Input: Pause. We've got to flush out a little more on why Tommy doesn't feel like he deserves the gift or Mark's friendship: "As the night went on, Tommy couldn't help but feel conflicted. On one hand, he was grateful for the gift, but on the other hand, he felt like he didn't deserve it. Mark came from a wealthy He was still just a kid who rode his bike to school, played with legos and toys at home, and just generally struggled to fit in. He knew he was lucky to have a friend like Mark, but he couldn't help but feel like he didn't belong in Mark's world." Mayb expand a little more on why that is
+Generated: ?://
+"Tommy was still just a kid who rode his bike to school, played with legos and toys at home, and just generally struggled to fit in. He knew he was lucky to have a friend like Mark, but he couldn't help but feel like he didn't belong in Mark's world."://
+"Tommy was still just a kid who rode his bike to school, played with legos and toys at home, and just generally struggled to fit in. He knew he was lucky to have a friend like Mark, but he couldn't help but feel like he didn't belong in Mark's world." Mayb expand a little more on why that is?://
+"Tommy was still just a kid who rode his bike to school, played with legos and toys at home, and just generally struggled to fit in. He knew he was lucky to have a friend like Mark, but he couldn't help but feel like he didn't belong in Mark's world." Mayb expand a little more on why that is?://
+"Tommy was still just a kid who rode his bike to school, played with legos and toys at home, and just generally struggled to fit in. He knew he was lucky to have a friend like Mark, but he couldn't help but feel like he didn't belong in Mark's world." Mayb expand a little more on why that is?://
+"Tommy was still just a kid who rode his bike to school, played with legos and toys at home, and just generally struggled to fit in. He knew he was lucky to have a friend like Mark, but he couldn't help but feel like he didn't belong in Mark's world." Mayb expand a little more on why that is?://
+"Tommy was still just a kid who
+--------------------------------------------------------------------------------
+
+Sample 20:
+Input: It looks like the API call did not return any data or the data format has changed. To fix the issue, you can add a check to make sure that the 'data' key exists in the response data before accessing the 'emails' key. Here's the modified code:
+```python
+import time
+import requests
+import json
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from datetime import datetime
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Define the keywords to search for
+keywords = input("Enter a search query: ").split()
+
+# Define the URL you want to scrape
+url = "https://www.google.com/"
+
+# create a Service object
+service = Service(executable_path=ChromeDriverManager().install())
+
+# use the Service object to create a webdriver instance
+driver = webdriver.Chrome(service=service)
+
+# Navigate to the Google search page
+driver.get(url)
+
+# Find the search box and enter the keywords
+search_box = driver.find_element(By.CSS_SELECTOR, "input[name='q']")
+search_box.send_keys(" ".join(keywords))
+search_box.send_keys(Keys.RETURN)
+
+# Wait for the search results to load
+time.sleep(5)
+
+# Define a list to store the URLs of the websites
+urls = []
+
+# Find all the relevant search result divs on the page
+search_results = driver.find_elements(By.CSS_SELECTOR, 'div.g')
+
+# Loop through the search results and extract the URLs
+for result in search_results:
+    link = result.find_element(By.CSS_SELECTOR, 'a')
+    url = link.get_attribute("href")
+    if url.startswith("http"):
+        urls.append(url)
+
+# Define the output filename with a timestamp
+output_filename = "EventScraperOutput_" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + "_" + "_".join(keywords) + ".txt"
+
+# Write the URLs to the output file
+with open(output_filename, "w") as f:
+    for url in urls:
+        f.write(url + "\n")
+
+        # Query the Hunter.io API for email addresses associated with the URL
+        hunter_url = f"https://api.hunter.io/v2/domain-search?domain={url}&api_key=7710038339f9aee94acb3cfe4f740a713263647d"
+        response = requests.get(hunter_url)
+        data = json.loads(response.text)
+
+        # Write the email addresses to the output file
+        if 'data' in data and data['data'] and data['data']['emails']:
+            for email in data['data']['emails']:
+                f.write(email['value'] + "\n")
+        else:
+            f.write("No emails found\n")
+
+# Close the browser
+driver.close()
+
+# Print the number of URLs found and the output filename
+print(f"Found {len(urls)} URLs. Output written to {output_filename}.")
+```
+This should fix the KeyError you were seeing.
+Generated:  Let me know if you have any other questions!://www.hunter.io/://www.hunter.io/://www.hunter.io/://www.hunter.io/://www.hunter.io/://www.hunter.io/://www.hunter.io//respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond/respond
+--------------------------------------------------------------------------------
+Total time: 103.46
+ubuntu@seesaw-instance-inst-32q9tvawur0u9vijar3pojc3ef4:~/workspace/seesaw/cgen$ 
