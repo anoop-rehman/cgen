@@ -54,7 +54,8 @@ def load_cnn(num_requests, tokenizer, max_length=4096, seed=0):
 
 def load_arxiv(num_requests, tokenizer, max_length=8192, seed=0):
     random.seed(seed)
-    ds = datasets.load_dataset("armanc/scientific_papers", "arxiv", trust_remote_code=True)
+    # Use a different arXiv dataset that doesn't require custom scripts
+    ds = datasets.load_dataset("ccdv/arxiv-summarization")
     filtered_dataset = []
     for data in ds['train']:
         prompt = data['article']
