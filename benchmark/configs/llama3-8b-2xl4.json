@@ -14,6 +14,7 @@
     "cache_config": {
         "num_pages": 500,
         "page_size": 16,
-        "shared_cache_tokens": 20000
+        "shared_cache_tokens": 20000,
+        "shared_cache_max_prompt_len": 8192
     }
 }
