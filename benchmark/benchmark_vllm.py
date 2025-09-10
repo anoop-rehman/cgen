@@ -71,8 +71,14 @@ def run_vllm(
     
     duration = end_time - start_time
     
-    # Extract generated text
-    generated_texts = [output.outputs[0].text for output in outputs]
+    # Extract generated text and remove single leading space if present (vLLM tokenizer artifact)
+    generated_texts = []
+    for output in outputs:
+        text = output.outputs[0].text
+        # Remove only a single leading space, preserve other whitespace
+        if text.startswith(' '):
+            text = text[1:]
+        generated_texts.append(text)
     
     if print_output:
         print("=== Sample vLLM Outputs (First 20) ===")
