@@ -6,7 +6,7 @@ docker run --gpus=all \
    --shm-size 64g \
    cgen:latest \
    python3 benchmark/benchmark_cgen.py \
-   benchmark/configs/llama2-7b-2xl4.json \
+   benchmark/configs/llama3-15b-2xl4.json \
    --dataset sharegpt \
    --dataset-path /datasets/sharegpt.json \
    --num-requests 50 \
