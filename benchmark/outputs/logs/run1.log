@@ -1,0 +1,128 @@
+ubuntu@seesaw-instance-inst-32q9tvawur0u9vijar3pojc3ef4:~/workspace/seesaw/cgen$ sh benchmark/run_benchmark.sh 
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.4.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-10 01:58:18.299 | INFO     | cgen.engine:__init__:335 - init process group using port 37407
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-10 01:58:24.178 | INFO     | cgen.engine:__init__:97 - loading model...
+2025-09-10 01:58:24.178 | INFO     | cgen.engine:__init__:98 - partitioning model...
+2025-09-10 01:58:24.370 | INFO     | cgen.engine:__init__:97 - loading model...
+2025-09-10 01:58:24.370 | INFO     | cgen.engine:__init__:98 - partitioning model...
+2025-09-10 01:58:24.387 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=1/2
+2025-09-10 01:58:24.387 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=0/2
+2025-09-10 01:58:24.397 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/2 pp=0/1
+2025-09-10 01:58:24.397 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=1/2 pp=0/1
+INFO 09-10 01:58:24 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-10 01:58:24 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-10 01:58:24 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-10 01:58:24 pynccl.py:63] vLLM is using nccl==2.20.5
+291it [00:08, 32.60it/s] 
+291it [00:08, 32.60it/s]
+291it [00:10, 28.04it/s]
+2025-09-10 01:58:48.485 | INFO     | cgen.engine:init_kvcache:236 - initializing kvcache
+2025-09-10 01:58:48.490 | INFO     | cgen.engine:init_kvcache:256 - kvcache initialized, memory occupied: 8.10 GB
+291it [00:10, 27.55it/s]
+2025-09-10 01:58:48.734 | INFO     | cgen.engine:init_kvcache:236 - initializing kvcache
+2025-09-10 01:58:48.744 | INFO     | cgen.engine:init_kvcache:256 - kvcache initialized, memory occupied: 8.10 GB
+2025-09-10 01:58:49.435 | INFO     | cgen.engine:init_shared_cache:262 - start allocating shared kvcache
+2025-09-10 01:58:49.435 | INFO     | cgen.engine:init_shared_cache:262 - start allocating shared kvcache
+2025-09-10 01:58:49.759 | INFO     | cgen.engine:init_shared_cache:278 - launch prefetcher
+2025-09-10 01:58:49.759 | INFO     | cgen.engine:init_shared_cache:279 - 1 <torch.cuda.Stream device=cuda:1 cuda_stream=0x0> 
+2025-09-10 01:58:49.790 | INFO     | cgen.engine:init_shared_cache:278 - launch prefetcher
+2025-09-10 01:58:49.790 | INFO     | cgen.engine:init_shared_cache:279 - 0 <torch.cuda.Stream device=cuda:0 cuda_stream=0x0> 
+self.watermark_blocks=50.0
+Processed prompts:   0%|          | 0/500 [00:03<?, ?it/s, est. speed input: 4631.01 toks/s, output: 0.00 toks/s]2025-09-10 01:58:54.692 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 15, prefetching 8, seqs in GPU 0
+2025-09-10 01:58:54.692 | INFO     | cgen.schedule:update_prefetch:252 - waiting for prefetching...
+2025-09-10 01:58:55.937 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.84 s
+Processed prompts:   3%|▎         | 16/500 [00:14<07:13,  1.12it/s, est. speed input: 1278.06 toks/s, output: 134.73 toks/s]2025-09-10 01:59:05.168 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 1, seqs in GPU 9
+2025-09-10 01:59:05.883 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.71 s
+2025-09-10 01:59:09.296 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 14, prefetching 2, seqs in GPU 10
+2025-09-10 01:59:10.480 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.80 s
+Processed prompts:   8%|▊         | 40/500 [00:53<10:12,  1.33s/it, est. speed input: 653.45 toks/s, output: 126.21 toks/s]2025-09-10 01:59:48.451 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-10 01:59:49.161 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.71 s
+2025-09-10 01:59:51.595 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 8, prefetching 2, seqs in GPU 2
+2025-09-10 01:59:53.654 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.82 s
+Processed prompts:  13%|█▎        | 63/500 [01:49<12:36,  1.73s/it, est. speed input: 459.68 toks/s, output: 117.98 toks/s]2025-09-10 02:00:39.851 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 0, prefetching 2, seqs in GPU 2
+2025-09-10 02:00:40.575 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.72 s
+2025-09-10 02:00:44.263 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 25, prefetching 0, seqs in GPU 4
+2025-09-10 02:00:45.992 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.88 s
+Processed prompts:  18%|█▊        | 89/500 [02:19<10:42,  1.56s/it, est. speed input: 502.50 toks/s, output: 124.74 toks/s]2025-09-10 02:01:10.472 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 3, prefetching 0, seqs in GPU 7
+2025-09-10 02:01:11.218 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.74 s
+2025-09-10 02:01:13.734 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 14, prefetching 2, seqs in GPU 7
+2025-09-10 02:01:15.892 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.83 s
+Processed prompts:  24%|██▍       | 121/500 [03:03<09:34,  1.52s/it, est. speed input: 465.25 toks/s, output: 136.01 toks/s]2025-09-10 02:01:54.160 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 3, prefetching 0, seqs in GPU 5
+2025-09-10 02:01:54.974 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.81 s
+2025-09-10 02:01:57.589 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 12, prefetching 0, seqs in GPU 5
+2025-09-10 02:01:59.802 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.82 s
+Processed prompts:  29%|██▉       | 145/500 [03:29<08:32,  1.44s/it, est. speed input: 484.47 toks/s, output: 134.41 toks/s]2025-09-10 02:02:20.284 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 5
+2025-09-10 02:02:21.061 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.77 s
+2025-09-10 02:02:24.873 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 35, prefetching 2, seqs in GPU 5
+2025-09-10 02:02:25.903 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.88 s
+Processed prompts:  34%|███▎      | 168/500 [03:45<07:26,  1.34s/it, est. speed input: 521.72 toks/s, output: 136.61 toks/s]2025-09-10 02:02:36.988 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 5, prefetching 0, seqs in GPU 15
+2025-09-10 02:02:37.750 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.76 s
+2025-09-10 02:02:40.378 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 20, prefetching 0, seqs in GPU 15
+2025-09-10 02:02:42.424 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.92 s
+Processed prompts:  41%|████▏     | 207/500 [04:17<06:04,  1.24s/it, est. speed input: 514.39 toks/s, output: 141.93 toks/s]2025-09-10 02:03:08.275 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 6
+2025-09-10 02:03:09.005 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.73 s
+2025-09-10 02:03:11.584 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 13, prefetching 4, seqs in GPU 6
+2025-09-10 02:03:13.690 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.84 s
+Processed prompts:  48%|████▊     | 240/500 [05:13<05:40,  1.31s/it, est. speed input: 471.10 toks/s, output: 149.73 toks/s]2025-09-10 02:04:09.682 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 5
+2025-09-10 02:04:10.516 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.83 s
+2025-09-10 02:04:14.128 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 21, prefetching 0, seqs in GPU 5
+2025-09-10 02:04:15.498 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.88 s
+Processed prompts:  54%|█████▍    | 270/500 [06:07<05:12,  1.36s/it, est. speed input: 449.97 toks/s, output: 148.40 toks/s]2025-09-10 02:04:58.100 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 3
+2025-09-10 02:04:58.818 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.71 s
+2025-09-10 02:05:02.764 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 20, prefetching 5, seqs in GPU 3
+2025-09-10 02:05:03.882 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.85 s
+Processed prompts:  59%|█████▉    | 296/500 [06:59<04:49,  1.42s/it, est. speed input: 434.58 toks/s, output: 147.34 toks/s]2025-09-10 02:05:50.529 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 5
+2025-09-10 02:05:51.239 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.71 s
+2025-09-10 02:05:54.933 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 20, prefetching 4, seqs in GPU 5
+2025-09-10 02:05:56.060 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.83 s
+Processed prompts:  64%|██████▍   | 322/500 [07:35<04:12,  1.42s/it, est. speed input: 436.49 toks/s, output: 148.05 toks/s]2025-09-10 02:06:26.702 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 5
+2025-09-10 02:06:27.504 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.80 s
+2025-09-10 02:06:31.373 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 31, prefetching 1, seqs in GPU 5
+2025-09-10 02:06:32.311 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.84 s
+Processed prompts:  69%|██████▉   | 346/500 [08:05<03:36,  1.40s/it, est. speed input: 442.91 toks/s, output: 148.53 toks/s]2025-09-10 02:06:56.739 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 3, prefetching 0, seqs in GPU 11
+2025-09-10 02:06:57.464 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.72 s
+2025-09-10 02:06:59.991 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 13, prefetching 1, seqs in GPU 11
+2025-09-10 02:07:02.087 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.81 s
+Processed prompts:  76%|███████▌  | 380/500 [08:43<02:45,  1.38s/it, est. speed input: 440.37 toks/s, output: 151.46 toks/s]2025-09-10 02:07:36.298 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 6
+2025-09-10 02:07:37.008 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.71 s
+2025-09-10 02:07:39.650 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 14, prefetching 0, seqs in GPU 6
+2025-09-10 02:07:41.836 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.80 s
+Processed prompts:  81%|████████  | 405/500 [09:16<02:10,  1.37s/it, est. speed input: 443.66 toks/s, output: 150.84 toks/s]2025-09-10 02:08:07.112 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 8
+2025-09-10 02:08:07.895 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.78 s
+2025-09-10 02:08:11.769 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 33, prefetching 0, seqs in GPU 8
+2025-09-10 02:08:12.721 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.81 s
+Processed prompts:  88%|████████▊ | 438/500 [10:10<01:26,  1.39s/it, est. speed input: 430.97 toks/s, output: 153.42 toks/s]2025-09-10 02:09:01.070 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 7
+2025-09-10 02:09:01.795 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.72 s
+2025-09-10 02:09:05.702 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 17, prefetching 3, seqs in GPU 7
+2025-09-10 02:09:06.604 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.82 s
+Processed prompts:  92%|█████████▏| 460/500 [10:45<00:56,  1.40s/it, est. speed input: 431.83 toks/s, output: 153.00 toks/s]2025-09-10 02:09:36.557 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 4
+2025-09-10 02:09:37.262 | INFO     | cgen.engine:to_prefill:162 - convert from decode to prefill time:  0.70 s
+2025-09-10 02:09:39.837 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 21, prefetching 0, seqs in GPU 4
+2025-09-10 02:09:41.927 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.80 s
+Processed prompts: 100%|██████████| 500/500 [11:35<00:00,  1.39s/it, est. speed input: 423.23 toks/s, output: 152.68 toks/s]
+detokenizer takes 0.57 s
+Total time: 695.73
+
