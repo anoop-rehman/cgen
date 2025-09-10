@@ -10,8 +10,8 @@ docker run --gpus=all \
    --tokenizer meta-llama/Llama-2-7b-hf \
    --dataset arxiv \
    --num-requests 10 \
-   --tensor-parallel-size 1 \
-   --pipeline-parallel-size 1 \
+   --tensor-parallel-size 2 \
+   --pipeline-parallel-size 2 \
    --enable-chunked-prefill \
    --max-model-len 4096 \
    --max-num-batched-tokens 2048 \
