@@ -7,7 +7,8 @@ docker run --gpus=all \
    cgen:latest \
    python3 benchmark/benchmark_cgen.py \
    benchmark/configs/llama3-15b-4xl4.json \
-   --dataset arxiv \
+   --dataset sharegpt \
+   --dataset-path /datasets/sharegpt.json \
    --num-requests 10 \
    --hf-token ${HF_TOKEN} \
    --print-output

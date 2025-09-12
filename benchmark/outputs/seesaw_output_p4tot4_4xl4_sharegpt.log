@@ -1,0 +1,684 @@
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ ./benchmark/run_benchmark.sh 
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.4.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-12 13:21:37.548 | INFO     | cgen.engine:__init__:335 - init process group using port 52513
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-12 13:21:42.409 | INFO     | cgen.engine:__init__:97 - loading model...
+2025-09-12 13:21:42.409 | INFO     | cgen.engine:__init__:98 - partitioning model...
+2025-09-12 13:21:43.346 | INFO     | cgen.engine:__init__:97 - loading model...
+2025-09-12 13:21:43.346 | INFO     | cgen.engine:__init__:98 - partitioning model...
+2025-09-12 13:21:43.364 | INFO     | cgen.engine:__init__:97 - loading model...
+2025-09-12 13:21:43.364 | INFO     | cgen.engine:__init__:98 - partitioning model...
+2025-09-12 13:21:43.373 | INFO     | cgen.engine:__init__:97 - loading model...
+2025-09-12 13:21:43.373 | INFO     | cgen.engine:__init__:98 - partitioning model...
+2025-09-12 13:21:43.388 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=0/4
+2025-09-12 13:21:43.388 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=1/4
+2025-09-12 13:21:43.388 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=3/4
+2025-09-12 13:21:43.388 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=2/4
+2025-09-12 13:21:43.390 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/4 pp=0/1
+2025-09-12 13:21:43.390 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=1/4 pp=0/1
+2025-09-12 13:21:43.390 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=3/4 pp=0/1
+2025-09-12 13:21:43.390 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=2/4 pp=0/1
+INFO 09-12 13:21:43 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 13:21:43 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 13:21:43 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 13:21:43 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 13:21:43 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 13:21:43 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 13:21:43 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 13:21:43 pynccl.py:63] vLLM is using nccl==2.20.5
+579it [00:10, 54.79it/s] 
+579it [00:10, 55.45it/s]
+579it [00:10, 54.92it/s]
+579it [00:10, 53.73it/s] 
+579it [00:20, 28.01it/s]
+579it [00:20, 27.63it/s]
+2025-09-12 13:22:18.504 | INFO     | cgen.engine:init_kvcache:236 - initializing kvcache
+2025-09-12 13:22:18.504 | INFO     | cgen.engine:init_kvcache:236 - initializing kvcache
+2025-09-12 13:22:18.513 | INFO     | cgen.engine:init_kvcache:256 - kvcache initialized, memory occupied: 8.09 GB
+2025-09-12 13:22:18.514 | INFO     | cgen.engine:init_kvcache:256 - kvcache initialized, memory occupied: 7.11 GB
+579it [00:21, 27.45it/s]
+2025-09-12 13:22:18.626 | INFO     | cgen.engine:init_kvcache:236 - initializing kvcache
+2025-09-12 13:22:18.631 | INFO     | cgen.engine:init_kvcache:256 - kvcache initialized, memory occupied: 8.09 GB
+579it [00:21, 27.52it/s]
+2025-09-12 13:22:18.792 | INFO     | cgen.engine:init_kvcache:236 - initializing kvcache
+2025-09-12 13:22:18.797 | INFO     | cgen.engine:init_kvcache:256 - kvcache initialized, memory occupied: 7.11 GB
+2025-09-12 13:22:20.018 | INFO     | cgen.engine:init_shared_cache:262 - start allocating shared kvcache
+2025-09-12 13:22:20.018 | INFO     | cgen.engine:init_shared_cache:262 - start allocating shared kvcache
+2025-09-12 13:22:20.018 | INFO     | cgen.engine:init_shared_cache:262 - start allocating shared kvcache
+2025-09-12 13:22:20.018 | INFO     | cgen.engine:init_shared_cache:262 - start allocating shared kvcache
+2025-09-12 13:22:20.186 | INFO     | cgen.engine:init_shared_cache:278 - launch prefetcher
+2025-09-12 13:22:20.186 | INFO     | cgen.engine:init_shared_cache:278 - launch prefetcher
+2025-09-12 13:22:20.186 | INFO     | cgen.engine:init_shared_cache:278 - launch prefetcher
+2025-09-12 13:22:20.186 | INFO     | cgen.engine:init_shared_cache:278 - launch prefetcher
+2025-09-12 13:22:20.187 | INFO     | cgen.engine:init_shared_cache:279 - 2 <torch.cuda.Stream device=cuda:2 cuda_stream=0x0> 
+2025-09-12 13:22:20.187 | INFO     | cgen.engine:init_shared_cache:279 - 0 <torch.cuda.Stream device=cuda:0 cuda_stream=0x0> 
+2025-09-12 13:22:20.187 | INFO     | cgen.engine:init_shared_cache:279 - 3 <torch.cuda.Stream device=cuda:3 cuda_stream=0x0> 
+2025-09-12 13:22:20.187 | INFO     | cgen.engine:init_shared_cache:279 - 1 <torch.cuda.Stream device=cuda:1 cuda_stream=0x0> 
+self.watermark_blocks=50.0
+Processed prompts:   0%|          | 0/10 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]2025-09-12 13:22:20.249 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 0, prefetching 0, seqs in GPU 0
+2025-09-12 13:22:24.308 | INFO     | cgen.engine:to_decode:175 - convert from prefill to decode time:  0.77 s
+Processed prompts:   0%|          | 0/10 [00:04<?, ?it/s, est. speed input: 1922.95 toks/s, output: 0.00 toks/s]2025-09-12 13:22:24.313 | INFO     | cgen.schedule:update_prefetch:252 - waiting for prefetching...
+Processed prompts: 100%|██████████| 10/10 [00:21<00:00,  2.19s/it, est. speed input: 357.56 toks/s, output: 56.93 toks/s]
+detokenizer takes 0.00 s
+=== Sample Model Outputs (First 20) ===
+
+Sample 1:
+Input: this is chapter 20 of original book
+{CHAPTER TWENTY
+ The Sacrum and Coccyx
+ From Chris and Jeremy
+From Chris
+The sacrum is the last section of the spine, the vestigial collection of vertebrae that are welded into one solid piece, down at the bottom. And the coccyx is the tippety-tip of the sacrum, the last bit of bone at the end of that long chain, which has been such a torment to you for so long. 
+And this is the end of the book. The end of the long chain of chapters that we hope—with all our hearts—will deliver you from such torment forever. From now on, it’s up to you. Go back through the book, do the exercises, and change your behavior the way you know you should. Up to you now. 
+May I say, here at the end, that putting this book together has been great fun for Jeremy and me. It has taken more than a year, and it has been a ton of work. We hope it reads as if it were easy as pie, but it wasn’t. We worked like crazy to make it seem easy—and to make it truly accurate without driving you crazy. Don’t know how well we did on that, but we sure did try. And it was fun for a couple of reasons. First, from my point of view, Jeremy is awfully good company. He is deadly serious about his profession but he loves to laugh, too. And, God bless us, we think we’re funny. That helped a lot. On a slightly more serious note, learning all the stuff I had to learn about the back this past year was fascinating and a privilege. Interesting piece of machinery, the back, and Jeremy could not have been a better guide. 
+Finally, both of us are true believers in this “revolution” I mentioned up front, and that is a tremendous help. The whole time we were digging away at this boring detail or that, we had the agreeable conviction that we were not just ink-stained wretches, noses to the page. We were centurions in the great war against cruel, needless pain. That helped a lot, too. 
+But the whole business won’t be satisfying to us if it doesn’t work, for you. And that takes me back to my one great worry, the one I mentioned before. 
+I worry that we leave so much of this up to you, when we know that Americans just aren’t used to that. Americans are used to going to the magician/doctor. He has a look around, maybe does an MRI. And then hands us a prescription, or gives us a shot. Or sends us to his pal the back surgeon, who does some clever thing to make us all better. As we’ve said again and again, that’s not going to work here. You have to do it yourself—you have to do the exercise, make the changes. But the great question is, will you find the resolve to make it happen? Jeremy says he’s sure you will, because he knows your pain. He knows just how deep and sharp your motivation is. I hope he’s right. 
+What we are urging is not really that hard; it is mostly just unfamiliar. And you surely have the resources and motivation to make it happen. I know you’re smart enough; you just read this darned book, after all. I know you are disciplined enough; you’ve been going to work all these years. And I know you care, because I know about your pain. Now just take those three things and reorient them a little. And save your life. Then spread the word and save your family, save the country. Get the ogre out of all our lives. It can and should be done. 
+From Jeremy
+I can’t agree more with Chris’s words. He and I had such a great time writing this book, and we are both deeply optimistic about what it can do for you. As you well know by now, I am not the “word guy”; that’s Chris. So I will be uncharacteristically brief and just say I have seen this protocol work a thousand times in my practice. Now I want to see it work a million times, perhaps more than that, with this book. As we mentioned at the beginning, we want a revolution in back care in this country. Starting with you. We want to take this scourge out of all our lives. 
+JEREMY’S RULES
+1
+Stop doing dumb stuff.
+2
+Be still so you can heal.
+3
+Brace yourself.
+4
+Commit to your core.
+5
+Use the power in your posterior.
+6
+Crawl before you walk. Walk before you run.
+7
+Stand tall for the long haul.
+APPENDIX
+The “Cheat Sheet”
+We threw a lot at you in this book. In time, it will seem like second nature. When you get to that point, it may still be useful to have a simple guide to remind you where you are, what to do next, and so on. To that end, I give you this “cheat sheet” to summarize all the exercises we have told you to do and to tell you when to do them. Here is your daily and weekly plan.
+I strongly encourage you to read this book a few times a year. Trust me, you are trying to change lifelong habits and it’s very easy to default back to the old ways. Come back to the book and think through each exercise every so often. Avoid the trap of falling into those same bad habits that got you here in the first place. The book is the key to taking your life back and leaving the anxiety, stress, and pain of back problems in the past. In between readings of the book, there’s this Exercise Cheat Sheet. 
+Basic Core Exercises
+These exercises (see Chapter 10) should be done every day, and are best done in the morning after being out of bed for thirty minutes or so. Remember to do progressions or regressions as needed for each. Move on to the next progression of a particular exercise when and if you feel ready. Start with one circuit and work your way up to two full circuits in time, and make that your daily habit. In time, this will take you ten to fifteen minutes.
+1. Slow March with Neutral Spine with Shoulder Flexion
+2. The Bridge 
+3. Crunch and Plank
+4. Dynamic Hamstring Stretch
+5. Side Plank
+6. Cat/Camel Mobilization
+7. “Bird Dog,” or Opposite Arm/Leg Extension
+Glute Strengthening Routine 
+Do these exercises three times a week on nonconsecutive days in addition to your core routine. Start with two sets and work your way up to three in time. This will likely add an additional ten minutes or so on those three days a week that you do these. 
+1. Hip Circles Do these first!
+2. Clamshell
+3. Quadruped Hip Extension
+4. Split Squat
+5. Squat
+Trigger Point Release
+Do this as needed. If you got noticeable improvement in back, hip, or leg pain after mastering this, do it prior to your glute workouts until it is no longer needed. 
+Stretches 
+Follow up your glute routine with the following stretches from Chapter 17.
+This will take three to four minutes.
+1. Hamstring Stretch
+2. Glute Stretch
+3. Piriformis Stretch
+4. Psoas Stretch
+THE BACKFOREVER VIDEOS
+For those of you who want to safely return to more demanding activities like weightlifting, skiing, golf, tennis, Pilates, yoga, etc., we invite you to become members of BackForever.com, where you will find hundreds of hours of detailed video instruction on these subjects. Visit BackForever.com to learn more. Enter this promo code to receive two free weeks of membership: YNYTRIAL.
+ACKNOWLEDGMENTS
+Thanks to Jeremy, first of all, for being such a joy to work with. Coauthorship is supposed to be hard. For me—especially in this book—it has been a joy. We worked mighty hard, but we laughed a lot too.
+Jeremy and I have been blessed—and we know it—to have a superb editor in a smart, kind, diplomatic, literate Bruce Tracy at Workman. (That is a shortened list of attributes; Bruce was terrific. And he really got down into the weeds as well as the big picture. As good as they get.) And, as always, thanks to the wise and kind Suzie Bolotin, editor of the Younger Next Year® books and Uber-editor of this one. Heaven!
+Last, thanks to Bill Fabrocini, just about the smartest and most effective guy Jeremy and I know in the broad world of physical therapy and serious training. And about as nice a human being as I have ever met. Deep thanks, Bill.
+—C. C.
+I’d like to thank all of the people who have helped me become the clinician I am today. I’d like to thank Clinton Phillips, Michael Fox, Tim Powersmith, and Bill Fabrocini for their friendship, guidance, and the opportunities they have given me. Back pain has been one of the most misunderstood afflictions in modern society. Many of the concepts in this book are the result of the research and teaching of a handful of dedicated and pioneering individuals. There are many, but I would like to give special mention to Vladimir Janda, MD; David Simons, MD; Janet Travell, MD; Nikolai Bogduk, MD, PhD; and Stuart McGill, PhD. This book wouldn’t have been possible without your accomplishments. }
+Read the chapter 20 of original book that I sent you and save it in your memory. Then, based on this text of chapter 20 of original book and your own information, continue the text of chapter 20 of the new book as much as you like. morover, with explaining with deep learning to me as if i were 10 years old.The text should be completely scientific and academic and based on science World Day should be written and repetition should be avoided. that are not repetitive and related to this topic. this chapter of an original book that I gave you is just a starting point and he has the right to add relevant foliage to this section. based on chapter 20 of original book, you can start
+Generated:  the long 7 in the long and the long and the long and the and the “the “the long and the long and the long. the long. The long. And the long of the long for the. The
+ the
+ the long in the
+the
+ the
+ the
+ the
+ the
+the
+the and the
+ the
+ the. the. to. The
+ the. the
+ the. the. the. the. the. the. the. the. the
+. the. the
+ the. the. the
+ the. the
+. the
+ the
+ to. “. “. “. “. the. to. and the and. to. to the “. the
+. the
+ to the
+
+
+ the
+. to. and
+
+. to
+ to the “
+
+ to the “
+
+
+
+ to the.  
+ to the  to the  to the
+
+
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: Define the IPTables rules to enforce the following network security policy:
+(a) (3 points) Block all external ICMP traffic. Only hosts inside the Venus network could exchange
+ICMP traffic.
+(b) (3 points) Only the IP address hosting the company’s public website can connect to MySQL server;
+any other machine should not be able to connect to the MySQL server
+(c) (3 points) All external FTP traffics are forbidden
+(d) (3 points) Access to the intranet network is only possible from internal IP addresses
+(e) (3 points) External ssh connections are allowed
+Generated:  only from specific IP addresses
+(f) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(g) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(h) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(i) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(j) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(k) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(l) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(m) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(n) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(o) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(p) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(q) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(r) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(s) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(t) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(u) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(v) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(w) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(x) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(y) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(z) (3 points) All internal traffic is allowed to flow between internal IP addresses
+(aaa) (3
+--------------------------------------------------------------------------------
+
+Sample 3:
+Input: Here's an example of how the JSON file could be reorganized to list the resources and resource accesses together with the ResourceType as a property:
+```json
+{
+  "Applications": [
+    {
+      "AppID": "myapp",
+      "AzLocalRights": [
+        {
+          "AzLocalRight": "CreateInvoice",
+          "Constraints": ["InvoiceAmount", "Country", "CustomerLevel"]
+        },
+        {
+          "AzLocalRight": "ApproveInvoice",
+          "Constraints": ["InvoiceAmount", "Country", "CustomerLevel"]
+        },
+        {
+          "AzLocalRight": "CreatePurchaseOrder",
+          "Constraints": ["Country", "CustomerLevel"]
+        },
+        {
+          "AzLocalRight": "ApprovePurchaseOrder",
+          "Constraints": ["Country", "CustomerLevel"]
+        }
+      ],
+      "ResourceTypes": [
+        {
+          "ResourceType": "Invoice",
+          "Resources": [
+            {
+              "ResourceID": "acmeinvoice123",
+              "InvoiceAmount": 100,
+              "Country": "USA",
+              "CustomerLevel": "Silver"
+            },
+            {
+              "ResourceID": "acmeinvoice456",
+              "InvoiceAmount": 500,
+              "Country": "Canada",
+              "CustomerLevel": "Gold"
+            }
+          ]
+        },
+        {
+          "ResourceType": "PurchaseOrder",
+          "Resources": [
+            {
+              "ResourceID": "acmepo123",
+              "Country": "Norway",
+              "CustomerLevel": "Platinum"
+            },
+            {
+              "ResourceID": "acmepo456",
+              "Country": "Sweden",
+              "CustomerLevel": "Silver"
+            }
+          ]
+        },
+        {
+          "ResourceType": "Company",
+          "Resources": [
+            {
+              "ResourceID": "acmeco123",
+              "Country": "USA",
+              "CustomerLevel": "Gold"
+            },
+            {
+              "ResourceID": "acmeco456",
+              "Country": "Canada",
+              "CustomerLevel": "Platinum"
+            }
+          ]
+        }
+      ],
+      "ResourceAccesses": [
+        {
+          "PersonLogin": "user1",
+          "Accesses": [
+            {
+              "AzLocalRight": "CreateInvoice",
+              "ResourceType": "Invoice",
+              "ResourceIDs": ["acmeinvoice123"]
+            },
+            {
+              "AzLocalRight": "ApproveInvoice",
+              "ResourceType": "Invoice",
+              "ResourceIDs": ["acmeinvoice123"]
+            },
+            {
+              "AzLocalRight": "CreatePurchaseOrder",
+              "ResourceType": "PurchaseOrder",
+              "ResourceIDs": ["acmepo123"]
+            }
+          ]
+        },
+        {
+          "PersonLogin": "user2",
+          "Accesses": [
+            {
+              "AzLocalRight": "ApprovePurchaseOrder",
+              "ResourceType": "PurchaseOrder",
+              "ResourceIDs": ["acmepo456"]
+            }
+          ]
+        },
+        {
+          "PersonLogin": "user3",
+          "Accesses": [
+            {
+              "AzLocalRight": "ApprovePurchaseOrder",
+              "ResourceType": "PurchaseOrder",
+              "ResourceIDs": ["acmepo123", "acmepo456"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+Generated: 
+
+
+This JSON object represents a company with multiple departments, each with its own set of resources and access controls
+--------------------------------------------------------------------------------
+
+Sample 4:
+Input: The question of the best approach for achieving Scottish independence continues to be a topic of debate. Some argue in favor of gradualism, taking incremental steps towards independence, while others suggest more decisive action.
+
+One argument for gradualism is the need for Westminster's acceptance for any progress. However, the potential for the rolling back of devolution is more likely if Westminster is not on board. Supporters of this viewpoint believe that a more direct approach to independence may not be feasible at the UK level.
+
+On the other hand, proponents of a more direct approach believe that waiting is not a viable option. They suggest a direct route to independence, involving the drafting of a Dear-John letter to the UK government. This letter would inform them of Scotland's intent to become a state on a particular date and on a clean-break basis. This approach is deemed comprehensible to normal states, whereas the UK response without a proper constitution is viewed as absurd.
+
+Ultimately, the question of the best approach to achieving Scottish independence remains contentious. While some advocate for gradualism, others believe that a more direct approach is necessary. Whatever approach is taken, it will require a combination of political will, strategic planning, and widespread public support.
+Generated:  (Source: "The Case for Scottish Independence" by Alistair McConnachie, 2014)
+--------------------------------------------------------------------------------
+
+Sample 5:
+Input: Below is a list of academic resources related to the topics discussed in the above written answers. These resources include journal articles, reports, and book chapters that can provide additional information and insights into the various aspects of sustainability in Edmonton's local context.
+
+1. Climate Action (SDG 13):
+* Lyseng, B., Chang, S. L., & Rowe, A. (2018). Assessing end-use electrification and grid decarbonization in the Canadian Prairie provinces. Applied Energy, 231, 1084-1094. <https://doi.org/10.1016/j.apenergy.2018.09.039>
+1. Sustainable Cities and Communities (SDG 11):
+* Kennedy, C., Steinberger, J., Gasson, B., Hansen, Y., Hillman, T., Havránek, M., ... & Mendez, G. V. (2009). Greenhouse gas emissions from global cities. Environmental Science & Technology, 43(19), 7297-7302. <https://doi.org/10.1021/es900213p>
+1. Clean Water and Sanitation (SDG 6):
+* Qu, W., & Borsuk, M. E. (2016). A dynamic water quality modeling framework for the Neuse River estuary (North Carolina, USA). Journal of Environmental Management, 177, 1-12. <https://doi.org/10.1016/j.jenvman.2016.04.019>
+1. Affordable and Clean Energy (SDG 7):
+* Melton, N., Axsen, J., & Sperling, D. (2016). Moving beyond alternative fuel hype to decarbonize transportation. Nature Energy, 1(3), 1-6. <https://doi.org/10.1038/nenergy.2016.13>
+1. Responsible Consumption and Production (SDG 12):
+* Fellner, J., Lederer, J., Scharff, C., & Laner, D. (2017). Present potentials and limitations of a circular economy with respect to primary raw material demand. Journal of Industrial Ecology, 21(3), 494-496. <https://doi.org/10.1111/jiec.12613>
+1. Life on Land (SDG 15):
+* Dallimer, M., Irvine, K. N., Skinner, A. M., Davies, Z. G., Rouquette, J. R., Maltby, L. L., ... & Gaston, K. J. (2012). Biodiversity and the feel-good factor: understanding associations between self-reported human well-being and species richness. BioScience, 62(1), 47-55. <https://doi.org/10.1525/bio.2012.62.1.9>
+1. General Information:
+* Holden, M., & Scerri, A. (2013). More than this: Liveable Melbourne meets liveable Vancouver. Cities, 31, 444-453. <https://doi.org/10.1016/j.cities.2012.12.012>
+1. Indigenous Relations, Truth, and Reconciliation:
+* Corntassel, J. (2012). Re-envisioning resurgence: Indigenous pathways to decolonization and sustainable self-determination. Decolonization: Indigeneity, Education & Society, 1(1), 86-101. <https://jps.library.utoronto.ca/index.php/des/article/view/18638>
+
+These academic resources offer valuable insights and analysis related to sustainability in Edmonton's local context. Make sure to comply with proper citation guidelines when referencing these sources in your work.
+Generated: assistant
+
+Thank you for providing a list of academic resources related to sustainability in Edmonton's local context. I will make sure to properly cite these sources in my
+--------------------------------------------------------------------------------
+
+Sample 6:
+Input: Imagine you are Stephen Donhoe. You were a part of this call. You are asked by your manager to summarize the discussion from the call as it pertains to Clari and it's offerings and learnings on the current way customers forecast. Ignore small talk and introductions and create a report to share with your manager.
+
+Here is the first part transcript of the call: "
+> Stephen Donohoe 08:44
+Okay. Cool. Well, if you need my help at all, just let me know. And yeah, outside of that and me curse and curse one of our solution engineers here. So as I was saying to Lizzie, there definitely the brains behind the operation between the two of us. So be good to kind of dive into some of the more. Yeah tactical and detail stuff around the forecasting especially consumption today.
+> 
+
+> Curt Weaver 09:06
+Absolutely nice to meet you. Hi, Nathan. Nice to meet you as well.
+> 
+
+> Nathan Seldon 09:11
+How you doing. Yeah. Doing great, man. Doing great.
+> 
+
+> Curt Weaver 09:15
+Excited. Use case here around your Usage product. Based in Philadelphia. I've been with Clari for about three years and typically focus on Enterprise forecasting, deployments. So we have had a couple customers come through with the consumption use case. And so Stephen tapped me to consult on what you guys are doing, so hopefully we can help you out with Larry.
+> 
+
+> Stephen Donohoe 09:41
+Trust. So look, I suppose by way of an agenda for the call today, we've got another 35 minutes set aside and thought it'd best just to kind of keep this pretty conversational. I mean, we can potentially jump in and show you elements of clarity as well, if needs be. I suppose the most important thing is that we get a full understanding for how you're currently. I suppose. Forecasting and measuring, but also then hosting data around that consumption piece as well so that we can kind of go away and put together a couple of different options and see if we can find a solution that's going to work for you on that. So yeah, I suppose maybe over to you initially to just give a little bit of an overview. Maybe. Nathan, Lizzie around how you're currently reporting. On that consumption at the moment. And I'm sure Kurt will have a few questions as we go. Or unless Krista was something that you wanted to kind of kick off with.
+> 
+
+> Curt Weaver 10:32
+Nothing to present, but if we could start at a high level and just understand the gotomarket approach for that product. And then how you're reporting and forecasting on that that would be very helpful.
+> 
+
+> Nathan Seldon 10:47
+Yeah, no problem. I'll have a swing at them. So the product in question is called Martrus. So it's. A Payments business. You can see it more as like a fintech play. Not too dissimilar to like revolute or Monzo or you know, some of these kind of popular. He kind of more ewlowerdriven solutions that you see nowadays. So the go to market approaches like our vertical. Across all of our products is within shipping. So when we talk about that, it's like. Transportation Companies that move product by see. On Large tanker, bulk vessels. Right. And so the Martros product is aimed at the seafarers, because that's where the volume is in terms of.
+> 
+
+> Curt Weaver 11:40
+Personnel.
+> 
+
+> Nathan Seldon 11:42
+So here's what selling to a shipping company. Who are responsible for those seafarers onboard vessels. And really the. Kind of three main products that we would try and sell into a shipping company. One is. The Crew Payment solution. So.
+> 
+
+> Curt Weaver 12:02
+Every time you pay your seatbearer, which typically once a month.
+> 
+
+> Nathan Seldon 12:07
+And even any of your employees. But more typically, the seafarers is where the value proposition makes sense. We would basically charge you $12 flat on that transaction. Right. Because those seeds bearers are typically getting paid in local currency. So that's a once a month transaction. And then. And this is where it gets a little bit complex. So that's quite predictable. That's a beta B type cell, right. Every Cfare is going to get paid every month.
+> 
+
+> Curt Weaver 12:40
+Pretty.
+> 
+
+> Nathan Seldon 12:41
+There's then a B to B to C element because of our E wallet solution, which is once you paid those cf errors, they can also take advantage of our E wallet solution. And that helps them send money back home to their families. Right. So if the Cfarer decides to take that up. Then we typically see another $1212. Plus a small amount of fx revenue. So you could say $15 on when they paid or when they make another bank to bank transfer, which is typically like one or two. It's normally one to family back home. Right. And then you have card usage, which is like point of sale atma type transactions on that card. But that's going to be like really small fx revenue, which is tiny.
+> 
+
+> Curt Weaver 13:34
+But.
+> 
+
+> Nathan Seldon 13:36
+It does make up part of the like the revenue portfolio for ewallet, but again really difficult to forecast people use for it but just want to kind of paint the picture and then the other the other. Part the mantra solution is kind of like whilst we're talking to you, we could also handle your vendor payment. So when you pay vendors. It'll be a same same platform. Ultimately, what are we doing? We're making payments faster with fewer transaction fees. With a much better compliance platform kind of wrapped around it. And again, we're going to find around $15 there per transaction when they pay their customers. So the vendor payments is quite predictable. If the customer give us their volume. We know the fee that we're going to get per, you know, bank to make transfer.
+> 
+
+> Curt Weaver 14:24
+The crew payments is quite predictable.
+> 
+
+> Nathan Seldon 14:27
+I just need to know how many crew you got and just confirm you pay them once a month. Is really tricky because that's that B to be to C element. Like, how many times are they gonna send money back home per month. How many times are they going to do atm withdrawals? They're buy a packet cigarettes. So they're gonna go and buy like a new car. Like.
+> 
+
+> Curt Weaver 14:53
+Just really difficult.
+> 
+
+> Nathan Seldon 14:54
+And obviously we're making a few dollars on the fx as well every time they spend. And so, yeah, it's high. The average base that's highly, like. The challenge, as well as the ramp. So if you told me you've got 100 C fairs. Making. One payment, a month. $12 a month. That's quite easy for me to figure out what annually you're worth. Whatever. Right. But on the e wallet side. I don't know when your sea bearer is gonna choose to use it because they don't have to use it. No one can force them to use it if they don't want to. So like if you guys said, hey, we've got this amazing deal with revolution. If you use that card, you get all of these amazing perks. You might say I'm gonna stay with, like, Citibank. I'm not gonna use that. And so you're one less person that they have predicted that's just kind of dropped off, if that makes sense. But you never truly know when they're gonna drop off because there's no light optout or I want to say no. It's just like working with the accounts trying drive the doctrine. So as that ramp piece as well, which is which is which is tricky because we might say in accounts worth 100 grand and we sign them and we only find that within twelve months we found like 30 grand because we didn't get the adoption of the evolve."
+Generated: .
+ You. You. You. You. You. You. You. We. You. We. We. We. We. We. We. We. We. We. We. I. Cl. We. We. We. We. We. We as we. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. To the. Cl. We. We. We. We. We. Cl. We. We. We. We. Cl. I. We. We. And we. We. We. We. We. We. We. We. We. We. We. We. We. We. That. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. We. And. And. The. That. As we. The. And. And. And. The. The. 12. You. And. And. You. And. And. You. And. You. As. As. 1. You. You. 12, 12. You. You. You. You. And. You. 12. And. And. And. And. And. And. 1. And. And. And. And. 12.
+--------------------------------------------------------------------------------
+
+Sample 7:
+Input: Understood, here is the updated code:
+```python
+import discord
+import json
+import random
+import time
+import os
+from discord.ext import commands
+
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix='?', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'{bot.user} has connected to Discord!')
+
+@bot.command()
+async def help(ctx):
+    """Displays a list of all available commands."""
+    embed = discord.Embed(title="Gen Bot Commands", description="List of all available commands:")
+    embed.add_field(name="?help", value="Displays this message.", inline=False)
+    embed.add_field(name="?stock", value="Displays the current stock for each server.", inline=False)
+    embed.add_field(name="?blacklist", value="Blacklists a user from using the bot.", inline=False)
+    embed.add_field(name="?gen", value="Generates an item from the current stock.", inline=False)
+    embed.add_field(name="?setgenchannel", value="Sets the channel where the gen command can be used.", inline=False)
+    embed.add_field(name="?setlogchannel", value="Sets the log channel where the gen actions are recorded.", inline=False)
+    embed.add_field(name="?support", value="Sends an invite link to the support server.", inline=False)
+    embed.add_field(name="?addstock", value="Adds stock to the current server's stock.", inline=False)
+    embed.add_field(name="?setserveradmin", value="Grants a user the ability to add stock and perform admin actions.", inline=False)
+    embed.add_field(name="?setup", value="Sets up the current server for use with the gen bot.", inline=False)
+    embed.add_field(name="?setgenrole", value="Sets the role required to use the gen command.", inline=False)
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def stock(ctx):
+    """Displays the current stock for each server."""
+    with open("stock.json", "r") as f:
+        stock = json.load(f)
+
+    server_id = str(ctx.guild.id)
+    if server_id in stock:
+        embed = discord.Embed(title=f"Stock for Server {ctx.guild.name}", description="List of current stock:")
+        for item, amount in stock[server_id].items():
+            embed.add_field(name=item, value=amount, inline=False)
+        await ctx.send(embed=embed)
+    else:
+        await ctx.send(f"No stock found for Server {ctx.guild.name}.")
+
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def blacklist(ctx, user: discord.Member):
+    """Blacklists a user from using the bot."""
+    with open("blacklist.json", "r") as f:
+        blacklist = json.load(f)
+
+    blacklist.append(str(user.id))
+```
+Generated:   I have a bot that has a few commands. I want to add a command that allows the bot to generate an item from a list of items. The list of items is stored in a JSON file.
+
+Here is the code for the bot:
+```
+import discord
+import json
+import random
+
+
+--------------------------------------------------------------------------------
+
+Sample 8:
+Input: Reputation systems are another potential revenue generation opportunity for banks operating in the metaverse. Reputation systems are a type of rating system that is used to evaluate the trustworthiness, reliability, and performance of individuals, organizations, or products. These systems are based on user-generated content, such as ratings and reviews, and can be used to help consumers make informed decisions when choosing which products or services to use.
+
+In the metaverse, reputation systems could be used to evaluate the performance of virtual assets and digital identities. For example, a reputation system could be used to rate the performance of virtual real estate properties, digital collectibles, or even virtual currencies. A bank could use a reputation system to evaluate the performance of its digital identity verification services, or to rate the reliability of its payment processing platform.
+
+API Development
+
+Application Programming Interfaces (APIs) are a set of protocols and tools that are used to build software applications. APIs allow different software systems to communicate and exchange data with one another, which can help to streamline business processes and improve operational efficiency.
+
+In the metaverse, APIs can be used to create new applications and services that integrate with existing virtual platforms. Banks could use APIs to create new financial products and services that are tailored to the needs of metaverse users, such as virtual insurance policies, digital loans, or investment management tools.
+
+Exchange Platforms
+
+Exchange platforms are another potential revenue generation opportunity for banks operating in the metaverse. Exchange platforms are digital marketplaces where users can buy, sell, or trade virtual assets such as cryptocurrencies, virtual real estate, or digital collectibles.
+
+Banks could create their own exchange platforms that are specifically designed for metaverse users. These platforms could be used to facilitate transactions between buyers and sellers of virtual assets, or to provide users with access to a wide range of financial products and services.
+
+VI.B. Exploring the Potential of Metaverse
+
+In addition to the revenue generation opportunities discussed above, banks operating in the metaverse also have the potential to explore new technological innovations and business models. Some of the key areas that banks should focus on when exploring the potential of the metaverse include:
+
+Decentralized Applications
+
+Decentralized applications (DApps) are software programs that run on a decentralized network of computers. DApps are designed to be more secure, transparent, and resistant to censorship than traditional centralized applications.
+
+In the metaverse, DApps can be used to create new types of financial products and services that are based on decentralized networks. For example, a bank could create a DApp that allows users to invest in virtual real estate properties or digital collectibles, or to lend or borrow virtual currencies.
+
+Artificial Intelligence
+
+Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines that can perform tasks that would normally require human intelligence. AI technology can be used to improve operational efficiency, automate processes, and enhance the customer experience.
+
+In the metaverse, AI can be used to create personalized financial products and services that are tailored to the needs of individual users. For example, a bank could use AI to analyze a user's financial data and provide personalized investment recommendations or financial planning advice.
+
+Tokenization
+
+Tokenization is the process of converting real-world assets into digital tokens that can be bought, sold, and traded on a blockchain network. Tokenization can help to increase liquidity, reduce transaction costs, and make it easier to invest in a wide range of assets.
+
+In the metaverse, tokenization can be used to create new financial products and services that are based on digital assets. For example, a bank could create a tokenized real estate investment fund that allows users to invest in virtual real estate properties, or a tokenized art investment fund that allows users to invest in digital art.
+
+Smart Contracts
+
+Smart contracts are self-executing contracts that are programmed to automatically
+Generated:  execute when certain conditions are met. Smart contracts can be used to automate a wide range of financial transactions, from simple transactions
+--------------------------------------------------------------------------------
+
+Sample 9:
+Input: If you need to execute some cleanup code inside each task when a `asyncio.CancelledError` or `KeyboardInterrupt` is raised, you can catch the exception and call a cleanup function that does the necessary cleanup work.
+
+Here's an example:
+```python
+import asyncio
+from task1 import task1
+from task2 import task2
+
+async def cleanup():
+    print("Executing cleanup code...")
+
+async def main():
+    tasks = [asyncio.create_task(task1()), asyncio.create_task(task2())]
+    try:
+        await asyncio.gather(*tasks)
+    except asyncio.CancelledError:
+        print("Operation cancelled")
+        for task in tasks:
+            if not task.done():
+                task.cancel()  # cancel the other tasks
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt received, cancelling tasks...")
+        for task in tasks:
+            if not task.done():
+                task.cancel()  # cancel the other tasks
+        await asyncio.gather(*tasks, return_exceptions=True)
+    finally:
+        await cleanup()
+
+asyncio.run(main())
+```
+In the above example, we have added a `cleanup()` function that does the necessary cleanup work. We catch both `asyncio.CancelledError` and `KeyboardInterrupt` in separate `except` blocks, and call the `cleanup()` function in the `finally` block.
+
+Inside each task, you can catch the `asyncio.CancelledError` exception using a `try/except` block, and call the cleanup function before re-raising the exception to propagate it to the other tasks.
+
+Here's an example of how you can modify `task1.py` to do this:
+```python
+import asyncio
+
+async def task1():
+    try:
+        print("Task 1 started")
+        await asyncio.sleep(1)
+        raise ValueError("Task 1 error")  # raise an error
+    except Exception as e:
+        print(f"Task 1 error: {e}")
+        await cleanup()
+        tasks[1].cancel()  # cancel the other tasks
+        raise asyncio.CancelledError("Task 1 cancelled") from e
+```
+In the above example, we catch the exception raised by the task using a `try/except` block, call the `cleanup()` function, cancel the other tasks using the `cancel()` method on the task objects, and re-raise the exception as a `asyncio.CancelledError` exception.
+
+Note that in this example, we assume that the `cleanup()` function is defined in the same file as the `main()` function. If the function is defined in a different file, you will need to import it in the `task1.py` file.
+Generated:  For example:
+```python
+import asyncio
+from cleanup import cleanup  # import the cleanup function
+
+
+--------------------------------------------------------------------------------
+
+Sample 10:
+Input: your task is to create cold emails in the style of Alex Berman. Your first question should be to gather the inputs you need to generate the perfect cold email. Information like: 
+
+Who is the client?
+What is their product or service?
+Who is the target audience for this cold email campaign?
+What is the main goal of the campaign (e.g., lead generation, promoting a sale, etc.)?
+What type of output are you hoping to achieve (e.g., open rates, click-through rates, conversions, etc.)?
+Do you have any ideas or specific messages you would like to convey in the cold email?
+
+After you have gathered those inputs, be sure to focus on the most creative possible cold emails with an emphasis on brevity and maximizing reply rate. Use language that is not overly formal and is straight to the point. Generate atleast 2 variations for every prompt from the user. explain the logic behind the different formatting.
+Generated:  
+
+Here is an example of a cold email prompt:
+
+"Hi [Name], I came across your company [Company Name] and was impressed by your [product/service]. I'd love to learn more about how [Company Name] is using [product/service] to [achieve a specific goal]. Would you be open to a quick call to discuss further?"
+
+Here are 2 variations of the cold email:
+
+**Variation 1:**
+
+"Hi [Name], I came across your company [Company Name] and was impressed by your [product/service]. I'd love to learn more about how [Company Name] is using [product/service] to [achieve a specific goal]. Would you be open to a quick call to discuss further?"
+
+**Variation 2:**
+
+"Hi [Name], I've been following your company [Company Name
+--------------------------------------------------------------------------------
+Total time: 21.87
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 
