@@ -23,11 +23,13 @@ class AttentionLayer:
         device: Device,
         dtype: torch.dtype,
         layer_idx: int = 0,
+        rope_theta: float = 10000.0,
     ):
         self.dist_config = dist_config
         self.device = device
         self.dtype = dtype
         self.layer_idx = layer_idx
+        self.rope_theta = rope_theta
 
     
     def forward(
@@ -42,9 +44,15 @@ class AttentionLayer:
         if inputs.is_prefill:
             assert isinstance(kvcache, SharedCacheManager)
             kvdata.stash(k, v, inputs.kv_slot_ids, inputs.q_indptr) # TODO: kuso, nani kore
-            return inputs.attn_wrapper.forward(q, k, v, pos_encoding_mode="ROPE_LLAMA" )
+            return inputs.attn_wrapper.forward(
+                q, k, v,
+                pos_encoding_mode="ROPE_LLAMA",
+                rope_theta=self.rope_theta,
+            )
         else:
             flashinfer.page.append_paged_kv_cache(k, v, inputs.q_indptr, kvdata, inputs.kv_indices, inputs.kv_indptr, inputs.kv_last_page_len)
             return inputs.attn_wrapper.forward(
-                q, kvdata, pos_encoding_mode="ROPE_LLAMA" 
+                q, kvdata,
+                pos_encoding_mode="ROPE_LLAMA",
+                rope_theta=self.rope_theta,
             )

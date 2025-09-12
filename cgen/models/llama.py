@@ -57,7 +57,7 @@ class DistLlamaAttn(torch.nn.Module):
         self.nkvheads = model_config.num_key_value_heads // dist_config.tp_size
         self.hsz = model_config.hidden_size
         self.dim = model_config.hidden_size // model_config.num_attention_heads
-        self.rope_theta = model_config.rope_theta
+        self.rope_theta = getattr(model_config, "rope_theta", 10000.0)
 
 
         self.qkv_proj = LinearLayer(
@@ -75,7 +75,8 @@ class DistLlamaAttn(torch.nn.Module):
             torch.float16,
         )
         self.attn = AttentionLayer(
-            dist_config, device, torch.float16, layer_idx=layer_idx
+            dist_config, device, torch.float16,
+            layer_idx=layer_idx, rope_theta=self.rope_theta
         )
 
     def forward(
