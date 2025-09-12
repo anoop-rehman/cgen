@@ -447,6 +447,9 @@ class LLMEngine():
         itr_cnt = 0
         detokenized_seq: Dict[int, str] = {}
         start_t = time.time()
+        # actual tokens processed by the model (prefill vs decode)
+        actual_prefill_tokens = 0
+        actual_generated_tokens = 0
         while not scheduler.finished():
             logger.debug("next iteration")
             itr_cnt += 1
@@ -496,6 +499,11 @@ class LLMEngine():
             # Only enqueue/execute if there is actual work.
             if len(batch.seq_ids) > 0:
                 task_queue.append(batch.seq_ids)
+                # count actual tokens flowing through the model
+                if batch.is_prefill:
+                    actual_prefill_tokens += int(getattr(batch.x, "shape", [0])[0] or 0)
+                else:
+                    actual_generated_tokens += int(getattr(batch.x, "shape", [0])[0] or 0)
                 self.call_no_wait("execute_model", batch)
 
             # Drain in strict FIFO:
@@ -533,7 +541,7 @@ class LLMEngine():
         t1 = time.time() - t0
         print(f"detokenizer takes {t1:.2f} s")
         dur = time.time() - start_t
-        return ret, dur
+        return ret, dur, actual_prefill_tokens, actual_generated_tokens
 
     def perf_record(self):
         return self.call_and_wait('perf_record')

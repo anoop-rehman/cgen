@@ -44,14 +44,24 @@ def run_cgen(
     engine._clear_timing()
     inputs = [x[0] for x in requests]
     max_tokens = [x[1] + x[2] for x in requests]
-    out, dur = engine.run(
+    out, dur, actual_prefill, actual_generated = engine.run(
         inputs=inputs,
         max_tokens=max_tokens
         )
     engine.join()
+    # --- Token accounting (ACTUAL) ---
+    print("\n=== Token accounting (actual) ===")
+    print(f"Actual prefilled tokens:  {actual_prefill}")
+    print(f"Actual generated tokens:  {actual_generated}")
+    total_actual = actual_prefill + actual_generated
+    if dur > 0:
+        print("\n=== Throughput (actual / wall time) ===")
+        print(f"Prefill throughput: {actual_prefill / dur:,.2f} toks/s")
+        print(f"Decode  throughput: {actual_generated / dur:,.2f} toks/s")
+        print(f"Total   throughput: {total_actual / dur:,.2f} toks/s")
     if prin_output:
-        print("=== Sample Model Outputs (First 20) ===")
-        for i in range(min(20, len(out))):
+        print("=== Sample Model Outputs (First 2) ===")
+        for i in range(min(2, len(out))):
             print(f"\nSample {i+1}:")
             print(f"Input: {inputs[i]}")
             print(f"Generated: {out[i]}")

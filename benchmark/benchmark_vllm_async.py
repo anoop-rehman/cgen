@@ -113,8 +113,8 @@ async def run_vllm_async(
 
     # ---- Optional: show some outputs ----
     if print_output:
-        print("=== Sample vLLM Outputs (First 20) ===")
-        for i, r in enumerate(results[:20]):
+        print("=== Sample vLLM Outputs (First 2) ===")
+        for i, r in enumerate(results[:2]):
             if r is None or not r.outputs:
                 continue
             text = (r.outputs[0].text or "")
@@ -139,10 +139,13 @@ async def run_vllm_async(
     output_tp = total_output_tokens / duration if duration > 0 else 0.0
     total_tp = (total_input_tokens + total_output_tokens) / duration if duration > 0 else 0.0
 
-    print(f"Input tokens: {total_input_tokens}, Output tokens: {total_output_tokens}")
-    print(f"Input throughput: {input_tp:.2f} tokens/s")
-    print(f"Output throughput: {output_tp:.2f} tokens/s")
-    print(f"Total throughput: {total_tp:.2f} tokens/s")
+    print("=== Token accounting (actual) ===")
+    print(f"Actual prefilled tokens: {total_input_tokens}")
+    print(f"Actual generated tokens: {total_output_tokens}")
+    print("\n=== Throughput (actual / wall time) ===")
+    print(f"Prefill throughput: {input_tp:.2f} tokens/s")
+    print(f"Decode  throughput: {output_tp:.2f} tokens/s")
+    print(f"Total   throughput: {total_tp:.2f} tokens/s")
     print(f"Wall time: {duration:.2f}s")
 
     return duration, total_input_tokens, total_output_tokens

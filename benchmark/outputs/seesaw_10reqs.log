@@ -1,0 +1,222 @@
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ ./benchmark/run_benchmark.sh 
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.4.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-12 23:20:43.380 | INFO     | cgen.engine:__init__:336 - init process group using port 49807
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-12 23:20:48.305 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:20:48.305 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:20:48.438 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:20:48.438 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:20:48.453 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:20:48.453 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:20:48.473 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:20:48.473 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:20:48.486 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=0/4
+2025-09-12 23:20:48.486 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=1/4
+2025-09-12 23:20:48.486 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=3/4
+2025-09-12 23:20:48.486 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=2/4
+2025-09-12 23:20:48.488 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/4 pp=0/1
+2025-09-12 23:20:48.488 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=3/4 pp=0/1
+2025-09-12 23:20:48.488 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=2/4 pp=0/1
+2025-09-12 23:20:48.488 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=1/4 pp=0/1
+INFO 09-12 23:20:48 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:20:48 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:20:48 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 23:20:48 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:20:48 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:20:48 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 23:20:48 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 23:20:48 pynccl.py:63] vLLM is using nccl==2.20.5
+579it [00:10, 52.85it/s] 
+579it [00:10, 54.05it/s]
+579it [00:11, 51.96it/s]
+579it [00:11, 51.75it/s]
+579it [00:22, 25.72it/s]
+579it [00:22, 25.48it/s]
+2025-09-12 23:21:25.854 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:21:25.854 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:21:25.863 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 8.09 GB
+2025-09-12 23:21:25.863 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 7.11 GB
+579it [00:22, 25.55it/s]
+2025-09-12 23:21:25.928 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:21:25.933 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 7.11 GB
+579it [00:22, 25.65it/s]
+2025-09-12 23:21:26.040 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:21:26.046 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 8.09 GB
+2025-09-12 23:21:27.236 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:21:27.236 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:21:27.236 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:21:27.236 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:280 - 3 <torch.cuda.Stream device=cuda:3 cuda_stream=0x0> 
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:280 - 0 <torch.cuda.Stream device=cuda:0 cuda_stream=0x0> 
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:280 - 1 <torch.cuda.Stream device=cuda:1 cuda_stream=0x0> 
+2025-09-12 23:21:27.404 | INFO     | cgen.engine:init_shared_cache:280 - 2 <torch.cuda.Stream device=cuda:2 cuda_stream=0x0> 
+self.watermark_blocks=50.0
+Processed prompts:   0%|          | 0/10 [00:03<?, ?it/s, est. speed input: 5684.15 toks/s, output: 0.00 toks/s]2025-09-12 23:21:30.498 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 4, seqs in GPU 0
+2025-09-12 23:21:30.498 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:30.599 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:30.699 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:30.799 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:30.900 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:31.000 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:31.100 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:31.201 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:31.301 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:31.401 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:31.501 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:21:32.781 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+Processed prompts:   0%|          | 0/10 [00:11<?, ?it/s, est. speed input: 1494.41 toks/s, output: 43.05 toks/s]2025-09-12 23:21:39.029 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=1 reason=max_tokens len=1328 max=1328
+2025-09-12 23:21:39.095 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=3 reason=max_tokens len=1899 max=1899
+Processed prompts:  20%|██        | 2/10 [00:11<00:46,  5.80s/it, est. speed input: 1474.15 toks/s, output: 43.42 toks/s]2025-09-12 23:21:39.685 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=0 reason=max_tokens len=1079 max=1079
+2025-09-12 23:21:47.248 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=5 reason=max_tokens len=2993 max=2993
+Processed prompts:  40%|████      | 4/10 [00:19<00:29,  4.94s/it, est. speed input: 865.92 toks/s, output: 50.65 toks/s] 2025-09-12 23:21:54.703 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=4 reason=max_tokens len=2573 max=2573
+2025-09-12 23:21:54.813 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:21:55.461 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:21:55.465 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+Processed prompts:  50%|█████     | 5/10 [00:30<00:30,  6.00s/it, est. speed input: 870.42 toks/s, output: 47.65 toks/s]2025-09-12 23:21:58.778 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+Processed prompts:  50%|█████     | 5/10 [00:31<00:31,  6.27s/it, est. speed input: 776.83 toks/s, output: 42.59 toks/s]2025-09-12 23:22:12.113 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=6 reason=max_tokens len=3671 max=3671
+Processed prompts:  60%|██████    | 6/10 [00:44<00:29,  7.44s/it, est. speed input: 545.62 toks/s, output: 43.23 toks/s]2025-09-12 23:22:19.425 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=7 reason=max_tokens len=3692 max=3692
+Processed prompts:  70%|███████   | 7/10 [00:51<00:22,  7.42s/it, est. speed input: 468.80 toks/s, output: 43.34 toks/s]2025-09-12 23:22:21.205 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=2 reason=max_tokens len=2174 max=2174
+Processed prompts:  80%|████████  | 8/10 [00:53<00:13,  6.71s/it, est. speed input: 453.27 toks/s, output: 43.28 toks/s]2025-09-12 23:22:24.061 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=8 reason=max_tokens len=3634 max=3634
+Processed prompts:  90%|█████████ | 9/10 [00:56<00:06,  6.29s/it, est. speed input: 430.39 toks/s, output: 42.26 toks/s]2025-09-12 23:22:24.061 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:22:30.778 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=9 reason=max_tokens len=3855 max=3855
+Processed prompts: 100%|██████████| 10/10 [01:03<00:00,  6.33s/it, est. speed input: 384.71 toks/s, output: 40.12 Processed prompts: 100%|██████████| 10/10 [01:03<00:00,  6.33s/it, est. speed input: 384.71 toks/s, output: 40.12 toks/s]
+detokenizer takes 0.01 s
+
+=== Token accounting (actual) ===
+Actual prefilled tokens:  24349
+Actual generated tokens:  2539
+
+=== Throughput (actual / wall time) ===
+Prefill throughput: 384.65 toks/s
+Decode  throughput: 40.11 toks/s
+Total   throughput: 424.76 toks/s
+=== Sample Model Outputs (First 2) ===
+
+Sample 1:
+Input: for fixed integers @xmath0 and @xmath1 , we consider the admissible sequences of @xmath2 lattice paths in a colored @xmath3 square given in @xcite . each admissible sequence of paths can be associated with a partition @xmath10 of @xmath4 . in section 
+ [ paths ] , we show that the number of self - conjugate admissible sequences of paths associated with @xmath10 is equal to the number of standard young tableaux of shape @xmath10 , and thus can be calculated using the hook length formula . 
+ we extend this result to include the non - self - conjugate admissible sequences of paths and show that the number of all such admissible sequences of paths is equal to the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 . using the rsk correspondence in @xcite , 
+ it is shown in ( @xcite , corollary 7.23.12 ) that the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 is equal to the number of @xmath6-avoiding permutations of @xmath7 .    in section [ multiplicities ] 
+ , we apply our results to the representation theory of the affine kac - moody algebra @xmath8 . 
+ let @xmath12 , @xmath13 and @xmath14 denote the simple roots , simple coroots , and fundamental weights respectively . 
+ note that @xmath15 
+ . for @xmath16 , set @xmath17 and @xmath18 . as shown in @xcite , @xmath19 
+ are maximal dominant weights of the irreducible @xmath8-module @xmath9 . 
+ we show that the multiplicity of the weight @xmath19 in @xmath9 is the number of @xmath6-avoiding permutations of @xmath7 , which proves conjecture 4.13 in @xcite . 
+ for fixed integers @xmath0 and @xmath1 , consider the @xmath3 square containing @xmath20 unit boxes in the fourth quadrant so that the top left corner of the square is at the origin . 
+ we assign color @xmath21 to a box if its upper left corner has coordinates @xmath22 . 
+ this gives the following @xmath3 colored square @xmath23 :      a lattice path @xmath25 on @xmath23 is a path joining the lower left corner @xmath26 to the upper right corner @xmath27 moving unit lengths up or right . for two lattice paths @xmath28 on @xmath23 
+ we say that @xmath29 if the boxes above @xmath30 are also above @xmath25 . 
+ now , we draw @xmath2 lattice paths , @xmath31 on @xmath23 such that @xmath32 . for integers 
+ @xmath33 , where @xmath34 , @xmath35 , we define @xmath36 to be the number of @xmath37-colored boxes between @xmath38 and @xmath39 . 
+ we define @xmath40 to be the number of @xmath37-colored boxes below @xmath41 and @xmath42 to be the number of @xmath37-colored boxes above @xmath43 . 
+ denote by @xmath49 the set of all admissible sequences of @xmath2 paths . 
+ notice that there are @xmath4 0-colored boxes in @xmath23 and hence for any admissible sequence of paths , @xmath50 . 
+ in addition , it follows from definition [ pathsdef](2 ) that @xmath51 for any admissible sequence of paths . 
+ thus , we can and do associate an admissible sequence of paths @xmath44 on @xmath23 with a partition @xmath52 of @xmath4 . in this case , we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram . 
+ figure [ adseq](a ) is an element of @xmath53 , where @xmath54 and @xmath55 are shown in figures [ adseq](b ) , [ adseq](c ) , and [ adseq](d ) , respectively . 
+ notice that this admissible sequence of paths is of type @xmath56 .
+Generated:  
+ we can also associate a partition @xmath57 of @xmath4 with an admissible sequence of paths @xmath44 on @xmath23. 
+ in this case, we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram. 
+ figure [ adseq](a ) is an element of @xmath53, where @xmath58 and @xmath59 are shown in figures [ adseq](b ), [ adseq](c ), and [ adseq](d ), respectively. 
+ notice that this admissible sequence of paths is of type @xmath60. 
+ we can
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: there are reasons to believe that cosmic rays ( crs ) around the ankle at @xmath0 gev are dominated by extragalactic protons  @xcite . 
+ scattering processes in the cosmic microwave background ( cmb ) limit the propagation of ultra high energy ( uhe ) charged particles in our universe . 
+ a continuation of a power - like cr spectrum above the greisen - zatsepin - kuzmin ( gzk ) cutoff  @xcite at about @xmath1 gev is only consistent with the proton dominance if the sources lie within the proton attenuation length of about 50 mpc . 
+ very few astrophysical accelerators can generate crs with energies above the gzk cutoff  ( see e.g.  @xcite for a review ) and so far none of the candidate sources have been confirmed in our local environment . 
+ it has been speculated that decaying superheavy particles , possibly some new form of dark matter or remnants of topological defects , could be a source of uhe crs , but also these proposals are not fully consistent with the cr spectrum at lower energies  @xcite . 
+ the observation of gzk excesses has led to speculations about a different origin of uhe crs . 
+ berezinsky and zatsepin  @xcite proposed that _ 
+ cosmogenic _ neutrinos produced in the decay of the gzk photopions could explain these events assuming a strong neutrino nucleon interaction . 
+ we have followed this idea in ref . 
+ @xcite and investigated the statistical goodness of scenarios with strongly interacting neutrinos from optically thin sources using cr data from agasa  @xcite and hires  @xcite ( see fig .  [ cr ] ) and limits from horizontal events at agasa  @xcite and contained events at rice  @xcite . 
+ -branes , and string excitations ( see ref . 
+ @xcite ) . ] 
+ the flux of uhe extragalactic protons from distant sources is redshifted and also subject to @xmath2 pair production and photopion - production in the cmb which can be taken into account by means of propagation functions . 
+ the resonantly produced photopions provide a _ guaranteed _ source of cosmogenic uhe neutrinos observed at earth . in astrophysical accelerators inelastic scattering of the beam protons off the ambient photon gas in the source will also produce photopions which provide an additional source of uhe neutrinos . the corresponding spectrum will in general depend on the details of the source such as the densities of the target photons and the ambient gas  @xcite . 
+ we have used the flux of crs from _ optically thin _ sources using the luminosities given in ref . 
+ @xcite in the goodness - of - fit test .    for a reasonable and consistent contribution of extragalactic neutrinos in vertical crs 
+ one has to assume a strong and rapid enhancement of the neutrino nucleon interaction . 
+ the realization of such a behavior has been proposed in scenarios beyond the ( perturbative ) sm ( see ref . 
+ @xcite ) . for convenience 
+ , we have approximated the strong neutrino nucleon cross section in our analysis by a @xmath3-behavior shown in fig . 
+ [ fig ] , parameterized by the energy scale and width of the transition , and the amplification compared to the standard model predictions . 
+ our analysis showed that uhe crs measured at agasa and hires can be interpreted to the 90% cl as a composition of extragalactic protons and strongly interacting neutrinos from optically thin sources in agreement with experimental results from horizontal events at agasa and contained events at rice ( see fig . 
+ [ fig ] ) . 
+ the pierre auger observatory combines the experimental techniques of agasa and hires as a hybrid detector . with a better energy resolution , much higher statistics and also stronger bounds on horizontal showers 
+ it will certainly help to clarify our picture of uhe crs in the future . 
+ the author would like to thank the organizers of the erice school on nuclear physics 2005 _ `` neutrinos in cosmology , in astro , particle and nuclear physic '' _ for the inspiring workshop and vihkos ( _ `` virtuelles institut fr hochenergiestrahlungen aus dem kosmos '' _ ) for support . 
+ m.  ahlers , a.  ringwald , and h.  tu , _ astropart . 
+ ( to appear ) , preprint astro - ph/0506698 . 
+ v.  berezinsky , a.  z.  gazizov and s.  i.  grigorieva , preprint hep - ph/0204357 ; v.  berezinsky , a.  z.  gazizov and s.  i.  grigorieva , . 
+ m.  ahlers _ 
+ et  al . _ , . 
+ k.  greisen , ; g.  t.  zatsepin and v.  a.  kuzmin , . 
+ d.  f.  torres and l.  a.  anchordoqui , . 
+ d.  v.  semikoz and g.  sigl , . 
+ v.  s.  beresinsky and g.  t.  zatsepin , . 
+ m.  takeda _ 
+ et  al . _ [ agasa ] , . 
+ d.  j.  bird _ 
+ et  al . _ 
+ [ hires ] , ; r.  u.  abbasi _ et  al . _ [ hires ] , ; r.  u.  abbasi _ et  al . _ [ hires ] , . s.  yoshida _ 
+ _ [ agasa ] , .
+Generated:  
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers _ 
+ et  al. _,. 
+ m.  ahlers
+--------------------------------------------------------------------------------
+Total time: 63.30
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 
+
