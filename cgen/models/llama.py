@@ -291,7 +291,7 @@ class DistLlamaForCausalLM(DistModelBaseForCausalLM):
 class LlamaPinnedModelWeights:
     # move all parameters to pinned memory for faster mode switching
     IN_PART = ["mlp.down_proj", "self_attn.o_proj"]
-    OUT_PART = ["mlp.gate_proj", "mlp.up_proj", "self_attn.k_proj", "self.attn.q_proj", "self_attn.v_proj"]
+    OUT_PART = ["mlp.gate_proj", "mlp.up_proj", "self_attn.k_proj", "self_attn.q_proj", "self_attn.v_proj"]
     def __init__(self, weight_loader, model_config, dist_config: DistConfig, dtype=torch.half):
         self.params = {}
         num_layers = model_config.num_hidden_layers
