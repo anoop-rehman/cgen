@@ -17,7 +17,6 @@ import torch.distributed
 from torch import multiprocessing as mp
 from torch.multiprocessing import Process
 import queue as pyqueue
-from datetime import datetime
 
 import cgen.dist_utils
 from cgen.models import create_model, PinnedModelWeights
@@ -185,17 +184,13 @@ class Worker:
             torch.cuda.nvtx.range_push("wait for inst")
             inst, args, kwargs = self.queue.get()
             torch.cuda.nvtx.range_pop()
-            logger.debug(f"[W{self.rank()}] recv inst={inst} args_keys={[type(a).__name__ for a in args]} "
-                         f"phase={'prefill' if self._current_dist_config is self.dist_config_prefill else 'decode'}")
             if inst == 'quit':
                 # torch.distributed.destroy_process_group()
                 del self._shared_cache_manager
-                logger.info(f"[W{self.rank()}] quit")
                 return
             else:
                 ret = getattr(self, inst)(*args, **kwargs)
                 if ret is not None and self._current_dist_config.should_return():
-                    logger.debug(f"[W{self.rank()}] return_queue.put(len={len(ret) if hasattr(ret,'__len__') else 'NA'})")
                     self.return_queue.put(ret)
 
     def execute_model(
@@ -205,9 +200,7 @@ class Worker:
         inputs = copy.deepcopy(inputs)
         t = time.time()
         rank = self._current_dist_config.rank()
-        logger.info(f"[W{rank}] EXEC start batch_id={inputs.batch_id} "
-                    f"is_prefill={inputs.is_prefill} nseq={len(inputs.seq_ids)} "
-                    f"ntokens={inputs.x.shape[0] if hasattr(inputs,'x') else 'NA'}")
+        logger.debug(f"rank: {rank} | batch_id: {inputs.batch_id} | is_prefill: {inputs.is_prefill}")
         # if self._current_dist_config.should_return():
             # return [0]*len(inputs.seq_ids)
         # else:
@@ -231,9 +224,7 @@ class Worker:
         torch.cuda.nvtx.range_pop()
         dur = (time.time() - start_t) * 1e3
 
-        logger.info(f"[W{rank}] EXEC done batch_id={inputs.batch_id} "
-                    f"is_prefill={inputs.is_prefill} nseq={len(inputs.seq_ids)} "
-                    f"dur_ms={dur:.1f}")
+        logger.debug(f"schedule {len(inputs.seq_ids)} {inputs.seq_ids} | is_prefill: {inputs.is_prefill} | ntokens: {inputs.x.shape[0]} | {dur: .1f} ms")
         if inputs.is_prefill:
             self._prefill_time += dur
         else:
@@ -405,15 +396,6 @@ class LLMEngine():
     def get_result(self):
         return copy.deepcopy(self._return_queue.get())
 
-    def _blocking_get_result_logged(self, reason: str, in_flight: int, current_pp: int):
-        """Block on a result and log how long we waited and why."""
-        t0 = time.time()
-        item = self._return_queue.get()
-        waited = (time.time() - t0)
-        logger.info(f"[DRIVER] RESULT reason={reason} waited_s={waited:.3f} "
-                    f"in_flight={in_flight} phase_pp={current_pp}")
-        return copy.deepcopy(item)
-
     def try_get_result(self, timeout: float = 0.0):
         """Non-blocking: return result or None if nothing ready."""
         try:
@@ -468,12 +450,7 @@ class LLMEngine():
         while not scheduler.finished():
             logger.debug("next iteration")
             itr_cnt += 1
-            tick_ts = datetime.utcnow().strftime("%H:%M:%S.%f")[:-3]
-            if os.getenv("CGEN_DUMP_SCHED", "0") == "1":
-                try:
-                    logger.info(f"[DRIVER] TICK {tick_ts} SNAPSHOT: {scheduler.debug_snapshot()}")
-                except Exception:
-                    pass
+            
 
             # if not scheduler.is_prefill:
             prefetch_tasks = scheduler.schedule_prefetch()
@@ -485,14 +462,7 @@ class LLMEngine():
             if batch.is_prefill != self.is_prefill:
                 # model transition
                 # clear the pipeline
-                logger.info(f"[DRIVER] PHASE SWITCH -> {'prefill' if batch.is_prefill else 'decode'} "
-                            f"(was {'prefill' if prev_is_prefill else 'decode'}) "
-                            f"in_flight={len(task_queue)}")
                 self._clear_pipeline(scheduler, task_queue)
-                try:
-                    logger.info(f"[DRIVER] POST-SWITCH SNAPSHOT: {scheduler.debug_snapshot()}")
-                except Exception:
-                    logger.exception("[DRIVER] snapshot after switch failed")
                 if batch.is_prefill:
                     self.call_and_wait("to_prefill")
                 else:
@@ -505,10 +475,7 @@ class LLMEngine():
                 if self.is_prefill
                 else self.dist_config_decode.pp_size
             )
-            logger.debug(f"[DRIVER] TICK {tick_ts} phase={'prefill' if self.is_prefill else 'decode'} "
-                         f"current_pp={current_pp} new_batch_seqids={len(batch.seq_ids)} "
-                         f"in_flight_before={len(task_queue)} "
-                         f"finished={len(scheduler.finished_reqs)}")
+            
             # on phase switch, reset the empty counter
             if batch.is_prefill != prev_is_prefill:
                 empty_cnt = 0
@@ -522,46 +489,27 @@ class LLMEngine():
                     empty_cnt += 1
                     # be generous: allow several consecutive empty iters ≈ a few PP fills
                     if empty_cnt > (current_pp * 4):
-                        # PANIC SNAPSHOT
-                        try:
-                            snap = scheduler.debug_snapshot()
-                            logger.error(f"[DRIVER] DEADLOCK SNAPSHOT: {snap}")
-                        except Exception as e:
-                            logger.exception(f"[DRIVER] Failed to get scheduler snapshot: {e}")
-                        logger.error(f"[DRIVER] DEADLOCK GUARD trip: phase="
-                                     f"{'prefill' if self.is_prefill else 'decode'} "
-                                     f"empty_cnt={empty_cnt} current_pp={current_pp} "
-                                     f"in_flight={len(task_queue)}")
                         raise RuntimeError("Deadlock")
             else:
                 empty_cnt = 0
 
             # Only enqueue/execute if there is actual work.
             if len(batch.seq_ids) > 0:
-                logger.info(f"[DRIVER] ENQ batch_id={batch.batch_id} "
-                            f"phase={'prefill' if self.is_prefill else 'decode'} "
-                            f"seq_ids={batch.seq_ids} ntokens={batch.x.shape[0]}")
                 task_queue.append(batch.seq_ids)
                 self.call_no_wait("execute_model", batch)
 
             # Drain in strict FIFO:
             # A) keep pace when pipeline full
             while len(task_queue) >= current_pp:
-                o = self._blocking_get_result_logged(
-                    reason="PIPELINE_FULL", in_flight=len(task_queue), current_pp=current_pp
-                )  # blocking
+                o = self.get_result()               # blocking
                 task = task_queue.pop(0)
-                logger.debug(f"[DRIVER] APPEND_OUTPUT (full) task={task}")
                 scheduler.append_output(task, o)
 
             # B) tail underfill: if there is in-flight work but no new batch
             #    this tick, block once for one result to retire the head.
             if len(batch.seq_ids) == 0 and task_queue:
-                o = self._blocking_get_result_logged(
-                    reason="TAIL_UNDERFILL", in_flight=len(task_queue), current_pp=current_pp
-                )  # blocking
+                o = self.get_result()               # blocking
                 task = task_queue.pop(0)
-                logger.debug(f"[DRIVER] APPEND_OUTPUT (tail) task={task}")
                 scheduler.append_output(task, o)            
             
             if batch.is_prefill:
