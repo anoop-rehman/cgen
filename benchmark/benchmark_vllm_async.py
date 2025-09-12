@@ -63,8 +63,6 @@ async def run_vllm_async(
     stop_tokens = []
     if getattr(hf_tok, "eos_token", None):
         stop_tokens.append(hf_tok.eos_token)
-    if getattr(hf_tok, "pad_token", None):
-        stop_tokens.append(hf_tok.pad_token)
 
     sampling_params = SamplingParams(
         temperature=0.0,                 # greedy (as in Seesaw evals)
@@ -79,14 +77,19 @@ async def run_vllm_async(
     if enforce_eager:
         print("NOTE: enforce_eager=True (CUDA graphs disabled)")
 
-    # ---- Submit/collect using generate(...) (0.6.x async stream) ----
-    async def collect_one(prompt: str, idx: int):
-        # In 0.6.3, AsyncLLMEngine.generate(...) returns an async generator of RequestOutput
+    per_req_out_lens = [x[2] for x in requests]  # dataset output_len per item
+
+    async def collect_one(prompt: str, idx: int, per_req_max_new: int):
+        # Build per-request SamplingParams to mirror Seesaw's cap
+        sp = SamplingParams(
+            temperature=0.0,
+            max_tokens=per_req_max_new,  # <= per-request cap
+            stop=stop_tokens or None
+        )
         try:
-            agen = engine.generate(prompt, sampling_params, request_id=f"req-{idx}")
+            agen = engine.generate(prompt, sp, request_id=f"req-{idx}")
         except TypeError:
-            # if request_id kw not supported in your exact subversion
-            agen = engine.generate(prompt, sampling_params)
+            agen = engine.generate(prompt, sp)
         final = None
         async for out in agen:
             if out.finished:
@@ -94,8 +97,12 @@ async def run_vllm_async(
                 break
         return idx, final
 
+
     start = time.time()
-    tasks = [asyncio.create_task(collect_one(p, i)) for i, p in enumerate(inputs)]
+    tasks = [
+        asyncio.create_task(collect_one(p, i, per_req_out_lens[i]))
+        for i, p in enumerate(inputs)
+    ]
     done_results = await asyncio.gather(*tasks)
     duration = time.time() - start
 
