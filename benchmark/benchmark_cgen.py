@@ -71,7 +71,8 @@ def launch(args):
         tokenizer,
         dataset_path = args.dataset_path,
         input_len = args.input_len,
-        output_len = args.output_len
+        output_len = args.output_len,
+        max_length = args.max_input_len,
     ) 
 
     if args.sort_prompts:
@@ -92,7 +93,7 @@ if __name__ == '__main__':
     parser.add_argument("--print-output", action='store_true', help="Print generation results after benchmarking.")
     parser.add_argument("--input-len", type=int, default=1000, help="Number of prompt tokens in a request(when dataset=constant)")
     parser.add_argument("--output-len", type=int, default=100, help="Number of generated tokens (when dataset=constant)")
-
+    parser.add_argument("--max-input-len", type=int, default=4096, help="Maximum tokens per input sequence (prompts longer than this will be truncated for benchmarking parity)")
     parser.add_argument("--hf-token", type=str, required=False, help="HuggingFace token")
     args = parser.parse_args()
     launch(args)
