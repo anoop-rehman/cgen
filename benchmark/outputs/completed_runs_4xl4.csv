@@ -1,0 +1,4 @@
+model                    ,tp ,pp ,max_model_len ,chunked_prefill ,max_batched_tokens ,gpu_mem_util ,enforce_eager ,num_requests ,input_len ,output_len ,duration_s ,input_tokens ,output_tokens ,input_toks_per_s ,output_toks_per_s ,total_toks_per_s
+meta-llama/Llama-2-7b-hf , 4 , 1 ,         4096 ,              1 ,              2048 ,         0.9 ,            0 ,          10 ,     1000 ,       100 ,   43.4937 ,       23295 ,         9990 ,          535.60 ,           229.69 ,          765.28
+meta-llama/Llama-2-7b-hf,1,4,4096,1,2048,0.9,0,10,1000,100,93.0296,23295,9990,250.40,107.39,357.79
+meta-llama/Llama-2-7b-hf,2,2,4096,1,2048,0.9,0,10,1000,100,60.6250,23295,9990,384.25,164.78,549.03
