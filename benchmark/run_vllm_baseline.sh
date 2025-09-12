@@ -1,19 +1,13 @@
-#!/bin/bash
+export CUDA_VISIBLE_DEVICES=0,1
 
-docker run --gpus=all \
-   -v .:/workspace/cgen \
-   -v ${HOME}/.cache/huggingface:/root/.cache/huggingface \
-   --shm-size 64g \
-   cgen:latest \
-   python3 benchmark/benchmark_vllm.py \
-   --model meta-llama/Llama-2-7b-hf \
-   --tokenizer meta-llama/Llama-2-7b-hf \
-   --dataset arxiv \
-   --num-requests 10 \
-   --tensor-parallel-size 1 \
-   --pipeline-parallel-size 1 \
-   --enable-chunked-prefill \
-   --max-model-len 4096 \
-   --max-num-batched-tokens 2048 \
-   --hf-token ${HF_TOKEN} \
-   --print-output
+# PP-heavy (prefill-friendly)
+python3 benchmark/benchmark_vllm_async.py \
+  --model meta-llama/Llama-2-7b-hf \
+  --tensor-parallel-size 1 \
+  --pipeline-parallel-size 1 \
+  --enable-chunked-prefill \
+  --max-num-batched-tokens 4096 \
+  --max-model-len 4096 \
+  --dataset arxiv --num-requests 200 \
+  --input-len 1000 --output-len 100 \
+  --csv runs.csv --csv-append
