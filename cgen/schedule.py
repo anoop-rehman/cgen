@@ -99,7 +99,7 @@ class Scheduler:
                 self.prefilled_reqs.add(seq_id)
             
             if len(seq) >= self.max_tokens[seq_id]:
-                logger.debug(f"seq {seq_id} finished")
+                logger.info(f"[SCHED] finish req seq_id={seq_id} reason=max_tokens len={len(seq)} max={self.max_tokens[seq_id]}")
                 self.finished_reqs.add(seq_id)
                 if seq_id in self.running_reqs:
                     self.running_reqs.remove(seq_id)
@@ -111,6 +111,19 @@ class Scheduler:
                 if seq_id in self.prefilled_reqs:
                     self.prefilled_reqs.remove(seq_id)
                     self.shared_table.free(seq_id)
+                # new: belt and suspenders cleanup for any stragglers
+                self.prefetching_reqs.discard(seq_id)
+                self.prefilling_reqs.discard(seq_id)
+                self.active_seqs.discard(seq_id)
+                leak = {
+                    "prefilled": seq_id in self.prefilled_reqs,
+                    "prefetching": seq_id in self.prefetching_reqs,
+                    "prefilling": seq_id in self.prefilling_reqs,
+                    "running": seq_id in self.running_reqs,
+                    "swap_out": seq_id in self.swap_out_reqs,
+                    "active": seq_id in self.active_seqs,
+                }
+                assert not any(leak.values()), f"finished seq {seq_id} still present in sets: {leak}"
                 new_finished.append(seq_id)
 
     def _try_schedule_prefill(self) -> List[int]:
@@ -264,11 +277,24 @@ class Scheduler:
         chosen = []
         ret = []
         pp_size = self.dist_config_decode.pp_size
-        for seq_id in self.prefilled_reqs:
+
+        # Tail condition: nothing left except prefilled seqs (no new prompts, no running or in-flight prefetch)
+        tail = (len(self.waiting_prompts) == 0 and
+                len(self.running_reqs) == 0 and
+                len(self.prefetching_reqs) == 0)
+        reserve = self.pagetable.watermark_blocks // pp_size
+
+        for seq_id in list(self.prefilled_reqs):
             seq = self.seq_tokens[seq_id]
             free_pages = self.pagetable.num_free_pages(fraction=self.dist_config_decode.pp_size)
             required_pages = self.pagetable.required_num_pages(len(seq) - 1)
-            if free_pages - required_pages >= self.pagetable.watermark_blocks // pp_size:
+
+            if tail:
+                can_alloc = (required_pages <= free_pages)  # ignore reserve at tail; allow exact fit
+            else:
+                can_alloc = (free_pages - required_pages) >= reserve
+
+            if can_alloc:
                 self.pagetable.alloc(seq_id, required_pages)
                 chosen.append(seq_id)
         for seq_id in chosen:
@@ -284,6 +310,22 @@ class Scheduler:
                 torch.tensor([kv_last_page_len], dtype=torch.int32)
             ))
             self.prefetching_reqs.add(seq_id)
+        if len(chosen) == 0 and len(self.prefilled_reqs) > 0:
+            blocked_watermark = 0
+            blocked_capacity = 0
+            for seq_id in self.prefilled_reqs:
+                seq = self.seq_tokens[seq_id]
+                free_pages = self.pagetable.num_free_pages(fraction=self.dist_config_decode.pp_size)
+                required_pages = self.pagetable.required_num_pages(len(seq) - 1)
+                if required_pages > free_pages:
+                    blocked_capacity += 1
+                elif (free_pages - required_pages) < reserve:
+                    blocked_watermark += 1
+            logger.info(
+                f"[SCHED] prefetch: none chosen; prefilled={len(self.prefilled_reqs)} "
+                f"blocked_capacity={blocked_capacity} blocked_by_watermark={blocked_watermark} "
+                f"tail={tail} snapshot={self.debug_snapshot()}"
+            )
         return ret
     
 
@@ -309,6 +351,21 @@ class Scheduler:
             batch = self.schedule_decode()
         if isinstance(batch, ModelInput): 
             self.active_seqs.update(batch.seq_ids)
+        # Decision logging
+        if hasattr(batch, 'seq_ids') and len(batch.seq_ids) == 0:
+            if self.finished():
+                logger.debug("[SCHED] schedule(): empty but finished=True")
+            else:
+                logger.info(f"[SCHED] schedule(): empty, finished=False, snapshot={self.debug_snapshot()}")
+        else:
+            try:
+                logger.info(
+                    f"[SCHED] schedule(): picked {getattr(batch, 'seq_ids', None)} "
+                    f"is_prefill={getattr(batch, 'is_prefill', None)} "
+                    f"ntokens={getattr(getattr(batch, 'x', None), 'shape', [None])[0]}"
+                )
+            except Exception:
+                pass
         self._sanity_check(batch)
         return batch
         
@@ -337,9 +394,46 @@ class Scheduler:
                 
 
     def finished(self):
-        return len(self.waiting_prompts) == 0 and\
-               len(self.prefilled_reqs) == 0 and \
-               len(self.prefilling_reqs) == 0 and \
-               len(self.prefetching_reqs) == 0 and \
-               len(self.running_reqs) == 0 and\
-               len(self.swap_out_reqs) == 0
+        done = (len(self.waiting_prompts) == 0 and
+                len(self.prefilled_reqs) == 0 and 
+                len(self.prefilling_reqs) == 0 and 
+                len(self.prefetching_reqs) == 0 and 
+                len(self.running_reqs) == 0 and
+                len(self.swap_out_reqs) == 0)
+        if not done:
+            logger.debug(f"[SCHED] finished(False): {self.debug_snapshot()}")
+        return done
+
+    def debug_snapshot(self):
+        """Return a compact dict with per-scheduler state for logging."""
+        try:
+            free_pages = self.pagetable.num_free_pages(fraction=self.dist_config_decode.pp_size)
+        except Exception:
+            free_pages = None
+        try:
+            used_pct = self.shared_table.used_percentage()
+        except Exception:
+            used_pct = None
+        snapshot = {
+            "phase": "prefill" if self.is_prefill else "decode",
+            "batch_cnt": self.batch_cnt,
+            "waiting": len(self.waiting_prompts),
+            "prefilling": len(self.prefilling_reqs),
+            "prefilled": len(self.prefilled_reqs),
+            "prefetching": len(self.prefetching_reqs),
+            "running": len(self.running_reqs),
+            "swap_out": len(self.swap_out_reqs),
+            "finished": len(self.finished_reqs),
+            "active": len(self.active_seqs),
+            "watermark_blocks": getattr(self.pagetable, 'watermark_blocks', None),
+            "page_size": getattr(self.pagetable, 'page_size', None),
+            "free_pages": free_pages,
+            "shared_used_pct": used_pct,
+            "sample_ids": {
+                "running": list(itertools.islice(iter(self.running_reqs), 8)),
+                "prefilled": list(itertools.islice(iter(self.prefilled_reqs), 8)),
+                "prefetching": list(itertools.islice(iter(self.prefetching_reqs), 8)),
+                "active": list(itertools.islice(iter(self.active_seqs), 8)),
+            },
+        }
+        return snapshot
