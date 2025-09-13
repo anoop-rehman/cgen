@@ -1,0 +1,494 @@
+Processed prompts:  48%|████▊     | 238/500 [05:15<05:47,  1.32s/it, est. speed input: 3576.99 toks/s, output: 135.09 toks/s]2025-09-13 04:32:09.648 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=271 reason=max_tokens len=2786 max=2786
+2025-09-13 04:32:10.304 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=270 reason=max_tokens len=2795 max=2795
+Processed prompts:  48%|████▊     | 240/500 [05:16<05:42,  1.32s/it, est. speed input: 3567.94 toks/s, output: 135.90 toks/s]2025-09-13 04:32:10.964 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=296 reason=max_tokens len=2553 max=2553
+2025-09-13 04:32:11.120 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=195 reason=max_tokens len=3315 max=3315
+2025-09-13 04:32:11.120 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=238 reason=max_tokens len=2867 max=2867
+Processed prompts:  49%|████▊     | 243/500 [05:16<05:35,  1.30s/it, est. speed input: 3558.75 toks/s, output: 136.70 toks/s]2025-09-13 04:32:11.824 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=229 reason=max_tokens len=2929 max=2929
+2025-09-13 04:32:12.611 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=292 reason=max_tokens len=2614 max=2614
+2025-09-13 04:32:12.888 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=286 reason=max_tokens len=2680 max=2680
+Processed prompts:  49%|████▉     | 246/500 [05:18<05:28,  1.30s/it, est. speed input: 3539.01 toks/s, output: 138.43 toks/s]2025-09-13 04:32:13.043 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=203 reason=max_tokens len=3274 max=3274
+2025-09-13 04:32:13.043 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=218 reason=max_tokens len=3149 max=3149
+2025-09-13 04:32:13.999 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=215 reason=max_tokens len=3184 max=3184
+2025-09-13 04:32:13.999 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=233 reason=max_tokens len=2921 max=2921
+Processed prompts:  50%|█████     | 250/500 [05:19<05:19,  1.28s/it, est. speed input: 3526.70 toks/s, output: 139.50 toks/s]2025-09-13 04:32:14.416 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=284 reason=max_tokens len=2708 max=2708
+2025-09-13 04:32:14.570 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=248 reason=max_tokens len=2802 max=2802
+2025-09-13 04:32:14.716 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=237 reason=max_tokens len=2897 max=2897
+2025-09-13 04:32:15.015 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=171 reason=max_tokens len=3586 max=3586
+2025-09-13 04:32:15.015 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=231 reason=max_tokens len=2937 max=2937
+Processed prompts:  51%|█████     | 255/500 [05:20<05:08,  1.26s/it, est. speed input: 3515.53 toks/s, output: 140.41 toks/s]2025-09-13 04:32:15.957 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=258 reason=max_tokens len=2891 max=2891
+2025-09-13 04:32:15.957 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=310 reason=max_tokens len=2455 max=2455
+2025-09-13 04:32:15.957 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=313 reason=max_tokens len=2437 max=2437
+2025-09-13 04:32:16.396 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=188 reason=max_tokens len=3418 max=3418
+2025-09-13 04:32:18.016 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=289 reason=max_tokens len=2678 max=2678
+Processed prompts:  52%|█████▏    | 260/500 [05:23<04:58,  1.25s/it, est. speed input: 3482.95 toks/s, output: 143.46 toks/s]2025-09-13 04:32:18.164 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=263 reason=max_tokens len=2879 max=2879
+2025-09-13 04:32:18.848 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=285 reason=max_tokens len=2733 max=2733
+2025-09-13 04:32:19.399 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=269 reason=max_tokens len=2862 max=2862
+2025-09-13 04:32:19.399 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=287 reason=max_tokens len=2718 max=2718
+2025-09-13 04:32:19.399 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=305 reason=max_tokens len=2529 max=2529
+2025-09-13 04:32:19.399 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=214 reason=max_tokens len=3232 max=3232
+Processed prompts:  53%|█████▎    | 266/500 [05:25<04:46,  1.22s/it, est. speed input: 3468.13 toks/s, output: 144.83 toks/s]2025-09-13 04:32:19.707 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=209 reason=max_tokens len=3295 max=3295
+2025-09-13 04:32:20.432 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=288 reason=max_tokens len=2709 max=2709
+2025-09-13 04:32:20.750 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=293 reason=max_tokens len=2663 max=2663
+2025-09-13 04:32:20.750 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=232 reason=max_tokens len=2969 max=2969
+2025-09-13 04:32:21.058 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=217 reason=max_tokens len=3212 max=3212
+2025-09-13 04:32:22.041 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=300 reason=max_tokens len=2573 max=2573
+Processed prompts:  54%|█████▍    | 272/500 [05:27<04:34,  1.20s/it, est. speed input: 3440.17 toks/s, output: 146.88 toks/s]2025-09-13 04:32:22.335 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=330 reason=max_tokens len=2349 max=2349
+2025-09-13 04:32:22.492 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=334 reason=max_tokens len=2324 max=2324
+2025-09-13 04:32:23.584 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=328 reason=max_tokens len=2370 max=2370
+2025-09-13 04:32:23.718 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=236 reason=max_tokens len=2973 max=2973
+2025-09-13 04:32:24.027 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=327 reason=max_tokens len=2383 max=2383
+2025-09-13 04:32:24.449 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=338 reason=max_tokens len=2300 max=2300
+2025-09-13 04:32:24.449 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=196 reason=max_tokens len=3402 max=3402
+Processed prompts:  56%|█████▌    | 279/500 [05:30<04:21,  1.18s/it, est. speed input: 3415.08 toks/s, output: 149.29 toks/s]2025-09-13 04:32:24.603 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=210 reason=max_tokens len=3320 max=3320
+2025-09-13 04:32:24.907 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=230 reason=max_tokens len=3012 max=3012
+2025-09-13 04:32:25.192 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=315 reason=max_tokens len=2486 max=2486
+2025-09-13 04:32:25.341 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=308 reason=max_tokens len=2546 max=2546
+2025-09-13 04:32:25.497 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=312 reason=max_tokens len=2512 max=2512
+2025-09-13 04:32:25.498 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=239 reason=max_tokens len=2955 max=2955
+2025-09-13 04:32:25.729 | INFO     | cgen.schedule:to_prefill:90 - switch to prefill, seqs in CPU 12, prefetching 2, seqs in GPU 68
+2025-09-13 04:32:26.543 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.81 s
+Processed prompts:  57%|█████▋    | 285/500 [05:40<04:17,  1.20s/it, est. speed input: 3464.98 toks/s, output: 146Processed prompts:  57%|█████▋    | 285/500 [05:41<04:17,  1.20s/it, est. speed input: 3469.50 toks/s, output: 146.02 toks/s]2025-09-13 04:32:52.216 | INFO     | cgen.schedule:to_decode:96 - switch to decode, seqs in CPU 99, prefetching 0, seqs in GPU 70
+2025-09-13 04:32:54.710 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-13 04:32:54.843 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=260 reason=max_tokens len=2948 max=2948
+Processed prompts:  57%|█████▋    | 286/500 [06:00<04:29,  1.26s/it, est. speed input: 3565.37 toks/s, output: 138.39 toks/s]2025-09-13 04:32:55.216 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=309 reason=max_tokens len=2529 max=2529
+Processed prompts:  57%|█████▋    | 287/500 [06:00<04:27,  1.26s/it, est. speed input: 3561.69 toks/s, output: 138.63 toks/s]2025-09-13 04:32:55.365 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=235 reason=max_tokens len=2993 max=2993
+Processed prompts:  58%|█████▊    | 288/500 [06:01<04:25,  1.25s/it, est. speed input: 3560.22 toks/s, output: 138.76 toks/s]2025-09-13 04:32:55.513 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=303 reason=max_tokens len=2577 max=2577
+Processed prompts:  58%|█████▊    | 289/500 [06:01<04:23,  1.25s/it, est. speed input: 3558.76 toks/s, output: 138.90 toks/s]2025-09-13 04:32:56.747 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=326 reason=max_tokens len=2425 max=2425
+Processed prompts:  58%|█████▊    | 290/500 [06:02<04:22,  1.25s/it, est. speed input: 3546.65 toks/s, output: 139.96 toks/s]2025-09-13 04:32:57.587 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=277 reason=max_tokens len=2847 max=2847
+2025-09-13 04:32:57.587 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=234 reason=max_tokens len=3018 max=3018
+Processed prompts:  58%|█████▊    | 292/500 [06:03<04:18,  1.24s/it, est. speed input: 3538.45 toks/s, output: 140.79 toks/s]2025-09-13 04:32:58.852 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=339 reason=max_tokens len=2319 max=2319
+2025-09-13 04:32:58.853 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=362 reason=max_tokens len=2152 max=2152
+Processed prompts:  59%|█████▉    | 294/500 [06:04<04:15,  1.24s/it, est. speed input: 3526.16 toks/s, output: 142.02 toks/s]2025-09-13 04:32:59.144 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=345 reason=max_tokens len=2293 max=2293
+2025-09-13 04:32:59.298 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=304 reason=max_tokens len=2602 max=2602
+Processed prompts:  59%|█████▉    | 296/500 [06:05<04:11,  1.23s/it, est. speed input: 3521.86 toks/s, output: 142.40 toks/s]2025-09-13 04:33:00.668 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=332 reason=max_tokens len=2392 max=2392
+2025-09-13 04:33:01.218 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=282 reason=max_tokens len=2837 max=2837
+Processed prompts:  60%|█████▉    | 298/500 [06:06<04:08,  1.23s/it, est. speed input: 3503.43 toks/s, output: 144.28 toks/s]2025-09-13 04:33:01.367 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=351 reason=max_tokens len=2263 max=2263
+2025-09-13 04:33:01.367 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=241 reason=max_tokens len=2857 max=2857
+Processed prompts:  60%|██████    | 300/500 [06:07<04:04,  1.22s/it, est. speed input: 3502.01 toks/s, output: 144.41 toks/s]2025-09-13 04:33:01.804 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=355 reason=max_tokens len=2230 max=2230
+2025-09-13 04:33:02.363 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=320 reason=max_tokens len=2524 max=2524
+Processed prompts:  60%|██████    | 302/500 [06:08<04:01,  1.22s/it, est. speed input: 3492.53 toks/s, output: 145.31 toks/s]2025-09-13 04:33:02.787 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=281 reason=max_tokens len=2858 max=2858
+2025-09-13 04:33:03.210 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=353 reason=max_tokens len=2262 max=2262
+Processed prompts:  61%|██████    | 304/500 [06:08<03:57,  1.21s/it, est. speed input: 3484.51 toks/s, output: 146.10 toks/s]2025-09-13 04:33:03.360 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=316 reason=max_tokens len=2548 max=2548
+2025-09-13 04:33:03.360 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=347 reason=max_tokens len=2309 max=2309
+Processed prompts:  61%|██████    | 306/500 [06:09<03:53,  1.21s/it, est. speed input: 3483.09 toks/s, output: 146.22 toks/s]2025-09-13 04:33:04.068 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=319 reason=max_tokens len=2541 max=2541
+2025-09-13 04:33:04.760 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=245 reason=max_tokens len=2824 max=2824
+Processed prompts:  62%|██████▏   | 308/500 [06:10<03:50,  1.20s/it, est. speed input: 3469.94 toks/s, output: 147.52 toks/s]2025-09-13 04:33:04.921 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=321 reason=max_tokens len=2517 max=2517
+2025-09-13 04:33:04.921 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=337 reason=max_tokens len=2383 max=2383
+Processed prompts:  62%|██████▏   | 310/500 [06:10<03:47,  1.20s/it, est. speed input: 3468.43 toks/s, output: 147.64 toks/s]2025-09-13 04:33:05.355 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=318 reason=max_tokens len=2556 max=2556
+2025-09-13 04:33:05.505 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=306 reason=max_tokens len=2637 max=2637
+2025-09-13 04:33:05.505 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=207 reason=max_tokens len=3418 max=3418
+Processed prompts:  63%|██████▎   | 313/500 [06:11<03:41,  1.19s/it, est. speed input: 3462.97 toks/s, output: 148.14 toks/s]2025-09-13 04:33:06.912 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=354 reason=max_tokens len=2276 max=2276
+2025-09-13 04:33:07.338 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=280 reason=max_tokens len=2895 max=2895
+2025-09-13 04:33:08.043 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=297 reason=max_tokens len=2744 max=2744
+2025-09-13 04:33:08.043 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=350 reason=max_tokens len=2316 max=2316
+Processed prompts:  63%|██████▎   | 317/500 [06:13<03:35,  1.18s/it, est. speed input: 3439.46 toks/s, output: 150.57 toks/s]2025-09-13 04:33:08.358 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=249 reason=max_tokens len=2788 max=2788
+2025-09-13 04:33:08.648 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=324 reason=max_tokens len=2519 max=2519
+2025-09-13 04:33:08.817 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=322 reason=max_tokens len=2542 max=2542
+2025-09-13 04:33:09.255 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=342 reason=max_tokens len=2380 max=2380
+Processed prompts:  64%|██████▍   | 321/500 [06:14<03:29,  1.17s/it, est. speed input: 3428.34 toks/s, output: 151.63 toks/s]2025-09-13 04:33:10.645 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=325 reason=max_tokens len=2531 max=2531
+2025-09-13 04:33:10.645 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=247 reason=max_tokens len=2829 max=2829
+2025-09-13 04:33:11.240 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=323 reason=max_tokens len=2551 max=2551
+2025-09-13 04:33:11.532 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=361 reason=max_tokens len=2280 max=2280
+Processed prompts:  65%|██████▌   | 325/500 [06:17<03:23,  1.16s/it, est. speed input: 3407.65 toks/s, output: 153.85 toks/s]2025-09-13 04:33:11.693 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=368 reason=max_tokens len=2169 max=2169
+2025-09-13 04:33:11.987 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=369 reason=max_tokens len=2106 max=2106
+2025-09-13 04:33:12.552 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=253 reason=max_tokens len=2785 max=2785
+2025-09-13 04:33:13.271 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=344 reason=max_tokens len=2394 max=2394
+Processed prompts:  66%|██████▌   | 329/500 [06:18<03:16,  1.15s/it, est. speed input: 3392.01 toks/s, output: 155.51 toks/s]2025-09-13 04:33:13.567 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=360 reason=max_tokens len=2268 max=2268
+2025-09-13 04:33:14.005 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=294 reason=max_tokens len=2826 max=2826
+2025-09-13 04:33:14.160 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=357 reason=max_tokens len=2294 max=2294
+2025-09-13 04:33:15.010 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=307 reason=max_tokens len=2700 max=2700
+2025-09-13 04:33:15.010 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=367 reason=max_tokens len=2205 max=2205
+Processed prompts:  67%|██████▋   | 334/500 [06:20<03:09,  1.14s/it, est. speed input: 3376.52 toks/s, output: 157.20 toks/s]2025-09-13 04:33:15.165 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=359 reason=max_tokens len=2283 max=2283
+2025-09-13 04:33:15.471 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=336 reason=max_tokens len=2474 max=2474
+2025-09-13 04:33:16.049 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=364 reason=max_tokens len=2246 max=2246
+2025-09-13 04:33:16.346 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=356 reason=max_tokens len=2320 max=2320
+2025-09-13 04:33:16.921 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=331 reason=max_tokens len=2525 max=2525
+2025-09-13 04:33:16.921 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=379 reason=max_tokens len=2027 max=2027
+Processed prompts:  68%|██████▊   | 340/500 [06:22<03:00,  1.13s/it, est. speed input: 3359.65 toks/s, output: 159.03 toks/s]2025-09-13 04:33:17.513 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=348 reason=max_tokens len=2485 max=2485
+2025-09-13 04:33:17.513 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=363 reason=max_tokens len=2270 max=2270
+2025-09-13 04:33:17.513 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=366 reason=max_tokens len=2233 max=2233
+2025-09-13 04:33:17.513 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=375 reason=max_tokens len=2084 max=2084
+2025-09-13 04:33:17.827 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=346 reason=max_tokens len=2412 max=2412
+2025-09-13 04:33:17.828 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=365 reason=max_tokens len=2238 max=2238
+Processed prompts:  69%|██████▉   | 346/500 [06:23<02:50,  1.11s/it, est. speed input: 3351.71 toks/s, output: 159.86 toks/s]2025-09-13 04:33:17.985 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=333 reason=max_tokens len=2509 max=2509
+2025-09-13 04:33:17.986 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=388 reason=max_tokens len=1965 max=1965
+2025-09-13 04:33:18.600 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=329 reason=max_tokens len=2547 max=2547
+2025-09-13 04:33:19.173 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=378 reason=max_tokens len=2048 max=2048
+2025-09-13 04:33:19.327 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=385 reason=max_tokens len=2002 max=2002
+2025-09-13 04:33:20.201 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=283 reason=max_tokens len=2965 max=2965
+Processed prompts:  70%|███████   | 352/500 [06:25<02:42,  1.10s/it, est. speed input: 3331.10 toks/s, output: 162.21 toks/s]2025-09-13 04:33:20.357 | INFO     | cgen.schedule:to_prefill:90 - switch to prefill, seqs in CPU 28, prefetching 0, seqs in GPU 83
+2025-09-13 04:33:21.533 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  1.18 s
+2025-09-13 04:33:25.201 | INFO     | cgen.schedule:to_decode:96 - switch to decode, seqs in CPU 40, prefetching 1, seqs in GPU 83
+2025-09-13 04:33:27.746 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.76 s
+2025-09-13 04:33:28.164 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=243 reason=max_tokens len=2944 max=2944
+2025-09-13 04:33:28.164 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=246 reason=max_tokens len=2906 max=2906
+2025-09-13 04:33:28.327 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=311 reason=max_tokens len=2694 max=2694
+2025-09-13 04:33:28.495 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=411 reason=max_tokens len=1784 max=1784
+2025-09-13 04:33:28.951 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=371 reason=max_tokens len=2146 max=2146
+2025-09-13 04:33:29.683 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=384 reason=max_tokens len=2026 max=2026
+Processed prompts:  72%|███████▏  | 358/500 [06:35<02:36,  1.10s/it, est. speed input: 3313.45 toks/s, output: 161.35 toks/s]2025-09-13 04:33:29.845 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=403 reason=max_tokens len=1840 max=1840
+2025-09-13 04:33:29.845 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=244 reason=max_tokens len=2946 max=2946
+2025-09-13 04:33:30.173 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=352 reason=max_tokens len=2399 max=2399
+2025-09-13 04:33:30.342 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=250 reason=max_tokens len=2884 max=2884
+2025-09-13 04:33:31.087 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=395 reason=max_tokens len=1920 max=1920
+2025-09-13 04:33:31.241 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=377 reason=max_tokens len=2084 max=2084
+Processed prompts:  73%|███████▎  | 364/500 [06:36<02:28,  1.09s/it, est. speed input: 3300.45 toks/s, output: 163.07 toks/s]2025-09-13 04:33:31.686 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=251 reason=max_tokens len=2890 max=2890
+2025-09-13 04:33:31.995 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=340 reason=max_tokens len=2492 max=2492
+2025-09-13 04:33:31.996 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=255 reason=max_tokens len=2852 max=2852
+2025-09-13 04:33:32.323 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=462 reason=max_tokens len=1195 max=1195
+2025-09-13 04:33:32.957 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=398 reason=max_tokens len=1910 max=1910
+2025-09-13 04:33:34.695 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=402 reason=max_tokens len=1872 max=1872
+Processed prompts:  74%|███████▍  | 370/500 [06:40<02:20,  1.08s/it, est. speed input: 3271.98 toks/s, output: 167.20 toks/s]2025-09-13 04:33:35.417 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=407 reason=max_tokens len=1835 max=1835
+2025-09-13 04:33:35.573 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=380 reason=max_tokens len=2097 max=2097
+2025-09-13 04:33:35.875 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=383 reason=max_tokens len=2075 max=2075
+2025-09-13 04:33:35.876 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=424 reason=max_tokens len=1702 max=1702
+2025-09-13 04:33:36.036 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=374 reason=max_tokens len=2167 max=2167
+2025-09-13 04:33:36.036 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=252 reason=max_tokens len=2900 max=2900
+2025-09-13 04:33:36.036 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=254 reason=max_tokens len=2881 max=2881
+Processed prompts:  75%|███████▌  | 377/500 [06:41<02:11,  1.07s/it, est. speed input: 3261.06 toks/s, output: 168.94 toks/s]2025-09-13 04:33:36.199 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=317 reason=max_tokens len=2717 max=2717
+2025-09-13 04:33:36.199 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=390 reason=max_tokens len=2001 max=2001
+2025-09-13 04:33:36.517 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=389 reason=max_tokens len=2018 max=2018
+2025-09-13 04:33:36.517 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=406 reason=max_tokens len=1854 max=1854
+2025-09-13 04:33:36.996 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=259 reason=max_tokens len=3189 max=3189
+2025-09-13 04:33:37.311 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=461 reason=max_tokens len=1271 max=1271
+2025-09-13 04:33:37.463 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=417 reason=max_tokens len=1734 max=1734
+2025-09-13 04:33:37.464 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=447 reason=max_tokens len=1362 max=1362
+Processed prompts:  77%|███████▋  | 385/500 [06:43<02:00,  1.05s/it, est. speed input: 3249.51 toks/s, output: 170.69 toks/s]2025-09-13 04:33:37.757 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=423 reason=max_tokens len=1667 max=1667
+2025-09-13 04:33:38.337 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=392 reason=max_tokens len=1989 max=1989
+2025-09-13 04:33:38.481 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=408 reason=max_tokens len=1850 max=1850
+2025-09-13 04:33:39.198 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=414 reason=max_tokens len=1771 max=1771
+2025-09-13 04:33:39.198 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=442 reason=max_tokens len=1422 max=1422
+2025-09-13 04:33:39.762 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=358 reason=max_tokens len=2408 max=2408
+2025-09-13 04:33:39.903 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=240 reason=max_tokens len=3069 max=3069
+2025-09-13 04:33:40.464 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=376 reason=max_tokens len=2149 max=2149
+Processed prompts:  79%|███████▊  | 393/500 [06:46<01:50,  1.03s/it, est. speed input: 3225.51 toks/s, output: 175.19 toks/s]2025-09-13 04:33:40.602 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=410 reason=max_tokens len=1847 max=1847
+2025-09-13 04:33:41.297 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=439 reason=max_tokens len=1486 max=1486
+2025-09-13 04:33:41.435 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=399 reason=max_tokens len=1963 max=1963
+2025-09-13 04:33:42.251 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=404 reason=max_tokens len=1913 max=1913
+2025-09-13 04:33:42.387 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=394 reason=max_tokens len=1999 max=1999
+2025-09-13 04:33:42.387 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=405 reason=max_tokens len=1899 max=1899
+2025-09-13 04:33:42.387 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=430 reason=max_tokens len=1590 max=1590
+2025-09-13 04:33:42.787 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=302 reason=max_tokens len=2854 max=2854
+Processed prompts:  80%|████████  | 401/500 [06:48<01:40,  1.02s/it, est. speed input: 3207.16 toks/s, output: 178.52 toks/s]2025-09-13 04:33:42.917 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=382 reason=max_tokens len=2140 max=2140
+2025-09-13 04:33:42.917 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=416 reason=max_tokens len=1780 max=1780
+2025-09-13 04:33:43.181 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=349 reason=max_tokens len=2510 max=2510
+2025-09-13 04:33:43.181 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=441 reason=max_tokens len=1465 max=1465
+2025-09-13 04:33:43.540 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=396 reason=max_tokens len=2000 max=2000
+2025-09-13 04:33:44.016 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=386 reason=max_tokens len=2110 max=2110
+2025-09-13 04:33:44.016 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=440 reason=max_tokens len=1596 max=1596
+2025-09-13 04:33:44.252 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=393 reason=max_tokens len=2022 max=2022
+Processed prompts:  82%|████████▏ | 409/500 [06:49<01:31,  1.00s/it, est. speed input: 3195.70 toks/s, output: 180.66 toks/s]2025-09-13 04:33:44.486 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=341 reason=max_tokens len=2573 max=2573
+2025-09-13 04:33:44.950 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=469 reason=max_tokens len=1132 max=1132
+2025-09-13 04:33:45.065 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=476 reason=max_tokens len=940 max=940
+2025-09-13 04:33:45.297 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=426 reason=max_tokens len=1693 max=1693
+2025-09-13 04:33:45.410 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=467 reason=max_tokens len=1212 max=1212
+2025-09-13 04:33:45.750 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=443 reason=max_tokens len=1457 max=1457
+2025-09-13 04:33:45.864 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=433 reason=max_tokens len=1585 max=1585
+2025-09-13 04:33:45.864 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=463 reason=max_tokens len=1266 max=1266
+Processed prompts:  83%|████████▎ | 417/500 [06:51<01:21,  1.01it/s, est. speed input: 3183.19 toks/s, output: 182.96 toks/s]2025-09-13 04:33:45.975 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=448 reason=max_tokens len=1398 max=1398
+2025-09-13 04:33:46.084 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=381 reason=max_tokens len=2168 max=2168
+2025-09-13 04:33:46.304 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=425 reason=max_tokens len=1709 max=1709
+2025-09-13 04:33:46.304 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=431 reason=max_tokens len=1612 max=1612
+2025-09-13 04:33:46.412 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=299 reason=max_tokens len=2931 max=2931
+2025-09-13 04:33:46.412 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=400 reason=max_tokens len=1977 max=1977
+2025-09-13 04:33:46.517 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=468 reason=max_tokens len=1149 max=1149
+2025-09-13 04:33:46.838 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=457 reason=max_tokens len=1326 max=1326
+2025-09-13 04:33:46.838 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=483 reason=max_tokens len=748 max=748
+Processed prompts:  85%|████████▌ | 426/500 [06:52<01:11,  1.03it/s, est. speed input: 3175.67 toks/s, output: 184.25 toks/s]2025-09-13 04:33:46.943 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=450 reason=max_tokens len=1397 max=1397
+2025-09-13 04:33:47.151 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=480 reason=max_tokens len=893 max=893
+2025-09-13 04:33:47.671 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=370 reason=max_tokens len=2294 max=2294
+2025-09-13 04:33:48.083 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=420 reason=max_tokens len=1805 max=1805
+2025-09-13 04:33:48.388 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=409 reason=max_tokens len=1899 max=1899
+2025-09-13 04:33:48.590 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=387 reason=max_tokens len=2142 max=2142
+2025-09-13 04:33:48.590 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=460 reason=max_tokens len=1328 max=1328
+2025-09-13 04:33:48.787 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=438 reason=max_tokens len=1564 max=1564
+2025-09-13 04:33:49.568 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=477 reason=max_tokens len=922 max=922
+Processed prompts:  87%|████████▋ | 435/500 [06:55<01:02,  1.05it/s, est. speed input: 3154.80 toks/s, output: 187.55 toks/s]2025-09-13 04:33:49.957 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=454 reason=max_tokens len=1534 max=1534
+2025-09-13 04:33:50.238 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=415 reason=max_tokens len=1858 max=1858
+2025-09-13 04:33:50.331 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=473 reason=max_tokens len=1079 max=1079
+2025-09-13 04:33:50.423 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=413 reason=max_tokens len=1872 max=1872
+2025-09-13 04:33:50.514 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=397 reason=max_tokens len=2054 max=2054
+2025-09-13 04:33:50.514 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=475 reason=max_tokens len=1080 max=1080
+2025-09-13 04:33:50.963 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=419 reason=max_tokens len=1839 max=1839
+2025-09-13 04:33:50.963 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=422 reason=max_tokens len=1820 max=1820
+2025-09-13 04:33:52.474 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=391 reason=max_tokens len=2133 max=2133
+Processed prompts:  89%|████████▉ | 444/500 [06:58<00:52,  1.06it/s, est. speed input: 3132.87 toks/s, output: 190.52 toks/s]2025-09-13 04:33:52.735 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=412 reason=max_tokens len=1935 max=1935
+2025-09-13 04:33:53.251 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=487 reason=max_tokens len=694 max=694
+2025-09-13 04:33:53.424 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=428 reason=max_tokens len=1712 max=1712
+2025-09-13 04:33:53.596 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=465 reason=max_tokens len=1278 max=1278
+2025-09-13 04:33:53.765 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=449 reason=max_tokens len=1536 max=1536
+2025-09-13 04:33:53.765 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=482 reason=max_tokens len=859 max=859
+2025-09-13 04:33:53.931 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=401 reason=max_tokens len=2046 max=2046
+2025-09-13 04:33:53.931 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=455 reason=max_tokens len=1414 max=1414
+2025-09-13 04:33:54.259 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=485 reason=max_tokens len=772 max=772
+Processed prompts:  91%|█████████ | 453/500 [06:59<00:43,  1.08it/s, est. speed input: 3119.56 toks/s, output: 192.35 toks/s]2025-09-13 04:33:54.504 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=418 reason=max_tokens len=1879 max=1879
+2025-09-13 04:33:54.586 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=444 reason=max_tokens len=1547 max=1547
+2025-09-13 04:33:54.666 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=437 reason=max_tokens len=1638 max=1638
+2025-09-13 04:33:54.667 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=373 reason=max_tokens len=2343 max=2343
+2025-09-13 04:33:55.457 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=458 reason=max_tokens len=1413 max=1413
+2025-09-13 04:33:55.535 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=421 reason=max_tokens len=1884 max=1884
+2025-09-13 04:33:56.000 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=451 reason=max_tokens len=1476 max=1476
+2025-09-13 04:33:56.310 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=436 reason=max_tokens len=1664 max=1664
+2025-09-13 04:33:56.921 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=429 reason=max_tokens len=1750 max=1750
+Processed prompts:  92%|█████████▏| 462/500 [07:02<00:34,  1.09it/s, est. speed input: 3099.91 toks/s, output: 194.50 toks/s]2025-09-13 04:33:58.660 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=435 reason=max_tokens len=1698 max=1698
+2025-09-13 04:33:58.886 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=427 reason=max_tokens len=1807 max=1807
+2025-09-13 04:33:59.260 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=472 reason=max_tokens len=1221 max=1221
+2025-09-13 04:34:00.672 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=445 reason=max_tokens len=1621 max=1621
+2025-09-13 04:34:00.746 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=474 reason=max_tokens len=1164 max=1164
+2025-09-13 04:34:02.644 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=466 reason=max_tokens len=1385 max=1385
+2025-09-13 04:34:03.775 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=432 reason=max_tokens len=1806 max=1806
+2025-09-13 04:34:06.211 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=464 reason=max_tokens len=1478 max=1478
+2025-09-13 04:34:08.143 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=470 reason=max_tokens len=1391 max=1391
+Processed prompts:  94%|█████████▍| 471/500 [07:13<00:26,  1.09it/s, est. speed input: 3019.73 toks/s, output: 201.36 toks/s]2025-09-13 04:34:12.127 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=471 reason=max_tokens len=1431 max=1431
+Processed prompts:  94%|█████████▍| 472/500 [07:17<00:25,  1.08it/s, est. speed input: 2992.25 toks/s, output: 203.37 toks/s]2025-09-13 04:34:12.604 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=452 reason=max_tokens len=1690 max=1690
+Processed prompts:  95%|█████████▍| 473/500 [07:18<00:25,  1.08it/s, est. speed input: 2989.00 toks/s, output: 203.60 toks/s]2025-09-13 04:34:14.147 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=343 reason=max_tokens len=2943 max=2943
+Processed prompts:  95%|█████████▍| 474/500 [07:19<00:24,  1.08it/s, est. speed input: 2978.51 toks/s, output: 204.30 toks/s]2025-09-13 04:34:20.917 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=335 reason=max_tokens len=3116 max=3116
+Processed prompts:  95%|█████████▌| 475/500 [07:26<00:23,  1.06it/s, est. speed input: 2933.36 toks/s, output: 207.14 toks/s]2025-09-13 04:34:22.788 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=446 reason=max_tokens len=1936 max=1936
+Processed prompts:  95%|█████████▌| 476/500 [07:28<00:22,  1.06it/s, est. speed input: 2921.12 toks/s, output: 207.83 toks/s]2025-09-13 04:34:23.514 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=456 reason=max_tokens len=1834 max=1834
+Processed prompts:  95%|█████████▌| 477/500 [07:29<00:21,  1.06it/s, est. speed input: 2916.40 toks/s, output: 208.09 toks/s]2025-09-13 04:34:29.319 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=372 reason=max_tokens len=2853 max=2853
+Processed prompts:  96%|█████████▌| 478/500 [07:35<00:20,  1.05it/s, est. speed input: 2879.20 toks/s, output: 209.93 toks/s]2025-09-13 04:34:35.868 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=301 reason=max_tokens len=3590 max=3590
+Processed prompts:  96%|█████████▌| 479/500 [07:41<00:20,  1.04it/s, est. speed input: 2838.34 toks/s, output: 211.77 toks/s]2025-09-13 04:34:39.392 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=459 reason=max_tokens len=2174 max=2174
+Processed prompts:  96%|█████████▌| 480/500 [07:45<00:19,  1.03it/s, est. speed input: 2816.84 toks/s, output: 212.64 toks/s]2025-09-13 04:34:40.020 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=314 reason=max_tokens len=3563 max=3563
+Processed prompts:  96%|█████████▌| 481/500 [07:45<00:18,  1.03it/s, est. speed input: 2813.04 toks/s, output: 212.79 toks/s]2025-09-13 04:35:49.825 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=490 reason=max_tokens len=2302 max=2302
+Processed prompts:  96%|█████████▋| 482/500 [08:55<00:19,  1.11s/it, est. speed input: 2446.37 toks/s, output: 223.05 toks/s]2025-09-13 04:35:50.291 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=434 reason=max_tokens len=3402 max=3402
+Processed prompts:  97%|█████████▋| 483/500 [08:56<00:18,  1.11s/it, est. speed input: 2444.25 toks/s, output: 223.09 toks/s]2025-09-13 04:36:00.307 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=488 reason=max_tokens len=2607 max=2607
+Processed prompts:  97%|█████████▋| 484/500 [09:06<00:18,  1.13s/it, est. speed input: 2399.41 toks/s, output: 223.73 toks/s]2025-09-13 04:36:11.072 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=479 reason=max_tokens len=3032 max=3032
+Processed prompts:  97%|█████████▋| 485/500 [09:16<00:17,  1.15s/it, est. speed input: 2353.02 toks/s, output: 224.29 toks/s]2025-09-13 04:36:25.022 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=484 reason=max_tokens len=3078 max=3078
+Processed prompts:  97%|█████████▋| 486/500 [09:30<00:16,  1.17s/it, est. speed input: 2295.51 toks/s, output: 224.62 toks/s]2025-09-13 04:36:30.265 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=453 reason=max_tokens len=3810 max=3810
+Processed prompts:  97%|█████████▋| 487/500 [09:35<00:15,  1.18s/it, est. speed input: 2274.61 toks/s, output: 224.61 toks/s]2025-09-13 04:36:36.624 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=481 reason=max_tokens len=3348 max=3348
+Processed prompts:  98%|█████████▊| 488/500 [09:42<00:14,  1.19s/it, est. speed input: 2249.77 toks/s, output: 224.46 toks/s]2025-09-13 04:36:41.780 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=498 reason=max_tokens len=2802 max=2802
+Processed prompts:  98%|█████████▊| 489/500 [09:47<00:13,  1.20s/it, est. speed input: 2230.03 toks/s, output: 224.23 toks/s]2025-09-13 04:36:45.059 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=486 reason=max_tokens len=3330 max=3330
+Processed prompts:  98%|█████████▊| 490/500 [09:50<00:12,  1.21s/it, est. speed input: 2217.65 toks/s, output: 224.01 toks/s]2025-09-13 04:36:57.289 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=499 reason=max_tokens len=3054 max=3054
+Processed prompts:  98%|█████████▊| 491/500 [10:03<00:11,  1.23s/it, est. speed input: 2172.68 toks/s, output: 222.93 toks/s]2025-09-13 04:37:04.748 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=489 reason=max_tokens len=3586 max=3586
+Processed prompts:  98%|█████████▊| 492/500 [10:10<00:09,  1.24s/it, est. speed input: 2146.13 toks/s, output: 222.22 toks/s]2025-09-13 04:37:08.167 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=478 reason=max_tokens len=4003 max=4003
+Processed prompts:  99%|█████████▊| 493/500 [10:13<00:08,  1.25s/it, est. speed input: 2134.17 toks/s, output: 221.82 toks/s]2025-09-13 04:37:08.427 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=495 reason=max_tokens len=3359 max=3359
+Processed prompts:  99%|█████████▉| 494/500 [10:14<00:07,  1.24s/it, est. speed input: 2133.27 toks/s, output: 221.78 toks/s]2025-09-13 04:37:09.181 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=493 reason=max_tokens len=3440 max=3440
+Processed prompts:  99%|█████████▉| 495/500 [10:14<00:06,  1.24s/it, est. speed input: 2130.66 toks/s, output: 221.66 toks/s]2025-09-13 04:37:21.823 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=492 reason=max_tokens len=3699 max=3699
+Processed prompts:  99%|█████████▉| 496/500 [10:27<00:05,  1.27s/it, est. speed input: 2087.73 toks/s, output: 219.24 toks/s]2025-09-13 04:37:22.207 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=491 reason=max_tokens len=3776 max=3776
+Processed prompts:  99%|█████████▉| 497/500 [10:27<00:03,  1.26s/it, est. speed input: 2086.45 toks/s, output: 219.16 toks/s]2025-09-13 04:37:39.703 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=497 reason=max_tokens len=3939 max=3939
+Processed prompts: 100%|█████████▉| 498/500 [10:45<00:02,  1.30s/it, est. speed input: 2029.90 toks/s, output: 214.95 toks/s]2025-09-13 04:37:42.490 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=494 reason=max_tokens len=4069 max=4069
+Processed prompts: 100%|█████████▉| 499/500 [10:48<00:01,  1.30s/it, est. speed input: 2021.17 toks/s, output: 214.22 toks/s]2025-09-13 04:37:44.337 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=496 reason=max_tokens len=4091 max=4091
+Processed prompts: 100%|██████████| 500/500 [10:50<00:00,  1.30s/it, est. speed input: 2015.43 toks/s, output: 213Processed prompts: 100%|██████████| 500/500 [10:50<00:00,  1.30s/it, est. speed input: 2015.43 toks/s, output: 213.67 toks/s]
+detokenizer takes 0.41 s
+
+=== Scheduler profiling ===
+to_prefill transitions: 7
+to_decode  transitions: 8
+waited for prefetch: 0.0 s across 0 loops
+prefill batches: 419 | avg prefill batch tokens: 3126.8
+decode  batches: 5167 | avg decode batch size (seqs/tokens): 26.88
+evictions: 0 | pages evicted: 0
+shared_used_pct (last): 0.0
+
+
+=== Token accounting (actual) ===
+Actual prefilled tokens:  1310128
+Actual generated tokens:  138899
+
+=== Throughput (actual / wall time) ===
+Prefill throughput: 2,014.15 toks/s
+Decode  throughput: 213.54 toks/s
+Total   throughput: 2,227.69 toks/s
+=== Sample Model Outputs (First 2) ===
+
+Sample 1:
+Input: solar and atmospheric neutrino experiments have observed for a long time anomalies that are commonly interpreted as evidences in favor of neutrino oscillations with mass squared differences @xmath0 respectively ( see refs.@xcite ) . 
+ more recently , the accelerator lsnd experiment has reported the observation of @xmath1 and @xmath2 appearance  @xcite with a mass - squared difference @xmath3 the lsnd evidence in favor of neutrino oscillations has not been confirmed by other experiments , but it has not been excluded either . awaiting an independent check of the lsnd result , that will probably come soon from the miniboone experiment  @xcite , it is interesting to consider the possibility that the results of solar , atmospheric and lsnd experiments are due to neutrino oscillations . in this case , the existence of the three mass - squared differences ( [ dm2sun])([dm2lsnd ] ) with different scales implies that there are at least four massive neutrinos ( three massive neutrinos are not enough because the three @xmath4 s have different scales and do not add up to zero ) . 
+ since the mass - squared differences ( [ dm2sun])([dm2lsnd ] ) have been obtained by analyzing separately the data of each type of experiment ( solar , atmospheric and lsnd ) in terms of two - neutrino mixing , it is legitimate to ask if three different mass squared are really necessary to fit the data . 
+ the answer is `` yes '' , as explained in section  [ three ] . 
+ although the precise measurement of the invisible width of the @xmath5 boson has determined that there are only three active flavor neutrinos , @xmath6 , @xmath7 , @xmath8 , the possible existence of at least four massive neutrinos is not a problem , because in general flavor neutrinos are not mass eigenstates , _ 
+ i.e. _ there is _ neutrino mixing _ ( see , _ e.g. _ , ref.@xcite ) .    in general , 
+ the left - handed component @xmath9 of a flavor neutrino field is a linear combination of the left - handed components @xmath10 of neutrino fields with masses @xmath11 : @xmath12 , where @xmath13 is the unitary neutrino mixing matrix . 
+ the number of massive neutrinos is only constrained to be @xmath14 . following the old principle known as _ occam razor _ , we consider the simplest case of four massive neutrinos that allows to explain all data with neutrino oscillations  @xcite . in this case , in the flavor basis the usual three active neutrinos @xmath6 
+ , @xmath7 , @xmath8 , are associated with a sterile neutrino , @xmath15 , that is a singlet of the electroweak group . 
+ taking into account the measured hierarchy @xmath16 there are only six types of possible four - neutrino schemes , which are shown in fig.[4schemes ] . 
+ these six schemes are divided in two classes : 3 + 1 and 2 + 2 . in both classes 
+ there are two groups of neutrino masses separated by the lsnd gap , of the order of 1 ev , such that the largest mass - squared difference generates the oscillations observed in the lsnd experiment : @xmath17 ( where @xmath18 ) . in 3 + 1 schemes 
+ there is a group of three neutrino masses separated from an isolated mass by the lsnd gap . in 2 + 2 schemes 
+ there are two pairs of close masses separated by the lsnd gap . 
+ the numbering of the mass eigenvalues in fig . 
+ [ 4schemes ] is conveniently chosen in order to have always solar neutrino oscillations generated by @xmath19 . in 3 + 1 schemes 
+ atmospheric neutrino oscillations are generated by @xmath20 , whereas in 2 + 2 schemes they are generated by @xmath21 .    in 1999 
+ the 3 + 1 schemes were rather strongly disfavored by the experimental data , with respect to the 2 + 2 schemes  @xcite . in june 2000 
+ the lsnd collaboration presented the results of a new improved analysis of their data , leading to an allowed region in the @xmath22@xmath4 plane ( @xmath23 is the two - generation mixing angle ) that is larger and shifted towards lower values of @xmath22 , with respect to the 1999 allowed region . 
+ this implies that the 3 + 1 schemes are now marginally compatible with the data . 
+ therefore , in section  [ 3 + 1 ] i discuss the 3 + 1 schemes , that have been recently revived  @xcite . in section 
+ [ 2 + 2 ] i discuss the 2 + 2 schemes , that are still favored by the data . 
+ let us consider the general expression of the probability of @xmath24 transitions in vacuum valid for any number of massive neutrinos : @xmath25 where @xmath26 is the source - detector distance , @xmath27 is the neutrino energy , and @xmath28 is anyone of the mass eigenstate indices ( a phase common to all terms in the sum in eq.([prob ] ) is irrelevant ) 
+ .    if all the phases @xmath29 s are very small , oscillations are not observable because the probability reduces to @xmath30 . 
+ since the lsnd experiment has the smallest average @xmath31 , of the order of @xmath32 , at least one @xmath33 , denoted by @xmath34 , must be larger than about @xmath35 in order to generate the observed @xmath1 and @xmath2 lsnd transitions , whose measured probability is of the order of @xmath36 . 
+ solar neutrino experiments observe large transitions of @xmath6 s into other states , with an average probability of about 1/2 . 
+ these transitions can not be generated by a @xmath37 because they should have been observed by the long - baseline chooz experiment  @xcite . 
+ hence , at least another @xmath33 smaller than about @xmath38 , denoted by @xmath39 , is needed for the oscillations of solar neutrinos . 
+ the necessary existence of at least a third @xmath33 for atmospheric neutrino oscillations is less obvious , but can be understood by noticing that a dependence of the transition probability from the energy @xmath27 and/or from the distance @xmath26 is observable only if at least one phase @xmath29 is of order one . 
+ indeed , all the exponentials with phase @xmath40 can be approximated to one , whereas all the exponentials with phase @xmath41 are washed out by the averages over the energy resolution of the detector and the uncertainty in the source - detector distance . 
+ since the super - kamiokande atmospheric neutrino experiment measures a variation of the oscillation probability for @xmath42 ( see ref.@xcite ) , there must be at least one @xmath33 in the range @xmath43 , which is out of the ranges allowed for @xmath39 and @xmath34 . 
+ therefore , at least a third @xmath33 , denoted by @xmath44 , is needed for atmospheric neutrino oscillations . 
+ this argument is supported by a detailed calculation presented in ref.@xcite . 
+ 3 + 1 schemes . 
+ dotted and dashed lines : @xmath45 from bugey  @xcite and chooz  @xcite . 
+ solid lines enclose the allowed regions . 
+ , scaledwidth=45.0% ]    in the following sections we discuss some phenomenological aspects of the four - neutrino schemes in fig.[4schemes ] , in which there are three mass squared differences with the hierarchy ( [ hierarchy ] ) indicated by the data .     3 + 1 schemes . 
+ dotted and dashed lines : @xmath46 from cdhs  @xcite and super - kamiokande  @xcite . 
+ solid lines : allowed regions . , scaledwidth=45.0% ] 
+ in 3 + 1 schemes the amplitude of @xmath24 and @xmath47 transitions in short - baseline neutrino oscillation experiments ( equivalent to the usual @xmath22 in the two - generation case ) is given by ( see , for example , ref.@xcite ) @xmath48 and the oscillation amplitude ( again equivalent to the usual two - generation @xmath22 ) in short - baseline @xmath49 disappearance experiments is given by @xmath50     3 + 1 schemes . 
+ very thick solid line : allowed regions . 
+ thick solid line : disappearance bound ( [ 31bound ] ) . 
+ dotted line : lsnd 2000 allowed regions at 90% cl  @xcite . 
+ solid line : lsnd 2000 allowed regions at 99% cl  @xcite . broken dash - dotted line : bugey exclusion curve at 90% cl  @xcite . 
+ vertical dash - dotted line : chooz exclusion curve at 90% cl  @xcite . 
+ long - dashed line : karmen 2000 exclusion curve at 90% cl  @xcite . 
+ short - dashed line : bnl - e776 exclusion curve at 90% cl  @xcite . 
+ , scaledwidth=45.0% ]     3 + 1 schemes with @xmath51 . 
+ solid lines enclose the allowed regions . 
+ long dashed line : chorus exclusion curve at 90% cl  @xcite . 
+ short dashed line : nomad exclusion curve at 90% cl  @xcite . 
+ dotted line : cdhs exclusion curve at 90% cl  @xcite . 
+ , scaledwidth=45.0% ]    short - baseline @xmath52 and @xmath7 disappearance experiments put rather stringent limits @xmath53 and @xmath54 for @xmath55 in the lsnd - allowed region . taking into account also the results of solar and atmospheric neutrino experiments , eq.([16 ] ) implies that @xmath56 and @xmath57 are small ( see ref.@xcite and references therein ) : @xmath58 as shown by the dashed and dotted lines in figs.[uel4 ] and [ umu4 ] . 
+ these limits imply that the amplitude @xmath59 , equivalent to the usual @xmath22 in short - baseline @xmath2 and @xmath1 experiments , is very small : @xmath60 so small to be at the border of compatibility with the oscillations observed in the lsnd experiment . figure  [ 31-amuel - allowed ] shows the comparison of the bound ( [ 31bound ] ) with the lsnd allowed region , taking into account also the exclusion curves exclusion curves of the karmen  @xcite and bnl - e776  @xcite experiments . 
+ one can see that there are four regions that are marginally allowed , denoted by r1 , r2 , r3 , r4 . 
+ let us denote by @xmath61 the lower limit for @xmath62 in the four allowed regions in fig.[31-amuel - allowed ] . 
+ then , from @xmath63 and the upper bounds ( [ 24 ] ) , one can derive lower limits for @xmath56 and @xmath57 : @xmath64 the upper and lower limits ( [ 24 ] ) and ( [ 124 ] ) for @xmath56 and @xmath57 determine the allowed regions enclosed by solid lines in figs.[uel4 ] and [ umu4 ] .    summarizing the general properties of 3 + 1 schemes obtained so far , from fig.[uel4 ] 
+ we know that @xmath56 is very small , of the order of @xmath65 , and from fig.[umu4 ] we know that in the regions r2 , r3 , r4 @xmath57 is also very small , of the order of @xmath65 , whereas in the region r1 @xmath57 is relatively large , @xmath66 . on the other hand , 
+ the mixings of @xmath8 and @xmath15 with @xmath67 are unknown . 
+ the authors of ref.@xcite considered the interesting possibility that @xmath68 _ i.e. _ that the isolated neutrino @xmath67 practically coincides with @xmath15 . 
+ notice , however , that @xmath69 can not be exactly equal to one , because lsnd oscillations require that @xmath56 and @xmath57 do not vanish , as shown in figs.[uel4 ] and [ umu4 ] , and unitarity implies that @xmath70 . 
+ the possibility ( [ fate ] ) is attractive because it represents a perturbation of the standard three - neutrino mixing in which a mass eigenstate is added , that mixes mainly with the new sterile neutrino @xmath15 and very weakly with the standard active neutrinos @xmath6 , @xmath7 , @xmath8 . in this case 
+ , the usual phenomenology of three - neutrino mixing in solar and atmospheric neutrino oscillation experiments is practically unchanged : the atmospheric neutrino anomaly would be explained by dominant @xmath71 transitions , with possible sub - dominant @xmath72 transitions constrained by the chooz bound , and the solar neutrino problem would be explained by an approximately equal mixture of @xmath73 and @xmath74 transitions ( see , for example , ref.@xcite ) . 
+ an appealing characteristic of this scenario is the practical absence of transitions of solar and atmospheric neutrinos into sterile neutrinos , that seems to be favored by the latest data ( see @xcite ) 
+ .     2 + 2 schemes . 
+ see caption of fig.[31-amuel - allowed ] . 
+ , scaledwidth=45.0% ]     2 + 2 schemes . 
+ dotted and dashed lines : upper limit from bugey  @xcite and chooz  @xcite . 
+ the regions marked by `` a '' enclosed by solid lines are allowed . , 
+ scaledwidth=45.0% ]     2 + 2 schemes . 
+ solid , dotted and dashed lines : limits from cdhs  @xcite , super - kamiokande  @xcite and lsnd  @xcite . the allowed regions are marked by `` a '' . 
+ , scaledwidth=45.0% ]    another interesting possibility has been considered in ref.@xcite : @xmath75 this could be obtained , for example , in the hierarchical scheme i ( see fig .  [ 4schemes ] ) with an appropriate symmetry keeping the sterile neutrino very light , _ 
+ i.e. _ mostly mixed with the lightest mass eigenstates . notice that nothing forbids @xmath69 to be even zero exactly . 
+ the possibility ( [ large ] ) is interesting because if it is realized there are relatively large @xmath71 and @xmath74 transitions in short - baseline neutrino oscillation experiments , that could be observed in the near future . 
+ this is due to the fact that the unitarity of the mixing matrix implies that @xmath76 is large ( @xmath77 in the regions r2 , r3 , r4 and @xmath78 in the region r1 ) . 
+ therefore , the amplitudes @xmath79 and @xmath80 of short - baseline @xmath71 and @xmath74 oscillations are suppressed only by the smallness of @xmath57 and @xmath56 and lie just below the upper limits imposed by the negative results of short - baseline @xmath7 and @xmath52 disappearance experiments . 
+ figure [ amuta ] shows the allowed regions in the @xmath81@xmath55 plane . 
+ one can see that the region r4 is excluded by the negative results of the chorus @xcite and nomad @xcite experiments . 
+ the other three regions are possible and predict relatively large oscillation amplitudes that could be observed in the near future , especially the two regions r2 and r3 in which @xmath82 . 
+ an unattractive feature of this scenario is its predictions of large @xmath83 transitions of atmospheric neutrinos , that appear to be disfavored by the latest data ( see @xcite ) . 
+ the two 2 + 2 schemes in fig .  [ 4schemes ] are favored by the data because they do not suffer the constraint imposed by the thick solid line in fig.[31-amuel - allowed ] , that is valid only in 3 + 1 schemes . 
+ therefore , all the part of the lsnd region in the @xmath59@xmath84 plane that is not excluded by other experiments is allowed , as shown in fig.[22-amuel - allowed ] . 
+ for this reason , the phenomenology of 2 + 2 schemes has been studied in many articles  @xcite . 
+ figures  [ sel ] and [ smu ] show the limits on the mixing of @xmath6 and @xmath7 obtained from the results of short - baseline , solar and atmospheric experiments @xcite . from fig . 
+ [ sel ] one can see that the mixing of @xmath6 with @xmath85 and @xmath67 , whose mass - squared difference @xmath86 generates atmospheric neutrino transitions , is very small , leading to a suppression of oscillations of @xmath6 s in atmospheric and long - baseline experiments @xcite . 
+ the mixing of @xmath8 and @xmath15 is almost unknown , with weak limits obtained in recent fits of solar @xcite and atmospheric data @xcite . 
+ for example , it is possible that both solar @xmath6 s and atmospheric @xmath7 s oscillate into approximately equal mixtures of @xmath8 and @xmath15 s .    in the future it may be possible to exclude the scheme a if it will be established with confidence that the effective number of neutrinos in big - bang nucleosynthesis is less that four . in this case @xmath87 
+ @xcite and solar and atmospheric neutrino oscillations occur , respectively , through the decoupled channels @xmath88 and @xmath71 . 
+ it has been shown that in this scenario the small mass splitting in scheme a between @xmath85 and @xmath67 is incompatible with radiative corrections @xcite and the effective majorana mass in neutrinoless double - beta decay in scheme a is at the border of compatibility with the experimental limit @xcite . 
+ four - neutrino mixing is a realistic possibility ( if the solar , atmospheric and lsnd anomalies are due to neutrino oscillations ) . 
+ it is rather complicated , but very interesting , both for theory and experiments , because : it has a rich phenomenology ; the existence of a sterile neutrino is far beyond the standard model , hinting for exciting new physics ; there are several observable oscillation channels in short - baseline and long - baseline experiments ; cp violation may be observable in long - baseline experiments @xcite .
+Generated:  
+ the four - neutrino mixing schemes in fig.  [ 4schemes ] are the most interesting ones, because they are compatible with the data and have a rich phenomenology. 
+ the 3 + 1 schemes are marginally allowed, but have a rather
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: axial killing fields play an important role in classical general relativity when defining the angular momentum of a black hole or a similar compact , gravitating body . 
+ the simplest example is the komar angular momentum , which applies to regions of spacetime that admit a global axial killing field @xmath1 . 
+ the formula is @xmath2 where @xmath3 is a spacelike 2-sphere , @xmath4 is the area bivector normal to @xmath3 , @xmath5 is the extrinsic curvature of a cauchy surface @xmath6 containing @xmath3 , @xmath7 is the spacelike normal to @xmath3 within @xmath6 , and @xmath8 is the intrinsic area element on @xmath3 
+ . similar integrals  such as the quasi - local formulae due to brown and york @xcite and for dynamical horizons @xcite  apply more generally , when only the _ 
+ intrinsic , two - dimensional _ metric on @xmath3 is symmetric . 
+ but the definition of each does rely on the existence of such an intrinsic symmetry .    in order to justify an integral like ( [ komar ] ) as a physical angular momentum 
+ , @xmath1 should have some standard , global characteristics of an axial killing field . 
+ in particular , for a general riemannian geometry @xmath9 , these characteristics include that    1 . 
+ @xmath1 vanishes at at least one fixed point @xmath10 , 2 . 
+ every orbit of the flow @xmath11 generated by @xmath1 is either a fixed point or a circle , and 3 . 
+ all of the circular orbits close only at integer multiples of a common period @xmath12 . 
+ one may then scale @xmath1 by a constant as needed so that @xmath13 , the standard period for a group of rigid rotations . 
+ the angular momenta mentioned above take unique values only when one restricts to this preferred normalization . 
+ if @xmath14 happens to be a ( topological ) 2-sphere , then condition ( a ) is usually strengthened to    1 . 
+ @xmath1 vanishes at exactly two fixed points @xmath15 and @xmath16 in @xmath14 . 
+ these conditions distill the intuitive , geometric features of axial symmetries in standard geometries ( _ i.e. _ , euclidean , gaussian , or lobachevskian ) . 
+ the purpose of this note is to show that the conditions above are redundant . 
+ the _ global _ conditions ( b ) and ( c )  as well as condition ( a ) when @xmath14  derive from condition ( a ) and one other _ local _ condition at @xmath15 , which is that @xmath17 that is , any killing field @xmath1 with at least one fixed point @xmath15 , whose derivative satisfies the local condition ( [ fcon ] ) , is necessarily an axial killing field in the global sense described above . 
+ furthermore , ( [ fcon ] ) _ always _ holds if @xmath18 is 2- or 3-dimensional , so in those cases any killing field with a fixed point is an axial killing field . 
+ finally , every vector field on a 2-sphere must vanish at at least one point , so every killing field on a 2-sphere is axial . 
+ condition ( a ) then follows by a topological argument . 
+ one can also show that conditions ( a ) , ( b ) , and ( c ) hold whenever @xmath14 is a 2-sphere ( * ? ? ? 
+ * see  3 ) using the classical uniformization theorem : every metric @xmath19 on a 2-sphere is conformally related to a round metric @xmath20 . 
+ any killing field of @xmath19 must also be a killing field of @xmath20 , and therefore must satisfy conditions ( a ) , ( b ) , and ( c ) . 
+ the approach we take here is more direct , and actually lays the foundation @xcite for a proof of the uniformization theorem via ricci flow @xcite . here 
+ we extend this direct approach to arbitrary riemannian geometries and highlight its utility in physical applications . 
+ the global flow @xmath11 generated by a killing field @xmath1 on a riemannian manifold @xmath9 is closely related to the corresponding inifnitesimal flow @xmath21 induced on the tangent space @xmath22 at any point @xmath15 where @xmath1 vanishes . 
+ the key point is that the latter form a subgroup of the symmetry group @xmath23 for the euclidean geometry @xmath24 . 
+ the natural flow @xmath21 in the tangent space at @xmath15 consists of the differentials @xmath25 of the diffeomorphisms @xmath11 in the global flow on @xmath18 . 
+ the differential of a diffeomorphism @xmath26 is just the natural push - forward map @xmath27 on vectors . 
+ if @xmath28 is fixed , then @xmath29 becomes a linear map from the tangent space @xmath30 to itself . 
+ furthermore , if @xmath31 is a global isometry of the riemannian geometry @xmath9 that fixes @xmath32 , then @xmath29 is a linear isometry of the euclidean geometry @xmath33 . 
+ it follows that @xmath34 is a one - parameter group of linear isometries of a eucliean vector space 
+ . they must be rotational isometries , not translational , because they fix the origin of @xmath22 . 
+ thus , each orbit of @xmath21 must either be a fixed point or a circle . 
+ this is the tangent - space analogue ( b@xmath35 ) of condition ( b ) above . 
+ next , recall that the lie derivative along @xmath1 of a vector field @xmath36 is defined in terms of the push - forward under the flow @xmath11 generated by @xmath1 : @xmath37_{t = 0}.\ ] ] when @xmath1 vanishes at @xmath38 , this determines the generator , in the ordinary sense of matrices , of the one - parameter group of linear isometries @xmath21 via @xmath39_{t = 0 }           = - \lie_\varphi\ , v^b \bigr|_{p_0 }          = v^a\ , \grad\!_a\ , \varphi^b \bigr|_{p_0}.\ ] ] thus , the tensor @xmath40 from ( [ fcon ] ) generates the rotations @xmath21 in @xmath22 in the sense that @xmath41 one can always find an orthonormal basis for @xmath24 that puts an anti - symmetric tensor like @xmath40 in canonical , block - diagonal form with one or more @xmath42 anti - symmetric blocks along the diagonal , possibly followed by one or more zeroes . 
+ there can be at most one non - zero block if @xmath18 is 2- or 3-dimensional , but in higher dimensions there may be several . in principle , each block could have a different pair of values @xmath43 for its off - diagonal elements . 
+ but the period of @xmath44 within the 2-dimensional subspace of @xmath22 corresponding to one of these blocks is @xmath45 . 
+ these periods are equal if ( [ fcon ] ) holds because , working in the preferred basis , we have @xmath46 for each @xmath47 . 
+ thus , ( [ fcon ] ) yields the tangent - space analogue ( c@xmath35 ) of condition ( c ) . 
+ to summarize , the rigid , euclidean geometry of @xmath24 suffices to prove the tangent - space analogues of our claims above . 
+ more precisely , we have shown that    1 . 
+ the 1-parameter group of linear isometries @xmath21 fixes the origin in @xmath22 , _ whence _ 2 . 
+ every other orbit of @xmath21 in @xmath22 is either a fixed point or a circle , and 3 . 
+ all of those circular orbits close for a common period @xmath12 as long as ( [ fcon ] ) holds . 
+ in addition , ( [ fcon ] ) holds identically if @xmath18 is 2- or 3-dimensional . finally , note that the natural normalization of @xmath40 sets each @xmath48 , which is equivalent to @xmath49 this one normalization condition implies that _ all _ orbits of @xmath21 close at @xmath13 . 
+ the results in the tangent space @xmath22 extend back to the whole manifold @xmath18 essentially because the global isometries @xmath11 map geodesics of @xmath9 to other geodesics . recall the exponential map @xmath50 where @xmath51 denotes the unique geodesic of @xmath9 starting from @xmath52 , having initial tangent @xmath53 , and affinely parameterized so that @xmath54 for all @xmath55 . 
+ each global isometry @xmath11 maps this geodesic to another one , @xmath56 , which of course has its initial tangent rotated in @xmath22 . in short , @xmath57 for all @xmath58 and all @xmath59 . 
+ if @xmath18 is connected , compact , and without boundary , then there exists at least one geodesic between @xmath15 and any of its other points . 
+ it therefore follows from ( [ pcomm ] ) that every orbit of @xmath11 in @xmath18 must be the image under the exponential map of at least one orbit of @xmath21 in @xmath22 . the exponential generally is not invertible , of course , so the orbit in @xmath22 generally is not unique . but the orbits of @xmath11 can not intersect one another , or themselves , non - trivially . 
+ thus , although the exponential mapping of orbits may be many - to - one , and may map circular orbits of @xmath21 to fixed - point orbits of @xmath11 , it nonetheless preserves orbits . 
+ it follows in particular that each orbit of @xmath11 must either be a fixed point or a closed circle . in other words , 
+ condition ( b ) for the orbits of @xmath11 follows from condition ( b@xmath35 ) for the orbits of @xmath21 . 
+ it is also clear that every circular orbit of @xmath11 must close with the same period as one of the orbits of @xmath21 that is mapped to it by the exponential . 
+ but all orbits of @xmath21 have the same period as long as ( [ fcon ] ) holds , and condition ( c ) for the orbits of @xmath11 then follows from condition ( c@xmath35 ) for the orbits of @xmath21 .    let us summarize the chain of arguments here . condition ( a ) on a killing field on a riemannian geometry @xmath9 implies condition ( a@xmath35 ) for the linear isometries @xmath21 of the euclidean geometry @xmath24 . 
+ this in turn implies conditions ( b@xmath35 ) and ( c@xmath35 ) , as long as ( [ fcon ] ) holds . 
+ finally , these imply conditions ( b ) and ( c ) globally on @xmath18 via the exponential map . 
+ note that the _ local _ normalization condition ( [ fnorm ] ) at @xmath15 therefore dictates the _ global _ scaling of the killing field @xmath1 such that all of its orbits have the desired period @xmath13 . 
+ every vector field , and thus every killing field , on a 2-sphere @xmath3 vanishes at at least one point , and ( [ fcon ] ) holds identically in 2 dimensions . 
+ every killing field on a 2-sphere therefore satisfies conditions ( a ) , ( b ) , and ( c ) . 
+ but the intuitive picture of an axial killing field on a 2-sphere is that it should vanish at exactly two poles , as in condition ( a ) , not just at a single point . 
+ we now show that this is necessarily the case . 
+ suppose that a 2-sphere geometry @xmath60 admits an axial killing field @xmath1 , which we take to be normalized according to ( [ fnorm ] ) . 
+ each point @xmath61 in @xmath3 lies on a unique orbit of @xmath1 , which divides the sphere into two regions . 
+ let @xmath62 denote the area of the region bounded by that orbit and containing the fixed point @xmath15 . 
+ equivalently @xcite , we may set @xmath63 the smooth function @xmath62 takes both maximum and minimum values somewhere on the ( compact ) sphere , and each must occur at a fixed point where @xmath64 vanishes . 
+ the minimum value is zero , and occurs only at @xmath38 . 
+ the maximum value @xmath65 also occurs at a fixed point @xmath16 , which can not coincide with @xmath15 because any fixed point of @xmath1 must be _ one - sided_. that is , the local topology of @xmath66 is that of the 2-dimensional plane , so the fixed points of @xmath1 must be isolated from one another , and each must be surrounded by a _ 
+ single _ family of circular orbits . 
+ ( if two distinct families of circular orbits surrounded a given fixed point , then @xmath3 would have the local topology of a two - sided cone there . ) similarly , every circular orbit of @xmath1 must be _ two - sided _ in the sense that there are exactly two distinct families of circular orbits surrounding it . 
+ ( there can not be only one such family because @xmath3 has no boundary , and there can not be more than two because this would violate the assumed manifold structure of @xmath3 at each point of such an orbit . ) 
+ the manifold of orbits @xmath67 of @xmath1 therefore has the topology of a closed interval @xmath68 $ ] , with exactly two fixed points at the two ends and only circular orbits in the interior . 
+ thus , @xmath1 must have exactly two isolated fixed points . 
+ finally , we show that the exponential map maps a closed disk with _ finite _ 
+ radius @xmath69 in @xmath70 onto _ all _ of @xmath3 , with the entire circular boundary of that disk mapped to the conjugate fixed point @xmath71 . 
+ this mapping is invertible in the interior of the disk , but obviously not on the boundary . to see this , 
+ observe that @xmath72{\dot\gamma_v(s ) } = 0      \qquad\text{and}\qquad      \grad\!_{\dot\gamma_v(s)}\ , \bigl ( \varphi \cdot \dot\gamma_v(s ) \bigr ) = 0\ ] ] because @xmath51 in ( [ expdef ] ) is an affinely parameterized geodesic and @xmath1 is a killing field . 
+ it follows that the tangent to @xmath51 has constant norm equal to @xmath73 for all @xmath55 and , since @xmath1 vanishes at @xmath15 , is everywhere orthogonal to the circular orbits of @xmath1 . 
+ the proper distance in @xmath3 along @xmath51 from @xmath15 to @xmath74 is therefore equal to @xmath73 in @xmath75 . 
+ ( this holds generally , not just on the 2-sphere . ) 
+ it also follows from ( [ gprop ] ) that the proper geodetic distance from @xmath15 to @xmath16 is @xmath76 where @xmath77 is the proper radius of the orbit of @xmath1 through any given point , and primes denote derivatives with respect to @xmath78 . 
+ this integral is irregular because @xmath79 vanishes at both endpoints . 
+ but the integral converges nonetheless because the conditions to avoid conical singularities in @xmath3 at @xmath15 and @xmath16 are @xmath80 thus , although @xmath81 diverges at both endpoints in ( [ sigint ] ) , the indefinite integral of @xmath82 vanishes like @xmath79 near @xmath83 . 
+ the difference @xmath84 likewise vanishes like @xmath79 near @xmath85 . 
+ there can be no other irregular points with @xmath86 , so the integral ( [ sigint ] ) is well - defined and @xmath69 is finite . 
+ we have seen that any killing field @xmath1 that vanishes at at least one point @xmath15 in a riemannian manifold @xmath9 , and satisfies ( [ fcon ] ) there , necessarily has only fixed - point and closed , circular orbits throughout @xmath18 , the latter all having the same period @xmath87 . 
+ this offers a convenient way to characterize axial killing fields in terms of local data at a fixed point . 
+ furthermore , scaling @xmath1 globally such that ( [ fnorm ] ) holds locally at @xmath15 guarantees that the period of every circular orbit is @xmath0 . 
+ the condition ( [ fcon ] ) is not needed in 2 or 3 dimensions , and in fact one might imagine abandoning it altogether for manifolds of arbitrary dimension . 
+ the main disadvantage of this would be that some orbits of @xmath21 may no longer be closed . 
+ rather , if some of the @xmath88 from ( [ fivals ] ) were incommensurate , some orbits @xmath21 would densely fill a torus in @xmath22 . the same would then apply to the orbits of @xmath11 by the same methods used above . although this would be rather less convenient , and less physical , 
+ such `` quasi - axial '' symmetries could potentially be interesting in certain applications . 
+ one additional feature of these results is that they suggest a natural and convenient way to normalize an _ approximate _ killing field on a riemannian geometry @xmath9 that has no actual symmetries @xcite . 
+ namely , suppose that a candidate approximate killing field @xmath89 can be found up to constant scaling on @xmath18 and vanishes at at least one point , which again is guaranteed if @xmath14 . 
+ then , one may define @xmath90}$ ] , and use ( [ fnorm ] ) to normalize @xmath89 throughout @xmath18 without having to compute the orbits of @xmath89 and ensure that they close , etc . 
+ we explore this proposal further in a companion paper @xcite .
+Generated:  
+ the results presented here have been used in a variety of physical applications, including the study of black hole entropy @xcite and the behavior of cosmological models @xcite. 
+ they also have implications for the study of topological phases of matter @xcite and the behavior of quantum systems in the presence of symmetries @xc
+--------------------------------------------------------------------------------
+Total time: 650.46
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 

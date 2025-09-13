@@ -1,0 +1,908 @@
+INFO 09-13 04:52:28 metrics.py:345] Avg prompt throughput: 2040.1 tokens/s, Avg generation throughput: 95.1 tokens/s, Running: 59 reqs, Swapped: 0 reqs, Pending: 44 reqs, GPU KV cache usage: 98.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:52:28 async_llm_engine.py:177] Finished request req-437.
+INFO 09-13 04:52:28 async_llm_engine.py:221] Aborted request req-437.
+INFO 09-13 04:52:30 async_llm_engine.py:177] Finished request req-420.
+INFO 09-13 04:52:30 async_llm_engine.py:221] Aborted request req-420.
+INFO 09-13 04:52:32 async_llm_engine.py:177] Finished request req-442.
+INFO 09-13 04:52:32 async_llm_engine.py:221] Aborted request req-442.
+INFO 09-13 04:52:33 metrics.py:345] Avg prompt throughput: 1754.0 tokens/s, Avg generation throughput: 151.4 tokens/s, Running: 59 reqs, Swapped: 0 reqs, Pending: 41 reqs, GPU KV cache usage: 98.5%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:52:34 async_llm_engine.py:177] Finished request req-436.
+INFO 09-13 04:52:34 async_llm_engine.py:221] Aborted request req-436.
+INFO 09-13 04:52:37 async_llm_engine.py:177] Finished request req-432.
+INFO 09-13 04:52:37 async_llm_engine.py:221] Aborted request req-432.
+INFO 09-13 04:52:38 metrics.py:345] Avg prompt throughput: 1504.3 tokens/s, Avg generation throughput: 199.4 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 39 reqs, GPU KV cache usage: 97.0%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:52:38 async_llm_engine.py:177] Finished request req-429.
+INFO 09-13 04:52:38 async_llm_engine.py:221] Aborted request req-429.
+INFO 09-13 04:52:40 async_llm_engine.py:177] Finished request req-405.
+INFO 09-13 04:52:40 async_llm_engine.py:221] Aborted request req-405.
+INFO 09-13 04:52:41 async_llm_engine.py:177] Finished request req-440.
+INFO 09-13 04:52:41 async_llm_engine.py:221] Aborted request req-440.
+INFO 09-13 04:52:43 metrics.py:345] Avg prompt throughput: 1857.9 tokens/s, Avg generation throughput: 126.3 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 37 reqs, GPU KV cache usage: 97.2%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:52:43 async_llm_engine.py:177] Finished request req-430.
+INFO 09-13 04:52:43 async_llm_engine.py:221] Aborted request req-430.
+INFO 09-13 04:52:46 async_llm_engine.py:177] Finished request req-441.
+INFO 09-13 04:52:46 async_llm_engine.py:221] Aborted request req-441.
+INFO 09-13 04:52:46 async_llm_engine.py:177] Finished request req-425.
+INFO 09-13 04:52:46 async_llm_engine.py:221] Aborted request req-425.
+INFO 09-13 04:52:48 metrics.py:345] Avg prompt throughput: 1891.8 tokens/s, Avg generation throughput: 122.8 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 34 reqs, GPU KV cache usage: 97.6%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:52:49 async_llm_engine.py:177] Finished request req-408.
+INFO 09-13 04:52:49 async_llm_engine.py:221] Aborted request req-408.
+INFO 09-13 04:52:52 async_llm_engine.py:177] Finished request req-400.
+INFO 09-13 04:52:52 async_llm_engine.py:221] Aborted request req-400.
+INFO 09-13 04:52:54 metrics.py:345] Avg prompt throughput: 1691.4 tokens/s, Avg generation throughput: 158.8 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 32 reqs, GPU KV cache usage: 98.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:52:55 async_llm_engine.py:177] Finished request req-407.
+INFO 09-13 04:52:55 async_llm_engine.py:221] Aborted request req-407.
+INFO 09-13 04:52:56 async_llm_engine.py:177] Finished request req-459.
+INFO 09-13 04:52:56 async_llm_engine.py:221] Aborted request req-459.
+INFO 09-13 04:52:58 async_llm_engine.py:177] Finished request req-415.
+INFO 09-13 04:52:58 async_llm_engine.py:221] Aborted request req-415.
+INFO 09-13 04:52:59 metrics.py:345] Avg prompt throughput: 1554.0 tokens/s, Avg generation throughput: 191.6 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 29 reqs, GPU KV cache usage: 98.6%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:01 async_llm_engine.py:177] Finished request req-449.
+INFO 09-13 04:53:01 async_llm_engine.py:221] Aborted request req-449.
+INFO 09-13 04:53:02 async_llm_engine.py:177] Finished request req-444.
+INFO 09-13 04:53:02 async_llm_engine.py:221] Aborted request req-444.
+INFO 09-13 04:53:05 metrics.py:345] Avg prompt throughput: 1956.6 tokens/s, Avg generation throughput: 111.7 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 27 reqs, GPU KV cache usage: 98.9%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:05 async_llm_engine.py:177] Finished request req-445.
+INFO 09-13 04:53:05 async_llm_engine.py:221] Aborted request req-445.
+INFO 09-13 04:53:06 async_llm_engine.py:177] Finished request req-433.
+INFO 09-13 04:53:06 async_llm_engine.py:221] Aborted request req-433.
+INFO 09-13 04:53:06 async_llm_engine.py:177] Finished request req-424.
+INFO 09-13 04:53:06 async_llm_engine.py:221] Aborted request req-424.
+INFO 09-13 04:53:10 metrics.py:345] Avg prompt throughput: 2128.9 tokens/s, Avg generation throughput: 74.2 tokens/s, Running: 57 reqs, Swapped: 0 reqs, Pending: 24 reqs, GPU KV cache usage: 96.9%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:10 async_llm_engine.py:177] Finished request req-443.
+INFO 09-13 04:53:10 async_llm_engine.py:221] Aborted request req-443.
+INFO 09-13 04:53:11 async_llm_engine.py:177] Finished request req-453.
+INFO 09-13 04:53:11 async_llm_engine.py:221] Aborted request req-453.
+INFO 09-13 04:53:12 async_llm_engine.py:177] Finished request req-452.
+INFO 09-13 04:53:12 async_llm_engine.py:221] Aborted request req-452.
+INFO 09-13 04:53:13 async_llm_engine.py:177] Finished request req-418.
+INFO 09-13 04:53:13 async_llm_engine.py:177] Finished request req-438.
+INFO 09-13 04:53:13 async_llm_engine.py:221] Aborted request req-418.
+INFO 09-13 04:53:13 async_llm_engine.py:221] Aborted request req-438.
+INFO 09-13 04:53:16 metrics.py:345] Avg prompt throughput: 2101.5 tokens/s, Avg generation throughput: 80.1 tokens/s, Running: 57 reqs, Swapped: 0 reqs, Pending: 20 reqs, GPU KV cache usage: 97.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:18 async_llm_engine.py:177] Finished request req-464.
+INFO 09-13 04:53:18 async_llm_engine.py:221] Aborted request req-464.
+INFO 09-13 04:53:20 async_llm_engine.py:177] Finished request req-439.
+INFO 09-13 04:53:20 async_llm_engine.py:177] Finished request req-450.
+INFO 09-13 04:53:20 async_llm_engine.py:221] Aborted request req-439.
+INFO 09-13 04:53:20 async_llm_engine.py:221] Aborted request req-450.
+INFO 09-13 04:53:21 metrics.py:345] Avg prompt throughput: 1955.0 tokens/s, Avg generation throughput: 106.7 tokens/s, Running: 56 reqs, Swapped: 0 reqs, Pending: 17 reqs, GPU KV cache usage: 95.2%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:21 async_llm_engine.py:177] Finished request req-431.
+INFO 09-13 04:53:21 async_llm_engine.py:221] Aborted request req-431.
+INFO 09-13 04:53:25 async_llm_engine.py:177] Finished request req-428.
+INFO 09-13 04:53:25 async_llm_engine.py:221] Aborted request req-428.
+INFO 09-13 04:53:27 metrics.py:345] Avg prompt throughput: 1968.4 tokens/s, Avg generation throughput: 106.6 tokens/s, Running: 57 reqs, Swapped: 0 reqs, Pending: 15 reqs, GPU KV cache usage: 97.7%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:28 async_llm_engine.py:177] Finished request req-448.
+INFO 09-13 04:53:28 async_llm_engine.py:221] Aborted request req-448.
+INFO 09-13 04:53:29 async_llm_engine.py:177] Finished request req-457.
+INFO 09-13 04:53:29 async_llm_engine.py:221] Aborted request req-457.
+INFO 09-13 04:53:32 async_llm_engine.py:177] Finished request req-462.
+INFO 09-13 04:53:32 async_llm_engine.py:221] Aborted request req-462.
+INFO 09-13 04:53:33 metrics.py:345] Avg prompt throughput: 1670.2 tokens/s, Avg generation throughput: 165.2 tokens/s, Running: 57 reqs, Swapped: 0 reqs, Pending: 12 reqs, GPU KV cache usage: 98.2%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:34 async_llm_engine.py:177] Finished request req-198.
+INFO 09-13 04:53:34 async_llm_engine.py:221] Aborted request req-198.
+INFO 09-13 04:53:36 async_llm_engine.py:177] Finished request req-446.
+INFO 09-13 04:53:36 async_llm_engine.py:221] Aborted request req-446.
+INFO 09-13 04:53:38 async_llm_engine.py:177] Finished request req-186.
+INFO 09-13 04:53:38 async_llm_engine.py:221] Aborted request req-186.
+INFO 09-13 04:53:39 metrics.py:345] Avg prompt throughput: 2013.0 tokens/s, Avg generation throughput: 97.4 tokens/s, Running: 57 reqs, Swapped: 0 reqs, Pending: 9 reqs, GPU KV cache usage: 98.9%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:40 async_llm_engine.py:177] Finished request req-456.
+INFO 09-13 04:53:40 async_llm_engine.py:221] Aborted request req-456.
+INFO 09-13 04:53:42 async_llm_engine.py:177] Finished request req-451.
+INFO 09-13 04:53:42 async_llm_engine.py:221] Aborted request req-451.
+INFO 09-13 04:53:43 async_llm_engine.py:177] Finished request req-458.
+INFO 09-13 04:53:43 async_llm_engine.py:221] Aborted request req-458.
+INFO 09-13 04:53:44 metrics.py:345] Avg prompt throughput: 1541.1 tokens/s, Avg generation throughput: 188.5 tokens/s, Running: 56 reqs, Swapped: 0 reqs, Pending: 7 reqs, GPU KV cache usage: 97.2%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:45 async_llm_engine.py:177] Finished request req-394.
+INFO 09-13 04:53:45 async_llm_engine.py:221] Aborted request req-394.
+INFO 09-13 04:53:47 async_llm_engine.py:177] Finished request req-478.
+INFO 09-13 04:53:47 async_llm_engine.py:177] Finished request req-480.
+INFO 09-13 04:53:47 async_llm_engine.py:221] Aborted request req-478.
+INFO 09-13 04:53:47 async_llm_engine.py:221] Aborted request req-480.
+INFO 09-13 04:53:49 metrics.py:345] Avg prompt throughput: 1943.1 tokens/s, Avg generation throughput: 109.8 tokens/s, Running: 55 reqs, Swapped: 0 reqs, Pending: 4 reqs, GPU KV cache usage: 95.4%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:49 async_llm_engine.py:177] Finished request req-447.
+INFO 09-13 04:53:49 async_llm_engine.py:221] Aborted request req-447.
+INFO 09-13 04:53:54 async_llm_engine.py:177] Finished request req-460.
+INFO 09-13 04:53:54 async_llm_engine.py:221] Aborted request req-460.
+INFO 09-13 04:53:55 metrics.py:345] Avg prompt throughput: 1718.2 tokens/s, Avg generation throughput: 154.6 tokens/s, Running: 56 reqs, Swapped: 0 reqs, Pending: 2 reqs, GPU KV cache usage: 98.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:53:56 async_llm_engine.py:177] Finished request req-468.
+INFO 09-13 04:53:56 async_llm_engine.py:221] Aborted request req-468.
+INFO 09-13 04:53:58 async_llm_engine.py:177] Finished request req-471.
+INFO 09-13 04:53:58 async_llm_engine.py:221] Aborted request req-471.
+INFO 09-13 04:54:00 metrics.py:345] Avg prompt throughput: 1944.0 tokens/s, Avg generation throughput: 108.1 tokens/s, Running: 56 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 98.5%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:00 async_llm_engine.py:177] Finished request req-434.
+INFO 09-13 04:54:00 async_llm_engine.py:221] Aborted request req-434.
+INFO 09-13 04:54:01 async_llm_engine.py:177] Finished request req-454.
+INFO 09-13 04:54:01 async_llm_engine.py:177] Finished request req-484.
+INFO 09-13 04:54:01 async_llm_engine.py:177] Finished request req-490.
+INFO 09-13 04:54:01 async_llm_engine.py:221] Aborted request req-454.
+INFO 09-13 04:54:01 async_llm_engine.py:221] Aborted request req-484.
+INFO 09-13 04:54:01 async_llm_engine.py:221] Aborted request req-490.
+INFO 09-13 04:54:02 async_llm_engine.py:177] Finished request req-491.
+INFO 09-13 04:54:02 async_llm_engine.py:221] Aborted request req-491.
+INFO 09-13 04:54:02 async_llm_engine.py:177] Finished request req-469.
+INFO 09-13 04:54:02 async_llm_engine.py:221] Aborted request req-469.
+INFO 09-13 04:54:03 async_llm_engine.py:177] Finished request req-492.
+INFO 09-13 04:54:03 async_llm_engine.py:221] Aborted request req-492.
+INFO 09-13 04:54:03 async_llm_engine.py:177] Finished request req-479.
+INFO 09-13 04:54:03 async_llm_engine.py:221] Aborted request req-479.
+INFO 09-13 04:54:04 async_llm_engine.py:177] Finished request req-470.
+INFO 09-13 04:54:04 async_llm_engine.py:221] Aborted request req-470.
+INFO 09-13 04:54:04 async_llm_engine.py:177] Finished request req-466.
+INFO 09-13 04:54:04 async_llm_engine.py:177] Finished request req-475.
+INFO 09-13 04:54:04 async_llm_engine.py:221] Aborted request req-466.
+INFO 09-13 04:54:04 async_llm_engine.py:221] Aborted request req-475.
+INFO 09-13 04:54:05 metrics.py:345] Avg prompt throughput: 5.7 tokens/s, Avg generation throughput: 463.9 tokens/s, Running: 45 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 76.2%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-455.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-482.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-455.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-482.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-497.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-497.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-474.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-499.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-474.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-499.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-461.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-461.
+INFO 09-13 04:54:06 async_llm_engine.py:177] Finished request req-498.
+INFO 09-13 04:54:06 async_llm_engine.py:221] Aborted request req-498.
+INFO 09-13 04:54:07 async_llm_engine.py:177] Finished request req-467.
+INFO 09-13 04:54:07 async_llm_engine.py:177] Finished request req-494.
+INFO 09-13 04:54:07 async_llm_engine.py:221] Aborted request req-467.
+INFO 09-13 04:54:07 async_llm_engine.py:221] Aborted request req-494.
+INFO 09-13 04:54:07 async_llm_engine.py:177] Finished request req-496.
+INFO 09-13 04:54:07 async_llm_engine.py:221] Aborted request req-496.
+INFO 09-13 04:54:07 async_llm_engine.py:177] Finished request req-472.
+INFO 09-13 04:54:07 async_llm_engine.py:221] Aborted request req-472.
+INFO 09-13 04:54:08 async_llm_engine.py:177] Finished request req-481.
+INFO 09-13 04:54:08 async_llm_engine.py:221] Aborted request req-481.
+INFO 09-13 04:54:08 async_llm_engine.py:177] Finished request req-488.
+INFO 09-13 04:54:08 async_llm_engine.py:221] Aborted request req-488.
+INFO 09-13 04:54:08 async_llm_engine.py:177] Finished request req-489.
+INFO 09-13 04:54:08 async_llm_engine.py:221] Aborted request req-489.
+INFO 09-13 04:54:08 async_llm_engine.py:177] Finished request req-486.
+INFO 09-13 04:54:08 async_llm_engine.py:221] Aborted request req-486.
+INFO 09-13 04:54:08 async_llm_engine.py:177] Finished request req-427.
+INFO 09-13 04:54:08 async_llm_engine.py:221] Aborted request req-427.
+INFO 09-13 04:54:08 async_llm_engine.py:177] Finished request req-477.
+INFO 09-13 04:54:08 async_llm_engine.py:221] Aborted request req-477.
+INFO 09-13 04:54:09 async_llm_engine.py:177] Finished request req-465.
+INFO 09-13 04:54:09 async_llm_engine.py:221] Aborted request req-465.
+INFO 09-13 04:54:09 async_llm_engine.py:177] Finished request req-473.
+INFO 09-13 04:54:09 async_llm_engine.py:221] Aborted request req-473.
+INFO 09-13 04:54:10 async_llm_engine.py:177] Finished request req-495.
+INFO 09-13 04:54:10 async_llm_engine.py:221] Aborted request req-495.
+INFO 09-13 04:54:10 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 395.6 tokens/s, Running: 25 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 33.9%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:10 async_llm_engine.py:177] Finished request req-463.
+INFO 09-13 04:54:10 async_llm_engine.py:221] Aborted request req-463.
+INFO 09-13 04:54:12 async_llm_engine.py:177] Finished request req-487.
+INFO 09-13 04:54:12 async_llm_engine.py:221] Aborted request req-487.
+INFO 09-13 04:54:12 async_llm_engine.py:177] Finished request req-483.
+INFO 09-13 04:54:12 async_llm_engine.py:221] Aborted request req-483.
+INFO 09-13 04:54:12 async_llm_engine.py:177] Finished request req-476.
+INFO 09-13 04:54:12 async_llm_engine.py:221] Aborted request req-476.
+INFO 09-13 04:54:12 async_llm_engine.py:177] Finished request req-493.
+INFO 09-13 04:54:12 async_llm_engine.py:221] Aborted request req-493.
+INFO 09-13 04:54:12 async_llm_engine.py:177] Finished request req-485.
+INFO 09-13 04:54:12 async_llm_engine.py:221] Aborted request req-485.
+INFO 09-13 04:54:15 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 317.9 tokens/s, Running: 19 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 21.5%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:20 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 295.6 tokens/s, Running: 19 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 22.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:25 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 292.5 tokens/s, Running: 19 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 23.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:30 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 291.4 tokens/s, Running: 19 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 23.9%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:34 async_llm_engine.py:177] Finished request req-9.
+INFO 09-13 04:54:34 async_llm_engine.py:221] Aborted request req-9.
+INFO 09-13 04:54:35 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 288.1 tokens/s, Running: 18 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 23.5%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:37 async_llm_engine.py:177] Finished request req-65.
+INFO 09-13 04:54:37 async_llm_engine.py:221] Aborted request req-65.
+INFO 09-13 04:54:40 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 271.0 tokens/s, Running: 17 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 22.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:45 async_llm_engine.py:177] Finished request req-11.
+INFO 09-13 04:54:45 async_llm_engine.py:221] Aborted request req-11.
+INFO 09-13 04:54:45 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 264.0 tokens/s, Running: 16 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 21.7%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:50 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 260.2 tokens/s, Running: 16 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 22.4%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:54:53 async_llm_engine.py:177] Finished request req-20.
+INFO 09-13 04:54:53 async_llm_engine.py:221] Aborted request req-20.
+INFO 09-13 04:54:55 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 251.4 tokens/s, Running: 15 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 21.4%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:00 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 244.9 tokens/s, Running: 15 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 22.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:05 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 248.5 tokens/s, Running: 15 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 22.7%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:06 async_llm_engine.py:177] Finished request req-15.
+INFO 09-13 04:55:06 async_llm_engine.py:221] Aborted request req-15.
+INFO 09-13 04:55:10 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 240.8 tokens/s, Running: 14 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 21.7%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:12 async_llm_engine.py:177] Finished request req-46.
+INFO 09-13 04:55:12 async_llm_engine.py:221] Aborted request req-46.
+INFO 09-13 04:55:15 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 230.9 tokens/s, Running: 13 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 20.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:18 async_llm_engine.py:177] Finished request req-18.
+INFO 09-13 04:55:18 async_llm_engine.py:221] Aborted request req-18.
+INFO 09-13 04:55:20 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 219.5 tokens/s, Running: 12 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 19.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:24 async_llm_engine.py:177] Finished request req-1.
+INFO 09-13 04:55:24 async_llm_engine.py:221] Aborted request req-1.
+INFO 09-13 04:55:24 async_llm_engine.py:177] Finished request req-13.
+INFO 09-13 04:55:24 async_llm_engine.py:221] Aborted request req-13.
+INFO 09-13 04:55:25 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 206.6 tokens/s, Running: 10 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 16.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:30 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 185.3 tokens/s, Running: 10 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 16.8%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:36 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 184.5 tokens/s, Running: 10 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 17.4%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:39 async_llm_engine.py:177] Finished request req-0.
+INFO 09-13 04:55:39 async_llm_engine.py:221] Aborted request req-0.
+INFO 09-13 04:55:41 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 182.3 tokens/s, Running: 9 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 16.2%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:43 async_llm_engine.py:177] Finished request req-10.
+INFO 09-13 04:55:43 async_llm_engine.py:221] Aborted request req-10.
+INFO 09-13 04:55:46 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 169.3 tokens/s, Running: 8 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 14.7%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:46 async_llm_engine.py:177] Finished request req-21.
+INFO 09-13 04:55:46 async_llm_engine.py:221] Aborted request req-21.
+INFO 09-13 04:55:48 async_llm_engine.py:177] Finished request req-4.
+INFO 09-13 04:55:48 async_llm_engine.py:221] Aborted request req-4.
+INFO 09-13 04:55:50 async_llm_engine.py:177] Finished request req-6.
+INFO 09-13 04:55:50 async_llm_engine.py:221] Aborted request req-6.
+INFO 09-13 04:55:51 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 131.3 tokens/s, Running: 5 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:55:56 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 102.3 tokens/s, Running: 5 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 9.5%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:56:00 async_llm_engine.py:177] Finished request req-8.
+INFO 09-13 04:56:00 async_llm_engine.py:221] Aborted request req-8.
+INFO 09-13 04:56:01 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 99.1 tokens/s, Running: 4 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 7.8%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:56:01 async_llm_engine.py:177] Finished request req-7.
+INFO 09-13 04:56:01 async_llm_engine.py:221] Aborted request req-7.
+INFO 09-13 04:56:06 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 63.2 tokens/s, Running: 3 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.0%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:56:11 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 61.9 tokens/s, Running: 3 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.1%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:56:16 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 61.8 tokens/s, Running: 3 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 6.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:56:20 async_llm_engine.py:177] Finished request req-2.
+INFO 09-13 04:56:20 async_llm_engine.py:221] Aborted request req-2.
+INFO 09-13 04:56:21 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 57.6 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 4.3%, CPU KV cache usage: 0.0%.
+INFO 09-13 04:56:21 async_llm_engine.py:177] Finished request req-5.
+INFO 09-13 04:56:21 async_llm_engine.py:221] Aborted request req-5.
+INFO 09-13 04:56:25 async_llm_engine.py:177] Finished request req-3.
+=== Sample vLLM Outputs (First 2) ===
+
+Sample 1:
+Input: 12 url # 1#1urlprefix[2][]#2
+Generated: #2urlprefix[3][]#3#3urlprefix[4][]#4#4urlprefix[5][]#5#5urlprefix[6][]#6#6urlprefix[7][]#7#7urlprefix[8][]#8#8urlprefix[9][]#9#9urlprefix[10][]#10#10urlprefix[11][]#11#11urlprefix[12][]#12#12urlprefix[13][]#13#13urlprefix[14][]#14#14urlprefix[15][]#15#15urlprefix[16][]#16#16urlprefix[17][]#17#17urlprefix[18][]#18#18urlprefix[19][]#19#19urlprefix[20][]#20#20urlprefix[21][]#21#21urlprefix[22][]#22#22urlprefix[23][]#23#23urlprefix[24][]#24#24urlprefix[25][]#25#25urlprefix[26][]#26#26urlprefix[27][]#27#27urlprefix[28][]#28#28urlprefix[29][]#29#29urlprefix[30][]#30#30urlprefix[31][]#31#31urlprefix[32][]#32#32urlprefix[33][]#33#33urlprefix[34][]#34#34urlprefix[35][]#35#35urlprefix[36][]#36#36urlprefix[37][]#37#37urlprefix[38][]#38#38urlprefix[39][]#39#39urlprefix[40][]#40#40urlprefix[41][]#41#41urlprefix[42][]#42#42urlprefix[43][]#43#43urlprefix[44][]#44#44urlprefix[45][]#45#45urlprefix[46][]#46#46urlprefix[47][]#47#47urlprefix[48][]#48#48urlprefix[49][]#49#49urlprefix[50][]#50#50urlprefix[51][]#51#51urlprefix[52][]#52#52urlprefix[53][]#53#53urlprefix[54][]#54#54urlprefix[55][]#55#55urlprefix[56][]#56#56urlprefix[57][]#57#57urlprefix[58][]#58#58urlprefix[59][]#59#59urlprefix[60][]#60#60urlprefix[61][]#61#61urlprefix[62][]#62#62urlprefix[63][]#63#63urlprefix[64][]#64#64urlprefix[65][]#65#65urlprefix[66][]#66#66urlprefix[67][]#67#67urlprefix[68][]#68#68urlprefix[69][]#69#69urlprefix[70][]#70#70urlprefix[71][]#71#71urlprefix[72][]#72#72urlprefix[73][]#73#73urlprefix[74][]#74#74urlprefix[75][]#75#75urlprefix[76][]#76#76urlprefix[77][]#77#77urlprefix[78][]#78#78urlprefix[79][]#79#79urlprefix[80][]#80#80urlprefix[81][]#81#81urlprefix[82][]#82#82urlprefix[83][]#83#83urlprefix[84][]#84#84urlprefix[85][]#85#85urlprefix[86][]#86#86urlprefix[87][]#87#87urlprefix[88][]#88#88urlprefix[89][]#89#89urlprefix[90][]#90#90urlprefix[91][]#91#91urlprefix[92][]#92#92urlprefix[93][]#93#93urlprefix[94][]#94#94urlprefix[95][]#95#95urlprefix[96][]#96#96urlprefix[97][]#97#97urlprefix[98][]#98#98urlprefix[99][]#99#99urlprefix[100][]#100#100urlprefix[101][]#101#101urlprefix[102][]#102#102urlprefix[103][]#103#103urlprefix[104][]#104#104urlprefix[105][]#105#105urlprefix[106][]#106#106urlprefix[107][]#107#107urlprefix[108][]#108#108urlprefix[109][]#109#109urlprefix[110][]#110#110urlprefix[111][]#111#111urlprefix[112][]#112#112urlprefix[113][]#113#113urlprefix[114][]#114#114urlprefix[115][]#115#115urlprefix[116][]#116#116urlprefix[117][]#117#117urlprefix[118][]#118#118urlprefix[119][]#119#119urlprefix[120][]#120#120urlprefix[121][]#121#121urlprefix[122][]#122#122urlprefix[123][]#123#123urlprefix[124][]#124#124urlprefix[125][]#125#125urlprefix[126][]#126#126urlprefix[127][]#127#127urlprefix[128][]#128#128urlprefix[129][]#129#129urlprefix[130][]#130#130urlprefix[131][]#131#131urlprefix[132][]#132#132urlprefix[133][]#133#133urlprefix[134][]#134#134urlprefix[135][]#135#135urlprefix[136][]#136#136urlprefix[137][]#137#137urlprefix[138][]#138#138urlprefix[139][]#139#139urlprefix[140][]#140#140urlprefix[141][]#141#141urlprefix[142][]#142#142urlprefix[143][]#143#143urlprefix[144][]#144#144urlprefix[145][]#145#145urlprefix[146][]#146#146urlprefix[147][]#147#147urlprefix[148][]#148#148urlprefix[149][]#149#149urlprefix[150][]#150#150urlprefix[151][]#151#151urlprefix[152][]#152#152urlprefix[153][]#153#153urlprefix[154][]#154#154urlprefix[155][]#155#155urlprefix[156][]#156#156urlprefix[157][]#157#157urlprefix[158][]#158#158urlprefix[159][]#159#159urlprefix[160][]#160#160urlprefix[161][]#161#161urlprefix[162][]#162#162urlprefix[163][]#163#163urlprefix[164][]#164#164urlprefix[165][]#165#165urlprefix[166][]#166#166urlprefix[167][]#167#167urlprefix[168][]#168#168urlprefix[169][]#169#169urlprefix[170][]#170#170urlprefix[171][]#171#171urlprefix[172][]#172#172urlprefix[173][]#173#173urlprefix[174][]#174#174urlprefix[175][]#175#175urlprefix[176][]#176#176urlprefix[177][]#177#177urlprefix[178][]#178#178urlprefix[179][]#179#179urlprefix[180][]#180#180urlprefix[181][]#181#181urlprefix[182][]#182#182urlprefix[183][]#183#183urlprefix[184][]#184#184urlprefix[185][]#185#185urlprefix[186][]#186#186urlprefix[187][]#187#187urlprefix[188][]#188#188urlprefix[189][]#189#189urlprefix[190][]#190#190urlprefix[191][]#191#191urlprefix[192][]#192#192urlprefix[193][]#193#193urlprefix[194][]#194#194urlprefix[195][]#195#195urlprefix[196][]#196#196urlprefix[197][]#197#197urlprefix[198][]#198#198urlprefix[199][]#199#199urlprefix[200][]#200#200urlprefix[201][]#201#201urlprefix[202][]#202#202urlprefix[203][]#203#203urlprefix[204][]#204#204urlprefix[205][]#205#205urlprefix[206][]#206#206urlprefix[207][]#207#207urlprefix[208][]#208#208urlprefix[209][]#209#209urlprefix[210][]#210#210urlprefix[211][]#211#211urlprefix[212][]#212#212urlprefix[213][]#213#213urlprefix[214][]#214#214urlprefix[215][]#215#215urlprefix[216][]#216#216urlprefix[217][]#217#217urlprefix[218][]#218#218urlprefix[219][]#219#219urlprefix[220][]#220#220urlprefix[221][]#221#221urlprefix[222][]#222#222urlprefix[223][]#223#223urlprefix[224][]#224#224urlprefix[225][]#225#225urlprefix[226][]#226#226urlprefix[227][]#227#227urlprefix[228][]#228#228urlprefix[229][]#229#229urlprefix[230][]#230#230urlprefix[231][]#231#231urlprefix[232][]#232#232urlprefix[233][]#233#233urlprefix[234][]#234#234urlprefix[235][]#235#235urlprefix[236][]#236#236urlprefix[237][]#237#237urlprefix[238][]#238#238urlprefix[239][]#239#239urlprefix[240][]#240#240urlprefix[241][]#241#241urlprefix[242][]#242#242urlprefix[243][]#243#243urlprefix[244][]#244#244urlprefix[245][]#245#245urlprefix[246][]#246#246urlprefix[247][]#247#247urlprefix[248][]#248#248urlprefix[249][]#249#249urlprefix[250][]#250#250urlprefix[251][]#251#251urlprefix[252][]#252#252urlprefix[253][]#253#253urlprefix[254][]#254#254urlprefix[255][]#255#255urlprefix[256][]#256#256urlprefix[257][]#257#257urlprefix[258][]#258#258urlprefix[259][]#259#259urlprefix[260][]#260#260urlprefix[261][]#261#261urlprefix[262][]#262#262urlprefix[263][]#263#263urlprefix[264][]#264#264urlprefix[265][]#265#265urlprefix[266][]#266#266urlprefix[267][]#267#267urlprefix[268][]#268#268urlprefix[269][]#269#269urlprefix[270][]#270#270urlprefix[271][]#271#271urlprefix[272][]#272#272urlprefix[273][]#273#273urlprefix[274][]#274#274urlprefix[275][]#275#275urlprefix[276][]#276#276urlprefix[277][]#277#277urlprefix[278][]#278#278urlprefix[279][]#279#279urlprefix[280][]#280#280urlprefix[281][]#281#281urlprefix[282][]#282#282urlprefix[283][]#283#283urlprefix[284][]#284#284urlprefix[285][]#285#285urlprefix[286][]#286#286urlprefix[287][]#287#287urlprefix[288][]#288#288urlprefix[289][]#289#289urlprefix[290][]#290#290urlprefix[291][]#291#291urlprefix[292][]#292#292urlprefix[293][]#293#293urlprefix[294][]#294#294urlprefix[295][]#295#295urlprefix[296][]#296#296urlprefix[297][]#297#297urlprefix[298][]#298#298urlprefix[299][]#299#299urlprefix[300][]#300#300urlprefix[301][]#301#301urlprefix[302][]#302#302urlprefix[303][]#303#303urlprefix[304][]#304#304urlprefix[305][]#305#305urlprefix[306][]#306#306urlprefix[307][]#307#307urlprefix[308][]#308#308urlprefix[309][]#309#309urlprefix[310][]#310#310urlprefix[311][]#311#311urlprefix[312][]#312#312urlprefix[313][]#313#313urlprefix[314][]#314#314urlprefix[315][]#315#315urlprefix[316][]#316#316urlprefix[317][]#317#317urlprefix[318][]#318#318urlprefix[319][]#319#319urlprefix[320][]#320#320urlprefix[321][]#321#321urlprefix[322][]#322#322urlprefix[323][]#323#323urlprefix[324][]#324#324urlprefix[325][]#325#325urlprefix[326][]#326#326urlprefix[327][]#327#327urlprefix[328][]#328#328urlprefix[329][]#329#329urlprefix[330][]#330#330urlprefix[331][]#331#331urlprefix[332][]#332#332urlprefix[333][]#333#333urlprefix[334][]#334#334urlprefix[335][]#335#335urlprefix[336][]#336#336urlprefix[337][]#337#337urlprefix[338][]#338#338urlprefix[339][]#339#339urlprefix[340
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: lm , sl and ac acknowledge the italian miur for financial support . 
+ pu wishes to thank a.j . dean and j.b . 
+ stephen for useful scientific discussions .
+Generated: 
+ references 
+ [ 1 ] a . j . dean , j . b . stephen , and r . w . 
+ harrison , " the role of the 
+ ionic liquid in the 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic liquid 
+ ionic liquid - 
+ ionic
+--------------------------------------------------------------------------------
+=== Token accounting (actual) ===
+Actual prefilled tokens: 1310128
+Actual generated tokens: 139399
+
+=== Throughput (actual / wall time) ===
+Prefill throughput: 1542.60 tokens/s
+Decode  throughput: 164.13 tokens/s
+Total   throughput: 1706.73 tokens/s
+Wall time: 849.30s
+INFO 09-13 04:56:27 async_llm_engine.py:63] Engine is gracefully shutting down.
+Exception in callback Future.set_result(None)
+handle: <Handle Future.set_result(None)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+asyncio.exceptions.InvalidStateError: invalid state
+Exception in callback Future.set_result(None)
+handle: <Handle Future.set_result(None)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+asyncio.exceptions.InvalidStateError: invalid state
+Exception in callback Future.set_result(None)
+handle: <Handle Future.set_result(None)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+asyncio.exceptions.InvalidStateError: invalid state
+Total time: 849.30s
+Wrote CSV row to: /workspace/cgen/runs_4xl4.csv
+INFO 09-13 04:56:29 multiproc_worker_utils.py:121] Killing local vLLM worker processes
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 
