@@ -1,0 +1,521 @@
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ ./benchmark/run_benchmark.sh 
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.4.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-12 23:32:24.489 | INFO     | cgen.engine:__init__:336 - init process group using port 33089
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-12 23:32:29.182 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:32:29.182 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:32:29.521 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:32:29.521 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:32:29.521 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:32:29.521 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:32:29.534 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-12 23:32:29.534 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-12 23:32:29.547 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=0/4
+2025-09-12 23:32:29.547 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=3/4
+2025-09-12 23:32:29.547 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=2/4
+2025-09-12 23:32:29.547 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=1/4
+2025-09-12 23:32:29.549 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/4 pp=0/1
+2025-09-12 23:32:29.549 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=3/4 pp=0/1
+2025-09-12 23:32:29.549 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=1/4 pp=0/1
+2025-09-12 23:32:29.549 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=2/4 pp=0/1
+INFO 09-12 23:32:29 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:32:29 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:32:29 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:32:29 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:32:29 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 23:32:29 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 23:32:29 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-12 23:32:29 pynccl.py:63] vLLM is using nccl==2.20.5
+579it [00:10, 53.80it/s] 
+579it [00:10, 53.37it/s] 
+579it [00:10, 53.07it/s]
+579it [00:10, 53.24it/s]
+579it [00:22, 26.08it/s]
+579it [00:22, 26.22it/s]
+579it [00:22, 26.27it/s]
+2025-09-12 23:33:06.780 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:33:06.780 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:33:06.780 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:33:06.792 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 7.11 GB
+2025-09-12 23:33:06.792 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 8.09 GB
+2025-09-12 23:33:06.792 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 7.11 GB
+579it [00:22, 26.08it/s]
+2025-09-12 23:33:06.958 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-12 23:33:06.963 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 8.09 GB
+2025-09-12 23:33:08.232 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:33:08.233 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:33:08.233 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:33:08.233 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-12 23:33:08.400 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:33:08.400 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:33:08.401 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:33:08.401 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-12 23:33:08.401 | INFO     | cgen.engine:init_shared_cache:280 - 1 <torch.cuda.Stream device=cuda:1 cuda_stream=0x0> 
+2025-09-12 23:33:08.401 | INFO     | cgen.engine:init_shared_cache:280 - 0 <torch.cuda.Stream device=cuda:0 cuda_stream=0x0> 
+2025-09-12 23:33:08.401 | INFO     | cgen.engine:init_shared_cache:280 - 2 <torch.cuda.Stream device=cuda:2 cuda_stream=0x0> 
+2025-09-12 23:33:08.401 | INFO     | cgen.engine:init_shared_cache:280 - 3 <torch.cuda.Stream device=cuda:3 cuda_stream=0x0> 
+self.watermark_blocks=50.0
+Processed prompts:   0%|          | 0/100 [00:03<?, ?it/s, est. speed input: 5075.58 toks/s, output: 0.00 toks/s]2025-09-12 23:33:12.481 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 4, prefetching 6, seqs in GPU 0
+2025-09-12 23:33:12.481 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:33:12.582 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:33:12.682 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:33:12.782 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:33:12.882 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:33:14.332 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.76 s
+Processed prompts:   0%|          | 0/100 [00:11<?, ?it/s, est. speed input: 1666.10 toks/s, output: 62.69 toks/s]2025-09-12 23:33:19.996 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=2 reason=max_tokens len=1212 max=1212
+Processed prompts:   1%|          | 1/100 [00:11<18:31, 11.22s/it, est. speed input: 1650.40 toks/s, output: 63.08 toks/s]2025-09-12 23:33:20.385 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=5 reason=max_tokens len=1328 max=1328
+Processed prompts:   2%|▏         | 2/100 [00:11<09:26,  5.78s/it, est. speed input: 1603.35 toks/s, output: 64.91 toks/s]2025-09-12 23:33:21.105 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=1 reason=max_tokens len=1079 max=1079
+Processed prompts:   3%|▎         | 3/100 [00:12<06:36,  4.09s/it, est. speed input: 1509.26 toks/s, output: 68.35 toks/s]2025-09-12 23:33:21.613 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=4 reason=max_tokens len=1278 max=1278
+Processed prompts:   4%|▍         | 4/100 [00:12<05:06,  3.20s/it, est. speed input: 1449.28 toks/s, output: 69.94 toks/s]2025-09-12 23:33:27.068 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=3 reason=max_tokens len=1385 max=1385
+Processed prompts:   5%|▌         | 5/100 [00:18<05:46,  3.65s/it, est. speed input: 1015.76 toks/s, output: 81.04 toks/s]2025-09-12 23:33:30.266 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=8 reason=max_tokens len=1476 max=1476
+Processed prompts:   6%|▌         | 6/100 [00:21<05:35,  3.57s/it, est. speed input: 864.22 toks/s, output: 85.00 toks/s] 2025-09-12 23:33:31.896 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=9 reason=max_tokens len=1397 max=1397
+2025-09-12 23:33:31.896 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=10 reason=max_tokens len=1362 max=1362
+Processed prompts:   8%|▊         | 8/100 [00:23<04:25,  2.88s/it, est. speed input: 803.15 toks/s, output: 86.54 toks/s]2025-09-12 23:33:32.013 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 5
+2025-09-12 23:33:32.661 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:33:34.910 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 6, prefetching 0, seqs in GPU 5
+2025-09-12 23:33:37.042 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+Processed prompts:   8%|▊         | 8/100 [00:37<07:14,  4.72s/it, est. speed input: 919.52 toks/s, output: 79.01 toks/s]2025-09-12 23:33:47.755 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=11 reason=max_tokens len=1638 max=1638
+Processed prompts:   9%|▉         | 9/100 [00:38<06:33,  4.32s/it, est. speed input: 869.44 toks/s, output: 76.87 toks/s]2025-09-12 23:33:53.299 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=13 reason=max_tokens len=1585 max=1585
+Processed prompts:  10%|█         | 10/100 [00:44<06:40,  4.45s/it, est. speed input: 761.04 toks/s, output: 78.06 toks/s]2025-09-12 23:33:57.622 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=14 reason=max_tokens len=1590 max=1590
+Processed prompts:  11%|█         | 11/100 [00:48<06:34,  4.44s/it, est. speed input: 693.61 toks/s, output: 78.83 toks/s]2025-09-12 23:34:03.861 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=15 reason=max_tokens len=1702 max=1702
+Processed prompts:  12%|█▏        | 12/100 [00:55<06:43,  4.59s/it, est. speed input: 614.97 toks/s, output: 79.76 toks/s]2025-09-12 23:34:10.605 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=6 reason=max_tokens len=2174 max=2174
+Processed prompts:  13%|█▎        | 13/100 [01:01<06:53,  4.75s/it, est. speed input: 547.83 toks/s, output: 78.28 toks/s]2025-09-12 23:34:21.668 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=16 reason=max_tokens len=1884 max=1884
+Processed prompts:  14%|█▍        | 14/100 [01:12<07:27,  5.20s/it, est. speed input: 464.62 toks/s, output: 76.43 toks/s]2025-09-12 23:34:29.049 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=17 reason=max_tokens len=1805 max=1805
+Processed prompts:  15%|█▌        | 15/100 [01:20<07:34,  5.35s/it, est. speed input: 421.87 toks/s, output: 75.44 toks/s]2025-09-12 23:34:39.734 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=18 reason=max_tokens len=1879 max=1879
+Processed prompts:  16%|█▌        | 16/100 [01:30<07:57,  5.68s/it, est. speed input: 372.29 toks/s, output: 74.25 toks/s]2025-09-12 23:34:48.519 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=19 reason=max_tokens len=1839 max=1839
+Processed prompts:  17%|█▋        | 17/100 [01:39<08:06,  5.86s/it, est. speed input: 339.48 toks/s, output: 73.51 toks/s]2025-09-12 23:35:22.533 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=7 reason=max_tokens len=3810 max=3810
+Processed prompts:  18%|█▊        | 18/100 [02:13<10:09,  7.43s/it, est. speed input: 253.12 toks/s, output: 66.15 toks/s]2025-09-12 23:35:23.037 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 2, prefetching 0, seqs in GPU 3
+2025-09-12 23:35:23.683 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:35:26.422 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 6, prefetching 0, seqs in GPU 3
+2025-09-12 23:35:28.212 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.76 s
+2025-09-12 23:35:31.586 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=20 reason=max_tokens len=1835 max=1835
+Processed prompts:  19%|█▉        | 19/100 [02:22<10:08,  7.51s/it, est. speed input: 334.61 toks/s, output: 63.44 toks/s]2025-09-12 23:35:34.267 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=21 reason=max_tokens len=1899 max=1899
+Processed prompts:  20%|██        | 20/100 [02:25<09:41,  7.27s/it, est. speed input: 328.44 toks/s, output: 63.43 toks/s]2025-09-12 23:35:35.628 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=12 reason=max_tokens len=1698 max=1698
+Processed prompts:  21%|██        | 21/100 [02:26<09:12,  6.99s/it, est. speed input: 325.40 toks/s, output: 63.24 toks/s]2025-09-12 23:35:45.783 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=22 reason=max_tokens len=2046 max=2046
+Processed prompts:  22%|██▏       | 22/100 [02:36<09:16,  7.13s/it, est. speed input: 304.34 toks/s, output: 62.03 toks/s]2025-09-12 23:35:49.313 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=23 reason=max_tokens len=1920 max=1920
+Processed prompts:  23%|██▎       | 23/100 [02:40<08:57,  6.98s/it, est. speed input: 297.65 toks/s, output: 61.65 toks/s]2025-09-12 23:35:52.241 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=0 reason=max_tokens len=4003 max=4003
+Processed prompts:  24%|██▍       | 24/100 [02:43<08:37,  6.81s/it, est. speed input: 292.31 toks/s, output: 61.33 toks/s]2025-09-12 23:35:55.122 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=25 reason=max_tokens len=1965 max=1965
+Processed prompts:  25%|██▌       | 25/100 [02:46<08:18,  6.65s/it, est. speed input: 287.25 toks/s, output: 61.39 toks/s]2025-09-12 23:35:57.199 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=24 reason=max_tokens len=2022 max=2022
+Processed prompts:  26%|██▌       | 26/100 [02:48<07:59,  6.48s/it, est. speed input: 283.70 toks/s, output: 61.42 toks/s]2025-09-12 23:36:01.187 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=26 reason=max_tokens len=2110 max=2110
+Processed prompts:  27%|██▋       | 27/100 [02:52<07:46,  6.38s/it, est. speed input: 277.14 toks/s, output: 61.49 toks/s]2025-09-12 23:36:01.247 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 3
+2025-09-12 23:36:01.929 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.68 s
+2025-09-12 23:36:04.209 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 5, prefetching 0, seqs in GPU 3
+2025-09-12 23:36:06.080 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:36:06.870 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=28 reason=max_tokens len=2169 max=2169
+Processed prompts:  28%|██▊       | 28/100 [02:58<07:37,  6.36s/it, est. speed input: 354.90 toks/s, output: 59.83 toks/s]2025-09-12 23:36:12.416 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=29 reason=max_tokens len=2205 max=2205
+Processed prompts:  29%|██▉       | 29/100 [03:03<07:29,  6.33s/it, est. speed input: 344.18 toks/s, output: 59.98 toks/s]2025-09-12 23:36:12.852 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=27 reason=max_tokens len=2294 max=2294
+Processed prompts:  30%|███       | 30/100 [03:04<07:09,  6.13s/it, est. speed input: 343.37 toks/s, output: 59.94 toks/s]2025-09-12 23:36:14.501 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=30 reason=max_tokens len=2270 max=2270
+Processed prompts:  31%|███       | 31/100 [03:05<06:53,  5.99s/it, est. speed input: 340.32 toks/s, output: 59.99 toks/s]2025-09-12 23:36:18.264 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=33 reason=max_tokens len=2262 max=2262
+Processed prompts:  32%|███▏      | 32/100 [03:09<06:42,  5.92s/it, est. speed input: 333.56 toks/s, output: 60.09 toks/s]2025-09-12 23:36:20.306 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=32 reason=max_tokens len=2320 max=2320
+Processed prompts:  33%|███▎      | 33/100 [03:11<06:28,  5.80s/it, est. speed input: 330.00 toks/s, output: 60.13 toks/s]2025-09-12 23:36:24.351 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=34 reason=max_tokens len=2316 max=2316
+Processed prompts:  34%|███▍      | 34/100 [03:15<06:19,  5.75s/it, est. speed input: 323.17 toks/s, output: 60.13 toks/s]2025-09-12 23:36:24.629 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 3
+2025-09-12 23:36:25.277 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:36:27.405 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 4, prefetching 0, seqs in GPU 3
+2025-09-12 23:36:29.410 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.76 s
+2025-09-12 23:36:30.047 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=31 reason=max_tokens len=2408 max=2408
+Processed prompts:  35%|███▌      | 35/100 [03:21<06:13,  5.75s/it, est. speed input: 388.10 toks/s, output: 58.63 toks/s]2025-09-12 23:36:38.790 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=35 reason=max_tokens len=2485 max=2485
+Processed prompts:  36%|███▌      | 36/100 [03:29<06:13,  5.83s/it, est. speed input: 371.93 toks/s, output: 58.92 toks/s]2025-09-12 23:36:40.949 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=37 reason=max_tokens len=2547 max=2547
+Processed prompts:  37%|███▋      | 37/100 [03:32<06:01,  5.73s/it, est. speed input: 368.15 toks/s, output: 58.77 toks/s]2025-09-12 23:36:44.535 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=36 reason=max_tokens len=2573 max=2573
+Processed prompts:  38%|███▊      | 38/100 [03:35<05:51,  5.68s/it, est. speed input: 362.03 toks/s, output: 58.87 toks/s]2025-09-12 23:36:45.067 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=38 reason=max_tokens len=2425 max=2425
+Processed prompts:  39%|███▉      | 39/100 [03:36<05:38,  5.54s/it, est. speed input: 361.14 toks/s, output: 58.83 toks/s]2025-09-12 23:36:48.106 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=39 reason=max_tokens len=2517 max=2517
+Processed prompts:  40%|████      | 40/100 [03:39<05:28,  5.48s/it, est. speed input: 356.13 toks/s, output: 58.63 toks/s]2025-09-12 23:36:53.210 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=41 reason=max_tokens len=2680 max=2680
+Processed prompts:  41%|████      | 41/100 [03:44<05:22,  5.47s/it, est. speed input: 348.03 toks/s, output: 58.28 toks/s]2025-09-12 23:36:53.330 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:36:53.979 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:36:55.869 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 3, prefetching 0, seqs in GPU 2
+2025-09-12 23:36:57.975 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:37:09.203 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=42 reason=max_tokens len=2837 max=2837
+Processed prompts:  42%|████▏     | 42/100 [04:00<05:31,  5.72s/it, est. speed input: 380.62 toks/s, output: 56.50 toks/s]2025-09-12 23:37:12.577 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=43 reason=max_tokens len=2675 max=2675
+Processed prompts:  43%|████▎     | 43/100 [04:03<05:23,  5.67s/it, est. speed input: 375.35 toks/s, output: 56.33 toks/s]2025-09-12 23:37:17.037 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=44 reason=max_tokens len=2726 max=2726
+Processed prompts:  44%|████▍     | 44/100 [04:08<05:15,  5.64s/it, est. speed input: 368.60 toks/s, output: 56.11 toks/s]2025-09-12 23:37:23.105 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=45 reason=max_tokens len=2786 max=2786
+Processed prompts:  45%|████▌     | 45/100 [04:14<05:10,  5.65s/it, est. speed input: 359.81 toks/s, output: 55.79 toks/s]2025-09-12 23:37:25.898 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=46 reason=max_tokens len=2725 max=2725
+Processed prompts:  46%|████▌     | 46/100 [04:17<05:01,  5.59s/it, est. speed input: 355.90 toks/s, output: 55.64 toks/s]2025-09-12 23:37:25.995 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:37:26.646 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:37:28.708 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 3, prefetching 0, seqs in GPU 2
+2025-09-12 23:37:30.891 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:37:39.086 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=47 reason=max_tokens len=2900 max=2900
+Processed prompts:  47%|████▋     | 47/100 [04:30<05:04,  5.75s/it, est. speed input: 390.37 toks/s, output: 54.28 toks/s]2025-09-12 23:37:42.285 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=48 reason=max_tokens len=2802 max=2802
+Processed prompts:  48%|████▊     | 48/100 [04:33<04:56,  5.70s/it, est. speed input: 385.80 toks/s, output: 54.16 toks/s]2025-09-12 23:37:46.101 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=40 reason=max_tokens len=3590 max=3590
+Processed prompts:  49%|████▉     | 49/100 [04:37<04:48,  5.66s/it, est. speed input: 380.50 toks/s, output: 54.01 toks/s]2025-09-12 23:37:49.611 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=49 reason=max_tokens len=2906 max=2906
+Processed prompts:  50%|█████     | 50/100 [04:40<04:40,  5.62s/it, est. speed input: 375.74 toks/s, output: 53.88 toks/s]2025-09-12 23:37:54.527 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=50 reason=max_tokens len=2946 max=2946
+Processed prompts:  51%|█████     | 51/100 [04:45<04:34,  5.60s/it, est. speed input: 369.27 toks/s, output: 53.71 toks/s]2025-09-12 23:37:54.631 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:37:55.276 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.64 s
+2025-09-12 23:37:57.402 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 3, prefetching 0, seqs in GPU 2
+2025-09-12 23:37:59.607 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:38:06.598 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=51 reason=max_tokens len=3069 max=3069
+Processed prompts:  52%|█████▏    | 52/100 [04:57<04:34,  5.73s/it, est. speed input: 403.23 toks/s, output: 52.53 toks/s]2025-09-12 23:38:06.852 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=52 reason=max_tokens len=2993 max=2993
+Processed prompts:  53%|█████▎    | 53/100 [04:58<04:24,  5.62s/it, est. speed input: 402.89 toks/s, output: 52.51 toks/s]2025-09-12 23:38:10.604 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=53 reason=max_tokens len=2937 max=2937
+Processed prompts:  54%|█████▍    | 54/100 [05:01<04:17,  5.59s/it, est. speed input: 397.88 toks/s, output: 52.38 toks/s]2025-09-12 23:38:13.097 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=54 reason=max_tokens len=3020 max=3020
+Processed prompts:  55%|█████▌    | 55/100 [05:04<04:08,  5.53s/it, est. speed input: 394.62 toks/s, output: 52.31 toks/s]2025-09-12 23:38:14.420 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=55 reason=max_tokens len=2971 max=2971
+Processed prompts:  56%|█████▌    | 56/100 [05:05<04:00,  5.46s/it, est. speed input: 392.91 toks/s, output: 52.27 toks/s]2025-09-12 23:38:14.531 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:38:15.177 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:38:16.917 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 2, prefetching 0, seqs in GPU 2
+2025-09-12 23:38:19.189 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:38:22.701 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=56 reason=max_tokens len=3035 max=3035
+Processed prompts:  57%|█████▋    | 57/100 [05:13<03:56,  5.51s/it, est. speed input: 420.96 toks/s, output: 51.38 toks/s]2025-09-12 23:38:27.180 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=58 reason=max_tokens len=3037 max=3037
+Processed prompts:  58%|█████▊    | 58/100 [05:18<03:50,  5.49s/it, est. speed input: 415.04 toks/s, output: 51.28 toks/s]2025-09-12 23:38:31.837 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=57 reason=max_tokens len=3212 max=3212
+Processed prompts:  59%|█████▉    | 59/100 [05:23<03:44,  5.47s/it, est. speed input: 409.06 toks/s, output: 51.18 toks/s]2025-09-12 23:38:31.983 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=59 reason=max_tokens len=3064 max=3064
+Processed prompts:  60%|██████    | 60/100 [05:23<03:35,  5.39s/it, est. speed input: 408.87 toks/s, output: 51.17 toks/s]2025-09-12 23:38:32.087 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:38:32.733 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.64 s
+2025-09-12 23:38:34.537 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 2, prefetching 0, seqs in GPU 2
+2025-09-12 23:38:36.871 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:38:43.349 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=61 reason=max_tokens len=3182 max=3182
+Processed prompts:  61%|██████    | 61/100 [05:34<03:33,  5.48s/it, est. speed input: 432.63 toks/s, output: 50.29 toks/s]2025-09-12 23:38:49.269 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=60 reason=max_tokens len=3274 max=3274
+Processed prompts:  62%|██████▏   | 62/100 [05:40<03:28,  5.49s/it, est. speed input: 425.11 toks/s, output: 50.15 toks/s]2025-09-12 23:38:52.357 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=64 reason=max_tokens len=3328 max=3328
+Processed prompts:  63%|██████▎   | 63/100 [05:43<03:21,  5.45s/it, est. speed input: 421.29 toks/s, output: 50.08 toks/s]2025-09-12 23:38:57.647 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=66 reason=max_tokens len=3289 max=3289
+Processed prompts:  64%|██████▍   | 64/100 [05:48<03:16,  5.45s/it, est. speed input: 414.90 toks/s, output: 49.96 toks/s]2025-09-12 23:38:57.744 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:38:58.391 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:39:00.798 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 3, prefetching 0, seqs in GPU 2
+2025-09-12 23:39:03.253 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:39:09.277 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=62 reason=max_tokens len=3188 max=3188
+Processed prompts:  65%|██████▌   | 65/100 [06:00<03:14,  5.55s/it, est. speed input: 446.36 toks/s, output: 49.06 toks/s]2025-09-12 23:39:10.325 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=65 reason=max_tokens len=3504 max=3504
+Processed prompts:  66%|██████▌   | 66/100 [06:01<03:06,  5.48s/it, est. speed input: 445.07 toks/s, output: 49.04 toks/s]2025-09-12 23:39:15.296 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=67 reason=max_tokens len=3317 max=3317
+Processed prompts:  67%|██████▋   | 67/100 [06:06<03:00,  5.47s/it, est. speed input: 439.03 toks/s, output: 48.97 toks/s]2025-09-12 23:39:15.857 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=68 reason=max_tokens len=3316 max=3316
+Processed prompts:  68%|██████▊   | 68/100 [06:07<02:52,  5.40s/it, est. speed input: 438.36 toks/s, output: 48.95 toks/s]2025-09-12 23:39:22.300 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=69 reason=max_tokens len=3359 max=3359
+Processed prompts:  69%|██████▉   | 69/100 [06:13<02:47,  5.41s/it, est. speed input: 430.80 toks/s, output: 48.86 toks/s]2025-09-12 23:39:22.425 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:39:23.073 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:39:25.090 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 2, prefetching 0, seqs in GPU 2
+2025-09-12 23:39:27.636 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:39:32.472 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=71 reason=max_tokens len=3438 max=3438
+Processed prompts:  70%|███████   | 70/100 [06:23<02:44,  5.48s/it, est. speed input: 454.58 toks/s, output: 48.12 toks/s]2025-09-12 23:39:35.267 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=70 reason=max_tokens len=3557 max=3557
+Processed prompts:  71%|███████   | 71/100 [06:26<02:37,  5.44s/it, est. speed input: 451.29 toks/s, output: 48.09 toks/s]2025-09-12 23:39:41.538 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=72 reason=max_tokens len=3536 max=3536
+Processed prompts:  72%|███████▏  | 72/100 [06:32<02:32,  5.45s/it, est. speed input: 444.08 toks/s, output: 48.01 toks/s]2025-09-12 23:39:49.403 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=73 reason=max_tokens len=3671 max=3671
+Processed prompts:  73%|███████▎  | 73/100 [06:40<02:28,  5.49s/it, est. speed input: 435.36 toks/s, output: 47.88 toks/s]2025-09-12 23:39:49.529 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:39:50.198 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.67 s
+2025-09-12 23:39:52.278 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 2, prefetching 0, seqs in GPU 2
+2025-09-12 23:39:54.868 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:39:55.442 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=74 reason=max_tokens len=3565 max=3565
+Processed prompts:  74%|███████▍  | 74/100 [06:46<02:22,  5.49s/it, est. speed input: 462.93 toks/s, output: 47.23 toks/s]2025-09-12 23:40:02.780 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=75 reason=max_tokens len=3562 max=3562
+Processed prompts:  75%|███████▌  | 75/100 [06:53<02:17,  5.52s/it, est. speed input: 454.72 toks/s, output: 47.07 toks/s]2025-09-12 23:40:05.398 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=79 reason=max_tokens len=3665 max=3665
+Processed prompts:  76%|███████▌  | 76/100 [06:56<02:11,  5.48s/it, est. speed input: 451.86 toks/s, output: 47.05 toks/s]2025-09-12 23:40:08.514 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=76 reason=max_tokens len=3576 max=3576
+Processed prompts:  77%|███████▋  | 77/100 [06:59<02:05,  5.45s/it, est. speed input: 448.51 toks/s, output: 47.03 toks/s]2025-09-12 23:40:08.618 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:40:09.301 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.68 s
+2025-09-12 23:40:11.399 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 2, prefetching 0, seqs in GPU 2
+2025-09-12 23:40:13.990 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:40:23.686 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=78 reason=max_tokens len=3682 max=3682
+Processed prompts:  78%|███████▊  | 78/100 [07:14<02:02,  5.58s/it, est. speed input: 465.36 toks/s, output: 46.38 toks/s]2025-09-12 23:40:29.012 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=63 reason=max_tokens len=3222 max=3222
+Processed prompts:  79%|███████▉  | 79/100 [07:20<01:57,  5.57s/it, est. speed input: 459.73 toks/s, output: 46.34 toks/s]2025-09-12 23:40:31.772 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=77 reason=max_tokens len=3916 max=3916
+Processed prompts:  80%|████████  | 80/100 [07:22<01:50,  5.54s/it, est. speed input: 456.87 toks/s, output: 46.19 toks/s]2025-09-12 23:40:31.772 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:40:37.579 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=80 reason=max_tokens len=3625 max=3625
+Processed prompts:  81%|████████  | 81/100 [07:28<01:45,  5.54s/it, est. speed input: 450.95 toks/s, output: 46.14 toks/s]2025-09-12 23:40:37.685 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:40:38.342 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 2
+2025-09-12 23:40:38.388 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.70 s
+2025-09-12 23:40:42.585 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:40:44.149 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=81 reason=max_tokens len=3692 max=3692
+Processed prompts:  82%|████████▏ | 82/100 [07:35<01:39,  5.55s/it, est. speed input: 468.37 toks/s, output: 45.63 toks/s]2025-09-12 23:40:47.298 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=82 reason=max_tokens len=3634 max=3634
+Processed prompts:  83%|████████▎ | 83/100 [07:38<01:33,  5.52s/it, est. speed input: 465.16 toks/s, output: 45.61 toks/s]2025-09-12 23:40:50.917 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=83 reason=max_tokens len=3722 max=3722
+Processed prompts:  84%|████████▍ | 84/100 [07:42<01:28,  5.50s/it, est. speed input: 461.51 toks/s, output: 45.43 toks/s]2025-09-12 23:40:50.917 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:41:10.398 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=84 reason=max_tokens len=4059 max=4059
+Processed prompts:  85%|████████▌ | 85/100 [08:01<01:24,  5.67s/it, est. speed input: 442.84 toks/s, output: 44.50 toks/s]2025-09-12 23:41:10.398 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:41:10.543 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:41:11.549 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  1.00 s
+2025-09-12 23:41:11.551 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:41:15.754 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:41:27.254 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=85 reason=max_tokens len=3892 max=3892
+Processed prompts:  86%|████████▌ | 86/100 [08:18<01:21,  5.80s/it, est. speed input: 450.16 toks/s, output: 43.53 toks/s]2025-09-12 23:41:27.254 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:41:37.692 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=86 reason=max_tokens len=3882 max=3882
+Processed prompts:  87%|████████▋ | 87/100 [08:28<01:16,  5.85s/it, est. speed input: 440.93 toks/s, output: 43.10 toks/s]2025-09-12 23:41:37.693 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:41:41.081 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=87 reason=max_tokens len=3779 max=3779
+Processed prompts:  88%|████████▊ | 88/100 [08:32<01:09,  5.82s/it, est. speed input: 438.01 toks/s, output: 42.96 toks/s]2025-09-12 23:41:41.082 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:41:41.227 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:41:41.901 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:41:41.912 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.68 s
+2025-09-12 23:41:46.292 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:41:53.440 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=88 reason=max_tokens len=3866 max=3866
+Processed prompts:  89%|████████▉ | 89/100 [08:44<01:04,  5.89s/it, est. speed input: 449.30 toks/s, output: 42.25 toks/s]2025-09-12 23:41:53.440 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:00.010 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=89 reason=max_tokens len=3855 max=3855
+Processed prompts:  90%|█████████ | 90/100 [08:51<00:59,  5.90s/it, est. speed input: 443.74 toks/s, output: 42.01 toks/s]2025-09-12 23:42:00.011 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:00.111 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:00.211 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:00.311 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:00.411 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:05.262 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=90 reason=max_tokens len=3858 max=3858
+Processed prompts:  91%|█████████ | 91/100 [08:56<00:53,  5.89s/it, est. speed input: 439.40 toks/s, output: 41.80 toks/s]2025-09-12 23:42:05.262 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:05.408 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:42:06.054 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:42:06.058 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:42:10.435 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-12 23:42:17.506 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=91 reason=max_tokens len=3938 max=3938
+Processed prompts:  92%|█████████▏| 92/100 [09:08<00:47,  5.96s/it, est. speed input: 450.48 toks/s, output: 41.16 toks/s]2025-09-12 23:42:17.506 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:25.031 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=95 reason=max_tokens len=3993 max=3993
+Processed prompts:  93%|█████████▎| 93/100 [09:16<00:41,  5.98s/it, est. speed input: 444.38 toks/s, output: 40.90 toks/s]2025-09-12 23:42:25.032 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:31.682 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=92 reason=max_tokens len=3962 max=3962
+Processed prompts:  94%|█████████▍| 94/100 [09:22<00:35,  5.99s/it, est. speed input: 439.13 toks/s, output: 40.69 toks/s]2025-09-12 23:42:31.682 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:31.828 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:42:32.478 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:42:32.510 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:42:37.341 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  1.10 s
+2025-09-12 23:42:44.365 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=93 reason=max_tokens len=3976 max=3976
+Processed prompts:  95%|█████████▌| 95/100 [09:35<00:30,  6.06s/it, est. speed input: 449.75 toks/s, output: 40.07 toks/s]2025-09-12 23:42:44.366 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:49.981 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=96 reason=max_tokens len=3973 max=3973
+Processed prompts:  96%|█████████▌| 96/100 [09:41<00:24,  6.05s/it, est. speed input: 445.40 toks/s, output: 39.90 toks/s]2025-09-12 23:42:49.981 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:52.844 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=97 reason=max_tokens len=3979 max=3979
+Processed prompts:  97%|█████████▋| 97/100 [09:44<00:18,  6.02s/it, est. speed input: 443.22 toks/s, output: 39.81 toks/s]2025-09-12 23:42:52.844 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:42:52.990 | INFO     | cgen.schedule:to_prefill:78 - switch to prefill, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:42:53.639 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.65 s
+2025-09-12 23:42:53.639 | INFO     | cgen.schedule:to_decode:83 - switch to decode, seqs in CPU 1, prefetching 0, seqs in GPU 1
+2025-09-12 23:42:56.905 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.90 s
+2025-09-12 23:42:59.480 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=98 reason=max_tokens len=3980 max=3980
+Processed prompts:  98%|█████████▊| 98/100 [09:50<00:12,  6.03s/it, est. speed input: 444.94 toks/s, output: 39.46 toks/s]2025-09-12 23:42:59.481 | INFO     | cgen.schedule:update_prefetch:265 - waiting for prefetching...
+2025-09-12 23:43:06.650 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=99 reason=max_tokens len=4088 max=4088
+Processed prompts:  99%|█████████▉| 99/100 [09:57<00:06,  6.04s/it, est. speed input: 439.61 toks/s, output: 39.38 toks/s]2025-09-12 23:43:10.576 | INFO     | cgen.schedule:append_output:102 - [SCHED] finish req seq_id=94 reason=max_tokens len=4008 max=4008
+Processed prompts: 100%|██████████| 100/100 [10:01<00:00,  6.02s/it, est. speed input: 436.74 toks/s, output: 39.2Processed prompts: 100%|██████████| 100/100 [10:01<00:00,  6.02s/it, est. speed input: 436.74 toks/s, output: 39.26 toks/s]
+detokenizer takes 0.07 s
+
+=== Token accounting (actual) ===
+Actual prefilled tokens:  262805
+Actual generated tokens:  23626
+
+=== Throughput (actual / wall time) ===
+Prefill throughput: 436.69 toks/s
+Decode  throughput: 39.26 toks/s
+Total   throughput: 475.94 toks/s
+=== Sample Model Outputs (First 2) ===
+
+Sample 1:
+Input: this work is financially supported by the national science council of republic of china under the contract # : nsc-95 - 2112-m-007 - 059-my3 .            c.  k.  chua , w.  s.  hou and s.  y.  tsai , phys . 
+ . * d66 * , 054004 ( 2002 ) ; h.  y.  cheng and k.  c.  yang , phys .  rev . 
+ * d66 * , 014020 ( 2002 ) ; s. y. tsai , `` study of three - body baryonic b decays '' , ph . 
+ d thesis , national taiwan university ( 2005 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 74 * , 094023 ( 2006 ) . c.  q.  geng , y.  k.  hsiao and j.  n.  ng , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) .
+Generated:  
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: for fixed integers @xmath0 and @xmath1 , we consider the admissible sequences of @xmath2 lattice paths in a colored @xmath3 square given in @xcite . each admissible sequence of paths can be associated with a partition @xmath10 of @xmath4 . in section 
+ [ paths ] , we show that the number of self - conjugate admissible sequences of paths associated with @xmath10 is equal to the number of standard young tableaux of shape @xmath10 , and thus can be calculated using the hook length formula . 
+ we extend this result to include the non - self - conjugate admissible sequences of paths and show that the number of all such admissible sequences of paths is equal to the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 . using the rsk correspondence in @xcite , 
+ it is shown in ( @xcite , corollary 7.23.12 ) that the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 is equal to the number of @xmath6-avoiding permutations of @xmath7 .    in section [ multiplicities ] 
+ , we apply our results to the representation theory of the affine kac - moody algebra @xmath8 . 
+ let @xmath12 , @xmath13 and @xmath14 denote the simple roots , simple coroots , and fundamental weights respectively . 
+ note that @xmath15 
+ . for @xmath16 , set @xmath17 and @xmath18 . as shown in @xcite , @xmath19 
+ are maximal dominant weights of the irreducible @xmath8-module @xmath9 . 
+ we show that the multiplicity of the weight @xmath19 in @xmath9 is the number of @xmath6-avoiding permutations of @xmath7 , which proves conjecture 4.13 in @xcite . 
+ for fixed integers @xmath0 and @xmath1 , consider the @xmath3 square containing @xmath20 unit boxes in the fourth quadrant so that the top left corner of the square is at the origin . 
+ we assign color @xmath21 to a box if its upper left corner has coordinates @xmath22 . 
+ this gives the following @xmath3 colored square @xmath23 :      a lattice path @xmath25 on @xmath23 is a path joining the lower left corner @xmath26 to the upper right corner @xmath27 moving unit lengths up or right . for two lattice paths @xmath28 on @xmath23 
+ we say that @xmath29 if the boxes above @xmath30 are also above @xmath25 . 
+ now , we draw @xmath2 lattice paths , @xmath31 on @xmath23 such that @xmath32 . for integers 
+ @xmath33 , where @xmath34 , @xmath35 , we define @xmath36 to be the number of @xmath37-colored boxes between @xmath38 and @xmath39 . 
+ we define @xmath40 to be the number of @xmath37-colored boxes below @xmath41 and @xmath42 to be the number of @xmath37-colored boxes above @xmath43 . 
+ denote by @xmath49 the set of all admissible sequences of @xmath2 paths . 
+ notice that there are @xmath4 0-colored boxes in @xmath23 and hence for any admissible sequence of paths , @xmath50 . 
+ in addition , it follows from definition [ pathsdef](2 ) that @xmath51 for any admissible sequence of paths . 
+ thus , we can and do associate an admissible sequence of paths @xmath44 on @xmath23 with a partition @xmath52 of @xmath4 . in this case , we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram . 
+ figure [ adseq](a ) is an element of @xmath53 , where @xmath54 and @xmath55 are shown in figures [ adseq](b ) , [ adseq](c ) , and [ adseq](d ) , respectively . 
+ notice that this admissible sequence of paths is of type @xmath56 .
+Generated:  
+ we can also associate a partition @xmath57 of @xmath4 with an admissible sequence of paths @xmath44 on @xmath23. 
+ in this case, we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram. 
+ figure [ adseq](a ) is an element of @xmath53, where @xmath58 and @xmath59 are shown in figures [ adseq](b ), [ adseq](c ), and [ adseq](d ), respectively. 
+ notice that this admissible sequence of paths is of type @xmath60. 
+ we can
+--------------------------------------------------------------------------------
+Total time: 601.82
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 

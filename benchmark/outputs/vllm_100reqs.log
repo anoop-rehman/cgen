@@ -1,0 +1,674 @@
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ DATASET=arxiv MODEL=elinas/Llama-3-15B-Instruct-zeroed TP=4 PP=1 CHUNKED_PREFILL=1 MAX_BATCHED_TOKENS=2048 SORT_PROMPTS=1 ENFORCE_EAGER=1 NUM_REQUESTS=100 INPUT_LEN=1000 OUTPUT_LE
+N=100 CSV=runs_4xl4.csv CSV_APPEND=1 PRINT_OUTPUT=1 benchmark/run_vllm_async.sh
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.4.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 09-12 23:55:18 config.py:1005] Chunked prefill is enabled with max_num_batched_tokens=2048.
+WARNING 09-12 23:55:18 config.py:380] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+INFO 09-12 23:55:18 llm_engine.py:237] Initializing an LLM engine (vdev) with config: model='elinas/Llama-3-15B-Instruct-zeroed', speculative_config=None, tokenizer='elinas/Llama-3-15B-Instruct-zeroed', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=4, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=elinas/Llama-3-15B-Instruct-zeroed, use_v2_block_manager=True, num_scheduler_steps=1, chunked_prefill_enabled=True multi_step_stream_outputs=True, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+WARNING 09-12 23:55:18 multiproc_gpu_executor.py:53] Reducing Torch parallelism from 48 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+INFO 09-12 23:55:18 custom_cache_manager.py:17] Setting Triton cache manager to: vllm.triton_utils.custom_cache_manager:CustomCacheManager
+(VllmWorkerProcess pid=305) INFO 09-12 23:55:19 multiproc_worker_utils.py:216] Worker ready; awaiting tasks
+(VllmWorkerProcess pid=306) INFO 09-12 23:55:19 multiproc_worker_utils.py:216] Worker ready; awaiting tasks
+(VllmWorkerProcess pid=307) INFO 09-12 23:55:19 multiproc_worker_utils.py:216] Worker ready; awaiting tasks
+INFO 09-12 23:55:20 utils.py:1008] Found nccl from library libnccl.so.2
+(VllmWorkerProcess pid=305) INFO 09-12 23:55:20 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-12 23:55:20 pynccl.py:63] vLLM is using nccl==2.20.5
+(VllmWorkerProcess pid=307) INFO 09-12 23:55:20 utils.py:1008] Found nccl from library libnccl.so.2
+(VllmWorkerProcess pid=306) INFO 09-12 23:55:20 utils.py:1008] Found nccl from library libnccl.so.2
+(VllmWorkerProcess pid=305) INFO 09-12 23:55:20 pynccl.py:63] vLLM is using nccl==2.20.5
+(VllmWorkerProcess pid=307) INFO 09-12 23:55:20 pynccl.py:63] vLLM is using nccl==2.20.5
+(VllmWorkerProcess pid=306) INFO 09-12 23:55:20 pynccl.py:63] vLLM is using nccl==2.20.5
+(VllmWorkerProcess pid=305) WARNING 09-12 23:55:20 custom_all_reduce.py:132] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+WARNING 09-12 23:55:20 custom_all_reduce.py:132] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(VllmWorkerProcess pid=306) WARNING 09-12 23:55:20 custom_all_reduce.py:132] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(VllmWorkerProcess pid=307) WARNING 09-12 23:55:20 custom_all_reduce.py:132] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+INFO 09-12 23:55:20 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1, 2, 3], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x7b6c149e7f10>, local_subscribe_port=47207, remote_subscribe_port=None)
+INFO 09-12 23:55:20 model_runner.py:1060] Starting to load model elinas/Llama-3-15B-Instruct-zeroed...
+(VllmWorkerProcess pid=305) INFO 09-12 23:55:20 model_runner.py:1060] Starting to load model elinas/Llama-3-15B-Instruct-zeroed...
+(VllmWorkerProcess pid=306) INFO 09-12 23:55:20 model_runner.py:1060] Starting to load model elinas/Llama-3-15B-Instruct-zeroed...
+(VllmWorkerProcess pid=307) INFO 09-12 23:55:20 model_runner.py:1060] Starting to load model elinas/Llama-3-15B-Instruct-zeroed...
+INFO 09-12 23:55:20 weight_utils.py:243] Using model weights format ['*.safetensors']
+(VllmWorkerProcess pid=306) INFO 09-12 23:55:21 weight_utils.py:243] Using model weights format ['*.safetensors']
+(VllmWorkerProcess pid=307) INFO 09-12 23:55:21 weight_utils.py:243] Using model weights format ['*.safetensors']
+(VllmWorkerProcess pid=305) INFO 09-12 23:55:21 weight_utils.py:243] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:00<00:01,  1.78it/s]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:01<00:01,  1.67it/s]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:01<00:00,  1.53it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  2.21it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.95it/s]
+
+(VllmWorkerProcess pid=306) INFO 09-12 23:55:23 model_runner.py:1071] Loading model weights took 6.9922 GB
+INFO 09-12 23:55:23 model_runner.py:1071] Loading model weights took 6.9922 GB
+(VllmWorkerProcess pid=307) INFO 09-12 23:55:23 model_runner.py:1071] Loading model weights took 6.9922 GB
+(VllmWorkerProcess pid=305) INFO 09-12 23:55:23 model_runner.py:1071] Loading model weights took 6.9922 GB
+INFO 09-12 23:55:24 distributed_gpu_executor.py:57] # GPU blocks: 11644, # CPU blocks: 4096
+INFO 09-12 23:55:24 distributed_gpu_executor.py:61] Maximum concurrency for 4096 tokens per request: 45.48x
+Running vLLM (Async) with 100 requests...
+Model: elinas/Llama-3-15B-Instruct-zeroed
+TP=4, PP=1
+Chunked Prefill: True, Max Batched Tokens: 2048
+NOTE: enforce_eager=True (CUDA graphs disabled)
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-0.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-1.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-2.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-3.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-4.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-5.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-6.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-7.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-8.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-9.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-10.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-11.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-12.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-13.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-14.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-15.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-16.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-17.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-18.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-19.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-20.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-21.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-22.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-23.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-24.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-25.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-26.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-27.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-28.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-29.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-30.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-31.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-32.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-33.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-34.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-35.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-36.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-37.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-38.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-39.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-40.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-41.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-42.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-43.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-44.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-45.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-46.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-47.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-48.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-49.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-50.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-51.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-52.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-53.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-54.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-55.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-56.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-57.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-58.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-59.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-60.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-61.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-62.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-63.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-64.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-65.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-66.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-67.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-68.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-69.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-70.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-71.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-72.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-73.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-74.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-75.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-76.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-77.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-78.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-79.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-80.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-81.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-82.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-83.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-84.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-85.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-86.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-87.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-88.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-89.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-90.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-91.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-92.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-93.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-94.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-95.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-96.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-97.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-98.
+INFO 09-12 23:55:28 async_llm_engine.py:209] Added request req-99.
+INFO 09-12 23:55:33 metrics.py:345] Avg prompt throughput: 2029.0 tokens/s, Avg generation throughput: 5.4 tokens/s, Running: 10 reqs, Swapped: 0 reqs, Pending: 90 reqs, GPU KV cache usage: 6.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:55:38 metrics.py:345] Avg prompt throughput: 2431.8 tokens/s, Avg generation throughput: 16.3 tokens/s, Running: 18 reqs, Swapped: 0 reqs, Pending: 82 reqs, GPU KV cache usage: 12.7%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:55:43 metrics.py:345] Avg prompt throughput: 2408.0 tokens/s, Avg generation throughput: 25.1 tokens/s, Running: 25 reqs, Swapped: 0 reqs, Pending: 75 reqs, GPU KV cache usage: 19.4%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:55:48 metrics.py:345] Avg prompt throughput: 2376.4 tokens/s, Avg generation throughput: 32.3 tokens/s, Running: 31 reqs, Swapped: 0 reqs, Pending: 69 reqs, GPU KV cache usage: 26.0%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:55:53 metrics.py:345] Avg prompt throughput: 2351.2 tokens/s, Avg generation throughput: 39.1 tokens/s, Running: 37 reqs, Swapped: 0 reqs, Pending: 63 reqs, GPU KV cache usage: 33.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:55:58 metrics.py:345] Avg prompt throughput: 2331.5 tokens/s, Avg generation throughput: 44.6 tokens/s, Running: 42 reqs, Swapped: 0 reqs, Pending: 58 reqs, GPU KV cache usage: 39.7%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:04 metrics.py:345] Avg prompt throughput: 2310.8 tokens/s, Avg generation throughput: 49.9 tokens/s, Running: 45 reqs, Swapped: 0 reqs, Pending: 54 reqs, GPU KV cache usage: 44.8%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:04 async_llm_engine.py:177] Finished request req-10.
+INFO 09-12 23:56:04 async_llm_engine.py:221] Aborted request req-10.
+INFO 09-12 23:56:09 metrics.py:345] Avg prompt throughput: 2301.3 tokens/s, Avg generation throughput: 54.0 tokens/s, Running: 50 reqs, Swapped: 0 reqs, Pending: 49 reqs, GPU KV cache usage: 52.2%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:14 metrics.py:345] Avg prompt throughput: 2288.8 tokens/s, Avg generation throughput: 58.6 tokens/s, Running: 54 reqs, Swapped: 0 reqs, Pending: 45 reqs, GPU KV cache usage: 58.5%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:19 metrics.py:345] Avg prompt throughput: 2276.5 tokens/s, Avg generation throughput: 63.2 tokens/s, Running: 58 reqs, Swapped: 0 reqs, Pending: 41 reqs, GPU KV cache usage: 65.0%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:25 metrics.py:345] Avg prompt throughput: 2257.8 tokens/s, Avg generation throughput: 67.3 tokens/s, Running: 62 reqs, Swapped: 0 reqs, Pending: 37 reqs, GPU KV cache usage: 71.7%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:30 metrics.py:345] Avg prompt throughput: 2241.3 tokens/s, Avg generation throughput: 71.5 tokens/s, Running: 66 reqs, Swapped: 0 reqs, Pending: 33 reqs, GPU KV cache usage: 78.6%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:35 metrics.py:345] Avg prompt throughput: 2226.0 tokens/s, Avg generation throughput: 75.3 tokens/s, Running: 70 reqs, Swapped: 0 reqs, Pending: 29 reqs, GPU KV cache usage: 85.8%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:39 async_llm_engine.py:177] Finished request req-25.
+INFO 09-12 23:56:39 async_llm_engine.py:221] Aborted request req-25.
+INFO 09-12 23:56:41 metrics.py:345] Avg prompt throughput: 2213.8 tokens/s, Avg generation throughput: 78.7 tokens/s, Running: 72 reqs, Swapped: 0 reqs, Pending: 26 reqs, GPU KV cache usage: 90.4%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:42 async_llm_engine.py:177] Finished request req-20.
+INFO 09-12 23:56:42 async_llm_engine.py:221] Aborted request req-20.
+INFO 09-12 23:56:46 metrics.py:345] Avg prompt throughput: 2204.8 tokens/s, Avg generation throughput: 80.9 tokens/s, Running: 75 reqs, Swapped: 0 reqs, Pending: 22 reqs, GPU KV cache usage: 96.9%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:50 async_llm_engine.py:177] Finished request req-23.
+INFO 09-12 23:56:50 async_llm_engine.py:221] Aborted request req-23.
+INFO 09-12 23:56:50 async_llm_engine.py:177] Finished request req-46.
+INFO 09-12 23:56:51 async_llm_engine.py:221] Aborted request req-46.
+INFO 09-12 23:56:51 metrics.py:345] Avg prompt throughput: 1529.1 tokens/s, Avg generation throughput: 164.0 tokens/s, Running: 75 reqs, Swapped: 0 reqs, Pending: 20 reqs, GPU KV cache usage: 98.7%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:52 async_llm_engine.py:177] Finished request req-14.
+INFO 09-12 23:56:52 async_llm_engine.py:221] Aborted request req-14.
+INFO 09-12 23:56:53 async_llm_engine.py:177] Finished request req-33.
+INFO 09-12 23:56:53 async_llm_engine.py:221] Aborted request req-33.
+INFO 09-12 23:56:54 async_llm_engine.py:177] Finished request req-9.
+INFO 09-12 23:56:54 async_llm_engine.py:221] Aborted request req-9.
+INFO 09-12 23:56:55 async_llm_engine.py:177] Finished request req-43.
+INFO 09-12 23:56:55 async_llm_engine.py:221] Aborted request req-43.
+INFO 09-12 23:56:57 metrics.py:345] Avg prompt throughput: 1646.1 tokens/s, Avg generation throughput: 198.9 tokens/s, Running: 72 reqs, Swapped: 0 reqs, Pending: 18 reqs, GPU KV cache usage: 97.2%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:56:57 async_llm_engine.py:177] Finished request req-48.
+INFO 09-12 23:56:57 async_llm_engine.py:221] Aborted request req-48.
+INFO 09-12 23:56:57 async_llm_engine.py:177] Finished request req-2.
+INFO 09-12 23:56:57 async_llm_engine.py:221] Aborted request req-2.
+INFO 09-12 23:56:59 async_llm_engine.py:177] Finished request req-38.
+INFO 09-12 23:56:59 async_llm_engine.py:221] Aborted request req-38.
+INFO 09-12 23:56:59 async_llm_engine.py:177] Finished request req-28.
+INFO 09-12 23:56:59 async_llm_engine.py:221] Aborted request req-28.
+INFO 09-12 23:57:01 async_llm_engine.py:177] Finished request req-13.
+INFO 09-12 23:57:01 async_llm_engine.py:221] Aborted request req-13.
+INFO 09-12 23:57:01 async_llm_engine.py:177] Finished request req-5.
+INFO 09-12 23:57:01 async_llm_engine.py:221] Aborted request req-5.
+INFO 09-12 23:57:02 metrics.py:345] Avg prompt throughput: 1657.8 tokens/s, Avg generation throughput: 194.8 tokens/s, Running: 70 reqs, Swapped: 0 reqs, Pending: 15 reqs, GPU KV cache usage: 98.9%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:03 async_llm_engine.py:177] Finished request req-53.
+INFO 09-12 23:57:03 async_llm_engine.py:221] Aborted request req-53.
+INFO 09-12 23:57:04 async_llm_engine.py:177] Finished request req-44.
+INFO 09-12 23:57:04 async_llm_engine.py:221] Aborted request req-44.
+INFO 09-12 23:57:04 async_llm_engine.py:177] Finished request req-55.
+INFO 09-12 23:57:04 async_llm_engine.py:221] Aborted request req-55.
+INFO 09-12 23:57:07 async_llm_engine.py:177] Finished request req-1.
+INFO 09-12 23:57:07 async_llm_engine.py:177] Finished request req-21.
+INFO 09-12 23:57:07 async_llm_engine.py:221] Aborted request req-1.
+INFO 09-12 23:57:07 async_llm_engine.py:221] Aborted request req-21.
+INFO 09-12 23:57:08 metrics.py:345] Avg prompt throughput: 1884.9 tokens/s, Avg generation throughput: 143.4 tokens/s, Running: 68 reqs, Swapped: 0 reqs, Pending: 12 reqs, GPU KV cache usage: 99.0%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:09 async_llm_engine.py:177] Finished request req-15.
+INFO 09-12 23:57:09 async_llm_engine.py:221] Aborted request req-15.
+INFO 09-12 23:57:09 async_llm_engine.py:177] Finished request req-41.
+INFO 09-12 23:57:09 async_llm_engine.py:221] Aborted request req-41.
+INFO 09-12 23:57:11 async_llm_engine.py:177] Finished request req-34.
+INFO 09-12 23:57:11 async_llm_engine.py:221] Aborted request req-34.
+INFO 09-12 23:57:11 async_llm_engine.py:177] Finished request req-4.
+INFO 09-12 23:57:11 async_llm_engine.py:221] Aborted request req-4.
+INFO 09-12 23:57:12 async_llm_engine.py:177] Finished request req-58.
+INFO 09-12 23:57:12 async_llm_engine.py:221] Aborted request req-58.
+INFO 09-12 23:57:14 metrics.py:345] Avg prompt throughput: 1585.9 tokens/s, Avg generation throughput: 207.2 tokens/s, Running: 64 reqs, Swapped: 0 reqs, Pending: 10 reqs, GPU KV cache usage: 96.5%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:14 async_llm_engine.py:177] Finished request req-29.
+INFO 09-12 23:57:14 async_llm_engine.py:221] Aborted request req-29.
+INFO 09-12 23:57:15 async_llm_engine.py:177] Finished request req-56.
+INFO 09-12 23:57:15 async_llm_engine.py:221] Aborted request req-56.
+INFO 09-12 23:57:16 async_llm_engine.py:177] Finished request req-59.
+INFO 09-12 23:57:16 async_llm_engine.py:221] Aborted request req-59.
+INFO 09-12 23:57:18 async_llm_engine.py:177] Finished request req-45.
+INFO 09-12 23:57:18 async_llm_engine.py:221] Aborted request req-45.
+INFO 09-12 23:57:19 metrics.py:345] Avg prompt throughput: 1829.4 tokens/s, Avg generation throughput: 147.7 tokens/s, Running: 64 reqs, Swapped: 0 reqs, Pending: 7 reqs, GPU KV cache usage: 98.2%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:20 async_llm_engine.py:177] Finished request req-17.
+INFO 09-12 23:57:20 async_llm_engine.py:221] Aborted request req-17.
+INFO 09-12 23:57:21 async_llm_engine.py:177] Finished request req-63.
+INFO 09-12 23:57:21 async_llm_engine.py:221] Aborted request req-63.
+INFO 09-12 23:57:22 async_llm_engine.py:177] Finished request req-66.
+INFO 09-12 23:57:22 async_llm_engine.py:221] Aborted request req-66.
+INFO 09-12 23:57:24 metrics.py:345] Avg prompt throughput: 1732.8 tokens/s, Avg generation throughput: 161.4 tokens/s, Running: 61 reqs, Swapped: 0 reqs, Pending: 5 reqs, GPU KV cache usage: 95.3%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:24 async_llm_engine.py:177] Finished request req-30.
+INFO 09-12 23:57:24 async_llm_engine.py:177] Finished request req-71.
+INFO 09-12 23:57:24 async_llm_engine.py:221] Aborted request req-30.
+INFO 09-12 23:57:24 async_llm_engine.py:221] Aborted request req-71.
+INFO 09-12 23:57:25 async_llm_engine.py:177] Finished request req-32.
+INFO 09-12 23:57:25 async_llm_engine.py:177] Finished request req-54.
+INFO 09-12 23:57:25 async_llm_engine.py:221] Aborted request req-32.
+INFO 09-12 23:57:25 async_llm_engine.py:221] Aborted request req-54.
+INFO 09-12 23:57:28 async_llm_engine.py:177] Finished request req-8.
+INFO 09-12 23:57:28 async_llm_engine.py:177] Finished request req-24.
+INFO 09-12 23:57:28 async_llm_engine.py:177] Finished request req-39.
+INFO 09-12 23:57:28 async_llm_engine.py:221] Aborted request req-8.
+INFO 09-12 23:57:28 async_llm_engine.py:221] Aborted request req-24.
+INFO 09-12 23:57:28 async_llm_engine.py:221] Aborted request req-39.
+INFO 09-12 23:57:30 metrics.py:345] Avg prompt throughput: 2212.2 tokens/s, Avg generation throughput: 66.6 tokens/s, Running: 59 reqs, Swapped: 0 reqs, Pending: 1 reqs, GPU KV cache usage: 95.9%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:30 async_llm_engine.py:177] Finished request req-62.
+INFO 09-12 23:57:30 async_llm_engine.py:221] Aborted request req-62.
+INFO 09-12 23:57:33 async_llm_engine.py:177] Finished request req-68.
+INFO 09-12 23:57:33 async_llm_engine.py:221] Aborted request req-68.
+INFO 09-12 23:57:34 async_llm_engine.py:177] Finished request req-52.
+INFO 09-12 23:57:34 async_llm_engine.py:221] Aborted request req-52.
+INFO 09-12 23:57:34 async_llm_engine.py:177] Finished request req-67.
+INFO 09-12 23:57:34 async_llm_engine.py:221] Aborted request req-67.
+INFO 09-12 23:57:34 async_llm_engine.py:177] Finished request req-19.
+INFO 09-12 23:57:34 async_llm_engine.py:177] Finished request req-49.
+INFO 09-12 23:57:34 async_llm_engine.py:221] Aborted request req-19.
+INFO 09-12 23:57:34 async_llm_engine.py:221] Aborted request req-49.
+INFO 09-12 23:57:34 async_llm_engine.py:177] Finished request req-61.
+INFO 09-12 23:57:34 async_llm_engine.py:221] Aborted request req-61.
+INFO 09-12 23:57:35 metrics.py:345] Avg prompt throughput: 1494.5 tokens/s, Avg generation throughput: 206.4 tokens/s, Running: 53 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 88.3%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:35 async_llm_engine.py:177] Finished request req-11.
+INFO 09-12 23:57:35 async_llm_engine.py:221] Aborted request req-11.
+INFO 09-12 23:57:35 async_llm_engine.py:177] Finished request req-26.
+INFO 09-12 23:57:35 async_llm_engine.py:221] Aborted request req-26.
+INFO 09-12 23:57:35 async_llm_engine.py:177] Finished request req-76.
+INFO 09-12 23:57:35 async_llm_engine.py:221] Aborted request req-76.
+INFO 09-12 23:57:36 async_llm_engine.py:177] Finished request req-87.
+INFO 09-12 23:57:36 async_llm_engine.py:221] Aborted request req-87.
+INFO 09-12 23:57:36 async_llm_engine.py:177] Finished request req-82.
+INFO 09-12 23:57:36 async_llm_engine.py:221] Aborted request req-82.
+INFO 09-12 23:57:37 async_llm_engine.py:177] Finished request req-47.
+INFO 09-12 23:57:37 async_llm_engine.py:221] Aborted request req-47.
+INFO 09-12 23:57:37 async_llm_engine.py:177] Finished request req-69.
+INFO 09-12 23:57:37 async_llm_engine.py:221] Aborted request req-69.
+INFO 09-12 23:57:37 async_llm_engine.py:177] Finished request req-50.
+INFO 09-12 23:57:37 async_llm_engine.py:177] Finished request req-80.
+INFO 09-12 23:57:37 async_llm_engine.py:221] Aborted request req-50.
+INFO 09-12 23:57:37 async_llm_engine.py:221] Aborted request req-80.
+INFO 09-12 23:57:38 async_llm_engine.py:177] Finished request req-75.
+INFO 09-12 23:57:38 async_llm_engine.py:221] Aborted request req-75.
+INFO 09-12 23:57:38 async_llm_engine.py:177] Finished request req-18.
+INFO 09-12 23:57:38 async_llm_engine.py:221] Aborted request req-18.
+INFO 09-12 23:57:39 async_llm_engine.py:177] Finished request req-98.
+INFO 09-12 23:57:39 async_llm_engine.py:221] Aborted request req-98.
+INFO 09-12 23:57:39 async_llm_engine.py:177] Finished request req-16.
+INFO 09-12 23:57:39 async_llm_engine.py:221] Aborted request req-16.
+INFO 09-12 23:57:39 async_llm_engine.py:177] Finished request req-97.
+INFO 09-12 23:57:39 async_llm_engine.py:221] Aborted request req-97.
+INFO 09-12 23:57:40 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 446.0 tokens/s, Running: 40 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 67.3%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:40 async_llm_engine.py:177] Finished request req-64.
+INFO 09-12 23:57:40 async_llm_engine.py:221] Aborted request req-64.
+INFO 09-12 23:57:40 async_llm_engine.py:177] Finished request req-22.
+INFO 09-12 23:57:40 async_llm_engine.py:177] Finished request req-74.
+INFO 09-12 23:57:40 async_llm_engine.py:221] Aborted request req-22.
+INFO 09-12 23:57:40 async_llm_engine.py:221] Aborted request req-74.
+INFO 09-12 23:57:40 async_llm_engine.py:177] Finished request req-12.
+INFO 09-12 23:57:40 async_llm_engine.py:221] Aborted request req-12.
+INFO 09-12 23:57:41 async_llm_engine.py:177] Finished request req-3.
+INFO 09-12 23:57:41 async_llm_engine.py:177] Finished request req-37.
+INFO 09-12 23:57:41 async_llm_engine.py:177] Finished request req-90.
+INFO 09-12 23:57:41 async_llm_engine.py:221] Aborted request req-3.
+INFO 09-12 23:57:41 async_llm_engine.py:221] Aborted request req-37.
+INFO 09-12 23:57:41 async_llm_engine.py:221] Aborted request req-90.
+INFO 09-12 23:57:41 async_llm_engine.py:177] Finished request req-81.
+INFO 09-12 23:57:41 async_llm_engine.py:221] Aborted request req-81.
+INFO 09-12 23:57:41 async_llm_engine.py:177] Finished request req-83.
+INFO 09-12 23:57:41 async_llm_engine.py:221] Aborted request req-83.
+INFO 09-12 23:57:42 async_llm_engine.py:177] Finished request req-72.
+INFO 09-12 23:57:42 async_llm_engine.py:221] Aborted request req-72.
+INFO 09-12 23:57:42 async_llm_engine.py:177] Finished request req-31.
+INFO 09-12 23:57:42 async_llm_engine.py:221] Aborted request req-31.
+INFO 09-12 23:57:42 async_llm_engine.py:177] Finished request req-42.
+INFO 09-12 23:57:42 async_llm_engine.py:221] Aborted request req-42.
+INFO 09-12 23:57:43 async_llm_engine.py:177] Finished request req-27.
+INFO 09-12 23:57:43 async_llm_engine.py:221] Aborted request req-27.
+INFO 09-12 23:57:43 async_llm_engine.py:177] Finished request req-79.
+INFO 09-12 23:57:43 async_llm_engine.py:221] Aborted request req-79.
+INFO 09-12 23:57:44 async_llm_engine.py:177] Finished request req-51.
+INFO 09-12 23:57:44 async_llm_engine.py:221] Aborted request req-51.
+INFO 09-12 23:57:44 async_llm_engine.py:177] Finished request req-78.
+INFO 09-12 23:57:44 async_llm_engine.py:177] Finished request req-89.
+INFO 09-12 23:57:44 async_llm_engine.py:221] Aborted request req-78.
+INFO 09-12 23:57:44 async_llm_engine.py:221] Aborted request req-89.
+INFO 09-12 23:57:44 async_llm_engine.py:177] Finished request req-88.
+INFO 09-12 23:57:44 async_llm_engine.py:221] Aborted request req-88.
+INFO 09-12 23:57:44 async_llm_engine.py:177] Finished request req-35.
+INFO 09-12 23:57:44 async_llm_engine.py:221] Aborted request req-35.
+INFO 09-12 23:57:44 async_llm_engine.py:177] Finished request req-96.
+INFO 09-12 23:57:44 async_llm_engine.py:221] Aborted request req-96.
+INFO 09-12 23:57:45 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 363.3 tokens/s, Running: 20 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 35.3%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:45 async_llm_engine.py:177] Finished request req-92.
+INFO 09-12 23:57:45 async_llm_engine.py:221] Aborted request req-92.
+INFO 09-12 23:57:45 async_llm_engine.py:177] Finished request req-99.
+INFO 09-12 23:57:45 async_llm_engine.py:221] Aborted request req-99.
+INFO 09-12 23:57:45 async_llm_engine.py:177] Finished request req-91.
+INFO 09-12 23:57:45 async_llm_engine.py:221] Aborted request req-91.
+INFO 09-12 23:57:46 async_llm_engine.py:177] Finished request req-60.
+INFO 09-12 23:57:46 async_llm_engine.py:221] Aborted request req-60.
+INFO 09-12 23:57:46 async_llm_engine.py:177] Finished request req-57.
+INFO 09-12 23:57:46 async_llm_engine.py:221] Aborted request req-57.
+INFO 09-12 23:57:46 async_llm_engine.py:177] Finished request req-93.
+INFO 09-12 23:57:46 async_llm_engine.py:221] Aborted request req-93.
+INFO 09-12 23:57:47 async_llm_engine.py:177] Finished request req-95.
+INFO 09-12 23:57:47 async_llm_engine.py:221] Aborted request req-95.
+INFO 09-12 23:57:47 async_llm_engine.py:177] Finished request req-36.
+INFO 09-12 23:57:47 async_llm_engine.py:221] Aborted request req-36.
+INFO 09-12 23:57:48 async_llm_engine.py:177] Finished request req-94.
+INFO 09-12 23:57:48 async_llm_engine.py:221] Aborted request req-94.
+INFO 09-12 23:57:48 async_llm_engine.py:177] Finished request req-86.
+INFO 09-12 23:57:48 async_llm_engine.py:221] Aborted request req-86.
+INFO 09-12 23:57:48 async_llm_engine.py:177] Finished request req-73.
+INFO 09-12 23:57:48 async_llm_engine.py:221] Aborted request req-73.
+INFO 09-12 23:57:49 async_llm_engine.py:177] Finished request req-70.
+INFO 09-12 23:57:49 async_llm_engine.py:221] Aborted request req-70.
+INFO 09-12 23:57:49 async_llm_engine.py:177] Finished request req-65.
+INFO 09-12 23:57:49 async_llm_engine.py:221] Aborted request req-65.
+INFO 09-12 23:57:49 async_llm_engine.py:177] Finished request req-85.
+INFO 09-12 23:57:49 async_llm_engine.py:221] Aborted request req-85.
+INFO 09-12 23:57:50 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 217.1 tokens/s, Running: 6 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 8.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:55 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 126.7 tokens/s, Running: 6 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 8.4%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:57:56 async_llm_engine.py:177] Finished request req-77.
+INFO 09-12 23:57:56 async_llm_engine.py:221] Aborted request req-77.
+INFO 09-12 23:57:57 async_llm_engine.py:177] Finished request req-84.
+INFO 09-12 23:57:57 async_llm_engine.py:221] Aborted request req-84.
+INFO 09-12 23:58:00 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 101.6 tokens/s, Running: 4 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 4.4%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:05 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 85.7 tokens/s, Running: 4 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 4.7%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:10 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 85.1 tokens/s, Running: 4 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 4.9%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:15 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 85.4 tokens/s, Running: 4 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 5.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:16 async_llm_engine.py:177] Finished request req-6.
+INFO 09-12 23:58:16 async_llm_engine.py:221] Aborted request req-6.
+INFO 09-12 23:58:20 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 66.9 tokens/s, Running: 3 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 4.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:25 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 64.4 tokens/s, Running: 3 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 4.3%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:25 async_llm_engine.py:177] Finished request req-40.
+INFO 09-12 23:58:25 async_llm_engine.py:221] Aborted request req-40.
+INFO 09-12 23:58:30 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 44.5 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.5%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:35 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 42.2 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.6%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:40 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.0 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.7%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:45 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.0 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.8%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:50 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 42.8 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.0%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:58:55 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.1 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:00 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.1 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.2%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:05 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.0 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.3%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:10 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.2 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.4%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:15 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.2 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.5%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:20 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.0 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.6%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:25 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 43.1 tokens/s, Running: 2 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 3.8%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:29 async_llm_engine.py:177] Finished request req-7.
+INFO 09-12 23:59:29 async_llm_engine.py:221] Aborted request req-7.
+INFO 09-12 23:59:30 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 39.1 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 1.8%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:35 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 22.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 1.9%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:40 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 22.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 1.9%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:45 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 22.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.0%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:50 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 22.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:55 metrics.py:345] Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 22.2 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 2.1%, CPU KV cache usage: 0.0%.
+INFO 09-12 23:59:58 async_llm_engine.py:177] Finished request req-0.
+=== Sample vLLM Outputs (First 2) ===
+
+Sample 1:
+Input: this work is financially supported by the national science council of republic of china under the contract # : nsc-95 - 2112-m-007 - 059-my3 .            c.  k.  chua , w.  s.  hou and s.  y.  tsai , phys . 
+ . * d66 * , 054004 ( 2002 ) ; h.  y.  cheng and k.  c.  yang , phys .  rev . 
+ * d66 * , 014020 ( 2002 ) ; s. y. tsai , `` study of three - body baryonic b decays '' , ph . 
+ d thesis , national taiwan university ( 2005 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 74 * , 094023 ( 2006 ) . c.  q.  geng , y.  k.  hsiao and j.  n.  ng , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) .
+Generated: 
+ c.  q.  geng and y.  k.  hsiao , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) . 
+ c.  q.  geng and y.  k.  hsiao , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) . 
+ c.  q.  geng and y.  k.  hsiao , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) . 
+ c.  q.  geng and y.  k.  hsiao , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) . 
+ c.  q.  geng and y.  k.  hsiao , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) . 
+ c.  q.  geng and y.  k.  hsiao , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: for fixed integers @xmath0 and @xmath1 , we consider the admissible sequences of @xmath2 lattice paths in a colored @xmath3 square given in @xcite . each admissible sequence of paths can be associated with a partition @xmath10 of @xmath4 . in section 
+ [ paths ] , we show that the number of self - conjugate admissible sequences of paths associated with @xmath10 is equal to the number of standard young tableaux of shape @xmath10 , and thus can be calculated using the hook length formula . 
+ we extend this result to include the non - self - conjugate admissible sequences of paths and show that the number of all such admissible sequences of paths is equal to the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 . using the rsk correspondence in @xcite , 
+ it is shown in ( @xcite , corollary 7.23.12 ) that the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 is equal to the number of @xmath6-avoiding permutations of @xmath7 .    in section [ multiplicities ] 
+ , we apply our results to the representation theory of the affine kac - moody algebra @xmath8 . 
+ let @xmath12 , @xmath13 and @xmath14 denote the simple roots , simple coroots , and fundamental weights respectively . 
+ note that @xmath15 
+ . for @xmath16 , set @xmath17 and @xmath18 . as shown in @xcite , @xmath19 
+ are maximal dominant weights of the irreducible @xmath8-module @xmath9 . 
+ we show that the multiplicity of the weight @xmath19 in @xmath9 is the number of @xmath6-avoiding permutations of @xmath7 , which proves conjecture 4.13 in @xcite . 
+ for fixed integers @xmath0 and @xmath1 , consider the @xmath3 square containing @xmath20 unit boxes in the fourth quadrant so that the top left corner of the square is at the origin . 
+ we assign color @xmath21 to a box if its upper left corner has coordinates @xmath22 . 
+ this gives the following @xmath3 colored square @xmath23 :      a lattice path @xmath25 on @xmath23 is a path joining the lower left corner @xmath26 to the upper right corner @xmath27 moving unit lengths up or right . for two lattice paths @xmath28 on @xmath23 
+ we say that @xmath29 if the boxes above @xmath30 are also above @xmath25 . 
+ now , we draw @xmath2 lattice paths , @xmath31 on @xmath23 such that @xmath32 . for integers 
+ @xmath33 , where @xmath34 , @xmath35 , we define @xmath36 to be the number of @xmath37-colored boxes between @xmath38 and @xmath39 . 
+ we define @xmath40 to be the number of @xmath37-colored boxes below @xmath41 and @xmath42 to be the number of @xmath37-colored boxes above @xmath43 . 
+ denote by @xmath49 the set of all admissible sequences of @xmath2 paths . 
+ notice that there are @xmath4 0-colored boxes in @xmath23 and hence for any admissible sequence of paths , @xmath50 . 
+ in addition , it follows from definition [ pathsdef](2 ) that @xmath51 for any admissible sequence of paths . 
+ thus , we can and do associate an admissible sequence of paths @xmath44 on @xmath23 with a partition @xmath52 of @xmath4 . in this case , we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram . 
+ figure [ adseq](a ) is an element of @xmath53 , where @xmath54 and @xmath55 are shown in figures [ adseq](b ) , [ adseq](c ) , and [ adseq](d ) , respectively . 
+ notice that this admissible sequence of paths is of type @xmath56 .
+Generated: 
+ we can also associate a partition @xmath57 of @xmath4 with an admissible sequence of paths @xmath44 on @xmath23 . 
+ in this case , we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram . 
+ figure [ adseq](a ) is an element of @xmath53 , where @xmath58 and @xmath59 are shown in figures [ adseq](b ) , [ adseq](c ) , and [ adseq](d ) , respectively . 
+ notice that this admissible sequence of paths is of type @xmath60 . 
+ we can
+--------------------------------------------------------------------------------
+=== Token accounting (actual) ===
+Actual prefilled tokens: 262805
+Actual generated tokens: 23726
+
+=== Throughput (actual / wall time) ===
+Prefill throughput: 973.34 tokens/s
+Decode  throughput: 87.87 tokens/s
+Total   throughput: 1061.21 tokens/s
+Wall time: 270.00s
+INFO 09-12 23:59:59 async_llm_engine.py:63] Engine is gracefully shutting down.
+Exception in callback Future.set_result(None)
+handle: <Handle Future.set_result(None)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+asyncio.exceptions.InvalidStateError: invalid state
+Exception in callback Future.set_result(None)
+handle: <Handle Future.set_result(None)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+asyncio.exceptions.InvalidStateError: invalid state
+Exception in callback Future.set_result(None)
+handle: <Handle Future.set_result(None)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+asyncio.exceptions.InvalidStateError: invalid state
+Total time: 270.00s
+Wrote CSV row to: /workspace/cgen/runs_4xl4.csv
+ERROR 09-13 00:00:00 multiproc_worker_utils.py:117] Worker VllmWorkerProcess pid 307 died, exit code: -15
+INFO 09-13 00:00:00 multiproc_worker_utils.py:121] Killing local vLLM worker processes
+/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 
