@@ -541,6 +541,21 @@ class LLMEngine():
         t1 = time.time() - t0
         print(f"detokenizer takes {t1:.2f} s")
         dur = time.time() - start_t
+        # print lightweight scheduler profiling to help identify bottlenecks
+        try:
+            snap = scheduler.debug_snapshot()
+            prof = snap.get("profiling", {})
+            print("\n=== Scheduler profiling ===")
+            print(f"to_prefill transitions: {prof.get('to_prefill_count', 0)}")
+            print(f"to_decode  transitions: {prof.get('to_decode_count', 0)}")
+            print(f"waited for prefetch: {prof.get('wait_prefetch_time_s', 0)} s"
+                  f" across {prof.get('wait_prefetch_loops', 0)} loops")
+            print(f"prefill batches: {prof.get('prefill_batches', 0)} | avg prefill batch tokens: {prof.get('avg_prefill_batch_tokens', 0)}")
+            print(f"decode  batches: {prof.get('decode_batches', 0)} | avg decode batch size (seqs/tokens): {prof.get('avg_decode_batch_size', 0)}")
+            print(f"evictions: {prof.get('evict_events', 0)} | pages evicted: {prof.get('evict_pages', 0)}")
+            print(f"shared_used_pct (last): {snap.get('shared_used_pct')}\n")
+        except Exception:
+            pass
         return ret, dur, actual_prefill_tokens, actual_generated_tokens
 
     def perf_record(self):

@@ -1,0 +1,25 @@
+num_requests,seesaw_prefill_tp,seesaw_prefill_pp,seesaw_decode_tp,seesaw_decode_pp,seesaw_notes,seesaw_wall_clock_time (s),vllm_tp,vllm_pp,vllm_max_batched_tokens,vllm_notes,vllm_wall_clock_time (s)
+10,1,4,4,1,,60.12,,,,,
+10,,,,,,,2,2,2048,,71.64
+10,,,,,,,4,1,2048,,45.50
+10,1,4,2,2,,101.25,,,,,
+10,,,,,,,2,2,2048,,72.24
+10,,,,,,,4,1,4096,,46.15
+10,,,,,,,4,1,1024,,45.58
+10,,,,,,,4,1,0,,46.01
+10,,,,,,,1,4,2048,,124.17
+10,,,,,,,4,1,2048,SORT_PROMPTS=0,45.68
+10,,,,,,,4,1,2048,"SORT_PROMPTS=0, ENFORCE_EAGER=1",55.63
+10,1,4,4,1,,60.48,,,,,
+10,1,4,4,1,"""num_pages"": 3000",RecursionError,,,,,
+10,1,4,4,1,"""num_pages"": 1500",RecursionError,,,,,
+10,1,4,4,1,"""num_pages"": 1000",RecursionError,,,,,
+10,1,4,4,1,"""max_prefill_tokens"": 2048",KeyError,,,,,
+100,1,4,4,1,,572.41,,,,,
+100,,,,,,,4,1,2048,"SORT_PROMPTS=0, ENFORCE_EAGER=1",278.16
+100,1,4,4,1,--max-input-len 4096,575.36,,,,,
+10,1,4,4,1,--max-input-len 4096 --sort-prompts,62.43,,,,,
+10,1,4,4,1,--max-input-len 4096 --sort-prompts (--token-counting),63.30,,,,,
+10,,,,,,,4,1,2048,"SORT_PROMPTS=1, ENFORCE_EAGER=1, (TOKEN_COUNTING=1)",55.07
+100,1,4,4,1,--max-input-len 4096 --sort-prompts (--token-counting),601.82,,,,,
+100,,,,,,,4,1,2048,"SORT_PROMPTS=1, ENFORCE_EAGER=1, (TOKEN_COUNTING=1)",270.00

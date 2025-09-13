@@ -69,17 +69,30 @@ class Scheduler:
         self.batch_cnt = 0
         self.prefetch_counter = PrefetcherCounter(prefetch_ret_q, self.dist_config_decode.world_size())
         self.max_prefetching_seqs = 1000
+        # --- profiling counters ---
+        self.wait_prefetch_time_s: float = 0.0
+        self.wait_prefetch_loops: int = 0
+        self.to_prefill_count: int = 0
+        self.to_decode_count: int = 0
+        self.decode_batch_count: int = 0
+        self.decode_token_count: int = 0  # one token per seq per decode step
+        self.prefill_batch_count: int = 0
+        self.prefill_token_count: int = 0  # sum of prompt tokens per prefill batch
+        self.evict_events: int = 0
+        self.evict_pages: int = 0
 
     def to_prefill(self):
         if not self.is_prefill:
             self.batch_cnt = 0
         self.is_prefill = True
         self.dist_config = self.dist_config_prefill
+        self.to_prefill_count += 1
         logger.info(f"switch to prefill, seqs in CPU {len(self.prefilled_reqs)}, prefetching {len(self.prefetching_reqs)}, seqs in GPU {len(self.running_reqs)}")
     
     def to_decode(self):
         self.is_prefill = False
         self.dist_config = self.dist_config_decode
+        self.to_decode_count += 1
         logger.info(f"switch to decode, seqs in CPU {len(self.prefilled_reqs)}, prefetching {len(self.prefetching_reqs)}, seqs in GPU {len(self.running_reqs)}")
     
     def append_output(self, seq_ids: List[int], new_tokens: List[int]):
@@ -172,6 +185,9 @@ class Scheduler:
             swap_info=SwapInfo([], []),
         )
         self.batch_cnt += 1
+        # profiling: count tokens per prefill batch
+        self.prefill_batch_count += 1
+        self.prefill_token_count += len(flatten_input_ids)
         logger.debug(f"#scheduled prefill: {self.shared_table.num_seqs()}")
         return batch
     
@@ -205,6 +221,12 @@ class Scheduler:
                 if self.pagetable.num_free_pages(fraction=pp_size) < 1:
                     try:
                         evict_ret = self.pagetable.evict(exclude=chosen_seqs + exclude + list(self.prefetching_reqs))
+                        # profiling: eviction stats
+                        self.evict_events += 1
+                        try:
+                            self.evict_pages += len(evict_ret[1])
+                        except Exception:
+                            pass
                         self.running_reqs.remove(evict_ret[0])
                         self.swap_out_reqs.add(evict_ret[0])
                         swap_out.append(evict_ret)
@@ -244,6 +266,9 @@ class Scheduler:
             swap_info=SwapInfo(swap_in, swap_out),
         )
         self.batch_cnt += 1
+        # profiling: decode batch size (tokens == seqs here)
+        self.decode_batch_count += 1
+        self.decode_token_count += len(chosen_seqs)
         return batch
 
     def schedule_prefill(self):
@@ -256,14 +281,21 @@ class Scheduler:
     def update_prefetch(self):
         if len(self.prefetching_reqs) == 0:
             return
-
+        wait_start = None
         while len(prefetched_seqs := self.prefetch_counter.update()) == 0:
             if len(self.running_reqs) > 0:
+                # not truly waiting; decode has work
                 return
             if self.is_prefill:
+                # in prefill phase do not block on prefetch
                 return
+            if wait_start is None:
+                wait_start = time.time()
+            self.wait_prefetch_loops += 1
             logger.info("waiting for prefetching...")
             time.sleep(0.1)
+        if wait_start is not None:
+            self.wait_prefetch_time_s += (time.time() - wait_start)
          
         for seq_id in prefetched_seqs:
             self.running_reqs.add(seq_id)
@@ -399,6 +431,20 @@ class Scheduler:
             "page_size": getattr(self.pagetable, 'page_size', None),
             "free_pages": free_pages,
             "shared_used_pct": used_pct,
+            "profiling": {
+                "wait_prefetch_time_s": round(self.wait_prefetch_time_s, 3),
+                "wait_prefetch_loops": self.wait_prefetch_loops,
+                "to_prefill_count": self.to_prefill_count,
+                "to_decode_count": self.to_decode_count,
+                "decode_batches": self.decode_batch_count,
+                "decode_tokens_scheduled": self.decode_token_count,
+                "avg_decode_batch_size": round((self.decode_token_count / self.decode_batch_count) if self.decode_batch_count else 0, 2),
+                "prefill_batches": self.prefill_batch_count,
+                "prefill_tokens_scheduled": self.prefill_token_count,
+                "avg_prefill_batch_tokens": round((self.prefill_token_count / self.prefill_batch_count) if self.prefill_batch_count else 0, 2),
+                "evict_events": self.evict_events,
+                "evict_pages": self.evict_pages,
+            },
             "sample_ids": {
                 "running": list(itertools.islice(iter(self.running_reqs), 8)),
                 "prefilled": list(itertools.islice(iter(self.prefilled_reqs), 8)),
