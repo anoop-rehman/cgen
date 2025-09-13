@@ -10,6 +10,6 @@ docker run --gpus=all \
    --dataset arxiv \
    --num-requests 100 \
    --max-input-len 4096 \
-   --sort-prompts \
+   --sort-prompts-desc \
    --hf-token ${HF_TOKEN} \
    --print-output

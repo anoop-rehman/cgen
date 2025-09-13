@@ -85,7 +85,10 @@ def launch(args):
         max_length = args.max_input_len,
     ) 
 
-    if args.sort_prompts:
+    # Sorting options: ascending by input length (legacy) or descending to front-load long prompts
+    if getattr(args, 'sort_prompts_desc', False):
+        datasets.sort(key=lambda x: x[1], reverse=True)
+    elif args.sort_prompts:
         datasets.sort(key=lambda x: x[1])
     dur = run_cgen(datasets, plan, args.print_output, log_level=args.log_level)
     print(f"Total time: {dur:.2f}")
@@ -98,7 +101,8 @@ if __name__ == '__main__':
     parser.add_argument("--num-requests", type=int, default=500, help="Number of requests sent to the engine.")
 
     parser.add_argument("--log-level", type=str, default='INFO', help="Logger level")
-    parser.add_argument("--sort-prompts", action="store_true", help="Sort the prompt by length. Benificial for pipeline parallelism.")
+    parser.add_argument("--sort-prompts", action="store_true", help="Sort prompts by length ascending.")
+    parser.add_argument("--sort-prompts-desc", action="store_true", help="Sort prompts by length descending (front-load long prompts to reduce tail).")
     parser.add_argument("--dummy-weights", action="store_true", help="Use dummy weights for debugging purpose.")
     parser.add_argument("--print-output", action='store_true', help="Print generation results after benchmarking.")
     parser.add_argument("--input-len", type=int, default=1000, help="Number of prompt tokens in a request(when dataset=constant)")
