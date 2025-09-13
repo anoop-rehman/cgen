@@ -354,7 +354,11 @@ class Scheduler:
 
         self.update_prefetch()
         
-        swap_in = self.pagetable.try_swap_in(self.dist_config_decode.pp_size)
+        # Tail-aware: when no waiting prompts remain and prefetching queue is empty,
+        # relax reserve to 0 to accelerate draining the last few sequences
+        tail = (len(self.waiting_prompts) == 0 and len(self.prefetching_reqs) == 0)
+        reserve_override = 0 if tail else None
+        swap_in = self.pagetable.try_swap_in(self.dist_config_decode.pp_size, reserve_override=reserve_override)
         for seq_id, _ in swap_in:
             self.running_reqs.add(seq_id)
             self.swap_out_reqs.remove(seq_id)        

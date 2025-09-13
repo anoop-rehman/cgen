@@ -93,12 +93,13 @@ class PageTable:
         self._swap.pop(seq_id)
         logger.debug(f"swap in {seq_id=}, {self._map[seq_id]}")
 
-    def try_swap_in(self, fraction=1) -> List[Tuple[int, int]]:
+    def try_swap_in(self, fraction=1, reserve_override: Optional[int] = None) -> List[Tuple[int, int]]:
         chosen_seqs = []
         swap = copy.copy(self._swap)
         for seq_id, npages in swap.items():
             num_free_pages = self.num_free_pages(fraction=fraction)
-            if num_free_pages - npages >= self.watermark_blocks:
+            reserve = self.watermark_blocks if reserve_override is None else reserve_override
+            if num_free_pages - npages >= reserve:
                 self.swap_in(seq_id)
                 chosen_seqs.append((seq_id, self._map[seq_id]))
         return chosen_seqs
