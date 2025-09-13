@@ -12,7 +12,7 @@
         "pp_size": 1
     },
     "cache_config": {
-        "num_pages": 9216,
+        "num_pages": 11264,
         "page_size": 16,
         "shared_cache_tokens": 192000
     }
