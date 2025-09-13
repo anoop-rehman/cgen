@@ -2,7 +2,7 @@
     "model": "elinas/Llama-3-15B-Instruct-zeroed",
     "tokenizer": "elinas/Llama-3-15B-Instruct-zeroed",
     "max_prefill_tokens": 4096,
-    "prefill_threshold": 0.1,
+    "prefill_threshold": 0.05,
     "dist_config_prefill": {
         "tp_size": 1,
         "pp_size": 4
@@ -12,8 +12,8 @@
         "pp_size": 1
     },
     "cache_config": {
-        "num_pages": 8192,
+        "num_pages": 9216,
         "page_size": 16,
-        "shared_cache_tokens": 128000
+        "shared_cache_tokens": 192000
     }
 }
