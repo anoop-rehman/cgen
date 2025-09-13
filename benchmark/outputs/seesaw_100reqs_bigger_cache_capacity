@@ -1,0 +1,434 @@
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ ./benchmark/run_benchmark.sh 
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.4.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-13 01:09:30.932 | INFO     | cgen.engine:__init__:336 - init process group using port 48801
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+/usr/local/lib/python3.10/dist-packages/vllm/connections.py:8: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from vllm.version import __version__ as VLLM_VERSION
+2025-09-13 01:09:35.936 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-13 01:09:35.936 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-13 01:09:36.078 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-13 01:09:36.078 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-13 01:09:36.097 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-13 01:09:36.097 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-13 01:09:36.097 | INFO     | cgen.engine:__init__:98 - loading model...
+2025-09-13 01:09:36.097 | INFO     | cgen.engine:__init__:99 - partitioning model...
+2025-09-13 01:09:36.106 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=0/4
+2025-09-13 01:09:36.106 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=3/4
+2025-09-13 01:09:36.106 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=2/4
+2025-09-13 01:09:36.106 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/1 pp=1/4
+2025-09-13 01:09:36.108 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=0/4 pp=0/1
+2025-09-13 01:09:36.108 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=2/4 pp=0/1
+2025-09-13 01:09:36.108 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=1/4 pp=0/1
+2025-09-13 01:09:36.109 | INFO     | cgen.dist_utils:_create_process_groups:28 - create proc groups tp=3/4 pp=0/1
+INFO 09-13 01:09:36 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-13 01:09:36 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-13 01:09:36 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-13 01:09:36 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-13 01:09:36 utils.py:1008] Found nccl from library libnccl.so.2
+INFO 09-13 01:09:36 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-13 01:09:36 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 09-13 01:09:36 pynccl.py:63] vLLM is using nccl==2.20.5
+579it [00:10, 53.34it/s] 
+579it [00:10, 53.43it/s]
+579it [00:10, 54.30it/s] 
+579it [00:10, 53.51it/s]
+579it [00:20, 27.59it/s]
+579it [00:21, 26.50it/s]
+579it [00:21, 26.38it/s]
+2025-09-13 01:10:12.490 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-13 01:10:12.490 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-13 01:10:12.490 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-13 01:10:12.509 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 14.63 GB
+2025-09-13 01:10:12.509 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 15.60 GB
+2025-09-13 01:10:12.509 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 14.63 GB
+579it [00:21, 26.33it/s]
+2025-09-13 01:10:12.635 | INFO     | cgen.engine:init_kvcache:237 - initializing kvcache
+2025-09-13 01:10:12.645 | INFO     | cgen.engine:init_kvcache:257 - kvcache initialized, memory occupied: 15.60 GB
+2025-09-13 01:10:19.500 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-13 01:10:19.500 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-13 01:10:19.500 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-13 01:10:19.500 | INFO     | cgen.engine:init_shared_cache:263 - start allocating shared kvcache
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:279 - launch prefetcher
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:280 - 1 <torch.cuda.Stream device=cuda:1 cuda_stream=0x0> 
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:280 - 2 <torch.cuda.Stream device=cuda:2 cuda_stream=0x0> 
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:280 - 3 <torch.cuda.Stream device=cuda:3 cuda_stream=0x0> 
+2025-09-13 01:10:19.668 | INFO     | cgen.engine:init_shared_cache:280 - 0 <torch.cuda.Stream device=cuda:0 cuda_stream=0x0> 
+self.watermark_blocks=819.2
+Processed prompts:   0%|          | 0/100 [00:39<?, ?it/s, est. speed input: 6051.67 toks/s, output: 0.00 toks/s]2025-09-13 01:10:59.681 | INFO     | cgen.schedule:to_decode:96 - switch to decode, seqs in CPU 33, prefetching 0, seqs in GPU 58
+2025-09-13 01:11:02.533 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  1.03 s
+Processed prompts:   0%|          | 0/100 [00:45<?, ?it/s, est. speed input: 5215.75 toks/s, output: 41.68 toks/s]2025-09-13 01:11:06.124 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=10 reason=max_tokens len=1362 max=1362
+Processed prompts:   1%|          | 1/100 [00:46<1:15:56, 46.02s/it, est. speed input: 5204.34 toks/s, output: 42.85 toks/s]2025-09-13 01:11:08.413 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=46 reason=max_tokens len=2725 max=2725
+Processed prompts:   2%|▏         | 2/100 [00:48<39:27, 24.16s/it, est. speed input: 4957.78 toks/s, output: 67.95 toks/s]  2025-09-13 01:11:08.905 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=25 reason=max_tokens len=1965 max=1965
+Processed prompts:   3%|▎         | 3/100 [00:48<26:17, 16.27s/it, est. speed input: 4907.83 toks/s, output: 73.01 toks/s]2025-09-13 01:11:09.586 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=48 reason=max_tokens len=2802 max=2802
+Processed prompts:   4%|▍         | 4/100 [00:49<19:47, 12.37s/it, est. speed input: 4840.26 toks/s, output: 79.78 toks/s]2025-09-13 01:11:09.800 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=20 reason=max_tokens len=1835 max=1835
+Processed prompts:   5%|▌         | 5/100 [00:49<15:44,  9.94s/it, est. speed input: 4819.40 toks/s, output: 81.61 toks/s]2025-09-13 01:11:10.119 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=43 reason=max_tokens len=2675 max=2675
+Processed prompts:   6%|▌         | 6/100 [00:50<13:03,  8.34s/it, est. speed input: 4788.71 toks/s, output: 84.37 toks/s]2025-09-13 01:11:10.531 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=23 reason=max_tokens len=1920 max=1920
+Processed prompts:   7%|▋         | 7/100 [00:50<11:10,  7.20s/it, est. speed input: 4749.57 toks/s, output: 88.00 toks/s]2025-09-13 01:11:10.823 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=33 reason=max_tokens len=2262 max=2262
+Processed prompts:   8%|▊         | 8/100 [00:50<09:43,  6.34s/it, est. speed input: 4722.26 toks/s, output: 90.69 toks/s]2025-09-13 01:11:11.381 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=55 reason=max_tokens len=2971 max=2971
+Processed prompts:   9%|▉         | 9/100 [00:51<08:38,  5.70s/it, est. speed input: 4670.89 toks/s, output: 90.74 toks/s]2025-09-13 01:11:11.500 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=53 reason=max_tokens len=2937 max=2937
+Processed prompts:  10%|█         | 10/100 [00:51<07:42,  5.14s/it, est. speed input: 4660.06 toks/s, output: 91.56 toks/s]2025-09-13 01:11:12.113 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=38 reason=max_tokens len=2425 max=2425
+Processed prompts:  11%|█         | 11/100 [00:52<07:00,  4.73s/it, est. speed input: 4605.15 toks/s, output: 96.65 toks/s]2025-09-13 01:11:12.503 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=14 reason=max_tokens len=1590 max=1590
+Processed prompts:  12%|█▏        | 12/100 [00:52<06:24,  4.37s/it, est. speed input: 4570.83 toks/s, output: 99.98 toks/s]2025-09-13 01:11:12.914 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=44 reason=max_tokens len=2726 max=2726
+Processed prompts:  13%|█▎        | 13/100 [00:52<05:53,  4.06s/it, est. speed input: 4535.26 toks/s, output: 103.17 toks/s]2025-09-13 01:11:13.528 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=9 reason=max_tokens len=1397 max=1397
+2025-09-13 01:11:13.528 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=28 reason=max_tokens len=2169 max=2169
+Processed prompts:  15%|█▌        | 15/100 [00:53<05:02,  3.56s/it, est. speed input: 4483.15 toks/s, output: 107.90 toks/s]2025-09-13 01:11:13.853 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=56 reason=max_tokens len=3035 max=3035
+2025-09-13 01:11:14.178 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=41 reason=max_tokens len=2680 max=2680
+Processed prompts:  17%|█▋        | 17/100 [00:54<04:24,  3.18s/it, est. speed input: 4429.30 toks/s, output: 112.30 toks/s]2025-09-13 01:11:14.954 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=2 reason=max_tokens len=1212 max=1212
+2025-09-13 01:11:15.179 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=13 reason=max_tokens len=1585 max=1585
+Processed prompts:  19%|█▉        | 19/100 [00:55<03:54,  2.90s/it, est. speed input: 4348.79 toks/s, output: 119.49 toks/s]2025-09-13 01:11:15.662 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=34 reason=max_tokens len=2316 max=2316
+2025-09-13 01:11:15.803 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=5 reason=max_tokens len=1328 max=1328
+Processed prompts:  21%|██        | 21/100 [00:55<03:29,  2.65s/it, est. speed input: 4300.06 toks/s, output: 123.51 toks/s]2025-09-13 01:11:15.900 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=21 reason=max_tokens len=1899 max=1899
+2025-09-13 01:11:16.220 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=45 reason=max_tokens len=2786 max=2786
+Processed prompts:  23%|██▎       | 23/100 [00:56<03:07,  2.44s/it, est. speed input: 4268.06 toks/s, output: 126.05 toks/s]2025-09-13 01:11:16.647 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=54 reason=max_tokens len=3020 max=3020
+2025-09-13 01:11:16.840 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=15 reason=max_tokens len=1702 max=1702
+Processed prompts:  25%|██▌       | 25/100 [00:56<02:50,  2.27s/it, est. speed input: 4221.48 toks/s, output: 129.81 toks/s]2025-09-13 01:11:17.066 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=29 reason=max_tokens len=2205 max=2205
+2025-09-13 01:11:17.392 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=1 reason=max_tokens len=1079 max=1079
+Processed prompts:  27%|██▋       | 27/100 [00:57<02:34,  2.12s/it, est. speed input: 4180.80 toks/s, output: 132.67 toks/s]2025-09-13 01:11:18.455 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=4 reason=max_tokens len=1278 max=1278
+2025-09-13 01:11:18.551 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=52 reason=max_tokens len=2993 max=2993
+Processed prompts:  29%|██▉       | 29/100 [00:58<02:23,  2.02s/it, est. speed input: 4097.90 toks/s, output: 139.68 toks/s]2025-09-13 01:11:18.970 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=39 reason=max_tokens len=2517 max=2517
+2025-09-13 01:11:19.293 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=49 reason=max_tokens len=2906 max=2906
+Processed prompts:  31%|███       | 31/100 [00:59<02:11,  1.91s/it, est. speed input: 4046.55 toks/s, output: 143.30 toks/s]2025-09-13 01:11:19.484 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=17 reason=max_tokens len=1805 max=1805
+2025-09-13 01:11:19.485 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=32 reason=max_tokens len=2320 max=2320
+Processed prompts:  33%|███▎      | 33/100 [00:59<02:00,  1.80s/it, est. speed input: 4033.47 toks/s, output: 144.35 toks/s]2025-09-13 01:11:19.595 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=30 reason=max_tokens len=2270 max=2270
+2025-09-13 01:11:20.279 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=58 reason=max_tokens len=3037 max=3037
+Processed prompts:  35%|███▌      | 35/100 [01:00<01:51,  1.72s/it, est. speed input: 3980.20 toks/s, output: 148.23 toks/s]2025-09-13 01:11:20.592 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=24 reason=max_tokens len=2022 max=2022
+2025-09-13 01:11:21.104 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=59 reason=max_tokens len=3064 max=3064
+Processed prompts:  37%|███▋      | 37/100 [01:01<01:43,  1.65s/it, est. speed input: 3926.40 toks/s, output: 151.93 toks/s]2025-09-13 01:11:21.676 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=47 reason=max_tokens len=2900 max=2900
+2025-09-13 01:11:21.879 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=8 reason=max_tokens len=1476 max=1476
+2025-09-13 01:11:21.879 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=50 reason=max_tokens len=2946 max=2946
+Processed prompts:  40%|████      | 40/100 [01:01<01:32,  1.54s/it, est. speed input: 3877.12 toks/s, output: 155.56 toks/s]2025-09-13 01:11:22.561 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=19 reason=max_tokens len=1839 max=1839
+2025-09-13 01:11:22.561 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=26 reason=max_tokens len=2110 max=2110
+2025-09-13 01:11:23.235 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=63 reason=max_tokens len=3222 max=3222
+Processed prompts:  43%|████▎     | 43/100 [01:03<01:23,  1.47s/it, est. speed input: 3793.88 toks/s, output: 161.36 toks/s]2025-09-13 01:11:23.638 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=11 reason=max_tokens len=1638 max=1638
+2025-09-13 01:11:24.512 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=62 reason=max_tokens len=3188 max=3188
+2025-09-13 01:11:25.077 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=66 reason=max_tokens len=3289 max=3289
+Processed prompts:  46%|████▌     | 46/100 [01:04<01:16,  1.41s/it, est. speed input: 3686.32 toks/s, output: 167.35 toks/s]2025-09-13 01:11:25.938 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=61 reason=max_tokens len=3182 max=3182
+2025-09-13 01:11:26.629 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=18 reason=max_tokens len=1879 max=1879
+2025-09-13 01:11:26.911 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=71 reason=max_tokens len=3438 max=3438
+Processed prompts:  49%|████▉     | 49/100 [01:06<01:09,  1.36s/it, est. speed input: 3585.13 toks/s, output: 174.05 toks/s]2025-09-13 01:11:27.121 | INFO     | cgen.schedule:to_prefill:90 - switch to prefill, seqs in CPU 6, prefetching 0, seqs in GPU 39
+2025-09-13 01:11:28.012 | INFO     | cgen.engine:to_prefill:163 - convert from decode to prefill time:  0.89 s
+2025-09-13 01:11:31.449 | INFO     | cgen.schedule:to_decode:96 - switch to decode, seqs in CPU 9, prefetching 0, seqs in GPU 39
+2025-09-13 01:11:34.111 | INFO     | cgen.engine:to_decode:176 - convert from prefill to decode time:  0.75 s
+2025-09-13 01:11:34.266 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=37 reason=max_tokens len=2547 max=2547
+2025-09-13 01:11:34.381 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=67 reason=max_tokens len=3317 max=3317
+2025-09-13 01:11:34.381 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=68 reason=max_tokens len=3316 max=3316
+Processed prompts:  52%|█████▏    | 52/100 [01:14<01:08,  1.43s/it, est. speed input: 3538.00 toks/s, output: 158.60 toks/s]2025-09-13 01:11:34.793 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=16 reason=max_tokens len=1884 max=1884
+2025-09-13 01:11:34.978 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=22 reason=max_tokens len=2046 max=2046
+2025-09-13 01:11:35.650 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=42 reason=max_tokens len=2837 max=2837
+Processed prompts:  55%|█████▌    | 55/100 [01:15<01:01,  1.37s/it, est. speed input: 3478.59 toks/s, output: 162.42 toks/s]2025-09-13 01:11:36.115 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=12 reason=max_tokens len=1698 max=1698
+2025-09-13 01:11:36.115 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=51 reason=max_tokens len=3069 max=3069
+2025-09-13 01:11:36.767 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=31 reason=max_tokens len=2408 max=2408
+Processed prompts:  58%|█████▊    | 58/100 [01:16<00:55,  1.32s/it, est. speed input: 3427.90 toks/s, output: 165.31 toks/s]2025-09-13 01:11:37.236 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=3 reason=max_tokens len=1385 max=1385
+2025-09-13 01:11:37.886 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=27 reason=max_tokens len=2294 max=2294
+2025-09-13 01:11:38.085 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=69 reason=max_tokens len=3359 max=3359
+Processed prompts:  61%|██████    | 61/100 [01:17<00:49,  1.28s/it, est. speed input: 3369.98 toks/s, output: 168.84 toks/s]2025-09-13 01:11:38.486 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=57 reason=max_tokens len=3212 max=3212
+2025-09-13 01:11:38.885 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=64 reason=max_tokens len=3328 max=3328
+2025-09-13 01:11:38.977 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=35 reason=max_tokens len=2485 max=2485
+Processed prompts:  64%|██████▍   | 64/100 [01:18<00:44,  1.23s/it, est. speed input: 3331.87 toks/s, output: 170.86 toks/s]2025-09-13 01:11:39.177 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=76 reason=max_tokens len=3576 max=3576
+2025-09-13 01:11:39.931 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=82 reason=max_tokens len=3634 max=3634
+2025-09-13 01:11:41.154 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=80 reason=max_tokens len=3625 max=3625
+Processed prompts:  67%|██████▋   | 67/100 [01:21<00:39,  1.21s/it, est. speed input: 3242.37 toks/s, output: 175.85 toks/s]2025-09-13 01:11:41.428 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=75 reason=max_tokens len=3562 max=3562
+2025-09-13 01:11:41.428 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=87 reason=max_tokens len=3779 max=3779
+2025-09-13 01:11:42.915 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=74 reason=max_tokens len=3565 max=3565
+Processed prompts:  70%|███████   | 70/100 [01:22<00:35,  1.18s/it, est. speed input: 3173.43 toks/s, output: 179.67 toks/s]2025-09-13 01:11:43.086 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=36 reason=max_tokens len=2573 max=2573
+2025-09-13 01:11:43.339 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=72 reason=max_tokens len=3536 max=3536
+2025-09-13 01:11:44.423 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=81 reason=max_tokens len=3692 max=3692
+Processed prompts:  73%|███████▎  | 73/100 [01:24<00:31,  1.16s/it, est. speed input: 3116.69 toks/s, output: 182.52 toks/s]2025-09-13 01:11:44.504 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=60 reason=max_tokens len=3274 max=3274
+2025-09-13 01:11:44.585 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=98 reason=max_tokens len=3980 max=3980
+2025-09-13 01:11:44.665 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=83 reason=max_tokens len=3722 max=3722
+2025-09-13 01:11:44.665 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=90 reason=max_tokens len=3858 max=3858
+Processed prompts:  77%|███████▋  | 77/100 [01:24<00:25,  1.10s/it, est. speed input: 3107.76 toks/s, output: 182.91 toks/s]2025-09-13 01:11:44.742 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=97 reason=max_tokens len=3979 max=3979
+2025-09-13 01:11:46.341 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=79 reason=max_tokens len=3665 max=3665
+2025-09-13 01:11:47.388 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=78 reason=max_tokens len=3682 max=3682
+2025-09-13 01:11:47.607 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=89 reason=max_tokens len=3855 max=3855
+Processed prompts:  81%|████████  | 81/100 [01:27<00:20,  1.08s/it, est. speed input: 3003.26 toks/s, output: 186.35 toks/s]2025-09-13 01:11:48.478 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=88 reason=max_tokens len=3866 max=3866
+2025-09-13 01:11:48.976 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=91 reason=max_tokens len=3938 max=3938
+2025-09-13 01:11:48.976 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=92 reason=max_tokens len=3962 max=3962
+2025-09-13 01:11:49.044 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=96 reason=max_tokens len=3973 max=3973
+Processed prompts:  85%|████████▌ | 85/100 [01:28<00:15,  1.05s/it, est. speed input: 2954.77 toks/s, output: 187.50 toks/s]2025-09-13 01:11:49.821 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=93 reason=max_tokens len=3976 max=3976
+2025-09-13 01:11:50.204 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=65 reason=max_tokens len=3504 max=3504
+2025-09-13 01:11:50.204 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=99 reason=max_tokens len=4088 max=4088
+2025-09-13 01:11:50.809 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=70 reason=max_tokens len=3557 max=3557
+2025-09-13 01:11:50.809 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=73 reason=max_tokens len=3671 max=3671
+Processed prompts:  90%|█████████ | 90/100 [01:30<00:10,  1.01s/it, est. speed input: 2897.25 toks/s, output: 188.09 toks/s]2025-09-13 01:11:51.332 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=95 reason=max_tokens len=3993 max=3993
+2025-09-13 01:11:52.201 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=86 reason=max_tokens len=3882 max=3882
+2025-09-13 01:11:52.357 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=94 reason=max_tokens len=4008 max=4008
+2025-09-13 01:11:53.218 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=85 reason=max_tokens len=3892 max=3892
+2025-09-13 01:12:00.317 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=77 reason=max_tokens len=3916 max=3916
+Processed prompts:  95%|█████████▌| 95/100 [01:40<00:05,  1.05s/it, est. speed input: 2622.38 toks/s, output: 182.57 toks/s]2025-09-13 01:12:01.078 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=84 reason=max_tokens len=4059 max=4059
+Processed prompts:  96%|█████████▌| 96/100 [01:53<00:04,  1.18s/it, est. speed input: 2322.33 toks/s, output: 171.Processed prompts:  96%|█████████▌| 96/100 [01:53<00:04,  1.18s/it, est. speed input: 2321.38 toks/s, output: 171.64 toks/s]2025-09-13 01:12:15.727 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=6 reason=max_tokens len=2174 max=2174
+Processed prompts:  97%|█████████▋| 97/100 [01:55<00:03,  1.19s/it, est. speed input: 2272.89 toks/s, output: 169.86 toks/s]2025-09-13 01:12:23.850 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=40 reason=max_tokens len=3590 max=3590
+Processed prompts:  98%|█████████▊| 98/100 [02:03<00:02,  1.26s/it, est. speed input: 2123.70 toks/s, output: 163.00 toks/s]2025-09-13 01:13:26.926 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=7 reason=max_tokens len=3810 max=3810
+Processed prompts:  99%|█████████▉| 99/100 [03:06<00:01,  1.89s/it, est. speed input: 1406.69 toks/s, output: 123.01 toks/s]2025-09-13 01:13:54.897 | INFO     | cgen.schedule:append_output:115 - [SCHED] finish req seq_id=0 reason=max_tokens len=4003 max=4003
+Processed prompts: 100%|██████████| 100/100 [03:34<00:00,  2.15s/it, est. speed input: 1223.51 toks/s, output: 109Processed prompts: 100%|██████████| 100/100 [03:34<00:00,  2.15s/it, est. speed input: 1223.51 toks/s, output: 109.99 toks/s]
+detokenizer takes 0.07 s
+
+=== Scheduler profiling ===
+to_prefill transitions: 1
+to_decode  transitions: 2
+waited for prefetch: 0.0 s across 0 loops
+prefill batches: 84 | avg prefill batch tokens: 3128.63
+decode  batches: 3184 | avg decode batch size (seqs/tokens): 7.42
+evictions: 0 | pages evicted: 0
+shared_used_pct (last): 0.0
+
+
+=== Token accounting (actual) ===
+Actual prefilled tokens:  262805
+Actual generated tokens:  23626
+
+=== Throughput (actual / wall time) ===
+Prefill throughput: 1,223.10 toks/s
+Decode  throughput: 109.96 toks/s
+Total   throughput: 1,333.05 toks/s
+=== Sample Model Outputs (First 2) ===
+
+Sample 1:
+Input: this work is financially supported by the national science council of republic of china under the contract # : nsc-95 - 2112-m-007 - 059-my3 .            c.  k.  chua , w.  s.  hou and s.  y.  tsai , phys . 
+ . * d66 * , 054004 ( 2002 ) ; h.  y.  cheng and k.  c.  yang , phys .  rev . 
+ * d66 * , 014020 ( 2002 ) ; s. y. tsai , `` study of three - body baryonic b decays '' , ph . 
+ d thesis , national taiwan university ( 2005 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 74 * , 094023 ( 2006 ) . c.  q.  geng , y.  k.  hsiao and j.  n.  ng , phys . 
+ lett .   * 98 * , 011801 ( 2007 ) ; phys . 
+ d * 75 * , 094013 ( 2007 ) . 
+ geng and y.k . 
+ hsiao , phys . 
+ d * 75 * , 094005 ( 2007 ) . 
+ b.  aubert _ et al . _ [ babar collaboration ] , phys .  rev . * 
+ d72 * , 051101 ( 2005 ) ; phys . 
+ d * 76 * , 092004 ( 2007 ) ; see also t.b . 
+ hrynova , `` study of b meson decays to @xmath120 final states '' , ph.d . 
+ thesis , stanford university ( 2006 ) .      c. q. geng and y. k. hsiao , phys . 
+ d * 72 * , 037901 ( 2005 ) ; int . 
+ j.  mod . 
+ a * 21 * , 897 ( 2006 ) . 
+ m.  z.  wang _ et al . _ [ belle collaboration ] , phys .  rev . 
+ d * 76 * , 052004 ( 2007 ) ; b.  aubert [ babar collaboration ] , arxiv : hep - ex/0608020 . 
+ hou and a. soni , @xmath121 , 4247 ( 2001 ) . 
+ chua , w.s . 
+ hou and s.y . 
+ tsai , @xmath122 , 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou , eur . 
+ j.  c*29 * , 27 ( 2003 ) . 
+ f. piccinini and a. d. polosa , @xmath123 , 097508 ( 2002 ) ; h. y. cheng and k.c . 
+ yang , @xmath124 , 271 ( 2002 ) ; c. q. geng and y. k. hsiao , phys . 
+ b * 610 * , 67 ( 2005 ) . 
+ g.  p.  lepage and s.  j.  brodsky , phys . 
+ lett .   * 43 * , 545(1979 ) [ erratum - ibid .   * 
+ 43 * , 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky , phys . 
+ rev .  * d22 * , 2157 ( 1980 ) ; s.  j.  brodsky , g.  p.  lepage and s.  a.  a.  zaidi , phys . 
+ * d23 * , 1152 ( 1981 ) .
+Generated:  
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007 ). 
+ geng and y.k. 
+ hsiao, phys. 
+ d * 75 *, 094005 ( 2007 ). 
+ b.  aubert _ et al. _ [ babar collaboration ], phys.  rev. * 
+ d72 *, 051101 ( 2005 ) ; phys. 
+ d * 76 *, 092004 ( 2007 ) ; see also t.b. 
+ hrynova, `` study of b meson decays to @xmath120 final states '', ph.d. 
+ thesis, stanford university ( 2006 ).      c. q. geng and y. k. hsiao, phys. 
+ d * 72 *, 037901 ( 2005 ) ; int. 
+ j.  mod. 
+ a * 21 *, 897 ( 2006 ). 
+ m.  z.  wang _ et al. _ [ belle collaboration ], phys.  rev. 
+ d * 76 *, 052004 ( 2007 ) ; b.  aubert [ babar collaboration ], arxiv : hep - ex/0608020. 
+ hou and a. soni, @xmath121, 4247 ( 2001 ). 
+ chua, w.s. 
+ hou and s.y. 
+ tsai, @xmath122, 233 ( 2002 ) ; c.  k.  chua and w.  s.  hou, eur. 
+ j.  c*29 *, 27 ( 2003 ). 
+ f. piccinini and a. d. polosa, @xmath123, 097508 ( 2002 ) ; h. y. cheng and k.c. 
+ yang, @xmath124, 271 ( 2002 ) ; c. q. geng and y. k. hsiao, phys. 
+ b * 610 *, 67 ( 2005 ). 
+ g.  p.  lepage and s.  j.  brodsky, phys. 
+ lett.   * 43 *, 545(1979 ) [ erratum - ibid.   * 
+ 43 *, 1625 ( 1979 ) ] ; g.  p.  lepage and s.  j.  brodsky, phys. 
+ rev.  * d22 *, 2157 ( 1980 ) ; s.  j.  brodsky, g.  p.  lepage and s.  a.  a.  zaidi, phys. 
+ * d23 *, 1152 ( 1981 ). 
+ c.  q.  geng and y.  k.  hsiao, phys. 
+ lett.   * 98 *, 011801 ( 2007 ) ; phys. 
+ d * 75 *, 094013 ( 2007
+--------------------------------------------------------------------------------
+
+Sample 2:
+Input: for fixed integers @xmath0 and @xmath1 , we consider the admissible sequences of @xmath2 lattice paths in a colored @xmath3 square given in @xcite . each admissible sequence of paths can be associated with a partition @xmath10 of @xmath4 . in section 
+ [ paths ] , we show that the number of self - conjugate admissible sequences of paths associated with @xmath10 is equal to the number of standard young tableaux of shape @xmath10 , and thus can be calculated using the hook length formula . 
+ we extend this result to include the non - self - conjugate admissible sequences of paths and show that the number of all such admissible sequences of paths is equal to the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 . using the rsk correspondence in @xcite , 
+ it is shown in ( @xcite , corollary 7.23.12 ) that the sum of squares of the number of standard young tableaux of partitions of @xmath4 with height less than or equal to @xmath11 is equal to the number of @xmath6-avoiding permutations of @xmath7 .    in section [ multiplicities ] 
+ , we apply our results to the representation theory of the affine kac - moody algebra @xmath8 . 
+ let @xmath12 , @xmath13 and @xmath14 denote the simple roots , simple coroots , and fundamental weights respectively . 
+ note that @xmath15 
+ . for @xmath16 , set @xmath17 and @xmath18 . as shown in @xcite , @xmath19 
+ are maximal dominant weights of the irreducible @xmath8-module @xmath9 . 
+ we show that the multiplicity of the weight @xmath19 in @xmath9 is the number of @xmath6-avoiding permutations of @xmath7 , which proves conjecture 4.13 in @xcite . 
+ for fixed integers @xmath0 and @xmath1 , consider the @xmath3 square containing @xmath20 unit boxes in the fourth quadrant so that the top left corner of the square is at the origin . 
+ we assign color @xmath21 to a box if its upper left corner has coordinates @xmath22 . 
+ this gives the following @xmath3 colored square @xmath23 :      a lattice path @xmath25 on @xmath23 is a path joining the lower left corner @xmath26 to the upper right corner @xmath27 moving unit lengths up or right . for two lattice paths @xmath28 on @xmath23 
+ we say that @xmath29 if the boxes above @xmath30 are also above @xmath25 . 
+ now , we draw @xmath2 lattice paths , @xmath31 on @xmath23 such that @xmath32 . for integers 
+ @xmath33 , where @xmath34 , @xmath35 , we define @xmath36 to be the number of @xmath37-colored boxes between @xmath38 and @xmath39 . 
+ we define @xmath40 to be the number of @xmath37-colored boxes below @xmath41 and @xmath42 to be the number of @xmath37-colored boxes above @xmath43 . 
+ denote by @xmath49 the set of all admissible sequences of @xmath2 paths . 
+ notice that there are @xmath4 0-colored boxes in @xmath23 and hence for any admissible sequence of paths , @xmath50 . 
+ in addition , it follows from definition [ pathsdef](2 ) that @xmath51 for any admissible sequence of paths . 
+ thus , we can and do associate an admissible sequence of paths @xmath44 on @xmath23 with a partition @xmath52 of @xmath4 . in this case , we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram . 
+ figure [ adseq](a ) is an element of @xmath53 , where @xmath54 and @xmath55 are shown in figures [ adseq](b ) , [ adseq](c ) , and [ adseq](d ) , respectively . 
+ notice that this admissible sequence of paths is of type @xmath56 .
+Generated:  
+ we can also associate a partition @xmath57 of @xmath4 with an admissible sequence of paths @xmath44 on @xmath23. 
+ in this case, we say that this admissible sequence of paths is of type @xmath10 and often draw @xmath10 as a young diagram. 
+ figure [ adseq](a ) is an element of @xmath53, where @xmath58 and @xmath59 are shown in figures [ adseq](b ), [ adseq](c ), and [ adseq](d ), respectively. 
+ notice that this admissible sequence of paths is of type @xmath60. 
+ we can
+--------------------------------------------------------------------------------
+Total time: 214.87
+ubuntu@ip-172-31-35-196:~/workspace/seesaw/cgen$ 

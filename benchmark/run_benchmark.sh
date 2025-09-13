@@ -8,7 +8,7 @@ docker run --gpus=all \
    python3 benchmark/benchmark_cgen.py \
    benchmark/configs/llama3-15b-4xl4.json \
    --dataset arxiv \
-   --num-requests 10 \
+   --num-requests 100 \
    --max-input-len 4096 \
    --sort-prompts \
    --hf-token ${HF_TOKEN} \
